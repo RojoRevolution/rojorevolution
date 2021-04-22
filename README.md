@@ -2,8 +2,7 @@
 
 My name is David, a Designer and Illustrator for the last 15+ years. 
 
-I'm currently enrolled in a Full-Stack Web Development Bootcamp offered through UT-Austin so I can not only design web products, but build them as well. The bootcamp course is set to end in late March 2021, and I am hoping to transition my career to working full-time in web developemt.
-
+I've been working with HTML and CSS for quite a long time, but in December 2020 I decided to take the plunge and join a Full-Stack Web Development Bootcamp offered through UT-Austin. I'm currently employed full-time as a Web Designer, but I hope to continue to hone my development chops when time permits.
 
 ### Feel free to find me in the following places:
 
