@@ -1,0 +1,43 @@
+<%- include('partials/html-start-doc'); %>
+    <!-- Start Body -->
+    <section id="mainIntro" class="container-flex intro">
+        <div id="intro-content" class="container">
+            <div class="py-3 logo"><img src="/assets/images/logo/rr_logo_white.svg" class="text-light"></div>
+            <div>
+                <h1>David Rojo is a multidiscplinary designer, illustrator
+                    and full-stack developer.
+                </h1>
+            </div>
+            <div>
+                <p><a href="/about"><span class="learnmore">Learn more</span></a> or check out some projects below</p>
+            </div>
+            <div class="bounce">
+                <a href="#projects" onclick="return false;"><i class="fa fa-angle-double-down"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio -->
+    <main id="portfolio">
+        <div class="container-flex padding-top-100">
+            <div class="container mt-5 toggleWork">
+                <div class="row">
+                    <div id="designWork" class="col-6 text-center py-3 border-right inActiveText activeDesign">Design
+                    </div>
+                    <div id="devWork" class="col-6 text-center py-3 inActiveText"><span id="web">Web</span> Development
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div id="toggleContainer" class="container">
+                <%- include('partials/design-portfolio'); %>
+                    <%- include('partials/dev-portfolio'); %>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/get-in-touch'); %>
+
+        <%- include('partials/footer'); %>
+            <!--   Single page scripts -->
+            <script src="/assets/js/home.js" type="text/javascript"></script>
+            <!-- End Body -->
+            <%- include('partials/html-end-doc'); %>

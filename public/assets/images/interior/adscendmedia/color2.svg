@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="525px" height="82px" viewBox="0 0 525 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>color2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ADSCEND-001" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-721.000000, -1652.000000)">
+            <g id="color2" transform="translate(721.000000, 1652.000000)">
+                <text id="#003549" font-family="Helvetica" font-size="16" font-weight="normal" line-spacing="30" letter-spacing="0.5" fill="#4A4A4A">
+                    <tspan x="0" y="77">#003549</tspan>
+                </text>
+                <text id="80%" font-family="Helvetica" font-size="16" font-weight="normal" line-spacing="30" letter-spacing="0.5" fill="#4A4A4A">
+                    <tspan x="305" y="77">80%</tspan>
+                </text>
+                <text id="60%" font-family="Helvetica" font-size="16" font-weight="normal" line-spacing="30" letter-spacing="0.5" fill="#4A4A4A">
+                    <tspan x="360" y="77">60%</tspan>
+                </text>
+                <text id="40%" font-family="Helvetica" font-size="16" font-weight="normal" line-spacing="30" letter-spacing="0.5" fill="#4A4A4A">
+                    <tspan x="415" y="77">40%</tspan>
+                </text>
+                <text id="20%" font-family="Helvetica" font-size="16" font-weight="normal" line-spacing="30" letter-spacing="0.5" fill="#4A4A4A">
+                    <tspan x="470" y="77">20%</tspan>
+                </text>
+                <rect id="Rectangle" fill="#003549" x="0" y="0" width="305" height="55"></rect>
+                <rect id="Rectangle" fill-opacity="0.8" fill="#003549" x="305" y="0" width="55" height="55"></rect>
+                <rect id="Rectangle-Copy" fill-opacity="0.6" fill="#003549" x="360" y="0" width="55" height="55"></rect>
+                <rect id="Rectangle-Copy-2" fill-opacity="0.4" fill="#003549" x="415" y="0" width="55" height="55"></rect>
+                <rect id="Rectangle-Copy-3" fill-opacity="0.2" fill="#003549" x="470" y="0" width="55" height="55"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
