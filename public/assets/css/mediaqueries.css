@@ -1,0 +1,88 @@
+@media only screen and (max-width: 1400px) {
+    #toggleContainer {
+        height: 2200px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #toggleContainer {
+        height: 2200px;
+    }
+
+    .card-overwrite { 
+        width:20rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .toggleWork {
+        width: 75%;
+    }
+    
+    #toggleContainer {
+        height: 4200px;
+    }
+
+    .card-overwrite { 
+        width:25rem;
+    }
+    #mainHeader {
+        height: 100px;
+    }
+    #menu {
+        display: block;
+    }
+
+    #navIntro {
+        display: none;
+    }
+    #navContent {
+        display: none;
+    }
+    .img-badge{
+        max-width: 250px;
+    }
+
+    .can-image {
+        width: 200px;
+    }
+
+    #videoDiv {
+        display: none;
+    }
+
+    #videoReplace {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #intro-content {
+        padding-top: 18vh;  
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height:2.5rem;
+    }
+
+    p {
+        font-size:1rem;
+    }
+
+    .toggleWork {
+        width: 95%;
+    }
+
+    #web {
+        display: none;
+    }
+
+    .card-overwrite {
+        width: 90%;
+    }
+
+    #toggleContainer {
+        height: 3700px;
+    }
+}

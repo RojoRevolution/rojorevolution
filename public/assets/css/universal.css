@@ -1,0 +1,380 @@
+/* Universal Elements */
+html { box-sizing: border-box; scroll-behavior: smooth;}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color:#ffffff;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color:#E83A0E;
+	text-decoration:none;
+}
+
+a:visited {
+	color:none;
+}
+
+a:hover {
+	color:#bc4241;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Abril Fatface', Georgia, cursive;
+    color: #525257;
+    font-size: 2.5rem;
+	font-weight:900;
+    letter-spacing: 0.02em;
+    line-height:3.5rem;
+    margin: 25px 0;
+	text-decoration:none;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Abril Fatface', Georgia, cursive;
+	font-size: 2rem;
+    font-weight: 300;
+	color: #4A4A4A;
+	text-decoration:none;
+	line-height:2.5rem;
+}
+
+h3 {
+	font-family: 'Source Sans Pro', Helvetica, Arial, serif;
+	font-size: 1.5rem;
+    font-weight: 300;
+	color: #4A4A4A;
+	text-decoration:none;
+	line-height:2.5rem;
+}
+
+h4 {
+	font-family: 'Source Sans Pro', Helvetica, Arial, serif;
+	font-size: 1.5rem;
+    font-weight: 300;
+	color: #4A4A4A;
+	text-decoration:none;
+    text-align: center;
+	line-height:2rem;
+    margin:0 0 25px;
+}
+
+h5 {
+	font-family: 'Source Sans Pro', Helvetica, Arial, serif;
+	font-size: 1.5rem;
+    font-weight: 300;
+	color: #4A4A4A;
+	text-decoration:none;
+    text-align: left;
+	line-height:2.2rem;
+    margin:0 0 25px;
+}
+
+
+
+p {
+	font-family: 'Source Sans Pro', Helvetica, Arial, serif;
+	font-size: 1.15rem;
+    font-weight: 400;
+	color:#262524;
+	line-height: 2rem;
+	text-align: left;
+    margin: 0 0 .5rem 0;
+}
+
+.fs-smaller {
+font-size:.9rem;
+line-height: 1.5rem;
+}
+
+
+/* Footer */
+#footer {
+    background-color: #4A4A4A;
+    background-position: left top;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#footer .logo {
+    background: url(/assets/images/footer/rr_logo_footersprite.svg) no-repeat;
+    display: inline-block;
+    background-size: cover;
+    height: 67px;
+    width: 55px;
+    margin: 12px 0 0 0px;
+}
+
+#footer .logo:hover {
+  background-position: 0 -67px;
+}
+
+#footer #wrappercontent {
+    padding: 50px 0 0;
+}
+
+#copyright {
+    background-color:#3E3E3E;
+}
+
+#copyright p {
+    text-align: center;
+    padding: 14px 0;
+    margin: 15px 0 0;
+    color:#fff;
+    font-size: .75em;
+    font-weight:300;
+}
+
+#footer ul {
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+#footer li {
+    list-style: none;
+    padding: 1em;
+}
+
+#footer li a {
+	font-family: 'Source Sans Pro', Helvetica, Arial, serif;
+	font-size: 1em;
+    font-weight: 500;
+	color:#ffffff;
+	line-height: 1.25em;
+	text-align: justify;
+	margin:0;
+    text-transform: uppercase;
+    /*transition: .5s;*/
+}
+
+#footer li a:hover{
+    color:#E83A0E;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.insta{
+    display: inline-block;
+    background: url(/assets/images/footer/instasprite.svg) no-repeat;
+    height: 25px;
+    width: 25px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.insta:hover{
+  background-position: 0 -25px;
+}
+
+.github{
+    display: inline-block;
+    background: url(/assets/images/footer/githubsprite.svg) top/cover no-repeat;
+    height: 25px;
+    width: 25px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.github:hover{
+  background-position: 0 -25px;
+}
+
+
+/* =========================== */
+/* INTERIOR PAGES HEADER & NAV */
+/* =========================== */
+
+#mainHeader {
+    transition: .25s ease-out;
+    z-index: 10;
+}
+
+#menu {
+    width: 25px;
+    display:none;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+#menu:hover {
+    transition: .5s;
+    left: 20px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+}
+
+.headerBg {
+    background-color:#ffffff;
+}
+
+.headerGradient {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 100%);
+    width: 100%;
+    height: 200px;
+    top: 0;
+}
+
+.headerGradient_mobile {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.0) 0%, rgba(255,255,255,255) 100%);
+    width: 100%;
+    height: 200px;
+    top: 0;
+}
+
+header .logo {
+    top: 20px;
+    left: 46%;
+    transition:.25s ease-out;
+}
+
+header .logo:hover {
+    top: 25px;
+    left: 46%;
+    transition:.25s ease-in;
+}
+
+header nav {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 44px 0 34px;
+}
+
+header nav ul li a {
+    /* color: #ffffff; */
+    text-transform: uppercase;
+    padding: 50px 30px 37px;
+}
+
+header nav ul li a:hover {
+    text-decoration:none;
+    /* transition: 1s; */
+}
+
+.navli-intro {
+    color: #ffffff !important;
+}
+
+.navli-intro a {
+    color: #ffffff !important;
+    transition: .5s ease-out;
+}
+.navli-intro a:hover {
+    color: #E83A0E !important;
+    transition: .5s ease-out;
+
+}
+
+
+.navli-content a {
+    color: #3E3E3E !important;
+    transition: .5s ease-out;
+
+}
+
+.navli-content a:hover {
+    color: #E83A0E !important;
+    transition: .5s ease-out;
+
+}
+
+.navScrollToggle {
+    color: #a53434;
+}
+
+.middle {
+    visibility: hidden;
+    padding:0 20px;
+    overflow: hidden;
+    color:#ffffff;
+}
+
+
+
+
+/* =========================== */
+/* HELPER CLASSES */
+/* =========================== */
+
+.hide {
+    display:none;
+}
+
+.disp-inline {
+    display: inline-block;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position:absolute;
+}
+
+.margin-0 {
+    margin:0;
+}
+
+.margin-0-auto {
+    margin:0 auto;
+}
+
+.padding-y-100 {
+    padding: 100px 0;
+}
+
+.padding-y-200 {
+    padding: 200px 0;
+}
+
+.padding-top-100 {
+    padding: 100px 0 0 0;
+}
+
+.padding-top-200 {
+    padding: 200px 0 0 0;
+}
+
+.img-size {
+    width: 100%;
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+.max-w-995 {
+    max-width: 995px;
+}
+
+.content-max {
+    max-width:1200px;
+}
+
+/* =========================== */
+/* Overides */
+/* =========================== */
