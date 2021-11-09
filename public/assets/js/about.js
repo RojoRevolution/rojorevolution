@@ -1,21 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // function findPos(obj) {
-    //     var curtop = 0;
-    //     if (obj.offsetParent) {
-    //         do {
-    //             curtop += obj.offsetTop;
-    //         } while (obj = obj.offsetParent);
-    //         return [curtop];
-    //     }
-    // }
-
-    // if (window.location.href.indexOf("contact")) {
-    //     window.scrollTo(0, findPos(contact));
-    // };
-
-
-    const designSkills = ['Branding', 'Identity Design', 'Art Direciton', 'Visual Design', 'UI/UX Design', 'Web Design', 'Print Design', 'User Flows / Wireframes', 'Storyboarding', 'User Research', 'Rapid Prototyping', 'Vector Illustration'
+    const designSkills = ['Branding', 'Identity Design', 'Illustration', 'Visual Design', 'UI/UX Design', 'Web Design', 'Print Design', 'User Flows / Wireframes', 'Art Direciton', 'Storyboarding', 'User Research', 'Rapid Prototyping'
     ];
 
     const devSkills = ['HTML', 'CSS', 'Javascript(ES6)', 'jQuery', "REST API's", 'Node.js', 'Express', 'MySQL', 'Sequelize', 'MongoDB', 'Mongoose', 'React.js', 'MVC: EJS / Handlebars', 'Git / Command Line'];
