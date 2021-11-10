@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lazySizes": "node ",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "RojoRevolution <rojo@rojorevolution.com> (https://rojorevolution.com)",
