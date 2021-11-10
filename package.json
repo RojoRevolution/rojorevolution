@@ -8,6 +8,10 @@
     "lazySizes": "node ",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RojoRevolution/rojorevolution.git"
+  },
   "keywords": [],
   "author": "RojoRevolution <rojo@rojorevolution.com> (https://rojorevolution.com)",
   "license": "ISC",
