@@ -469,7 +469,7 @@ margin: 0 auto;
 
 .cask-hero {
     background: url('/assets/images/interior/acopon/bg_003.jpg') center bottom/cover no-repeat fixed;
-    min-height:300px;
+    min-height:500px;
 }
 
 .color-scheme.acopon1 {
@@ -513,7 +513,7 @@ margin: 0 auto;
 
 .acopon-pattern-dark {
     padding: 250px 0;
-    background: url('/assets/images/interior/acopon/pattern_dark_sm@2x.png') center repeat-x;
+    background: url('/assets/images/interior/acopon/pattern_dark_sm@2x.png') center repeat;
 }
 
 .crowler-content {
@@ -529,7 +529,7 @@ margin: 0 auto;
 }
 
 .hans {
-    background: url('/assets/images/interior/acopon/hans_pattern.png') #C12126;
+    background: url('/assets/images/interior/acopon/hans_pattern.png') #C12126 fixed;
     text-align: center;
 }
 
@@ -543,6 +543,31 @@ margin: 0 auto;
     width: 100%;
 }
 
+
+.polednice {
+    margin-top: 100px;
+    background: url('/assets/images/interior/acopon/pattern_light_sm@2x.png');
+}
+
+.polednice > .container {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.polednice > .container > img {
+    max-width: 768px;
+    width: 100%;
+}
+
+#promotionals.acopon-pattern-dark {
+    margin-top:100px;
+    padding: 150px 0;
+}
+
+#promotionals h2 {
+    color: var(--acopon-light);
+    padding: 0 0 50px 0;
+}
 
 
 

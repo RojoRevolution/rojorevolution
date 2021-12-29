@@ -244,13 +244,13 @@ header {
 
 header .logo {
     top: 20px;
-    left: 46%;
+    left: 47%;
     transition:.25s ease-out;
 }
 
 header .logo:hover {
     top: 25px;
-    left: 46%;
+    left: 47%;
     transition:.25s ease-in;
 }
 
