@@ -1,4 +1,12 @@
 /* Universal Elements */
+:root {
+    /* Rojorevolution */
+    --rojo-primary: brown;
+    --header-primary: #525257;
+    --text-primary: #262524;
+  }
+
+
 html { box-sizing: border-box; scroll-behavior: smooth;}
 *, *:before, *:after {
     box-sizing: inherit;

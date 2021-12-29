@@ -12,7 +12,9 @@
     .card-overwrite { 
         width:20rem;
     }
+
 }
+
 
 @media only screen and (max-width: 767px) {
     .toggleWork {
@@ -54,7 +56,9 @@
     #videoReplace {
         display: block;
     }
+
 }
+
 
 @media only screen and (max-width: 600px) {
     #intro-content {
@@ -85,4 +89,5 @@
     #toggleContainer {
         height: 3700px;
     }
+
 }

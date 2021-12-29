@@ -1,3 +1,18 @@
+/* Universal Elements */
+:root {
+    /* Rojorevolution */
+    --rojo-primary: brown;
+    --header-primary: #525257;
+    --text-primary: #262524;
+    /* Acopon */
+    --acopon-primary: #3D4055;
+    --acopon-secondary: #6AA284;
+    --acopon-grey: #9A9B9C;
+    --acopon-light: #F5EBE3;
+    --acopon-beige: #E8D9B4
+  }
+
+
 /* ================================= */
 /* INDEX PAGE STYLES */
 /* ================================= */
@@ -290,6 +305,14 @@ background:#a53434;
 /* INTERIOR PAGE STYLES */
 /* ================================= */
 
+.color-scheme {
+    padding: 20px;
+    text-align: center;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+
 #azwBranding h3, #adscend h3, #logofolio h3, #illustration h3, #adscend h3, #acopon h3  {
     text-align:center;
 }
@@ -448,6 +471,79 @@ margin: 0 auto;
     background: url('/assets/images/interior/acopon/bg_003.jpg') center bottom/cover no-repeat fixed;
     min-height:300px;
 }
+
+.color-scheme.acopon1 {
+    background: var(--acopon-primary);
+    color: var(--acopon-primary)
+}
+
+.color-scheme.acopon2 {
+    background: var(--acopon-secondary);
+    color: var(--acopon-secondary);
+}
+
+.color-scheme.acopon3 {
+    background: var(--acopon-grey);
+    color: var(--acopon-grey);
+}
+
+.color-scheme.acopon4 {
+    background: var(--acopon-light);
+    color: var(--acopon-light);
+}
+
+.color-scheme.acopon5 {
+    background: var(--acopon-beige);
+    color: var(--acopon-beige);
+}
+
+.color-scheme.acopon1:hover {
+    color: var(--acopon-light)
+}
+
+.color-scheme.acopon2:hover, .color-scheme.acopon3:hover, .color-scheme.acopon4:hover, .color-scheme.acopon5:hover   {
+    transition: .5s ease-out;
+    color: var(--text-primary);
+}
+
+.acopon-patterns {
+    padding: 500px 0;
+    background-image: url('/assets/images/interior/acopon/patterns@2x.png');
+}
+
+.acopon-pattern-dark {
+    padding: 250px 0;
+    background: url('/assets/images/interior/acopon/pattern_dark_sm@2x.png') center repeat-x;
+}
+
+.crowler-content {
+    background: url('/assets/images/interior/acopon/pattern_light_sm@2x.png') top repeat-x;
+}
+
+.crowler-content .container {
+    padding: 150px 0 0 0;
+}
+.crowler-img {
+    max-width: 1242px;
+    width: 100%;
+}
+
+.hans {
+    background: url('/assets/images/interior/acopon/hans_pattern.png') #C12126;
+    text-align: center;
+}
+
+.hans-hero {
+    width: 100%;
+    max-width: 1028px;
+}
+
+.hans-label {
+    max-width: 999px;
+    width: 100%;
+}
+
+
 
 
 /* Mobile Menu */
