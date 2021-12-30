@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const designWorkBtn = document.getElementById('designWork');
     const devWorkBtn = document.getElementById('devWork');
     // Container holding cards
+    const toggleContainer = document.getElementById('toggleContainer')
     const designDIV = document.getElementById('designProjects');
     const devDiv = document.getElementById('devProjects');
 
@@ -25,12 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, findPos(portfolioSection))
     })
 
+    function checkForActive() {
+        if (designDIV.classList.contains('active')) {
+            console.log("Design List Active")
+        } else if (devDiv.classList.contains('active')) {
+            console.log("Dev List Active")
+        }
+    }
 
     designWorkBtn.addEventListener('click', () => {
         // If button is active Return
         if (designDIV.classList.contains('active')) {
             return
         }
+        toggleContainer.style.height = '1150px'
         designDIV.style.left = '0px';
         devDiv.style.right = '-1500px';
 
@@ -39,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         designDIV.classList.toggle('active')
         devDiv.classList.toggle('active')
 
+        checkForActive()
 
 
     });
@@ -48,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (devDiv.classList.contains('active')) {
             return
         }
+        toggleContainer.style.height = '1700px'
         designDIV.style.left = '-1500px';
         devDiv.style.right = '0px';
 
@@ -55,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         devWorkBtn.classList.toggle('activeDev')
         designDIV.classList.toggle('active')
         devDiv.classList.toggle('active')
+        checkForActive()
     });
 
 });
