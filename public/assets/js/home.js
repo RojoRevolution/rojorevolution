@@ -6,10 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const designWorkBtn = document.getElementById('designWork');
     const devWorkBtn = document.getElementById('devWork');
     // Container holding cards
-    const toggleContainer = document.getElementById('toggleContainer')
     const designDIV = document.getElementById('designProjects');
     const devDiv = document.getElementById('devProjects');
-    const extras = document.getElementById('extras');
     const extraCards = document.querySelectorAll('[card-data="extra"]')
 
     //Function for finding the Y Position of an element
