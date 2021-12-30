@@ -26,14 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, findPos(portfolioSection))
     })
 
-    function checkForActive() {
-        if (designDIV.classList.contains('active')) {
-            console.log("Design List Active")
-        } else if (devDiv.classList.contains('active')) {
-            console.log("Dev List Active")
-        }
-    }
-
     designWorkBtn.addEventListener('click', () => {
         // If button is active Return
         if (designDIV.classList.contains('active')) {
@@ -47,10 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
         devWorkBtn.classList.toggle('activeDev');
         designDIV.classList.toggle('active')
         devDiv.classList.toggle('active')
-
-        checkForActive()
-
-
     });
 
     devWorkBtn.addEventListener('click', () => {
@@ -66,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         devWorkBtn.classList.toggle('activeDev')
         designDIV.classList.toggle('active')
         devDiv.classList.toggle('active')
-        checkForActive()
     });
 
 });
