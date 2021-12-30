@@ -1,7 +1,8 @@
 /* Universal Elements */
 :root {
     /* Rojorevolution */
-    --rojo-primary: brown;
+    --rojo-primary: #e83a0e;
+    --rojo-secondary: #BC4241;
     --header-primary: #525257;
     --text-primary: #262524;
     /* Acopon */
