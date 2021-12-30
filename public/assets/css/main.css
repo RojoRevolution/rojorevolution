@@ -1,3 +1,19 @@
+/* Universal Elements */
+:root {
+    /* Rojorevolution */
+    --rojo-primary: #e83a0e;
+    --rojo-secondary: #BC4241;
+    --header-primary: #525257;
+    --text-primary: #262524;
+    /* Acopon */
+    --acopon-primary: #3D4055;
+    --acopon-secondary: #6AA284;
+    --acopon-grey: #9A9B9C;
+    --acopon-light: #F5EBE3;
+    --acopon-beige: #E8D9B4
+  }
+
+
 /* ================================= */
 /* INDEX PAGE STYLES */
 /* ================================= */
@@ -134,7 +150,7 @@
     position: relative;
     height: auto;
     overflow: hidden;
-    height: 1700px;
+    /* height: 1150px; */
 }
 
 #designWork {
@@ -181,6 +197,7 @@
     top: 0;
     left: 0px;
     transition: .25s ease-out;
+    z-index: 3;
 }
 
 #devProjects {
@@ -188,8 +205,8 @@
     top: 0;
     right: -1500px;
     transition: .3s ease-out;
+    z-index: 3;
 }
-
 
 .card-overwrite {
     width: 25rem;
@@ -200,6 +217,15 @@
     min-height: 475px;
     vertical-align: top;
     position:relative;
+}
+
+.prj-placeholder {
+    padding: 48px 0 100px 14px;
+    text-align: center;
+}
+
+.extra-prjs {
+    display: none;
 }
 
 .viewMoreDiv {
@@ -289,6 +315,14 @@ background:#a53434;
 /* ================================= */
 /* INTERIOR PAGE STYLES */
 /* ================================= */
+
+.color-scheme {
+    padding: 20px;
+    text-align: center;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
 
 #azwBranding h3, #adscend h3, #logofolio h3, #illustration h3, #adscend h3, #acopon h3  {
     text-align:center;
@@ -446,8 +480,106 @@ margin: 0 auto;
 
 .cask-hero {
     background: url('/assets/images/interior/acopon/bg_003.jpg') center bottom/cover no-repeat fixed;
-    min-height:300px;
+    min-height:500px;
 }
+
+.color-scheme.acopon1 {
+    background: var(--acopon-primary);
+    color: var(--acopon-primary)
+}
+
+.color-scheme.acopon2 {
+    background: var(--acopon-secondary);
+    color: var(--acopon-secondary);
+}
+
+.color-scheme.acopon3 {
+    background: var(--acopon-grey);
+    color: var(--acopon-grey);
+}
+
+.color-scheme.acopon4 {
+    background: var(--acopon-light);
+    color: var(--acopon-light);
+}
+
+.color-scheme.acopon5 {
+    background: var(--acopon-beige);
+    color: var(--acopon-beige);
+}
+
+.color-scheme.acopon1:hover {
+    color: var(--acopon-light)
+}
+
+.color-scheme.acopon2:hover, .color-scheme.acopon3:hover, .color-scheme.acopon4:hover, .color-scheme.acopon5:hover   {
+    transition: .5s ease-out;
+    color: var(--text-primary);
+}
+
+.acopon-patterns {
+    padding: 500px 0;
+    background-image: url('/assets/images/interior/acopon/patterns@2x.png');
+}
+
+.acopon-pattern-dark {
+    padding: 250px 0;
+    background: url('/assets/images/interior/acopon/pattern_dark_sm@2x.png') center repeat;
+}
+
+.crowler-content {
+    background: url('/assets/images/interior/acopon/pattern_light_sm@2x.png') top repeat-x;
+}
+
+.crowler-content .container {
+    padding: 150px 0 0 0;
+}
+.crowler-img {
+    max-width: 1242px;
+    width: 100%;
+}
+
+.hans {
+    background: url('/assets/images/interior/acopon/hans_pattern.png') #C12126 fixed;
+    text-align: center;
+}
+
+.hans-hero {
+    width: 100%;
+    max-width: 1028px;
+}
+
+.hans-label {
+    max-width: 999px;
+    width: 100%;
+}
+
+
+.polednice {
+    margin-top: 100px;
+    background: url('/assets/images/interior/acopon/pattern_light_sm@2x.png');
+}
+
+.polednice > .container {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.polednice > .container > img {
+    max-width: 768px;
+    width: 100%;
+}
+
+#promotionals.acopon-pattern-dark {
+    margin-top:100px;
+    padding: 150px 0;
+}
+
+#promotionals h2 {
+    color: var(--acopon-light);
+    padding: 0 0 50px 0;
+}
+
 
 
 /* Mobile Menu */

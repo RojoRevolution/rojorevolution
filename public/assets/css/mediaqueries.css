@@ -1,28 +1,19 @@
-@media only screen and (max-width: 1400px) {
-    #toggleContainer {
-        height: 2200px;
-    }
-}
-
 @media only screen and (max-width: 991px) {
-    #toggleContainer {
-        height: 2200px;
-    }
-
     .card-overwrite { 
         width:20rem;
     }
+
+    .prj-placeholder {
+        padding-left:0px;
+    }
 }
+
 
 @media only screen and (max-width: 767px) {
     .toggleWork {
         width: 75%;
     }
     
-    #toggleContainer {
-        height: 4200px;
-    }
-
     .card-overwrite { 
         width:25rem;
     }
@@ -54,7 +45,32 @@
     #videoReplace {
         display: block;
     }
+
+    #acopon #posthero .col {
+        flex-basis: auto;
+        padding:0 200px;
+    }
+
+    #acopon .col {
+        flex-basis: auto;
+    }
+
+    #acopon .col-6 {
+        flex-basis: content;
+    }
+
+    .color-scheme.acopon1 {
+        color: var(--acopon-light);
+        padding: 40px 0;
+    }
+
+    .color-scheme.acopon2, .color-scheme.acopon3, .color-scheme.acopon4, .color-scheme.acopon5 {
+        color: var(--text-primary);
+        padding: 40px 0;
+    }
+
 }
+
 
 @media only screen and (max-width: 600px) {
     #intro-content {
@@ -82,7 +98,16 @@
         width: 90%;
     }
 
-    #toggleContainer {
-        height: 3700px;
+    #acopon #posthero .col {
+        padding: 0 50px;
     }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    #acopon #posthero .col {
+        padding: 0;
+    }
+
 }
