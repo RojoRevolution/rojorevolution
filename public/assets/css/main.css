@@ -150,7 +150,7 @@
     position: relative;
     height: auto;
     overflow: hidden;
-    height: 1150px;
+    /* height: 1150px; */
 }
 
 #designWork {
@@ -197,6 +197,7 @@
     top: 0;
     left: 0px;
     transition: .25s ease-out;
+    z-index: 3;
 }
 
 #devProjects {
@@ -204,8 +205,8 @@
     top: 0;
     right: -1500px;
     transition: .3s ease-out;
+    z-index: 3;
 }
-
 
 .card-overwrite {
     width: 25rem;
@@ -216,6 +217,15 @@
     min-height: 475px;
     vertical-align: top;
     position:relative;
+}
+
+.prj-placeholder {
+    padding: 48px 0 100px 14px;
+    text-align: center;
+}
+
+.extra-prjs {
+    display: none;
 }
 
 .viewMoreDiv {

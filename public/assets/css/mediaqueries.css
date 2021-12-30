@@ -1,18 +1,17 @@
 @media only screen and (max-width: 1400px) {
-    #toggleContainer {
+    /* #toggleContainer {
         height: 2200px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 991px) {
-    #toggleContainer {
-        height: 2200px;
-    }
-
     .card-overwrite { 
         width:20rem;
     }
 
+    .prj-placeholder {
+        padding-left:0px;
+    }
 }
 
 
@@ -21,9 +20,9 @@
         width: 75%;
     }
     
-    #toggleContainer {
+    /* #toggleContainer {
         height: 4200px;
-    }
+    } */
 
     .card-overwrite { 
         width:25rem;
@@ -109,9 +108,9 @@
         width: 90%;
     }
 
-    #toggleContainer {
+    /* #toggleContainer {
         height: 3700px;
-    }
+    } */
 
     #acopon #posthero .col {
         padding: 0 50px;
