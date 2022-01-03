@@ -1,40 +1,32 @@
-const lowQimages = [
-    '/assets/images/interior/azw-illustration/lazy/DHW_Papa.jpg',
-    '/assets/images/interior/azw-illustration/lazy/DHW_Screaming.jpg',
-    '/assets/images/interior/azw-illustration/lazy/CobraBlood.jpg',
-    '/assets/images/interior/azw-illustration/lazy/PicketPost.jpg',
-    '/assets/images/interior/azw-illustration/lazy/tropicalstorm.jpg',
-    '/assets/images/interior/azw-illustration/lazy/BrutalNature.jpg',
-    '/assets/images/interior/azw-illustration/lazy/ElJefe.jpg',
-    '/assets/images/interior/azw-illustration/lazy/BigHorn.jpg',
-    '/assets/images/interior/azw-illustration/lazy/hellsgate.jpg',
-    '/assets/images/interior/azw-illustration/lazy/7years.jpg',
-    '/assets/images/interior/azw-illustration/lazy/5years.jpg',
-    '/assets/images/interior/azw-illustration/lazy/4years.jpg',
-    '/assets/images/interior/azw-illustration/lazy/killthekeg.jpg',
-    '/assets/images/interior/azw-illustration/lazy/burgermonday.jpg',
-    '/assets/images/interior/azw-illustration/lazy/tacotuesday.jpg',
-    '/assets/images/interior/azw-illustration/lazy/ontheroad.jpg',
-]
-
+const lowQimages = '/assets/images/interior/illustrations/loader_small.gif'
 
 const images = [
-    '/assets/images/interior/azw-illustration/DHW_Papa.png',
-    '/assets/images/interior/azw-illustration/DHW_Screaming.png',
-    '/assets/images/interior/azw-illustration/CobraBlood.png',
-    '/assets/images/interior/azw-illustration/PicketPost.png',
-    '/assets/images/interior/azw-illustration/tropicalstorm.png',
-    '/assets/images/interior/azw-illustration/BrutalNature.png',
-    '/assets/images/interior/azw-illustration/ElJefe.png',
-    '/assets/images/interior/azw-illustration/BigHorn.png',
-    '/assets/images/interior/azw-illustration/hellsgate.png',
-    '/assets/images/interior/azw-illustration/7years.png',
-    '/assets/images/interior/azw-illustration/5years.png',
-    '/assets/images/interior/azw-illustration/4years.png',
-    '/assets/images/interior/azw-illustration/killthekeg.png',
-    '/assets/images/interior/azw-illustration/burgermonday.png',
-    '/assets/images/interior/azw-illustration/tacotuesday.png',
-    '/assets/images/interior/azw-illustration/ontheroad.png',
+    '/assets/images/interior/illustrations/eljefe.png',
+    '/assets/images/interior/illustrations/elbonito.png',
+    '/assets/images/interior/illustrations/screamingforvengeance.png',
+    '/assets/images/interior/illustrations/picketpostpils.png',
+    '/assets/images/interior/illustrations/brutalnature.png',
+    '/assets/images/interior/illustrations/skullvalley.png',
+    '/assets/images/interior/illustrations/pariapils.png',
+    '/assets/images/interior/illustrations/leggomyego.png',
+    '/assets/images/interior/illustrations/mother.png',
+    '/assets/images/interior/illustrations/papadontpreach.png',
+    '/assets/images/interior/illustrations/citrusvalley.png',
+    '/assets/images/interior/illustrations/laciudad.png',
+    '/assets/images/interior/illustrations/humankindness.png',
+    '/assets/images/interior/illustrations/bighorn.png',
+    '/assets/images/interior/illustrations/hellsgatehelles.png',
+    '/assets/images/interior/illustrations/cobrablood.png',
+    '/assets/images/interior/illustrations/nothingbecomesher.png',
+    '/assets/images/interior/illustrations/marstosirius.png',
+    '/assets/images/interior/illustrations/thewildernessact.png',
+    '/assets/images/interior/illustrations/cactuspalace.png',
+    '/assets/images/interior/illustrations/empressrising.png',
+]
+
+const exceptContent = [
+    'Primary artwork created by <a href="https://www.instagram.com/breeze1phx/?hl=en" target="_blank" style="color:white; text-decoration:underline;">Breeze.</a> <br>Digitization and label design by RojoRevolution.',
+    'Background pattern for label provided by <a href="https://cobraarcadebar.com/" target="_blank" style="color:white; text-decoration:underline;">Cobra Arcade</a> team'
 ]
 
 const containerEL = document.getElementById('vectors')
@@ -45,11 +37,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const renderLogos = () => {
         for (let i = 0; i < images.length; i++) {
             const img = document.createElement('img');
-            img.setAttribute('class', 'img-size disp-inline lazyload');
+            const div = document.createElement('div');
+            div.setAttribute('class', 'position-relative')
+            // div.setAttribute('id', images[i].slice(38, -4));
+            img.setAttribute('class', 'img-size lazyload');
             // img.setAttribute('src', '/assets/images/loader.gif');
-            img.setAttribute('src', lowQimages[i]);
+            img.setAttribute('src', lowQimages);
             img.setAttribute('data-src', images[i]);
-            containerEL.appendChild(img);
+            containerEL.appendChild(div);
+            div.appendChild(img);
+            // console.log(img.getAttribute('data-src').slice(38, -4))
+            if (img.getAttribute('data-src').slice(38, -4) === 'laciudad' || img.getAttribute('data-src').slice(38, -4) === 'cobrablood') {
+                div.setAttribute('id', images[i].slice(38, -4));
+            }
+        }
+        addExcerpt()
+    }
+
+    const addExcerpt = () => {
+        laCiudadEl = document.getElementById('laciudad');
+        cobraBloodEl = document.getElementById('cobrablood');
+
+        for (let i = 0; i < exceptContent.length; i++) {
+            const div = document.createElement('div')
+            div.setAttribute("class", 'excerpt')
+            div.innerHTML += exceptContent[i]
+            switch (i) {
+                case 0:
+                    laCiudadEl.appendChild(div);
+                    break;
+                case 1:
+                    cobraBloodEl.appendChild(div);
+                    break;
+            }
         }
     }
 
