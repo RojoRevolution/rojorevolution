@@ -22,6 +22,12 @@ const images = [
     '/assets/images/interior/illustrations/thewildernessact.png',
     '/assets/images/interior/illustrations/cactuspalace.png',
     '/assets/images/interior/illustrations/empressrising.png',
+    '/assets/images/interior/illustrations/burgermonday.png',
+    '/assets/images/interior/illustrations/tacotuesday.png',
+    '/assets/images/interior/illustrations/ontheroad.png',
+    '/assets/images/interior/illustrations/4years.png',
+    '/assets/images/interior/illustrations/5years.png',
+    '/assets/images/interior/illustrations/7years.png',
 ]
 
 const exceptContent = [
