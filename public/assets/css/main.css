@@ -2,9 +2,11 @@
 :root {
     /* Rojorevolution */
     --rojo-primary: #e83a0e;
+    --rojo-primary-overlay: rgba(232,58,14,.75);
     --rojo-secondary: #BC4241;
     --header-primary: #525257;
     --text-primary: #262524;
+    --rojo-dark-overlay: rgba(38,37,36,.75);
     /* Acopon */
     --acopon-primary: #3D4055;
     --acopon-secondary: #6AA284;
@@ -200,12 +202,21 @@
     z-index: 3;
 }
 
+#design #designProjects {
+    position: relative
+}
+
 #devProjects {
     position: absolute;
     top: 0;
     right: -1500px;
     transition: .3s ease-out;
     z-index: 3;
+}
+
+#development #devProjects {
+    position: relative;
+    right: 0;
 }
 
 .card-overwrite {
@@ -217,6 +228,132 @@
     min-height: 475px;
     vertical-align: top;
     position:relative;
+    min-height: 637px;
+}
+
+#devProjects .card-overwrite {
+    min-height: 647px;
+}
+
+.overflow-div {
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-overlay {
+    background: rgba(38,37,36,0);
+    min-height: 426px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: .15s ease-in-out;
+}
+
+.cta-btns {
+    position: absolute; 
+    top: -50px;
+    transition: .15s ease-in-out;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-chip {
+    background: var(--acopon-grey);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    padding: .5rem .75rem;
+    margin: .25rem;
+}
+
+.project-chip.bootcamp {
+    background: var(--rojo-secondary);
+}
+
+.card-overwrite .tmb {
+    overflow: hidden;
+    background-position-x: center;
+    background-size: cover;
+    transition: .15s ease-in-out;
+}
+
+.card-overwrite:hover .tmb, .card-overwrite:focus .tmb, .card-overwrite:active .tmb {
+    /* background-size: 125%; */
+    transition: .5s ease-in-out;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card-overwrite:hover .card-overlay, .card-overwrite:focus .card-overlay, .card-overwrite:active .card-overlay {
+    background: rgba(38,37,36,.75);
+}
+
+.card-overwrite:hover .cta-btns, .card-overwrite:focus .cta-btns, .card-overwrite:active .cta-btns {
+    top: 210px;
+    transition: .35s ease-out;
+}
+
+.card-overwrite h3 {
+    font-weight: 600;
+    line-height: 1.75rem;
+    text-align: left;
+    padding: 1rem 0 0 .25rem;
+}
+
+.card-overwrite p {
+    padding: 0 0 0 .25rem;
+}
+
+.azw-brand {
+    background: url(../images/home/cards/azw-branding@2x.png);
+}
+.acopon-brand {
+    background: url(../images/home/cards/acopon@2x.png);
+}
+.azw-illustration {
+    background: url(../images/home/cards/azw-illustration@2x.png);
+}
+.hideout {
+    background: url(../images/home/cards/hideout@2x.png);
+}
+.adscendmedia {
+    background: url(../images/home/cards/adscendmedia@2x.png);
+}
+.azw-logos {
+    background: url(../images/home/cards/azw-logos@2x.png);
+}
+
+.applyordie {
+    background: url(../images/home/cards/dev-applyordie@2x.png);
+}
+.instance-styler {
+    background: url(../images/home/cards/dev-instance-styler@2x.png);
+}
+.acopon-dev {
+    background: url(../images/home/cards/dev-acopon@2x.png);
+}
+.goodday {
+    background: url(../images/home/cards/dev-goodday@2x.png);
+}
+.weather {
+    background: url(../images/home/cards/dev-weatherapi@2x.png);
+}
+.quiz {
+    background: url(../images/home/cards/dev-quiz@2x.png);
 }
 
 .prj-placeholder {
