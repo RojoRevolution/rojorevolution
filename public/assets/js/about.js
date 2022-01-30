@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const designSkills = ['Branding', 'Identity Design', 'Illustration', 'Visual Design', 'UI/UX Design', 'Web Design', 'Print Design', 'User Flows / Wireframes', 'Art Direciton', 'Storyboarding', 'User Research', 'Rapid Prototyping'
+    const designSkills = ['Branding', 'Identity Design', 'Illustration', 'Visual Design', 'Product Design', 'Web Design', 'Print Design', 'Art Direciton', 'Storyboarding', 'Rapid Prototyping', 'Animation'
     ];
 
-    const devSkills = ['HTML', 'CSS', 'Javascript(ES6)', 'jQuery', "REST API's", 'Node.js', 'Express', 'MySQL', 'Sequelize', 'MongoDB', 'Mongoose', 'React.js', 'MVC: EJS / Handlebars', 'Git / Command Line'];
+    const devSkills = ['HTML', 'CSS + Frameworks', 'Javascript(ES6)', 'jQuery', "REST API's", 'Node.js', 'Express', 'MySQL', 'Sequelize', 'MongoDB', 'Mongoose', 'React.js', 'MVC: EJS / Handlebars', 'Git / Command Line'];
 
     const designUL = document.getElementById('designSkills');
     const devUL = document.getElementById('devSkills');
