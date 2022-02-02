@@ -482,6 +482,7 @@ background:#a53434;
 
 .azw-branding-hero {
     background: url('/assets/images/interior/azw-branding/wilderness_hero.jpg')no-repeat fixed;
+    position: relative;
 }
 
 .logo-max-size {
