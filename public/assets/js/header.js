@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById('menu');
     const whiteMenuEl = document.getElementById('introMenu');
     const redMenuEl = document.getElementById('contentMenu');
-    const closeBtn = document.querySelector('.closebtn');
+    const closeBtn = document.querySelector('.close-btn');
+    const closeElement = document.getElementById('menu');
 
     const headerBgWhite = () => {
         header.style.backgroundColor = "rgba(255,255,255,1)";
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         logoRed.classList.remove('hide');
         whiteMenuEl.classList.add('hide');
         redMenuEl.classList.remove('hide');
+        closeElement.classList.add('hide')
     }
 
     const headerNoBg = () => {
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         logoRed.classList.add('hide');
         whiteMenuEl.classList.remove('hide');
         redMenuEl.classList.add('hide');
+        closeElement.classList.remove('bg-red')
     }
 
     if (document.title === 'About RojoRevolution' || document.title === 'Design Projects' || document.title === 'Web Development Projects') {
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     menu.addEventListener('click', () => {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "100%";
     })
 
     closeBtn.addEventListener('click', () => {
