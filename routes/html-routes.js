@@ -49,8 +49,4 @@ module.exports = (app) => {
     app.get('/about', (req, res) => {
         res.render('about', { title: 'About RojoRevolution' });
     });
-
-    app.get('/chat', (req, res) => {
-        res.render('chat-test', { title: 'Chat Test' });
-    });
 }
