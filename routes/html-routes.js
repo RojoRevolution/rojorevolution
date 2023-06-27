@@ -50,4 +50,8 @@ module.exports = (app) => {
         res.render('about', { title: 'About RojoRevolution' });
     });
 
+    app.get('/chat-test', (req, res) => {
+        res.render('chat-test', { title: 'Chat Test' });
+    });
+
 }
