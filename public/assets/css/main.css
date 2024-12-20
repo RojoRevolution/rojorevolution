@@ -1,0 +1,13 @@
+#welcome {
+    height: 80vh;
+}
+
+#welcome h1:before {
+    content: "Howdy, I'm David. I'm a ";
+    position: absolute;
+    top: -60px;
+    color: var(--rr-text-color-secondary);
+    font-size: var(--rr-size-lg);
+    font-family: var(--font-display);
+    font-weight: var(--weight-400);
+}

@@ -23,7 +23,7 @@
 
     --basic-white: white;
     --basic-black: black;
-    --basic-off-white: #F8F9FA;
+    --basic-off-white: #fcf1cf;
     --basic-off-black: #222222;
 
     --revolution-red-100: #FFF7F2;
@@ -86,6 +86,7 @@
     --size-40px: 2.5rem;
     --size-48px: 3rem;
     --size-60px: 3.75rem;
+    --size-72px: 4.5rem;
 
     /* Weight */
     --weight-100: 100;
@@ -99,15 +100,15 @@
     --weight-900: 900;
 
     /* Font */
-    --font-poppins: 'Poppins';
-    --font-roboto: 'Roboto';
+    --font-display: 'Inconsolata', serif;
+    --font-serif: 'Poppins', serif;
 
     /* ======= Semantic Variables ======= */
     /* ================================== */
 
     /* Surface: General Background */
-    --rr-surface-color-primary: var(--neutral-100);
-    --rr-surface-color-accent: var(--neutral-300);
+    --rr-surface-color-primary: var(--basic-off-white);
+    --rr-surface-color-accent: var(--neutral-100);
     --rr-surface-color-primary-inverse: var(--neutral-1200);
     --rr-surface-color-white: var(--basic-white);
     --rr-surface-color-black: var(--basic-black);
@@ -119,7 +120,6 @@
     --rr-surface-color-success-dark: var(--success-900);
     --rr-surface-color-warning-light: var(--warning-100);
     --rr-surface-color-warning-dark: var(--warning-900);
-
 
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-1100);
@@ -139,21 +139,20 @@
     --rr-radius-xl: var(--size-24px);
 
     /* Padding and Margins */
-    --rr-spacing-sm-4x: var(--size-2px);
-    --rr-spacing-sm-3x: var(--size-4px);
-    --rr-spacing-sm-2x: var(--size-8px);
-    --rr-spacing-sm: var(--size-12px);
-    --rr-spacing-md: var(--size-16px);
-    --rr-spacing-lg: var(--size-20px);
-    --rr-spacing-xl: var(--size-24px);
-    --rr-spacing-xl-2x: var(--size-28px);
-    --rr-spacing-xl-3x: var(--size-36px);
-    --rr-spacing-xl-4x: var(--size-40px);
-
-
-
+    --rr-size-sm-4x: var(--size-2px);
+    --rr-size-sm-2x: var(--size-8px);
+    --rr-size-sm-3x: var(--size-4px);
+    --rr-size-sm: var(--size-12px);
+    --rr-size-md: var(--size-16px);
+    --rr-size-lg: var(--size-20px);
+    --rr-size-xl: var(--size-24px);
+    --rr-size-xl-2x: var(--size-28px);
+    --rr-size-xl-3x: var(--size-36px);
+    --rr-size-xl-4x: var(--size-40px);
+    --rr-size-xl-5x: var(--size-48px);
+    --rr-size-xl-6x: var(--size-60px);
+    --rr-size-xl-7x: var(--size-72px);
 }
-
 
 html {
     box-sizing: border-box;
@@ -167,7 +166,7 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--rr-surface-color-primary);
     margin: 0px;
     padding: 0px;
 }
@@ -188,14 +187,15 @@ a:hover {
 
 h1,
 h2 {
-    font-family: 'Abril Fatface', Georgia, cursive;
+    font-family: var(--font-serif);
+    font-weight: var(--weight-700);
 }
 
 h3,
 h4,
 h5,
 p {
-    font-family: 'Source Sans Pro', Helvetica, Arial, serif;
+    font-family: var(--font-display)
 }
 
 h1,
@@ -203,18 +203,16 @@ h2,
 h3,
 h4,
 h5 {
-    color: var(--header-primary);
+    color: var(--rr-text-color-primary);
     text-decoration: none;
+    margin: 0;
 
 }
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    line-height: 3.5rem;
-    margin: 25px 0;
-    text-align: center;
+    font-size: var(--rr-size-xl-6x);
+    font-weight: var(--weight-700);
+    line-height: var(--rr-size-xl-7x);
 }
 
 h2 {
@@ -246,12 +244,8 @@ h5 {
 }
 
 
-
 p {
-    font-size: 1.15rem;
+    font-size: var(--rr-size-md);
     font-weight: 400;
-    color: #262524;
-    line-height: 2rem;
-    text-align: left;
-    margin: 0 0 .5rem 0;
+    color: var(--rr-text-color-secondary);
 }
