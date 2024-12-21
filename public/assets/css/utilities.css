@@ -1,7 +1,5 @@
 .container {
-    margin: 0 auto;
     padding: var(--rr-size-lg);
-    max-width: 1400px;
 }
 
 
