@@ -186,12 +186,12 @@ a:hover {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--font-serif);
     font-weight: var(--weight-700);
 }
 
-h3,
 h4,
 h5,
 p {
@@ -211,19 +211,17 @@ h5 {
 
 h1 {
     font-size: var(--rr-size-xl-6x);
-    font-weight: var(--weight-700);
+    font-weight: var(--weight-800);
     line-height: var(--rr-size-xl-7x);
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: 300;
     line-height: 2.5rem;
 }
 
 h3 {
     font-size: 1.5rem;
-    font-weight: 300;
     line-height: 2.5rem;
 }
 
@@ -245,7 +243,8 @@ h5 {
 
 
 p {
-    font-size: var(--rr-size-md);
+    font-size: var(--rr-size-xl);
     font-weight: 400;
+    line-height: var(--rr-size-xl-3x);
     color: var(--rr-text-color-secondary);
 }

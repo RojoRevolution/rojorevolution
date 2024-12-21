@@ -71,9 +71,74 @@
 }
 
 
-/* Sizing */
+/* Text */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Sizing and spacing */
 .height-100vh {
     height: 100vh;
+}
+
+.gap-1 {
+    gap: var(--rr-size-sm-4x);
+}
+
+.gap-2 {
+    gap: var(--rr-size-sm-3x);
+}
+
+.gap-3 {
+    gap: var(--rr-size-sm-2x);
+}
+
+.gap-4 {
+    gap: var(--rr-size-sm);
+}
+
+.gap-5 {
+    gap: var(--rr-size-md);
+}
+
+.gap-6 {
+    gap: var(--rr-size-lg);
+}
+
+.gap-7 {
+    gap: var(--rr-size-xl);
+}
+
+.gap-8 {
+    gap: var(--rr-size-xl-2x);
+}
+
+.gap-9 {
+    gap: var(--rr-size-xl-3x);
+}
+
+.gap-10 {
+    gap: var(--rr-size-xl-4x);
+}
+
+.gap-11 {
+    gap: var(--rr-size-xl-5x);
+}
+
+.gap-12 {
+    gap: var(--rr-size-xl-6x);
+}
+
+.gap-13 {
+    gap: var(--rr-size-xl-7x);
 }
 
 .size-1 {
@@ -283,8 +348,6 @@
 .padd-x-13 {
     padding: 0 var(--rr-size-xl-7x);
 }
-
-
 
 .marg-1 {
     margin: var(--rr-size-sm-4x);

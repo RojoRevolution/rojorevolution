@@ -2,12 +2,84 @@
     height: 80vh;
 }
 
-#welcome h1:before {
-    content: "Howdy, I'm David. I'm a ";
+#welcome #titles {
+    position: relative;
+    height: 70px;
+    clip-path: inset(0);
+}
+
+#welcome #titles .col {
     position: absolute;
-    top: -60px;
-    color: var(--rr-text-color-secondary);
-    font-size: var(--rr-size-lg);
-    font-family: var(--font-display);
-    font-weight: var(--weight-400);
+    top: -6px;
+    animation-name: scroll-titles;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes scroll-titles {
+    0% {
+        top: -6px;
+    }
+
+    3% {
+        top: -6px;
+    }
+
+    10% {
+        top: -6px;
+    }
+
+    13% {
+        top: -98px;
+    }
+
+    20% {
+        top: -98px;
+    }
+
+    23% {
+        top: -190px;
+    }
+
+    30% {
+        top: -190px;
+    }
+
+    33% {
+        top: -282px;
+    }
+
+    40% {
+        top: -282px;
+    }
+
+    55% {
+        top: -282px;
+    }
+
+    58% {
+        top: -190px;
+    }
+
+    66% {
+        top: -190px;
+    }
+
+    69% {
+        top: -98px;
+    }
+
+    77% {
+        top: -98px;
+    }
+
+    80% {
+        top: -6px;
+    }
+
+    100% {
+        top: -6px;
+    }
+
 }

@@ -1,0 +1,7 @@
+.card {
+    background: var(--rr-surface-color-accent);
+    border-radius: var(--rr-radius-lg);
+    min-height: 500px;
+    width: 84%;
+
+}
