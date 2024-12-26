@@ -84,7 +84,40 @@
 
 }
 
+/* Featured Projects */
+#featured h3 {
+    font-size: var(--rr-size-xl-5x);
+}
 
+
+#featured h3,
+#featured p {
+    color: white;
+
+}
+
+.panel>.project-bg:nth-of-type(1) {
+    background: url("/assets/images/2025/acopon/pattern_dark.png") repeat top left;
+    border-radius: var(--rr-radius-lg);
+}
+
+.rk-featured {
+    position: absolute;
+    right: 14px;
+    top: -118px;
+    max-width: 580px;
+    width: 100%;
+}
+
+.panel:hover .rk-featured {
+    transform: translate(10px, 0px);
+    transition: .5s ease-out;
+}
+
+
+footer {
+    padding-top: 100px;
+}
 
 footer p {
     display: flex;

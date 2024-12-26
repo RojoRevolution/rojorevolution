@@ -1,7 +1,144 @@
-.card {
+/* Panels */
+.panel {
     background: var(--rr-surface-color-accent);
     border-radius: var(--rr-radius-lg);
-    min-height: 500px;
-    width: 80%;
+    min-height: 200px;
+    width: 100%;
+    box-shadow: 0 0 0 var(--basic-off-white-2x);
+    transition: .25s ease-out;
+}
 
+.panel:hover {
+    box-shadow: 20px 20px 0 var(--basic-off-white-2x);
+    transition: .15s ease-out;
+}
+
+.panel>.project-bg {
+    height: 450px;
+    width: 100%;
+    clip-path: border-box;
+}
+
+.panel-gradient {
+    position: absolute;
+    height: 80px;
+    width: 1400px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+    bottom: -100px;
+    transition: .15s ease-in;
+}
+
+.panel:hover .panel-gradient {
+    transition: .15s ease-in;
+    height: 300px;
+    bottom: 0px;
+}
+
+
+/* Chips */
+.chip,
+.chip-outline {
+    padding-top: var(--rr-size-sm-2x);
+    padding-bottom: var(--rr-size-sm-2x);
+    padding-left: var(--rr-size-md);
+    padding-right: var(--rr-size-md);
+    font-size: var(--rr-size-md);
+    border-radius: var(--rr-radius-xl)
+}
+
+.chip {
+    background-color: var(--rr-surface-color-accent);
+}
+
+.chip-outline {
+    color: var(--rr-text-color-primary-inverse);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--rr-text-color-primary-inverse);
+    position: relative;
+    clip-path: border-box;
+    transition: .35s;
+}
+
+.chip-outline:hover {
+    transform: scale(105%);
+    background-color: rgba(0, 0, 0, .25);
+    transition: .35s;
+    box-shadow: inset;
+}
+
+.shine {
+    position: absolute;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(326deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.25) 37%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    width: 200px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    opacity: .35;
+    animation-name: move-gradient-left-to-right;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+
+}
+
+.chip-outline:nth-of-type(2)>.shine {
+    animation-delay: .5s;
+}
+
+.chip-outline:nth-of-type(3)>.shine {
+    animation-delay: 1s;
+}
+
+.chip-outline:nth-of-type(4)>.shine {
+    animation-delay: 1.5s;
+}
+
+
+@keyframes move-gradient-left-to-right {
+    0% {
+        opacity: .35s;
+        left: -110px;
+    }
+
+    50% {
+        left: 160px
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 110px;
+    }
+}
+
+/* Buttons */
+
+.btn {
+    outline: none;
+    border: none;
+    padding: var(--rr-size-sm) var(--rr-size-md);
+    transition: .25s ease-in;
+    font-size: var(--rr-size-md);
+    font-weight: var(--weight-600);
+}
+
+
+.btn.primary {
+    background-color: var(--rr-surface-button-inverse-default);
+    font-size: var(--rr-size-md);
+    border-radius: var(--rr-radius-sm);
+    font-size: var(--rr-size-md);
+    color: var(--rr-text-color-primary);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.btn.primary:hover {
+    background-color: var(--rr-surface-button-inverse-hover);
+    cursor: pointer;
+    transition: .25s ease-out;
 }

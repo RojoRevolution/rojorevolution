@@ -24,6 +24,7 @@
     --basic-white: white;
     --basic-black: black;
     --basic-off-white: #fcf1cf;
+    --basic-off-white-2x: #d5ccb1;
     --basic-off-black: #222222;
 
     --revolution-red-100: #FFF7F2;
@@ -100,8 +101,9 @@
     --weight-900: 900;
 
     /* Font */
-    --font-display: 'Inconsolata', serif;
-    --font-serif: 'Poppins', serif;
+    --font-console: 'Inconsolata', serif;
+    --font-header: 'Poppins', serif;
+    --font-content: 'Poppins', serif;
 
     /* ======= Semantic Variables ======= */
     /* ================================== */
@@ -121,6 +123,15 @@
     --rr-surface-color-warning-light: var(--warning-100);
     --rr-surface-color-warning-dark: var(--warning-900);
 
+    --rr-surface-button-primary-default: var(--revolution-red-600);
+    --rr-surface-button-primary-hover: var(--revolution-red-700);
+
+    --rr-surface-button-inverse-default: var(--neutral-300);
+    --rr-surface-button-inverse-hover: var(--neutral-400);
+
+
+
+
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-1100);
     --rr-text-color-primary-inverse: var(--neutral-200);
@@ -129,6 +140,10 @@
     --rr-text-color-danger: var(--revolution-red-600);
     --rr-text-color-success: var(--success-500);
     --rr-text-color-warning: var(--warning-500);
+    --rr-text-color-offwhite: var(--basic-off-white);
+
+    --rr-border-color-default: var(--neutral-400);
+    --rr-border-color-inverse: var(--neutral-600);
 
     /* Border Radius */
     --rr-radius-sm-3x: var(--size-2px);
@@ -140,8 +155,8 @@
 
     /* Padding and Margins */
     --rr-size-sm-4x: var(--size-2px);
-    --rr-size-sm-2x: var(--size-8px);
     --rr-size-sm-3x: var(--size-4px);
+    --rr-size-sm-2x: var(--size-8px);
     --rr-size-sm: var(--size-12px);
     --rr-size-md: var(--size-16px);
     --rr-size-lg: var(--size-20px);
@@ -152,6 +167,7 @@
     --rr-size-xl-5x: var(--size-48px);
     --rr-size-xl-6x: var(--size-60px);
     --rr-size-xl-7x: var(--size-72px);
+
 }
 
 html {
@@ -169,6 +185,7 @@ body {
     background-color: var(--rr-surface-color-primary);
     margin: 0px;
     padding: 0px;
+    font-family: var(--font-content);
 }
 
 a {
@@ -188,14 +205,15 @@ a:hover {
 h1,
 h2,
 h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-header);
     font-weight: var(--weight-700);
 }
 
 h4,
 h5,
 p {
-    font-family: var(--font-display)
+    font-family: var(--font-content);
+    font-weight: var(--weight-300);
 }
 
 h1,
@@ -244,7 +262,6 @@ h5 {
 
 p {
     font-size: var(--rr-size-xl);
-    font-weight: 400;
     line-height: var(--rr-size-xl-3x);
     color: var(--rr-text-color-secondary);
 }
