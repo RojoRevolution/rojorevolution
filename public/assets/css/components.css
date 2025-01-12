@@ -1,4 +1,11 @@
 /* Panels */
+/*  */
+.content-panel {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: clip;
+}
+
 .panel {
     background: var(--rr-surface-color-accent);
     border-radius: var(--rr-radius-lg);

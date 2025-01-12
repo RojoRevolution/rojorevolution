@@ -142,8 +142,7 @@
     --rr-text-color-warning: var(--warning-500);
     --rr-text-color-offwhite: var(--basic-off-white);
 
-    --rr-border-color-default: var(--neutral-400);
-    --rr-border-color-inverse: var(--neutral-600);
+    --rr-border-color-default: var(--basic-off-white-2x);
 
     /* Border Radius */
     --rr-radius-sm-3x: var(--size-2px);
@@ -170,6 +169,7 @@
 
 }
 
+*,
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -221,7 +221,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: var(--rr-text-color-primary);
+    color: var(--rr-text-color-brand);
     text-decoration: none;
     margin: 0;
 

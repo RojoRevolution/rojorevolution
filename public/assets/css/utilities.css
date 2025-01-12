@@ -1,7 +1,6 @@
 .container {
     padding: var(--rr-size-xl-3x);
-    max-width: 1440px;
-    margin: 0 auto;
+    /* max-width: 1440px; */
 }
 
 
@@ -15,19 +14,31 @@
 }
 
 .row {
+    display: flex;
     flex-direction: row;
 }
 
 .row-reverse {
+    display: flex;
     flex-direction: row-reverse;
 }
 
-.col {
-    flex-direction: column;
+.grow-1 {
+    flex-grow: 1;
+}
+
+.grow-2 {
+    flex-grow: 2;
 }
 
 .col {
+    display: flex;
     flex-direction: column;
+}
+
+.col-reverse {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .wrap {

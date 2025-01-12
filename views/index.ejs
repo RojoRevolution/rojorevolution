@@ -1,13 +1,21 @@
 <%- include('partials/html-start-doc'); %>
     <!-- Start Body -->
-    <section>
-        <%- include('content/home/intro'); %>
-    </section>
-    <section id="featured">
-        <%- include('content/home/featured'); %>
-    </section>
-
+    <div id="content-wrapper">
+        <div id="home" class="flex row">
+            <section class="col">
+                <%- include('sidebar'); %>
+            </section>
+            <section class="content-panel">
+                <div class="col">
+                    <%- include('content/home/intro'); %>
+                        <%- include('content/home/featured'); %>
+                </div>
+            </section>
+        </div>
+        <div id="project-wrapper" class="col">
+            Test
+        </div>
+    </div>
     <!-- End Body -->
 
-    <%- include('partials/footer'); %>
-        <%- include('partials/html-end-doc'); %>
+    <%- include('partials/html-end-doc'); %>
