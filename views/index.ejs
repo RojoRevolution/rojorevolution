@@ -1,19 +1,39 @@
 <%- include('partials/html-start-doc'); %>
     <!-- Start Body -->
-    <div id="content-wrapper">
-        <div id="home" class="flex row">
-            <section class="col">
-                <%- include('sidebar'); %>
-            </section>
-            <section class="content-panel">
-                <div class="col">
-                    <%- include('content/home/intro'); %>
-                        <%- include('content/home/featured'); %>
+    <div class=" go-back-container row padd-x-6">
+        <button class="btn primary" onclick="hideProjectPanel()">
+            <i class="bi bi-chevron-left"></i> Go Back
+        </button>
+    </div>
+    <div id="content-wrapper" class="relative">
+        <div class="all-panels">
+            <div class="flex row">
+                <section id="sidebar" class="col">
+                    <%- include('sidebar'); %>
+                </section>
+                <section id="home-content" class="content-panel padd-y-b-8">
+                    <div class="col">
+                        <%- include('content/home/intro'); %>
+                            <%- include('content/home/featured'); %>
+                    </div>
+                    <div class="row padd-x-6">
+                        <button class="btn primary" data-project-btn onclick="showProjectPanel(this)">
+                            Test Button #1
+                        </button>
+                        <button class="btn primary" data-project-btn onclick="showProjectPanel(this)">
+                            Test Button #2
+                        </button>
+                    </div>
+                </section>
+                <div id="project-wrapper" class="col opacity-0" data-project-render>
+                    <div class="project-content">
+                        <%- include('content/projects/acopon'); %>
+                    </div>
+                    <div class="project-content">
+                        Beer Labels
+                    </div>
                 </div>
-            </section>
-        </div>
-        <div id="project-wrapper" class="col">
-            Test
+            </div>
         </div>
     </div>
     <!-- End Body -->

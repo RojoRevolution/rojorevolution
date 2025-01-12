@@ -4,6 +4,7 @@
     height: 100vh;
     overflow-y: scroll;
     overflow-x: clip;
+    width: 100%;
 }
 
 .panel {
@@ -11,14 +12,14 @@
     border-radius: var(--rr-radius-lg);
     min-height: 200px;
     width: 100%;
-    box-shadow: 0 0 0 var(--basic-off-white-2x);
+    /* box-shadow: 0 0 0 var(--basic-off-white-2x); */
     transition: .25s ease-out;
 }
 
-.panel:hover {
+/* .panel:hover {
     box-shadow: 20px 20px 0 var(--basic-off-white-2x);
     transition: .15s ease-out;
-}
+} */
 
 .panel>.project-bg {
     height: 450px;
@@ -136,16 +137,16 @@
 
 
 .btn.primary {
-    background-color: var(--rr-surface-button-inverse-default);
+    background-color: var(--rr-surface-button-primary-default);
     font-size: var(--rr-size-md);
     border-radius: var(--rr-radius-sm);
     font-size: var(--rr-size-md);
-    color: var(--rr-text-color-primary);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+    color: var(--rr-text-color-white);
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, .75); */
 }
 
 .btn.primary:hover {
-    background-color: var(--rr-surface-button-inverse-hover);
+    background-color: var(--rr-surface-button-primary-hover);
     cursor: pointer;
     transition: .25s ease-out;
 }
