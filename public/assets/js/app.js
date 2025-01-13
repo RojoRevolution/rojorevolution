@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     let currentScreenWidth;
+    let currentScreenHeight;
     let contentPanelWidth;
     let projectContentPanelWidth;
     let dataProjectRender;
@@ -24,29 +25,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function sets the width on both content panels
     setContentPanelWidths = () => {
         console.log("Content Width Function")
-        contentPanelWidth = currentScreenWidth - 300;
+        // contentPanelWidth = currentScreenWidth - 300;
+        contentPanelWidth = currentScreenWidth;
 
-        if (currentScreenWidth > 1500) {
-            projectContentPanelWidth = 1200
-            homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
-            projectContentPanel.style.right = "-" + projectContentPanelWidth + "px";
-            projectContentPanel.style.maxWidth = projectContentPanelWidth + "px";
-        } else {
-            projectContentPanelWidth = contentPanelWidth;
-            homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
-            projectContentPanel.style.right = "-" + contentPanelWidth + "px";
-            projectContentPanel.style.maxWidth = contentPanelWidth + "px";
-        }
+        // if (currentScreenWidth > 1500) {
+        //     projectContentPanelWidth = 1200
+        //     homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
+        //     projectContentPanel.style.right = "-" + projectContentPanelWidth + "px";
+        //     projectContentPanel.style.maxWidth = projectContentPanelWidth + "px";
+        // } else {
+        //     projectContentPanelWidth = contentPanelWidth;
+        //     homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
+        //     projectContentPanel.style.right = "-" + contentPanelWidth + "px";
+        //     projectContentPanel.style.maxWidth = contentPanelWidth + "px";
+        // }
 
         // contentPanelWidth = currentScreenWidth - 300;
         // homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
         // projectContentPanel.style.right = "-" + contentPanelWidth + "px";
         // projectContentPanel.style.maxWidth = contentPanelWidth + "px";
+
+        projectContentPanelWidth = contentPanelWidth;
+        homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
+        projectContentPanel.style.right = "-" + contentPanelWidth + "px";
+        projectContentPanel.style.maxWidth = contentPanelWidth + "px";
     }
 
     // Function gets the current window width and project panel status
     getProjectStatusAndWindowSize = () => {
         currentScreenWidth = document.body.clientWidth;
+        currentScreenHeight = document.body.clientHeight;
         setContentPanelWidths();
     }
 

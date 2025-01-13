@@ -152,6 +152,7 @@
     --rr-text-color-offwhite: var(--basic-off-white);
 
     --rr-border-color-default: var(--basic-off-white-2x);
+    --rr-border-color-dark: var(--neutral-600);
 
     /* Border Radius */
     --rr-radius-sm-3x: var(--size-2px);
@@ -159,7 +160,9 @@
     --rr-radius-sm: var(--size-8px);
     --rr-radius-md: var(--size-12px);
     --rr-radius-lg: var(--size-16px);
-    --rr-radius-xl: var(--size-24px);
+    --rr-radius-lg-2x: var(--size-28px);
+    --rr-radius-lg-3x: var(--size-32px);
+    --rr-radius-lg-4x: var(--size-40px);
 
     /* Padding and Margins */
     --rr-size-sm-4x: var(--size-2px);
@@ -270,7 +273,7 @@ h5 {
 
 
 p {
-    font-size: var(--rr-size-xl);
+    font-size: var(--rr-size-lg);
     line-height: var(--rr-size-xl-3x);
     color: var(--rr-text-color-secondary);
 }

@@ -9,17 +9,17 @@
 
 .panel {
     background: var(--rr-surface-color-accent);
-    border-radius: var(--rr-radius-lg);
+    border-radius: var(--rr-radius-lg-4x);
     min-height: 200px;
     width: 100%;
-    /* box-shadow: 0 0 0 var(--basic-off-white-2x); */
     transition: .25s ease-out;
 }
 
-/* .panel:hover {
-    box-shadow: 20px 20px 0 var(--basic-off-white-2x);
-    transition: .15s ease-out;
-} */
+.panel.project-panel {
+    max-width: 1200px;
+    min-height: 250px;
+    max-height: 500px;
+}
 
 .panel>.project-bg {
     height: 450px;
@@ -60,8 +60,8 @@
     padding-bottom: var(--rr-size-sm-2x);
     padding-left: var(--rr-size-md);
     padding-right: var(--rr-size-md);
-    font-size: var(--rr-size-md);
-    border-radius: var(--rr-radius-xl)
+    font-size: var(--rr-size-sm);
+    border-radius: var(--rr-radius-lg-2x)
 }
 
 .chip {

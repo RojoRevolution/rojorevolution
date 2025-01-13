@@ -8,8 +8,8 @@
     <div id="content-wrapper" class="relative">
         <div class="all-panels">
             <div class="flex row">
-                <section id="sidebar" class="col">
-                    <%- include('sidebar'); %>
+                <section id="menu" class="col">
+                    <%- include('menu'); %>
                 </section>
                 <section id="home-content" class="content-panel padd-y-b-8">
                     <div class="col">
@@ -25,15 +25,15 @@
                             Test Button #2
                         </button>
                     </div>
+                    <div id="project-wrapper" class="col opacity-0" data-project-render>
+                        <div class="project-content">
+                            <%- include('content/projects/acopon'); %>
+                        </div>
+                        <div class="project-content">
+                            Beer Labels
+                        </div>
+                    </div>
                 </section>
-                <div id="project-wrapper" class="col opacity-0" data-project-render>
-                    <div class="project-content">
-                        <%- include('content/projects/acopon'); %>
-                    </div>
-                    <div class="project-content">
-                        Beer Labels
-                    </div>
-                </div>
             </div>
         </div>
     </div>

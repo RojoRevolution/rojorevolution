@@ -20,7 +20,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: .35s ease-in-out;
+    transition: .35s ease-in;
 }
 
 #project-wrapper {
@@ -29,34 +29,48 @@
     height: 100vh;
     position: absolute;
     top: 0;
+    padding: var(--rr-size-xl-2x);
     border-left: 1px solid var(--rr-border-color-default);
 }
 
 .project-content {
     display: none;
+    padding: var(--rr-size-xl-2x);
+    /* border: 1px solid var(--rr-border-color-dark); */
+    /* border-radius: var(--rr-radius-lg-4x);
+    box-shadow: 20px 20px 0px var(--rr-surface-color-brand); */
+}
+
+.project-conten .col {
+    height: 100%;
 }
 
 /* Main Sidebar and Navigation */
-#sidebar {
-    height: 100vh;
-    border-right: 1px solid var(--rr-border-color-default);
+#menu {
+    padding: var(--rr-size-md);
+    /* height: 100vh; */
+    /* border-right: 1px solid var(--rr-border-color-default); */
 }
 
-#sidebar>.col {
+#menu>.col {
     width: 300px;
+    padding: var(--rr-size-lg);
+    border: 1px solid var(--rr-border-color-dark);
+    border-radius: var(--rr-radius-lg-4x);
+    box-shadow: 20px 20px 0px var(--rr-surface-color-brand);
 }
 
-#sidebar nav ul {
+#menu nav ul {
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--rr-size-sm);
+    gap: var(--rr-size-sm-2x);
 }
 
-#sidebar nav ul li {
+#menu nav ul li {
     list-style-type: none;
-    padding: var(--rr-size-sm) 0;
+    padding: var(--rr-size-sm-2x) 0;
     display: flex;
     flex-direction: row;
     text-transform: uppercase;
@@ -66,7 +80,7 @@
     cursor: pointer;
 }
 
-#sidebar nav ul li:hover {
+#menu nav ul li:hover {
     color: var(--rr-text-color-brand);
     padding-left: 8px;
     border-left: 8px solid var(--rr-surface-color-brand);
@@ -168,32 +182,31 @@
 /* Featured Projects */
 #featured h3 {
     font-size: var(--rr-size-xl-5x);
+    color: var(--rr-text-color-brand);
 }
 
-
-#featured h3,
 #featured p {
-    color: white;
+    color: var(--rr-text-color-primary);
 
 }
 
 .panel>.project-bg:nth-of-type(1) {
     background: url("/assets/images/2025/acopon/pattern_dark.png") repeat top left;
-    border-radius: var(--rr-radius-lg);
+    border-radius: var(--rr-radius-lg-4x);
 }
 
-.rk-featured {
+/* .rk-featured {
     position: absolute;
     right: 14px;
     top: -118px;
     max-width: 580px;
     width: 100%;
-}
+} */
 
-.panel:hover .rk-featured {
+/* .panel:hover .rk-featured {
     transform: translate(10px, 0px);
     transition: .5s ease-out;
-}
+} */
 
 
 footer {
