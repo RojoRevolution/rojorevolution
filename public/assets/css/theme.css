@@ -21,6 +21,12 @@
     --alpha-white-50: rgba(255, 255, 255, .5);
     --alpha-white-75: rgba(255, 255, 255, .75);
 
+    --alpha-off-white-0: rgba(252, 241, 207, 0);
+    --alpha-off-white-25: rgba(252, 241, 207, .25);
+    --alpha-off-white-50: rgba(252, 241, 207, .5);
+    --alpha-off-white-75: rgba(252, 241, 207, .75);
+
+
     --basic-white: white;
     --basic-black: black;
     --basic-off-white: #fcf1cf;
@@ -122,6 +128,8 @@
     --rr-surface-color-success-dark: var(--success-900);
     --rr-surface-color-warning-light: var(--warning-100);
     --rr-surface-color-warning-dark: var(--warning-900);
+
+    --rr-surface-color-overlay: var(--alpha-off-white-50);
 
     --rr-surface-button-primary-default: var(--revolution-red-500);
     --rr-surface-button-primary-hover: var(--revolution-red-600);

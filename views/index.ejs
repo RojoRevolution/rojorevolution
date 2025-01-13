@@ -1,6 +1,6 @@
 <%- include('partials/html-start-doc'); %>
     <!-- Start Body -->
-    <div class=" go-back-container row padd-x-6">
+    <div class=" go-back-container row padd-x-6 z-index-2">
         <button class="btn primary" onclick="hideProjectPanel()">
             <i class="bi bi-chevron-left"></i> Go Back
         </button>
@@ -13,6 +13,7 @@
                 </section>
                 <section id="home-content" class="content-panel padd-y-b-8">
                     <div class="col">
+                        <div class="section-overlay absolute z-index-1 display-none"></div>
                         <%- include('content/home/intro'); %>
                             <%- include('content/home/featured'); %>
                     </div>

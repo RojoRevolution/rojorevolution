@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const AllPanelsEl = document.querySelector('.all-panels');
     const projectContentPanel = document.getElementById('project-wrapper');
     const homePageContentPanel = document.getElementById('home-content');
+    const homeSectionOverlay = document.querySelector('.section-overlay');
     const goBackButtonEl = document.querySelector('.go-back-container');
     const testButtonEl = document.getElementById('test-button');
 
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentScreenWidth;
     let contentPanelWidth;
+    let projectContentPanelWidth;
     let dataProjectRender;
     let projectSectionWidth;
     let projectSectionPosition;
@@ -23,9 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
     setContentPanelWidths = () => {
         console.log("Content Width Function")
         contentPanelWidth = currentScreenWidth - 300;
-        homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
-        projectContentPanel.style.right = "-" + contentPanelWidth + "px";
-        projectContentPanel.style.maxWidth = contentPanelWidth + "px";
+
+        if (currentScreenWidth > 1500) {
+            projectContentPanelWidth = 1200
+            homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
+            projectContentPanel.style.right = "-" + projectContentPanelWidth + "px";
+            projectContentPanel.style.maxWidth = projectContentPanelWidth + "px";
+        } else {
+            projectContentPanelWidth = contentPanelWidth;
+            homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
+            projectContentPanel.style.right = "-" + contentPanelWidth + "px";
+            projectContentPanel.style.maxWidth = contentPanelWidth + "px";
+        }
+
+        // contentPanelWidth = currentScreenWidth - 300;
+        // homePageContentPanel.style.maxWidth = contentPanelWidth + "px";
+        // projectContentPanel.style.right = "-" + contentPanelWidth + "px";
+        // projectContentPanel.style.maxWidth = contentPanelWidth + "px";
     }
 
     // Function gets the current window width and project panel status
@@ -58,10 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
         dataProjectRender = projectContentPanel.getAttribute('data-project-render');
         projectContentPanel.setAttribute('data-project-render', project);
         // Set Opacity
-        homePageContentPanel.classList.toggle('opacity-75');
+        // homePageContentPanel.classList.toggle('opacity-75');
+        homeSectionOverlay.classList.toggle("display-none");
         projectContentPanel.classList.toggle('opacity-0');
         goBackButtonEl.classList.toggle('show-go-back');
-        AllPanelsEl.style.left = "-" + contentPanelWidth + "px";
+        AllPanelsEl.style.left = "-" + projectContentPanelWidth - 125 + "px";
         chooseProjectToDisplay(dataProjectRender);
         // projectContentPanel.appendChild = projectsRenders[project]
     }
@@ -72,7 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
         projectContentToShow.forEach(div => div.classList.remove('col'));
         projectStatus = projectContentPanel.setAttribute('data-project-render', '');
         projectContentPanel.classList.toggle('flex');
-        homePageContentPanel.classList.toggle('opacity-75');
+        // homePageContentPanel.classList.toggle('opacity-75');
+        homeSectionOverlay.classList.toggle("display-none");
         projectContentPanel.classList.toggle('opacity-0');
         projectContentPanel.setAttribute('data-project-status', 'false');
         goBackButtonEl.classList.toggle('show-go-back');

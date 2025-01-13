@@ -1,10 +1,9 @@
 .go-back-container {
     position: absolute;
     top: -50px;
-    left: 20px;
+    left: 0;
     z-index: 1;
     transition: .25s ease-out;
-
 }
 
 .show-go-back {
