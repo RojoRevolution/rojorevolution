@@ -1,12 +1,16 @@
 <div id="menu" class="col" data-menu-status="closed">
     <div class="col">
-        <div class="col gap-4">
+        <div class="col">
             <div class="menu-shimmer"></div>
-            <div class="logo row gap-4 align-item-center">
-                <img src="/assets/images/logo/rr_logo_white.svg" /> <span class="menu-text">Menu</span><span
-                    class="close-text">Close</span>
+            <div class="row justify-end">
+                <div class="logo row gap-4 align-item-center">
+                    <img src="/assets/images/logo/rr_logo_white.svg" /><span class="menu-text">Menu</span>
+                </div>
+                <div class="row close-menu justify-end display-none">
+                    <i class="bi bi-x-lg"></i>
+                </div>
             </div>
-            <nav>
+            <nav id="nav-items">
                 <ul>
                     <a href="#welcome">
                         <li>Home</li>

@@ -141,9 +141,6 @@
     --rr-surface-button-inverse-default: var(--neutral-300);
     --rr-surface-button-inverse-hover: var(--neutral-400);
 
-
-
-
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-1100);
     --rr-text-color-primary-inverse: var(--neutral-200);
