@@ -1,6 +1,9 @@
 .container {
+    margin: 0 auto;
     padding: var(--rr-size-xl-3x);
-    /* max-width: 1440px; */
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Display */

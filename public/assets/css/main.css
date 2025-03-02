@@ -47,49 +47,125 @@
 
 /* Main Sidebar and Navigation */
 #menu {
-    padding: var(--rr-size-md);
-    /* height: 100vh; */
-    /* border-right: 1px solid var(--rr-border-color-default); */
+    position: absolute;
+    overflow: hidden;
+    top: 24px;
+    right: 32px;
+    z-index: 2;
+    border-radius: var(--rr-radius-lg) 0 0 var(--rr-radius-lg);
+    transition: .3s ease-out;
+    color: var(--rr-text-color-primary);
+    width: 106px;
+    color: white;
 }
 
 #menu>.col {
-    width: 300px;
-    padding: var(--rr-size-lg);
-    border: 1px solid var(--rr-border-color-dark);
-    border-radius: var(--rr-radius-lg-4x);
-    box-shadow: 20px 20px 0px var(--rr-surface-color-brand);
+    background: var(--rr-surface-color-brand);
+    position: relative;
+    padding: var(--rr-size-sm);
+    border-radius: var(--rr-radius-lg) 0 0 var(--rr-radius-lg);
+    transition: .25s;
 }
 
-#menu nav ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--rr-size-sm-2x);
+#menu>.col .logo {
+    color: white;
+    z-index: 3;
 }
 
-#menu nav ul li {
-    list-style-type: none;
-    padding: var(--rr-size-sm-2x) 0;
-    display: flex;
-    flex-direction: row;
-    text-transform: uppercase;
-    padding-left: 0px;
-    border-left: 0px solid var(--rr-surface-color-brand);
-    transition: .05s ease-in;
+#menu>.col .logo>img {
+    width: 25px;
+}
+
+#menu[data-menu-status="closed"] {
+    right: 0;
+    z-index: 2;
+    border-radius: var(--rr-radius-lg) 0 0 var(--rr-radius-lg);
+    color: white;
+}
+
+#menu[data-menu-status="open"] {
+    right: 20px;
+    z-index: 2;
+    border-radius: var(--rr-radius-lg*2x) 0 0 var(--rr-radius-lg-2x);
+    width: auto;
+}
+
+#menu[data-menu-status="closed"]:hover {
+    box-shadow: 0 0 20px 0 var(--alpha-red500-75);
     cursor: pointer;
+    width: 112px;
+    transition: .25s;
 }
 
-#menu nav ul li:hover {
-    color: var(--rr-text-color-brand);
-    padding-left: 8px;
-    border-left: 8px solid var(--rr-surface-color-brand);
-    transition: .1s ease-out;
+#menu[data-menu-status="open"]:hover {
+    box-shadow: 0 0 20px 0 0;
+    cursor: default;
+    width: auto;
+    transition: .25s;
+}
+
+
+
+#menu[data-menu-status="closed"]>.col {
+    animation-name: shimmer;
+    animation-iteration-count: infinite;
+}
+
+
+.menu-shimmer {
+    position: absolute;
+    top: 0;
+    right: 112px;
+    background: rgb(214, 65, 39);
+    background: linear-gradient(90deg, rgba(214, 65, 39, 0) 0%, rgba(238, 120, 89, .5) 50%, rgba(214, 65, 39, 0) 100%);
+    height: 100%;
+    width: 100%;
+    animation-name: shimmer;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        right: 112px;
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        right: 112px;
+    }
+
+    80% {
+        opacity: 1;
+        right: -200px;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        right: 112px;
+        opacity: 0;
+    }
+}
+
+#menu[data-menu-status="open"] .menu-shimmer {
+    display: none;
+}
+
+#menu[data-menu-status="closed"] nav {
+    display: none;
+}
+
+#menu[data-menu-status="open"] nav {
+    display: flex;
 }
 
 /* Intro Section */
 #welcome {
-    height: 80vh;
+    height: 40vh;
 }
 
 #welcome #titles {

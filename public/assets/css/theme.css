@@ -26,6 +26,10 @@
     --alpha-off-white-50: rgba(252, 241, 207, .5);
     --alpha-off-white-75: rgba(252, 241, 207, .75);
 
+    --alpha-red500-0: rgba(214, 65, 39, 0);
+    --alpha-red500-25: rgba(214, 65, 39, .25);
+    --alpha-red500-5: rgba(214, 65, 39, .5);
+    --alpha-red500-75: rgba(214, 65, 39, .75);
 
     --basic-white: white;
     --basic-black: black;
