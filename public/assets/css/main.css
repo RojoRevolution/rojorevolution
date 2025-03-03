@@ -1,3 +1,63 @@
+.bg-effect {
+    position: fixed;
+    top: 0;
+    background-image: url(/assets/images/bg/noise-texture.png);
+    height: 300%;
+    width: 300%;
+    opacity: 0.08;
+    animation: animateGrain 8s steps(10) infinite;
+}
+
+@keyframes animateGrain {
+
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-5%, -10%)
+    }
+
+    20% {
+        transform: translate(-15%, -20%)
+    }
+
+    30% {
+        transform: translate(-5%, -10%)
+    }
+
+    40% {
+        transform: translate(-15%, -20%)
+    }
+
+    50% {
+        transform: translate(-5%, -10%)
+    }
+
+    60% {
+        transform: translate(-15%, -20%)
+    }
+
+    70% {
+        transform: translate(-5%, -10%)
+    }
+
+    80% {
+        transform: translate(-15%, -20%)
+    }
+
+    90% {
+        transform: translate(-5%, -10%)
+    }
+
+    100% {
+        transform: translate(-15%, -20%)
+    }
+
+}
+
+
 .go-back-container {
     position: absolute;
     top: -50px;
@@ -175,7 +235,7 @@
 }
 
 #menu[data-menu-status="closed"]:hover .logo {
-    opacity: .5;
+    opacity: 1;
     transition: .5s;
 }
 
@@ -219,9 +279,6 @@
     animation-timing-function: ease-out;
 }
 
-#welcome #titles h1 {
-    color: var(--rr-text-color-brand);
-}
 
 @keyframes scroll-titles {
     0% {
@@ -291,20 +348,8 @@
 }
 
 /* Featured Projects */
-#featured h3 {
-    font-size: var(--rr-size-xl-5x);
-    color: var(--rr-text-color-brand);
-}
+/* #featured h3 { */
 
-#featured p {
-    color: var(--rr-text-color-primary);
-
-}
-
-.panel>.project-bg:nth-of-type(1) {
-    background: url("/assets/images/2025/acopon/pattern_dark.png") repeat top left;
-    border-radius: var(--rr-radius-lg-4x);
-}
 
 /* .rk-featured {
     position: absolute;
@@ -318,6 +363,14 @@
     transform: translate(10px, 0px);
     transition: .5s ease-out;
 } */
+
+#services h5 {
+    font-family: var(--font-header);
+    font-size: var(--rr-size-lg);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
 
 
 footer {

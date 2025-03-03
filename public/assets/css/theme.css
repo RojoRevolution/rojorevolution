@@ -114,6 +114,7 @@
     --font-console: 'Inconsolata', serif;
     --font-header: 'Poppins', serif;
     --font-content: 'Poppins', serif;
+    --font-display: "carol-gothic", sans-serif;
 
     /* ======= Semantic Variables ======= */
     /* ================================== */
@@ -234,7 +235,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: var(--rr-text-color-brand);
+    color: var(--rr-text-color-primary);
     text-decoration: none;
     margin: 0;
 
@@ -242,7 +243,7 @@ h5 {
 
 h1 {
     font-size: var(--rr-size-xl-6x);
-    font-weight: var(--weight-800);
+    font-weight: var(--weight-700);
     line-height: var(--rr-size-xl-7x);
 }
 
@@ -252,7 +253,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 2.5rem;
 }
 
@@ -277,4 +278,11 @@ p {
     font-size: var(--rr-size-lg);
     line-height: var(--rr-size-xl-3x);
     color: var(--rr-text-color-secondary);
+}
+
+.display-font {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
 }

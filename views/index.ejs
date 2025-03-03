@@ -1,16 +1,12 @@
 <%- include('partials/html-start-doc'); %>
     <!-- Start Body -->
-    <div>
+    <main>
         <div class="container">
-            <section id="home-content" class="padd-y-b-8">
-                <div class="col">
-                    <div class="section-overlay absolute z-index-1 display-none"></div>
-                    <%- include('content/home/intro'); %>
-                        <%- include('content/home/featured'); %>
-                </div>
-            </section>
+            <%- include('content/home/intro'); %>
+                <%- include('content/home/featured'); %>
+                    <%- include('content/home/services'); %>
         </div>
-    </div>
+    </main>
     <!-- End Body -->
 
     <%- include('partials/html-end-doc'); %>
