@@ -39,6 +39,16 @@ section {
     opacity: 1;
 }
 
+/* Sepia Filter */
+.sepia-50 {
+    filter: sepia(50%);
+}
+
+.sepia-100 {
+    filter: sepia(1);
+}
+
+
 /* FLEX */
 .flex {
     display: flex;
@@ -110,6 +120,10 @@ section {
 
 .justify-between {
     justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
 }
 
 .col-reverse {

@@ -121,6 +121,7 @@
 
     /* Surface: General Background */
     --rr-surface-color-primary: var(--basic-off-white);
+    --rr-surface-color-primary-dark: var(--neutral-1000);
     --rr-surface-color-accent: var(--neutral-100);
     --rr-surface-color-primary-inverse: var(--neutral-1200);
     --rr-surface-color-white: var(--basic-white);
@@ -153,8 +154,12 @@
     --rr-text-color-white: var(--basic-white);
     --rr-text-color-offwhite: var(--basic-off-white);
 
+    /* Border Colors */
     --rr-border-color-default: var(--basic-off-white-2x);
     --rr-border-color-dark: var(--neutral-600);
+    --rr-border-color-offwhite: var(--basic-off-white);
+
+
 
     /* Border Radius */
     --rr-radius-sm-3x: var(--size-2px);
