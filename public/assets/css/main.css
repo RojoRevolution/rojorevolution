@@ -482,125 +482,157 @@
 /* Featured Projects */
 /* #featured h3 { */
 
+
+#feature1,
+#feature2,
+#feature3 {
+    transition: .25s ease-out
+}
+
+#feature1:hover,
+#feature2:hover,
+#feature3:hover {
+    cursor: url('/assets/images/home/view_project.svg'), pointer;
+}
+
+#feature1:hover h3,
+#feature2:hover h3,
+#feature3:hover h3 {
+    color: var(--rr-text-color-brand);
+}
+
+#feature1:hover .chip-outline,
+#feature2:hover .chip-outline,
+#feature3:hover .chip-outline {
+    color: var(--rr-text-color-brand);
+    border-color: var(--rr-text-color-brand);
+}
+
 #featured .card {
     min-height: 500px;
+    transition: .25s ease-out;
+    filter: sepia(0%);
+
+}
+
+
+#feature1:hover .card,
+#feature2:hover .card,
+#feature3:hover .card {
+    /* box-shadow: 0 0 20px var(--alpha-red500-5); */
+    transition: .25s ease-out;
+    cursor: pointer;
+    filter: sepia(90%);
+    /* box-shadow: -20px -20px 0 0 rgba(0, 0, 0, .25); */
+
+}
+
+#feature2:hover .img-container>img,
+#feature3:hover .img-container>img {
+    transform: scale(1.05);
+    transition: .25s ease-out;
+}
+
+#featured #project1 {
+    background: url('/assets/images/home/acopon-featured.jpg');
+    background-size: 100%;
+    background-position: bottom center;
+    transition: .15s ease-out;
+}
+
+#feature1:hover #project1 {
+    background-size: 102%;
+    transition: .25s ease-out;
 }
 
 #featured #labels.card {
-    /* background-color: var(--neutral-200); */
-    background: rgb(214, 65, 39);
-    background: linear-gradient(308deg, rgba(214, 65, 39, 1) 0%, rgba(133, 144, 162, 1) 100%);
+    background: rgb(185, 105, 7);
+    background: linear-gradient(151deg, rgba(185, 105, 7, 1) 0%, rgba(251, 232, 91, 1) 100%);
 }
 
 #featured #labels {
     background: var(--rr-surface-color-offwhite);
 }
 
-.img-container {
+#featured .card:last-of-type {
+    background: rgb(250, 170, 141);
+    background: linear-gradient(133deg, rgba(250, 170, 141, 1) 0%, rgba(214, 65, 39, 1) 100%);
+}
+
+#featured ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+.view-prj {
+    height: 0;
+    color: var(--rr-text-color-brand);
+    transition: .25s ease-out;
+}
+
+#feature1:hover .view-prj,
+#feature2:hover .view-prj,
+#feature3:hover .view-prj {
+    height: 40px;
+    transition: .25s ease-out;
+}
+
+
+/* Services */
+#services .tab {
+    border-radius: var(--rr-radius-lg) var(--rr-radius-lg) 0 0;
+}
+
+#services .tab[data-tab-status="active"] {
+    background: var(--rr-surface-color-accent);
+}
+
+#services .tab[data-tab-status="inactive"] {
+    transition: .15s ease-out;
+}
+
+#services .tab[data-tab-status="inactive"]:hover {
+    background: rgba(0, 0, 0, .05);
+    transition: .25s ease-in;
+    cursor: pointer;
+}
+
+#services-content {
+    background: var(--rr-surface-color-accent);
+    padding: var(--rr-size-xl) var(--rr-size-xl-4x);
+    margin: 0;
+}
+
+#services ul {
+    padding: 0;
+    margin: 0;
     width: 100%;
 }
-
-.img-can {
-    max-width: 180px;
-    width: 100%;
-    transition: .25s;
-}
-
-#featured #labels .img-can:first-of-type {
-    animation-name: can-transform-one;
-}
-
-#featured #labels .img-can:nth-of-type(2) {
-    animation-name: can-transform-two;
-}
-
-#featured #labels .img-can:last-of-type {
-    animation-name: can-transform-three;
-}
-
-#featured #labels .img-can:first-of-type,
-#featured #labels .img-can:nth-of-type(2),
-#featured #labels .img-can:last-of-type {
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes can-transform-one {
-    0% {
-        transform: scale(1);
-    }
-
-    20% {
-        transform: scale(1);
-    }
-
-    25% {
-        transform: scale(1.05);
-    }
-
-    30% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes can-transform-two {
-    0% {
-        transform: scale(1);
-    }
-
-    25% {
-        transform: scale(1);
-    }
-
-    30% {
-        transform: scale(1.05);
-    }
-
-    35% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-
-@keyframes can-transform-three {
-    0% {
-        transform: scale(1);
-    }
-
-    30% {
-        transform: scale(1);
-    }
-
-    35% {
-        transform: scale(1.05);
-    }
-
-    40% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 
 #services h5 {
     font-family: var(--font-header);
-    font-size: var(--rr-size-lg);
+    font-size: var(--rr-size-md);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .05rem;
+    text-align: center;
+    margin: 0;
+}
+
+.tab-content-radius {
+    border-radius: var(--rr-radius-lg);
+    transition: .15s ease-out;
+}
+
+/* #services p {
+    margin: 0;
+} */
+
+
+/* Case Studies */
+#case-studies .card {
+    max-width: 768px;
 }
 
 

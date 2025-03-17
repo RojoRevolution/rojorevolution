@@ -8,15 +8,16 @@
 
 .card {
     background: #fff;
-    border-radius: var(--rr-size-md);
+    border-radius: var(--rr-size-sm-2x);
     width: 100%;
-    border: 2px solid var(--rr-border-color-default);
+    min-height: 300px;
+    /* border: 2px solid var(--rr-border-color-default); */
 }
 
-.card .project-info {
+/* .card .project-info {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     padding: var(--rr-size-sm-2x);
     background-color: var(--rr-surface-color-primary-dark);
 }
@@ -35,7 +36,7 @@
 
 .card .project-title h3 {
     color: var(--rr-text-color-offwhite);
-}
+} */
 
 
 
@@ -57,7 +58,8 @@
     padding-left: var(--rr-size-md);
     padding-right: var(--rr-size-md);
     font-size: var(--rr-size-sm);
-    border-radius: var(--rr-radius-lg-2x)
+    border-radius: var(--rr-radius-sm-2x);
+    transition: .25s ease-out;
 }
 
 .chip {
@@ -65,17 +67,19 @@
 }
 
 .chip-outline {
-    color: var(--rr-text-color-primary-inverse);
+    color: var(--rr-text-color-primary);
     background-color: rgba(0, 0, 0, 0);
-    border: 1px solid var(--rr-text-color-primary-inverse);
+    border: 1px solid var(--rr-text-color-primary);
     position: relative;
     clip-path: border-box;
     transition: .35s;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
 }
 
 .chip-outline:hover {
     transform: scale(105%);
-    background-color: rgba(0, 0, 0, .25);
+    /* background-color: rgba(0, 0, 0, .25); */
     transition: .35s;
     box-shadow: inset;
 }
@@ -156,11 +160,21 @@
     transition: .25s ease-out;
 }
 
+.btn[disabled] {
+    opacity: .5;
+}
+
+.btn[disabled].primary:hover {
+    background-color: var(--rr-surface-button-primary-default);
+    cursor: not-allowed;
+}
+
+
 /* Images */
 .img-placeholder {
     background: #dddddd;
-    width: 100%;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .img-100 {
@@ -172,7 +186,7 @@
 .tab {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
+    /* max-width: 250px; */
     width: 100%;
     padding: var(--rr-size-sm);
 }

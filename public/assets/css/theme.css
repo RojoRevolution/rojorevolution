@@ -253,7 +253,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: var(--rr-size-xl-4x);
     line-height: 2.5rem;
 }
 
