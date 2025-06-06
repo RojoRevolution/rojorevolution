@@ -482,53 +482,76 @@
 /* Featured Projects */
 /* #featured h3 { */
 
-
+/* 
 #feature1,
 #feature2,
 #feature3 {
     transition: .25s ease-out
+} */
+
+.feature-card {
+    transition: .25s ease-out
 }
 
-#feature1:hover,
+/* #feature1:hover,
 #feature2:hover,
 #feature3:hover {
     cursor: url('/assets/images/home/view_project.svg'), pointer;
-}
+} */
 
-#feature1:hover h3,
-#feature2:hover h3,
-#feature3:hover h3 {
+.feature-card:hover {
+    cursor: pointer;
     color: var(--rr-text-color-brand);
 }
 
-#feature1:hover .chip-outline,
-#feature2:hover .chip-outline,
-#feature3:hover .chip-outline {
+/* #feature1:hover h3,
+#feature2:hover h3,
+#feature3:hover h3 {
+    color: var(--rr-text-color-brand);
+} */
+
+
+.feature-card:hover h3,
+.feature-card:hover .chip-outline {
     color: var(--rr-text-color-brand);
     border-color: var(--rr-text-color-brand);
 }
 
-#featured .card {
+/* #featured .card {
     min-height: 500px;
     transition: .25s ease-out;
     filter: sepia(0%);
+} */
 
+.feature-card .card-img {
+    background: #fff;
+    min-height: 500px;
+    transition: .25s ease-out;
+    filter: sepia(0%);
 }
 
-
-#feature1:hover .card,
+/* #feature1:hover .card,
 #feature2:hover .card,
 #feature3:hover .card {
-    /* box-shadow: 0 0 20px var(--alpha-red500-5); */
     transition: .25s ease-out;
     cursor: pointer;
     filter: sepia(90%);
-    /* box-shadow: -20px -20px 0 0 rgba(0, 0, 0, .25); */
+} */
 
+.feature-card:hover .card-img {
+    transition: .25s ease-out;
+    /* cursor: pointer; */
+    filter: sepia(90%);
 }
 
-#feature2:hover .img-container>img,
+
+/* #feature2:hover .img-container>img,
 #feature3:hover .img-container>img {
+    transform: scale(1.05);
+    transition: .25s ease-out;
+} */
+
+.feature-card:hover .img-container>img {
     transform: scale(1.05);
     transition: .25s ease-out;
 }
@@ -545,21 +568,22 @@
     transition: .25s ease-out;
 }
 
-#featured #labels.card {
+#featured #labels.card-img {
     background: rgb(185, 105, 7);
     background: linear-gradient(151deg, rgba(185, 105, 7, 1) 0%, rgba(251, 232, 91, 1) 100%);
 }
 
-#featured #labels {
+/* #featured #labels {
     background: var(--rr-surface-color-offwhite);
-}
+} */
 
 #featured .card:last-of-type {
     background: rgb(250, 170, 141);
     background: linear-gradient(133deg, rgba(250, 170, 141, 1) 0%, rgba(214, 65, 39, 1) 100%);
 }
 
-#featured ul {
+#featured ul,
+#webdev ul {
     padding: 0;
     margin: 0;
 }
@@ -571,9 +595,12 @@
     transition: .25s ease-out;
 }
 
-#feature1:hover .view-prj,
-#feature2:hover .view-prj,
-#feature3:hover .view-prj {
+.view-prj:hover {
+    color: var(--rr-surface-color-brand-accent);
+}
+
+
+.feature-card:hover .view-prj {
     height: 40px;
     transition: .25s ease-out;
 }
@@ -633,6 +660,30 @@
 /* Case Studies */
 #case-studies .card {
     max-width: 768px;
+}
+
+#webdev .feature-card {
+    width: 680px;
+}
+
+#webdev .feature-card:hover {
+    cursor: default;
+    color: var(--rr-text-color-brand);
+}
+
+.feature-card:hover {
+    cursor: pointer;
+    color: var(--rr-text-color-brand);
+}
+
+.feature-card:hover h3,
+.feature-card:hover .chip-outline {
+    color: var(--rr-text-color-primary);
+    border-color: var(--rr-text-color-primary);
+}
+
+#webdev p {
+    margin: 0;
 }
 
 
