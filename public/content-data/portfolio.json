@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "type": "visual",
+            "image": "project-one.jpg",
+            "name": "Acopon Brewing Co.",
+            "description": "This is a description of project one.",
+            "details": [
+                "Differentiation",
+                "Illustration",
+                "Identity",
+                "Packaging",
+                "Print"
+            ],
+            "link": "https://example.com/project-one"
+        }
+    ]
+}

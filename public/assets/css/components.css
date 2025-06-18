@@ -7,11 +7,48 @@
 }
 
 .card {
-    background: #fff;
+    background: var(--rr-surface-color-primary);
+    padding: var(--rr-size-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     border-radius: var(--rr-size-sm-2x);
+    min-width: 300px;
+    max-width: 700px;
     width: 100%;
     min-height: 300px;
-    /* border: 2px solid var(--rr-border-color-default); */
+    border: 2px solid var(--rr-surface-color-primary);
+    border-radius: var(--rr-size-md);
+    transition: .5s;
+}
+
+.card:hover {
+    border: 2px solid var(--rr-border-color-default);
+    transition: .5s;
+    /* box-shadow: 0 0 32px rgba(0, 0, 0, .05); */
+}
+
+.card:first-of-type {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.card>.img-container {
+    background: #fff;
+    width: 100%;
+    min-height: 300px;
+    border-radius: var(--rr-size-md);
+}
+
+.card>.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card>.card-content>p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+
 }
 
 /* .card .project-info {
