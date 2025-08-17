@@ -1,82 +1,3 @@
-/* Panels and Cards */
-.content-panel {
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: clip;
-    width: 100%;
-}
-
-.card {
-    background: var(--rr-surface-color-primary);
-    padding: var(--rr-size-lg);
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    border-radius: var(--rr-size-sm-2x);
-    min-width: 300px;
-    max-width: 700px;
-    width: 100%;
-    min-height: 300px;
-    border: 2px solid var(--rr-surface-color-primary);
-    border-radius: var(--rr-size-md);
-    transition: .5s;
-}
-
-.card:hover {
-    border: 2px solid var(--rr-border-color-default);
-    transition: .5s;
-    /* box-shadow: 0 0 32px rgba(0, 0, 0, .05); */
-}
-
-.card:first-of-type {
-    max-width: 1440px;
-    width: 100%;
-}
-
-.card>.img-container {
-    background: #fff;
-    width: 100%;
-    min-height: 300px;
-    border-radius: var(--rr-size-md);
-}
-
-.card>.card-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.card>.card-content>p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-
-}
-
-/* .card .project-info {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    padding: var(--rr-size-sm-2x);
-    background-color: var(--rr-surface-color-primary-dark);
-}
-
-.card .project-info .inner-border {
-    border: 3px solid var(--rr-border-color-offwhite);
-}
-
-
-.card .project-title {
-    padding: var(--rr-size-lg);
-    max-width: 475px;
-    bottom: 0;
-    right: 40px;
-}
-
-.card .project-title h3 {
-    color: var(--rr-text-color-offwhite);
-} */
-
-
-
 /* Overlays */
 .section-overlay {
     top: 0;
@@ -86,6 +7,120 @@
     height: 100%;
 }
 
+/* Panels and Cards */
+.content-panel {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: clip;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    background: var(--rr-surface-color-primary);
+    padding: var(--rr-size-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: var(--rr-size-sm-2x);
+    min-width: 300px;
+    max-width: 49%;
+    width: 100%;
+    min-height: 300px;
+    border: 2px solid var(--rr-surface-color-primary);
+    border-radius: var(--rr-size-md);
+    transition: .5s;
+}
+
+.card.featured {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.card>.img-container {
+    position: relative;
+    background: var(--rr-surface-color-accent);
+    width: 100%;
+    min-height: 300px;
+    border-radius: var(--rr-size-md);
+}
+
+
+.card.featured>.img-container {
+    min-height: 420px;
+    background-size: 100%;
+    background-position: bottom center;
+    transition: .25s ease-out;
+}
+
+
+.card>#acopon.img-container {
+    background-image: url('/assets/images/2025/featured/acopon.jpg');
+    transition: .25s ease-in;
+}
+
+.card>.card-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card>.card-content>p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#projects .card .img-container .section-overlay {
+    opacity: 0;
+    transition: .25s ease-out;
+
+}
+
+.card .img-container .learn {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    gap: .5rem;
+    padding: var(--rr-size-sm);
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    transition: .25s ease-out;
+}
+
+/* Project Hover Effects */
+#projects .card:hover .img-container,
+#projects .card:hover .card-content h2,
+#projects .card:hover .card-content p {
+    transition: .25s ease-in;
+    /* cursor: pointer; */
+    cursor: url('/assets/images/home/view_project.svg'), pointer;
+}
+
+#projects .card:hover .img-container .learn {
+    opacity: 1;
+    bottom: 1rem;
+    transition: .25s ease-in;
+}
+
+#projects .card:hover .img-container {
+    background-size: 105%;
+    transition: .25s ease-out;
+}
+
+#projects .card:hover .img-container .section-overlay {
+    opacity: 1;
+    transition: .25s ease-in;
+}
+
+#projects .card:hover .card-content h2,
+#projects .card:hover .card-content p {
+    color: var(--rr-text-color-brand);
+}
+
+#projects #development {
+    padding: 80px 0;
+}
 
 /* Chips */
 .chip,
@@ -119,6 +154,12 @@
     /* background-color: rgba(0, 0, 0, .25); */
     transition: .35s;
     box-shadow: inset;
+}
+
+
+#projects .card:hover .chip-outline {
+    color: var(--rr-text-color-brand);
+    border: 1px solid var(--rr-border-color-brand);
 }
 
 .shine {

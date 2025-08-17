@@ -20,8 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("click");
         menuEl.setAttribute('data-menu-status', 'closed');
     })
-
-
-
-
 });

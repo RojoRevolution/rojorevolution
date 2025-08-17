@@ -156,6 +156,7 @@
 
     /* Border Colors */
     --rr-border-color-default: var(--basic-off-white-2x);
+    --rr-border-color-brand: var(--revolution-red-500);
     --rr-border-color-dark: var(--neutral-600);
     --rr-border-color-offwhite: var(--basic-off-white);
 
@@ -247,19 +248,19 @@ h5 {
 }
 
 h1 {
-    font-size: var(--rr-size-xl-6x);
+    font-size: var(--rr-size-xl-4x);
     font-weight: var(--weight-700);
     line-height: var(--rr-size-xl-7x);
 }
 
 h2 {
-    font-size: var(--rr-size-xl-4x);
-    line-height: 2.5rem;
+    font-size: var(--rr-size-xl-3x);
+    line-height: 2.25rem;
 }
 
 h3 {
     font-size: 1.75rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
 h4 {
@@ -283,6 +284,8 @@ p {
     font-size: var(--rr-size-lg);
     line-height: var(--rr-size-xl-3x);
     color: var(--rr-text-color-secondary);
+    margin-block-start: .5em;
+    margin-block-end: .5em;
 }
 
 .display-font {

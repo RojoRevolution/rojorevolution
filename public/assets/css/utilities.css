@@ -2,12 +2,17 @@ section {
     padding: 140px 0;
 }
 
+.container-wrapper {
+    max-width: 100%;
+}
+
 .container {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1024px;
     display: flex;
     flex-direction: column;
 }
+
 
 /* Display */
 .display-none {
@@ -47,7 +52,6 @@ section {
 .sepia-100 {
     filter: sepia(1);
 }
-
 
 /* FLEX */
 .flex {
@@ -693,4 +697,9 @@ section {
 
 .max-400 {
     max-width: 400px;
+}
+
+/* Shadows */
+.shadow-1 {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }

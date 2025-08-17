@@ -1,0 +1,16 @@
+@media screen and (max-width: 1000px) {
+    .card {
+        max-width: 48%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    .card.featured>.img-container {
+        min-height: 300px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}

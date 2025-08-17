@@ -504,11 +504,7 @@
     color: var(--rr-text-color-brand);
 }
 
-/* #feature1:hover h3,
-#feature2:hover h3,
-#feature3:hover h3 {
-    color: var(--rr-text-color-brand);
-} */
+
 
 
 .feature-card:hover h3,
@@ -517,11 +513,7 @@
     border-color: var(--rr-text-color-brand);
 }
 
-/* #featured .card {
-    min-height: 500px;
-    transition: .25s ease-out;
-    filter: sepia(0%);
-} */
+
 
 .feature-card .card-img {
     background: #fff;

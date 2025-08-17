@@ -2,9 +2,9 @@
     "projects": [
         {
             "type": "visual",
-            "image": "project-one.jpg",
+            "image": "/2025/featured/acopon.jpg",
             "name": "Acopon Brewing Co.",
-            "description": "This is a description of project one.",
+            "description": "Differentiating a small brewpub in the Texas Hill Country.",
             "details": [
                 "Differentiation",
                 "Illustration",
@@ -12,7 +12,33 @@
                 "Packaging",
                 "Print"
             ],
-            "link": "https://example.com/project-one"
+            "link": "/work/acopon-brewing"
+        },
+        {
+            "type": "visual",
+            "image": "/2025/featured/beerlabels.jpg",
+            "name": "Craft Beer Labels",
+            "description": "A collection of craft beer labels over the years.",
+            "details": [
+                "Differentiation",
+                "Illustration",
+                "Packaging",
+                "Print"
+            ],
+            "link": "/work/craft-beer-labels"
+        },
+        {
+            "type": "visual",
+            "image": "/2025/featured/logos.jpg",
+            "name": "Logos / Identity",
+            "description": "A collection of logo designs over the years.",
+            "details": [
+                "Differentiation",
+                "Illustration",
+                "Packaging",
+                "Print"
+            ],
+            "link": "/work/logofolio"
         }
     ]
 }
