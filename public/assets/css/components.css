@@ -18,13 +18,13 @@
 .card {
     position: relative;
     background: var(--rr-surface-color-primary);
-    padding: var(--rr-size-lg);
+    padding: var(--rr-size-md);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     border-radius: var(--rr-size-sm-2x);
     min-width: 300px;
-    max-width: 49%;
+    max-width: 50%;
     width: 100%;
     min-height: 300px;
     border: 2px solid var(--rr-surface-color-primary);
@@ -125,12 +125,15 @@
 /* Chips */
 .chip,
 .chip-outline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: var(--rr-size-sm-2x);
     padding-bottom: var(--rr-size-sm-2x);
     padding-left: var(--rr-size-md);
     padding-right: var(--rr-size-md);
-    font-size: var(--rr-size-sm);
-    border-radius: var(--rr-radius-sm-2x);
+    /* font-size: var(--rr-size-sm); */
+    border-radius: var(--rr-radius-lg-3x);
     transition: .25s ease-out;
 }
 

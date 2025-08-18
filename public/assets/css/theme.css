@@ -113,7 +113,7 @@
     /* Font */
     --font-console: 'Inconsolata', serif;
     --font-header: 'Poppins', serif;
-    --font-content: 'Poppins', serif;
+    --font-content: "Karla", sans-serif;
     --font-display: "carol-gothic", sans-serif;
 
     /* ======= Semantic Variables ======= */
@@ -254,8 +254,8 @@ h1 {
 }
 
 h2 {
-    font-size: var(--rr-size-xl-3x);
-    line-height: 2.25rem;
+    font-size: var(--rr-size-xl-2x);
+    line-height: 2rem;
 }
 
 h3 {
