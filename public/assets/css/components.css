@@ -40,6 +40,8 @@
 .card>.img-container {
     position: relative;
     background: var(--rr-surface-color-accent);
+    background-size: 100%;
+    background-position: center center;
     width: 100%;
     min-height: 300px;
     border-radius: var(--rr-size-md);
@@ -53,9 +55,37 @@
     transition: .25s ease-out;
 }
 
+.card.featured>.img-container>.vid-bg {
+    /* z-index: -1; */
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    max-width: 1024px;
+    opacity: .2;
+}
+
+.card.featured>.img-container>.vid-bg>video {
+    height: 562px
+}
+
+
+.card>#dentalray.img-container {
+    background: black;
+    overflow: hidden;
+}
 
 .card>#acopon.img-container {
     background-image: url('/assets/images/2025/featured/acopon.jpg');
+    transition: .25s ease-in;
+}
+
+.card>#labels.img-container {
+    background-image: url('/assets/images/2025/featured/cans-labels.png');
+    transition: .25s ease-in;
+}
+
+.card>#logos.img-container {
+    background-image: url('/assets/images/2025/featured/logos.gif');
     transition: .25s ease-in;
 }
 

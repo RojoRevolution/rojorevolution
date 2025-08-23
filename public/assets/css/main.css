@@ -544,17 +544,17 @@
     transition: .25s ease-out;
 } */
 
-.feature-card:hover .img-container>img {
+/* .feature-card:hover .img-container>img {
     transform: scale(1.05);
     transition: .25s ease-out;
-}
+} */
 
-#featured #project1 {
+/* #featured #project1 {
     background: url('/assets/images/home/acopon-featured.jpg');
     background-size: 100%;
     background-position: bottom center;
     transition: .15s ease-out;
-}
+} */
 
 #feature1:hover #project1 {
     background-size: 102%;
@@ -596,6 +596,16 @@
 .feature-card:hover .view-prj {
     height: 40px;
     transition: .25s ease-out;
+}
+
+.feature-vid-bg {
+    /* z-index: -1; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: .2;
 }
 
 
