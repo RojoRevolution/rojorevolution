@@ -113,7 +113,8 @@
     /* Font */
     --font-console: 'Inconsolata', serif;
     --font-header: 'Poppins', serif;
-    --font-content: "Karla", sans-serif;
+    /* --font-content: "Karla", sans-serif; */
+    --font-content: 'Inconsolata', serif;
     --font-display: "carol-gothic", sans-serif;
 
     /* ======= Semantic Variables ======= */
@@ -226,7 +227,7 @@ h1,
 h2,
 h3 {
     font-family: var(--font-header);
-    font-weight: var(--weight-700);
+    font-weight: var(--weight-900);
 }
 
 h4,
@@ -248,8 +249,8 @@ h5 {
 }
 
 h1 {
-    font-size: var(--rr-size-xl-4x);
-    font-weight: var(--weight-700);
+    font-size: var(--rr-size-xl-7x);
+    font-weight: var(--weight-900);
     line-height: var(--rr-size-xl-7x);
 }
 
@@ -282,7 +283,8 @@ h5 {
 
 p {
     font-size: var(--rr-size-lg);
-    line-height: var(--rr-size-xl-3x);
+    line-height: var(--rr-size-xl-2x);
+    font-weight: var(--weight-500);
     color: var(--rr-text-color-secondary);
     margin-block-start: .5em;
     margin-block-end: .5em;
