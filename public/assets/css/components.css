@@ -30,7 +30,7 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--rr-surface-color-primary-inverse);
-    color: var(--rr-text-color-white);
+    color: var(--rr-text-color-primary-inverse);
     padding: var(--rr-size-sm);
     border-radius: var(--rr-radius-sm);
     white-space: nowrap;
@@ -115,6 +115,7 @@
 .card>#dentalray.img-container {
     background: black;
     overflow: hidden;
+    filter: grayscale(1);
 }
 
 .card>#acopon.img-container {

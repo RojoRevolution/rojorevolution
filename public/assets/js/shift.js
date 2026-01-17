@@ -99,61 +99,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//     // let inactivityTime = () => {
+    //     // let inactivityTime = () => {
 
-//     //     // Function to execute upon inactivity
-//     //     let timedOut = () => {
-//     //         // console.log("Timer ", time)
-//     //         console.log("You have timed out")
-//     //         textHuman.classList.add("slow-shift-top-left");
-//     //         // alert("You have been logged out due to inactivity.");
-//     //         // Uncomment the line below to redirect to a logout page
-//     //         // location.href = 'logout.html';
-//     //     }
-
-
-//     //     if (timer = 10) {
-//     //         textHuman.classList.add("slow-shift-top-left");
-//     //     }
-//     //     if (timer > 10) {
-//     //         console.log("Do Nothing")
-//     //     }
+    //     //     // Function to execute upon inactivity
+    //     //     let timedOut = () => {
+    //     //         // console.log("Timer ", time)
+    //     //         console.log("You have timed out")
+    //     //         textHuman.classList.add("slow-shift-top-left");
+    //     //         // alert("You have been logged out due to inactivity.");
+    //     //         // Uncomment the line below to redirect to a logout page
+    //     //         // location.href = 'logout.html';
+    //     //     }
 
 
-//     //     idler();
-
-//     //     // Resets the inactivity timer
-//     //     function resetTimer() {
-//     //         // console.log("Reset Timer ", time)
-//     //         textHuman.classList.remove("slow-shift-top-left");
-
-//     //         timer = 0;
-
-//     //         // clearTimeout(time); // Clear the previous timer
-//     //         // time = setTimeout(timedOut, 3000); // Set a new timer for 3 seconds (3000 milliseconds)
-//     //     }
+    //     //     if (timer = 10) {
+    //     //         textHuman.classList.add("slow-shift-top-left");
+    //     //     }
+    //     //     if (timer > 10) {
+    //     //         console.log("Do Nothing")
+    //     //     }
 
 
-//     //     // Attach event listeners to reset the timer
-//     //     window.onload = resetTimer; // Reset on page load
-//     //     document.onmousemove = resetTimer; // Reset on mouse movement
-//     //     document.onkeydown = resetTimer;   // Reset on key press
-//     //     document.onmousedown = resetTimer; // Reset on mouse down (e.g., touch screens)
-//     //     document.ontouchstart = resetTimer; // Reset on touch start
-//     //     document.onclick = resetTimer;     // Reset on click
-//     //     document.addEventListener('scroll', resetTimer, true); // Reset on scroll (capture phase)
-//     //     window.addEventListener('load', resetTimer, true); // Another way to reset on load
+    //     //     idler();
 
-//     //     // More robust event registration using an array
-//     //     var events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
-//     //     events.forEach(function (eventName) {
-//     //         document.addEventListener(eventName, resetTimer, true);
-//     //     });
-//     // };
+    //     //     // Resets the inactivity timer
+    //     //     function resetTimer() {
+    //     //         // console.log("Reset Timer ", time)
+    //     //         textHuman.classList.remove("slow-shift-top-left");
 
-//     // // Initialize the inactivity timer when the page loads
-//     // window.onload = function () {
-//     //     inactivityTime();
-//     // };
+    //     //         timer = 0;
 
-// });
+    //     //         // clearTimeout(time); // Clear the previous timer
+    //     //         // time = setTimeout(timedOut, 3000); // Set a new timer for 3 seconds (3000 milliseconds)
+    //     //     }
+
+
+    //     //     // Attach event listeners to reset the timer
+    //     //     window.onload = resetTimer; // Reset on page load
+    //     //     document.onmousemove = resetTimer; // Reset on mouse movement
+    //     //     document.onkeydown = resetTimer;   // Reset on key press
+    //     //     document.onmousedown = resetTimer; // Reset on mouse down (e.g., touch screens)
+    //     //     document.ontouchstart = resetTimer; // Reset on touch start
+    //     //     document.onclick = resetTimer;     // Reset on click
+    //     //     document.addEventListener('scroll', resetTimer, true); // Reset on scroll (capture phase)
+    //     //     window.addEventListener('load', resetTimer, true); // Another way to reset on load
+
+    //     //     // More robust event registration using an array
+    //     //     var events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+    //     //     events.forEach(function (eventName) {
+    //     //         document.addEventListener(eventName, resetTimer, true);
+    //     //     });
+    //     // };
+
+    //     // // Initialize the inactivity timer when the page loads
+    //     // window.onload = function () {
+    //     //     inactivityTime();
+    //     // };
+
+});

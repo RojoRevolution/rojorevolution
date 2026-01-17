@@ -10,9 +10,9 @@
     /* Alpha Colors of Primitives */
     --alpha-black-0: rgba(0, 0, 0, 0);
     --alpha-black-15: rgba(0, 0, 0, .15);
-    --alpha-black-2: rgba(0, 0, 0, .2);
-    --alpha-black-3: rgba(0, 0, 0, .3);
-    --alpha-black-5: rgba(0, 0, 0, .5);
+    --alpha-black-20: rgba(0, 0, 0, .2);
+    --alpha-black-30: rgba(0, 0, 0, .3);
+    --alpha-black-50: rgba(0, 0, 0, .5);
     --alpha-black-75: rgba(0, 0, 0, .75);
 
     --alpha-white-0: rgba(255, 255, 255, 0);
@@ -117,51 +117,8 @@
     --font-content: 'Inconsolata', serif;
     --font-display: "carol-gothic", sans-serif;
 
-    /* ======= Semantic Variables ======= */
+    /* ======= Root Semantic Variables ======= */
     /* ================================== */
-
-    /* Surface: General Background */
-    --rr-surface-color-primary: var(--basic-off-white);
-    --rr-surface-color-primary-dark: var(--neutral-1000);
-    --rr-surface-color-accent: var(--neutral-100);
-    --rr-surface-color-primary-inverse: var(--neutral-1200);
-    --rr-surface-color-white: var(--basic-white);
-    --rr-surface-color-black: var(--basic-black);
-    --rr-surface-color-brand: var(--revolution-red-500);
-    --rr-surface-color-brand-accent: var(--revolution-red-600);
-    --rr-surface-color-danger-light: var(--revolution-red-100);
-    --rr-surface-color-danger-dark: var(--revolution-red-900);
-    --rr-surface-color-success-light: var(--success-100);
-    --rr-surface-color-success-dark: var(--success-900);
-    --rr-surface-color-warning-light: var(--warning-100);
-    --rr-surface-color-warning-dark: var(--warning-900);
-
-    --rr-surface-color-overlay: var(--alpha-off-white-50);
-
-    --rr-surface-button-primary-default: var(--revolution-red-500);
-    --rr-surface-button-primary-hover: var(--revolution-red-600);
-
-    --rr-surface-button-inverse-default: var(--neutral-300);
-    --rr-surface-button-inverse-hover: var(--neutral-400);
-
-    /* Text Colors */
-    --rr-text-color-primary: var(--neutral-1100);
-    --rr-text-color-primary-inverse: var(--neutral-200);
-    --rr-text-color-secondary: var(--neutral-800);
-    --rr-text-color-brand: var(--revolution-red-500);
-    --rr-text-color-danger: var(--revolution-red-600);
-    --rr-text-color-success: var(--success-500);
-    --rr-text-color-warning: var(--warning-500);
-    --rr-text-color-white: var(--basic-white);
-    --rr-text-color-offwhite: var(--basic-off-white);
-
-    /* Border Colors */
-    --rr-border-color-default: var(--basic-off-white-2x);
-    --rr-border-color-brand: var(--revolution-red-500);
-    --rr-border-color-dark: var(--neutral-600);
-    --rr-border-color-offwhite: var(--basic-off-white);
-
-
 
     /* Border Radius */
     --rr-radius-sm-3x: var(--size-2px);
@@ -186,8 +143,93 @@
     --rr-size-xl-4x: var(--size-40px);
     --rr-size-xl-5x: var(--size-48px);
     --rr-size-xl-6x: var(--size-60px);
-    --rr-size-xl-7x: var(--size-72px);
+    --rr-size-xl-7x: var(--size-72px)
+}
 
+[data-theme="light"] {
+    /* Surface: General Background */
+    --rr-surface-color-primary: var(--neutral-300);
+    --rr-surface-color-primary-dark: var(--neutral-1100);
+    --rr-surface-color-primary-inverse: var(--neutral-1000);
+    --rr-surface-color-secondary: var(--neutral-200);
+    --rr-surface-color-accent: var(--neutral-100);
+    --rr-surface-color-white: var(--basic-white);
+    --rr-surface-color-black: var(--basic-black);
+    --rr-surface-color-brand: var(--revolution-red-500);
+    --rr-surface-color-brand-accent: var(--revolution-red-600);
+    --rr-surface-color-danger-subtle: var(--revolution-red-100);
+    --rr-surface-color-danger-heavy: var(--revolution-red-900);
+    --rr-surface-color-success-subtle: var(--success-100);
+    --rr-surface-color-success-heavy: var(--success-900);
+    --rr-surface-color-warning-subtle: var(--warning-100);
+    --rr-surface-color-warning-heavy: var(--warning-900);
+    --rr-surface-color-overlay: var(--alpha-white-25);
+    /* Buttons */
+    --rr-surface-button-primary-default: var(--revolution-red-500);
+    --rr-surface-button-primary-hover: var(--revolution-red-600);
+    --rr-surface-button-inverse-default: var(--neutral-300);
+    --rr-surface-button-inverse-hover: var(--neutral-400);
+
+    /* Text Colors */
+    --rr-text-color-primary: var(--neutral-1100);
+    --rr-text-color-primary-inverse: var(--neutral-200);
+    --rr-text-color-secondary: var(--neutral-800);
+    --rr-text-color-brand: var(--revolution-red-500);
+    --rr-text-color-danger: var(--revolution-red-600);
+    --rr-text-color-success: var(--success-500);
+    --rr-text-color-warning: var(--warning-500);
+    --rr-text-color-white: var(--basic-white);
+    --rr-text-color-offwhite: var(--basic-off-white);
+
+    /* Border Colors */
+    --rr-border-color-default: var(--neutral-500);
+    --rr-border-color-brand: var(--revolution-red-500);
+    --rr-border-color-dark: var(--neutral-600);
+    --rr-border-color-offwhite: var(--basic-off-white);
+}
+
+[data-theme="dark"] {
+    /* Surface: General Background */
+    --rr-surface-color-primary: var(--neutral-1100);
+    --rr-surface-color-primary-dark: var(--neutral-300);
+    --rr-surface-color-primary-inverse: var(--neutral-100);
+    --rr-surface-color-secondary: var(--neutral-600);
+    --rr-surface-color-accent: var(--neutral-100);
+    --rr-surface-color-white: var(--basic-black);
+    --rr-surface-color-black: var(--basic-black);
+    --rr-surface-color-brand: var(--revolution-red-500);
+    --rr-surface-color-brand-accent: var(--revolution-red-600);
+    --rr-surface-color-danger-subtle: var(--revolution-red-100);
+    --rr-surface-color-danger-heavy: var(--revolution-red-900);
+    --rr-surface-color-success-subtle: var(--success-100);
+    --rr-surface-color-success-heavy: var(--success-900);
+    --rr-surface-color-warning-subtle: var(--warning-100);
+    --rr-surface-color-warning-subtle: var(--warning-900);
+
+    --rr-surface-color-overlay: var(--alpha-black-50);
+
+    --rr-surface-button-primary-default: var(--revolution-red-500);
+    --rr-surface-button-primary-hover: var(--revolution-red-600);
+
+    --rr-surface-button-inverse-default: var(--neutral-300);
+    --rr-surface-button-inverse-hover: var(--neutral-400);
+
+    /* Text Colors */
+    --rr-text-color-primary: var(--neutral-200);
+    --rr-text-color-primary-inverse: var(--neutral-1100);
+    --rr-text-color-secondary: var(--neutral-300);
+    --rr-text-color-brand: var(--revolution-red-500);
+    --rr-text-color-danger: var(--revolution-red-600);
+    --rr-text-color-success: var(--success-500);
+    --rr-text-color-warning: var(--warning-500);
+    --rr-text-color-white: var(--basic-white);
+    --rr-text-color-offwhite: var(--basic-off-white);
+
+    /* Border Colors */
+    --rr-border-color-default: var(--basic-off-white-2x);
+    --rr-border-color-brand: var(--revolution-red-500);
+    --rr-border-color-dark: var(--neutral-600);
+    --rr-border-color-offwhite: var(--basic-off-white);
 }
 
 *,
