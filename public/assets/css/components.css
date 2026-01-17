@@ -82,7 +82,7 @@
 
 .card>.img-container {
     position: relative;
-    background: var(--rr-surface-color-accent);
+    background: var(--rr-surface-color-secondary);
     background-size: 100%;
     background-position: center center;
     width: 100%;
