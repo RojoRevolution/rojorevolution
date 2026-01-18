@@ -1,13 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Color Theme Elements
+    const bodyEl = document.body;
+    const lightSwitchBox = document.querySelector('.light-switch-box');
+    const filmEffectBG = document.querySelector('.film-effect-bg');
+    const clickEl = document.querySelector('.click-sound');
+    const lightRays = document.querySelectorAll('.rays');
+    const lightSwitches = document.querySelectorAll('.lightswitch');
 
+    // Navigation Menu Elements
     const topMenus = document.querySelectorAll('[data-menu-type]');
     const menuEl = document.getElementById('menu');
-    const modeEl = document.getElementById('mode');
+    const lightSwitchEl = document.getElementById('light-switch');
     const menuText = document.querySelector('.menu-btn');
-    // const closeMenuEl = document.querySelector('.close-menu');
     const navItems = document.getElementById("nav-items");
 
     const colorThemeControl = document.querySelector("[data-theme]");
+
+
 
     let currentMenuStatus
     currentMenuStatus = menuEl.getAttribute("data-menu-status");
@@ -56,5 +65,148 @@ document.addEventListener("DOMContentLoaded", () => {
 
         })
     })
+
+
+    // Theme Switch Functions
+
+    let animateLightRays = (targetLightRayDivs) => {
+        targetLightRayDivs.forEach((ray) => {
+            let rayCount = ray.getAttribute('data-ray-count');
+            switch (rayCount) {
+                case "1":
+                    ray.classList.add('grow-even');
+                    setTimeout(() => {
+                        ray.classList.remove("grow-even")
+                    }, 500)
+                    break;
+                case "2":
+                    ray.classList.add('grow-odd');
+                    setTimeout(() => {
+                        ray.classList.remove("grow-odd")
+                    }, 500)
+                    break;
+                case "3":
+                    ray.classList.add('grow-even');
+                    setTimeout(() => {
+                        ray.classList.remove("grow-even")
+                    }, 500)
+                    break;
+                case "4":
+                    ray.classList.add('grow-odd');
+                    setTimeout(() => {
+                        ray.classList.remove("grow-odd")
+                    }, 500)
+                    break;
+                default:
+                    break;
+            };
+        });
+    }
+
+    // Event Listener for Theme Lightswitch
+
+    lightSwitches.forEach((lightSwitch) => {
+        lightSwitch.addEventListener("click", (evt) => {
+            let lightSwitchContainter = evt.currentTarget;
+            console.log("currentTarget :", lightSwitchContainter);
+            let activeSwitch = evt.currentTarget.getAttribute('data-switch-type')
+            console.log("Switch Pulled ", activeSwitch);
+
+            let themeStatus = bodyEl.getAttribute('data-theme');
+            let currentLightSwitchBox = lightSwitchContainter.querySelector('.light-switch-box');
+            let currentClickEl = lightSwitchContainter.querySelector('.click-sound')
+            let currentTargetRays = lightSwitchContainter.querySelectorAll('.rays')
+
+            console.log(currentLightSwitchBox)
+            console.log(currentClickEl)
+            switch (activeSwitch) {
+                case "theme":
+                    switch (themeStatus) {
+                        case 'light':
+                            currentLightSwitchBox.classList.add("pull");
+                            currentClickEl.classList.add("show-click");
+                            bodyEl.setAttribute('data-theme', 'dark');
+                            setTimeout(() => {
+                                currentLightSwitchBox.classList.remove("pull");
+                                currentClickEl.classList.remove("show-click");
+                            }, 500)
+                            animateLightRays(currentTargetRays);
+                            break;
+                        case 'dark':
+                            currentLightSwitchBox.classList.add("pull");
+                            currentClickEl.classList.add("show-click");
+
+                            bodyEl.setAttribute('data-theme', 'light');
+                            setTimeout(() => {
+                                currentLightSwitchBox.classList.remove("pull");
+                                currentClickEl.classList.remove("show-click");
+                            }, 500);
+                            animateLightRays(currentTargetRays);
+                            break;
+                        default:
+                            break
+                    }
+                    break;
+                case "film":
+                    filmEffectBG.classList.toggle("display-none");
+                    currentLightSwitchBox.classList.add("pull");
+                    currentClickEl.classList.add("show-click");
+
+                    setTimeout(() => {
+                        currentLightSwitchBox.classList.remove("pull");
+                        currentClickEl.classList.remove("show-click");
+                    }, 500);
+                    animateLightRays(currentTargetRays);
+                    break;
+                default:
+                    break;
+
+            }
+
+        });
+    }
+
+    )
+
+
+    // lightSwitchEl.addEventListener("click", (evt) => {
+    //     lightSwitchContainter = evt.currentTarget;
+    //     console.log("Event Target ", lightSwitchContainter);
+    //     animationTargetEl = lightSwitchContainter.children.firstElementChild;
+    //     console.log("Target ", lightSwitchBox);
+
+    //     let themeStatus = bodyEl.getAttribute('data-theme');
+    //     console.log("Body Theme Status ", themeStatus);
+
+    //     switch (themeStatus) {
+    //         case 'light':
+    //             // lightSwitchBox.style.animationName = "dummy-pull"
+    //             lightSwitchBox.classList.add("pull");
+    //             clickEl.classList.add("show-click");
+    //             bodyEl.setAttribute('data-theme', 'dark');
+    //             setTimeout(() => {
+    //                 lightSwitchBox.classList.remove("pull");
+    //                 clickEl.classList.remove("show-click");
+    //             }, 500)
+    //             animateLightRays();
+    //             break;
+    //         case 'dark':
+    //             lightSwitchBox.classList.add("pull");
+    //             clickEl.classList.add("show-click");
+
+    //             // lightSwitchBox.style.animationName = "dummy-pull"
+    //             bodyEl.setAttribute('data-theme', 'light');
+    //             // lightSwitchBox.style.animationName = "pull-switch"
+    //             setTimeout(() => {
+    //                 lightSwitchBox.classList.remove("pull");
+    //                 clickEl.classList.remove("show-click");
+    //             }, 500);
+    //             animateLightRays();
+
+    //             break;
+    //         default:
+    //             break
+    //     }
+    // });
 
 });

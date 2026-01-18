@@ -151,7 +151,7 @@
     --rr-surface-color-primary: var(--neutral-300);
     --rr-surface-color-primary-dark: var(--neutral-1100);
     --rr-surface-color-primary-inverse: var(--neutral-1000);
-    --rr-surface-color-secondary: var(--neutral-200);
+    --rr-surface-color-secondary: var(--neutral-100);
     --rr-surface-color-accent: var(--neutral-100);
     --rr-surface-color-white: var(--basic-white);
     --rr-surface-color-black: var(--basic-black);
@@ -193,10 +193,10 @@
     --rr-surface-color-primary: var(--neutral-1100);
     --rr-surface-color-primary-dark: var(--neutral-300);
     --rr-surface-color-primary-inverse: var(--neutral-100);
-    --rr-surface-color-secondary: var(--neutral-600);
+    --rr-surface-color-secondary: var(--neutral-700);
     --rr-surface-color-accent: var(--neutral-100);
     --rr-surface-color-white: var(--basic-black);
-    --rr-surface-color-black: var(--basic-black);
+    --rr-surface-color-black: var(--basic-white);
     --rr-surface-color-brand: var(--revolution-red-500);
     --rr-surface-color-brand-accent: var(--revolution-red-600);
     --rr-surface-color-danger-subtle: var(--revolution-red-100);
@@ -226,7 +226,7 @@
     --rr-text-color-offwhite: var(--basic-off-white);
 
     /* Border Colors */
-    --rr-border-color-default: var(--basic-off-white-2x);
+    --rr-border-color-default: var(--neutral-500);
     --rr-border-color-brand: var(--revolution-red-500);
     --rr-border-color-dark: var(--neutral-600);
     --rr-border-color-offwhite: var(--basic-off-white);

@@ -25,6 +25,7 @@
 [data-tooltip]::after {
     content: attr(data-tooltip-text);
     font-style: italic;
+    font-size: var(--rr-size-md);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -60,7 +61,6 @@
 
 .card {
     position: relative;
-    background: var(--rr-surface-color-primary);
     padding: var(--rr-size-md);
     display: flex;
     flex-direction: column;
@@ -70,7 +70,6 @@
     max-width: 50%;
     width: 100%;
     min-height: 300px;
-    border: 2px solid var(--rr-surface-color-primary);
     border-radius: var(--rr-size-md);
     transition: .5s;
 }
@@ -344,4 +343,307 @@
     /* max-width: 250px; */
     width: 100%;
     padding: var(--rr-size-sm);
+}
+
+
+/* Light Switch */
+/* #light-switch {
+    position: fixed;
+    left: var(--rr-size-lg);
+    left: 60px;
+    top: 0;
+} */
+
+.lightswitch {
+    position: fixed;
+    left: var(--rr-size-lg);
+    left: 60px;
+    top: 0;
+}
+
+.lightswitch[data-switch-type="film"] {
+    position: fixed;
+    left: var(--rr-size-lg);
+    left: 110px;
+    top: 0;
+}
+
+.light-switch-box {
+    position: absolute;
+    top: 0px;
+    transition: .25s ease-out;
+}
+
+.light-switch-box:hover {
+    top: 4px;
+    transition: .25s ease-in;
+    cursor: grab;
+}
+
+.click-sound {
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    right: -56px;
+    top: 90px;
+    color: var(--rr-text-color-primary);
+    font-family: var(--rr-font-header);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.show-click {
+    animation-name: click;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes click {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pull {
+    animation-name: pull-switch;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+@keyframes pull-switch {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(20px);
+    }
+
+    30% {
+        transform: translateY(-20px);
+    }
+
+    40% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    55% {
+        transform: translateY(6px);
+    }
+
+    60% {
+        transform: translateY(-6px);
+    }
+
+    65% {
+        transform: translateY(2px);
+    }
+
+    70% {
+        transform: translateY(-2px);
+    }
+
+    75% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes dummy-pull {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.swing {
+    animation-name: swing;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    25% {
+        transform: rotate(-7deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
+
+    90% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+.rays {
+    position: absolute;
+    display: flex;
+    background-color: var(--rr-text-color-primary);
+    width: 4px;
+    height: 0;
+    border-radius: var(--rr-radius-sm-2x);
+}
+
+.rays[data-ray-count="1"] {
+    top: 14px;
+    left: -18px;
+    transform: rotate(26deg);
+}
+
+.rays[data-ray-count="2"] {
+    top: 4px;
+    left: -28px;
+    transform: rotate(52deg);
+}
+
+.rays[data-ray-count="3"] {
+    top: 14px;
+    left: 18px;
+    transform: rotate(-26deg);
+}
+
+.rays[data-ray-count="4"] {
+    top: 4px;
+    left: 28px;
+    transform: rotate(-52deg);
+}
+
+.grow-odd {
+    animation-name: light-ray-grow-1;
+    animation-duration: .25s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes light-ray-grow-1 {
+    0% {
+        height: 0;
+    }
+
+    99% {
+        height: 18px;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+.grow-even {
+    animation-name: light-ray-grow-2;
+    animation-duration: .25s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: .05s;
+}
+
+@keyframes light-ray-grow-2 {
+    0% {
+        height: 0;
+    }
+
+    99% {
+        height: 28px;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+.bead {
+    position: absolute;
+    display: flex;
+    background-color: var(--rr-text-color-primary);
+    width: 6px;
+    height: 9px;
+    border-radius: var(--rr-radius-sm-2x);
+}
+
+.bead-0 {
+    top: -27px;
+}
+
+.bead-1 {
+    top: -18px;
+}
+
+.bead-2 {
+    top: -9px;
+}
+
+.bead-3 {
+    top: 0px;
+}
+
+.bead-4 {
+    top: 9px;
+}
+
+.bead-5 {
+    top: 18px;
+}
+
+.bead-6 {
+    top: 27px;
+}
+
+.bead-7 {
+    top: 36px;
+}
+
+.bead-8 {
+    top: 45px;
+}
+
+.bead-end {
+    position: absolute;
+    background-color: var(--rr-text-color-primary);
+    left: -2px;
+    top: 46px;
+    height: 22px;
+    width: 10px;
 }
