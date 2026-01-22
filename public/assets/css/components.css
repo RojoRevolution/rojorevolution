@@ -87,6 +87,7 @@
     width: 100%;
     min-height: 300px;
     border-radius: var(--rr-size-md);
+    overflow: hidden;
 }
 
 
@@ -356,15 +357,13 @@
 
 .lightswitch {
     position: fixed;
-    left: var(--rr-size-lg);
-    left: 60px;
+    left: 40px;
     top: 0;
 }
 
 .lightswitch[data-switch-type="film"] {
     position: fixed;
-    left: var(--rr-size-lg);
-    left: 110px;
+    left: 90px;
     top: 0;
 }
 
@@ -384,7 +383,7 @@
     position: absolute;
     opacity: 0;
     bottom: 0;
-    right: -56px;
+    right: -60px;
     top: 90px;
     color: var(--rr-text-color-primary);
     font-family: var(--rr-font-header);
@@ -441,38 +440,47 @@
 
     30% {
         transform: translateY(-20px);
+        filter: blur(1px);
     }
 
     40% {
         transform: translateY(10px);
+        filter: blur(1px);
     }
 
     50% {
         transform: translateY(-10px);
+        filter: blur(1px);
     }
 
     55% {
         transform: translateY(6px);
+        filter: blur(1px);
     }
 
     60% {
         transform: translateY(-6px);
+        filter: blur(1px);
     }
 
     65% {
         transform: translateY(2px);
+        filter: blur(1px);
     }
 
     70% {
         transform: translateY(-2px);
+        filter: blur(1px);
     }
 
     75% {
         transform: translateY(0px);
+        filter: blur(0);
     }
 
     100% {
         transform: translateY(4px);
+        filter: blur(0);
     }
 }
 
@@ -489,17 +497,17 @@
 .swing {
     animation-name: swing;
     animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
 }
 
 @keyframes swing {
     0% {
-        transform: rotate(7deg);
+        transform: rotate(4deg);
     }
 
     25% {
-        transform: rotate(-7deg);
+        transform: rotate(-4deg);
     }
 
     50% {
@@ -510,12 +518,9 @@
         transform: rotate(-4deg);
     }
 
-    90% {
-        transform: rotate(-4deg);
-    }
 
     100% {
-        transform: rotate(0deg);
+        transform: rotate(4deg);
     }
 }
 
@@ -650,4 +655,9 @@
     top: 46px;
     height: 22px;
     width: 10px;
+}
+
+[data-gravity-status="off"] {
+    transform: translate(-500px 175px);
+    transition: 70s ease;
 }

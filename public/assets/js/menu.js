@@ -20,11 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentMenuStatus
     currentMenuStatus = menuEl.getAttribute("data-menu-status");
-    console.log(currentMenuStatus)
 
 
+    // Show hide main nav menu
     let changeMenuStatus = (targetEl, status) => {
-
         switch (status) {
             case 'nav-closed':
                 console.log("Case Nav Closed")
@@ -56,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Event Listener for any menu with data-menu-type
     topMenus.forEach((menu) => {
         menu.addEventListener("click", (evt) => {
-            console.log("Target ", evt.target)
             let eventTarget = evt.target;
             let targetStatus = eventTarget.getAttribute('data-status');
             changeMenuStatus(eventTarget, targetStatus);
@@ -67,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
-    // Theme Switch Functions
-
+    //  Function controls the light ray animations
     let animateLightRays = (targetLightRayDivs) => {
         targetLightRayDivs.forEach((ray) => {
             let rayCount = ray.getAttribute('data-ray-count');
@@ -103,23 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Event Listener for Theme Lightswitch
-
+    // Event Listener for Light Switch Chains
     lightSwitches.forEach((lightSwitch) => {
         lightSwitch.addEventListener("click", (evt) => {
+            // Get current Target
             let lightSwitchContainter = evt.currentTarget;
-            console.log("currentTarget :", lightSwitchContainter);
+            // Get targets attribute - dictactes which chain was pulled
             let activeSwitch = evt.currentTarget.getAttribute('data-switch-type')
-            console.log("Switch Pulled ", activeSwitch);
 
+            // Color theme
             let themeStatus = bodyEl.getAttribute('data-theme');
+            // Selects relevant elements based on current target
             let currentLightSwitchBox = lightSwitchContainter.querySelector('.light-switch-box');
             let currentClickEl = lightSwitchContainter.querySelector('.click-sound')
             let currentTargetRays = lightSwitchContainter.querySelectorAll('.rays')
 
-            console.log(currentLightSwitchBox)
-            console.log(currentClickEl)
+
             switch (activeSwitch) {
+                // If first chain is pulled
                 case "theme":
                     switch (themeStatus) {
                         case 'light':
@@ -147,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             break
                     }
                     break;
+                // If second chain is pulled
                 case "film":
                     filmEffectBG.classList.toggle("display-none");
                     currentLightSwitchBox.classList.add("pull");
@@ -167,46 +167,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     )
-
-
-    // lightSwitchEl.addEventListener("click", (evt) => {
-    //     lightSwitchContainter = evt.currentTarget;
-    //     console.log("Event Target ", lightSwitchContainter);
-    //     animationTargetEl = lightSwitchContainter.children.firstElementChild;
-    //     console.log("Target ", lightSwitchBox);
-
-    //     let themeStatus = bodyEl.getAttribute('data-theme');
-    //     console.log("Body Theme Status ", themeStatus);
-
-    //     switch (themeStatus) {
-    //         case 'light':
-    //             // lightSwitchBox.style.animationName = "dummy-pull"
-    //             lightSwitchBox.classList.add("pull");
-    //             clickEl.classList.add("show-click");
-    //             bodyEl.setAttribute('data-theme', 'dark');
-    //             setTimeout(() => {
-    //                 lightSwitchBox.classList.remove("pull");
-    //                 clickEl.classList.remove("show-click");
-    //             }, 500)
-    //             animateLightRays();
-    //             break;
-    //         case 'dark':
-    //             lightSwitchBox.classList.add("pull");
-    //             clickEl.classList.add("show-click");
-
-    //             // lightSwitchBox.style.animationName = "dummy-pull"
-    //             bodyEl.setAttribute('data-theme', 'light');
-    //             // lightSwitchBox.style.animationName = "pull-switch"
-    //             setTimeout(() => {
-    //                 lightSwitchBox.classList.remove("pull");
-    //                 clickEl.classList.remove("show-click");
-    //             }, 500);
-    //             animateLightRays();
-
-    //             break;
-    //         default:
-    //             break
-    //     }
-    // });
-
 });
