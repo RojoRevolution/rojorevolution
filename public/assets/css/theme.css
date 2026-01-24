@@ -112,10 +112,10 @@
 
     /* Font */
     --font-console: 'Inconsolata', serif;
-    --font-header: 'Poppins', serif;
+    --font-header: 'Poppins', Helvetica, Arial, sans-serif;
     /* --font-content: "Karla", sans-serif; */
     --font-content: 'Inconsolata', serif;
-    --font-display: "carol-gothic", sans-serif;
+    --font-display: "UnifrakturCook", cursive;
 
     /* ======= Root Semantic Variables ======= */
     /* ================================== */
@@ -194,7 +194,7 @@
     --rr-surface-color-primary-dark: var(--neutral-300);
     --rr-surface-color-primary-inverse: var(--neutral-100);
     --rr-surface-color-secondary: var(--neutral-700);
-    --rr-surface-color-accent: var(--neutral-100);
+    --rr-surface-color-accent: var(--neutral-900);
     --rr-surface-color-white: var(--basic-black);
     --rr-surface-color-black: var(--basic-white);
     --rr-surface-color-brand: var(--revolution-red-500);
