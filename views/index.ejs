@@ -1,11 +1,14 @@
 <%- include('partials/html-start-doc'); %>
     <!-- Start Body -->
     <main class="padd-y-5">
-        <div class="container">
+        <section data-section-type="intro">
             <%- include('content/home/intro'); %>
-                <%- include('content/home/portfolio'); %>
-
-        </div>
+        </section>
+        <div class="section-gradient-top"></div>
+        <section class="relative col gap-12" data-section-type="content">
+            <%- include('content/home/portfolio'); %>
+        </section>
     </main>
     <!-- End Body -->
+    <script src="/assets/js/scroll-blur.js"></script>
     <%- include('partials/html-end-doc'); %>

@@ -1,3 +1,19 @@
+/* Sections */
+
+
+section[data-section-type="intro"] {
+    position: sticky;
+    top: 0;
+    z-index: -1;
+    padding-bottom: var(--rr-size-xl-4x);
+}
+
+section[data-section-type="content"] {
+    background: var(--rr-surface-color-primary);
+}
+
+
+
 .spacing-a-t {
     letter-spacing: -7px;
     margin-right: 10px;
@@ -262,171 +278,10 @@
     height: 100%;
 }
 
-/* =============== */
-/* Main Navigation */
-#menu {
-    position: fixed;
-    overflow: hidden;
-    font-family: var(--rr-font-header);
-    text-transform: uppercase;
-    top: 0;
-    z-index: 2;
-    transition: .3s ease-out;
-    color: var(--rr-text-color-primary);
-    border: 1px solid var(--rr-border-color-default);
-    letter-spacing: 2px;
-}
-
-#menu>.col {
-    background: var(--rr-surface-color-secondary);
-    position: relative;
-    padding: var(--rr-size-sm);
-    transition: .25s;
-}
-
-#menu>.col .menu-btn {
-    height: 30px;
-}
-
-#menu>.col .menu-btn:hover {
-    cursor: pointer;
-}
-
-#menu nav ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    gap: var(--rr-size-sm-2x);
-}
-
-#menu nav ul li {
-    list-style: none;
-    text-align: right;
-    padding: var(--rr-size-sm-2x) var(--rr-size-sm-3x);
-}
-
-#menu nav ul a li {
-    border-right: 0px solid var(--rr-text-color-primary-inverse);
-    transition: .1s ease-in;
-    font-size: inherit;
-    letter-spacing: inherit;
-}
-
-#menu nav ul a:hover li {
-    transform: scale(1.1);
-    border-right: 4px solid var(--rr-border-color-brand);
-    transition: .1s ease-out;
-    color: var(--rr-text-color-brand);
-
-}
-
-
-#menu .close-menu>i {
-    display: flex;
-    font-size: 1rem;
-    background: var(--rr-surface);
-    padding: var(--rr-size-sm-2x) var(--rr-size-sm);
-    border-radius: var(--rr-size-sm-2x);
-    transition: .25s;
-}
-
-#menu .close-menu>i:hover {
-    cursor: pointer;
-    background: var(--alpha-black-15);
-    transition: .25s;
-}
-
-
-
-#menu[data-menu-status="closed"] {
-    width: 70px;
-    height: 48px;
-    top: -6px;
-    right: 24px;
-    transition: .25s ease-out;
-    border-radius: 0 0 var(--rr-radius-lg) var(--rr-radius-lg);
-}
-
-
-#menu[data-menu-status="closed"]>.col>.col>.row {
-    justify-content: center;
-}
-
-#menu[data-menu-status="open"] {
-    width: 160px;
-    top: 20px;
-    right: 28px;
-    transition: .25s ease-out;
-    border-radius: var(--rr-radius-md);
-    box-shadow: -20px 20px 0 0 var(--alpha-red500-75);
-    font-size: var(--rr-size-md);
-
-}
-
-#menu[data-menu-status="open"]>.col>.col>.row {
-    justify-content: end;
-}
-
-#menu[data-menu-status="open"]>.col .menu-btn {
-    transition: .1s ease-in;
-    padding: var(--rr-size-sm-2x);
-}
-
-#menu[data-menu-status="open"]>.col .menu-btn:hover {
-    opacity: .5;
-    color: var(--rr-text-color-brand);
-    transform: scale(1.1);
-    border-right: 4px solid var(--rr-border-color-brand);
-    transition: .1s ease-out;
-}
-
-#menu[data-menu-status="open"] nav ul a li {
-    /* font-size: var(--rr-size-lg); */
-    letter-spacing: 3px;
-}
-
-#menu[data-menu-status="closed"]:hover {
-    top: 0;
-    background: var(--rr-surface-color-brand-accent);
-    color: var(--rr-text-color-brand);
-    transition: .25s ease-in;
-    cursor: pointer;
-    box-shadow: 0 0 0 6px var(--alpha-red500-75);
-}
-
-#mode[data-menu-type="theme"]:hover {
-    width: 100px;
-}
-
-#menu[data-menu-status="closed"]:hover .logo {
-    opacity: 1;
-    transition: .5s;
-}
-
-#menu[data-menu-status="closed"]:hover .menu-shimmer {
-    transform: .25s ease-in;
-    display: none;
-}
-
-
-#menu[data-menu-status="closed"] .close-menu {
-    display: none;
-}
-
-#menu[data-menu-status="open"] .menu-shimmer {
-    display: none;
-}
-
-#mode-switch[data-color-theme="light"] {
-    left: 20px;
-}
-
-
 /* ============= */
 /* Intro Section */
 #welcome {
-    height: 50vh;
+    height: 70vh;
     padding: var(--rr-size-xl-3x) var(--rr-size-md);
 }
 
@@ -584,11 +439,17 @@
         color: transparent;
         text-shadow: 0 0 0 var(--rr-text-color-primary);
     }
-
-
 }
 
+[data-blur="off"] {
+    filter: blur(0);
+    transition: .25s ease-in;
+}
 
+[data-blur="on"] {
+    filter: blur(6px);
+    transition: .25s ease-out;
+}
 
 
 .red {
@@ -695,24 +556,12 @@
 ;
 
 /* Featured Projects */
-/* #featured h3 { */
 
-/* 
-#feature1,
-#feature2,
-#feature3 {
-    transition: .25s ease-out
-} */
 
 .feature-card {
     transition: .25s ease-out
 }
 
-/* #feature1:hover,
-#feature2:hover,
-#feature3:hover {
-    cursor: url('/assets/images/home/view_project.svg'), pointer;
-} */
 
 .feature-card:hover {
     cursor: pointer;
@@ -822,6 +671,76 @@
     opacity: .2;
 }
 
+.marquee-container {
+    z-index: 2;
+    border-top: 1px solid var(--rr-border-color-default);
+    border-bottom: 1px solid var(--rr-border-color-default);
+    width: 100%;
+    height: 68px;
+    padding: var(--rr-size-md);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    color: var(--rr-text-color-primary);
+    padding-left: var(--rr-size-md);
+    background: var(--rr-surface-color-primary);
+}
+
+.marquee {
+    position: sticky;
+    top: 0;
+    color: var(--rr-text-color-primary);
+    padding-left: var(--rr-size-md);
+}
+
+.marquee-container h2 {
+    color: var(--rr-text-color-primary);
+    padding-left: var(--rr-size-md);
+}
+
+.shadow-container {
+    position: absolute;
+    width: 3000px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    left: -450px;
+}
+
+.shadow-container>span {
+    position: relative;
+    font-family: var(--font-header);
+    font-weight: var(--weight-900);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0;
+    padding-left: var(--rr-size-md);
+    font-size: var(--rr-size-xl-4x);
+    line-height: 2rem;
+}
+
+.marquee-container h2:before,
+.shadow-container>span:before {
+    position: absolute;
+    left: 0;
+    transform: skew(347deg);
+    content: '';
+    padding: 0px 4px;
+    width: 8px;
+    height: 32px;
+    background: var(--rr-text-color-primary);
+}
+
+.shadow-container>span,
+.shadow-container>span:before {
+    color: var(--rr-text-color-subtle);
+}
+
+.shadow-container>span:before {
+    background: var(--rr-text-color-subtle);
+}
+
+
 
 /* Services */
 #services .tab {
@@ -898,6 +817,7 @@
     color: var(--rr-text-color-primary);
     border-color: var(--rr-text-color-primary);
 }
+
 
 #webdev p {
     margin: 0;
