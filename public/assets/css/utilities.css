@@ -195,6 +195,14 @@
     letter-spacing: 1.25px;
 }
 
+.text-color-primary {
+    color: var(--rr-text-color-primary);
+}
+
+.text-color-secondary {
+    color: var(--rr-text-color-secondary);
+}
+
 /* Images */
 .img-container {
     width: 100%;

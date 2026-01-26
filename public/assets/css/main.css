@@ -8,12 +8,6 @@ section[data-section-type="intro"] {
     padding-bottom: var(--rr-size-xl-4x);
 }
 
-section[data-section-type="content"] {
-    background: var(--rr-surface-color-primary);
-}
-
-
-
 .spacing-a-t {
     letter-spacing: -7px;
     margin-right: 10px;
@@ -293,6 +287,10 @@ section[data-section-type="content"] {
     position: relative;
 }
 
+#welcome .opacity-toggle {
+    opacity: 1;
+    transition: 1s ease-in;
+}
 
 #welcome h1>span.cursor::after {
     content: '';
@@ -389,55 +387,55 @@ section[data-section-type="content"] {
     }
 }
 
-.centered {
+.blur {
     animation-name: blur;
     animation-duration: 10s;
     animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
     animation-iteration-count: infinite;
     color: var(--rr-text-color-primary);
     color: transparent;
-    text-shadow: 0 0 0 var(--rr-text-color-primary);
+    text-shadow: 0 0 0 var(--rr-text-color-subtle);
 }
 
 @keyframes blur {
     0% {
         color: transparent;
-        text-shadow: 0 0 0 var(--rr-text-color-primary);
+        text-shadow: 0 0 0 var(--rr-text-color-subtle);
     }
 
     50% {
         color: transparent;
-        text-shadow: 0 0 0 var(--rr-text-color-primary);
+        text-shadow: 0 0 0 var(--rr-text-color-subtle);
     }
 
     52% {
         color: transparent;
-        text-shadow: 0 0 8px var(--rr-text-color-primary);
+        text-shadow: 0 0 8px var(--rr-text-color-subtle);
     }
 
     56% {
         color: transparent;
-        text-shadow: 0 0 4px var(--rr-text-color-primary);
+        text-shadow: 0 0 4px var(--rr-text-color-subtle);
     }
 
     60% {
         color: transparent;
-        text-shadow: 0 0 4px var(--rr-text-color-primary);
+        text-shadow: 0 0 4px var(--rr-text-color-subtle);
     }
 
     62% {
         color: transparent;
-        text-shadow: 0 0 6px var(--rr-text-color-primary);
+        text-shadow: 0 0 6px var(--rr-text-color-subtle);
     }
 
     64% {
         color: transparent;
-        text-shadow: 0 0 0 var(--rr-text-color-primary);
+        text-shadow: 0 0 0 var(--rr-text-color-subtle);
     }
 
     100% {
         color: transparent;
-        text-shadow: 0 0 0 var(--rr-text-color-primary);
+        text-shadow: 0 0 0 var(--rr-text-color-subtle);
     }
 }
 
@@ -568,16 +566,11 @@ section[data-section-type="content"] {
     color: var(--rr-text-color-brand);
 }
 
-
-
-
 .feature-card:hover h3,
 .feature-card:hover .chip-outline {
     color: var(--rr-text-color-brand);
     border-color: var(--rr-text-color-brand);
 }
-
-
 
 .feature-card .card-img {
     background: #fff;
@@ -586,38 +579,11 @@ section[data-section-type="content"] {
     filter: sepia(0%);
 }
 
-/* #feature1:hover .card,
-#feature2:hover .card,
-#feature3:hover .card {
-    transition: .25s ease-out;
-    cursor: pointer;
-    filter: sepia(90%);
-} */
-
 .feature-card:hover .card-img {
     transition: .25s ease-out;
     /* cursor: pointer; */
     filter: sepia(90%);
 }
-
-
-/* #feature2:hover .img-container>img,
-#feature3:hover .img-container>img {
-    transform: scale(1.05);
-    transition: .25s ease-out;
-} */
-
-/* .feature-card:hover .img-container>img {
-    transform: scale(1.05);
-    transition: .25s ease-out;
-} */
-
-/* #featured #project1 {
-    background: url('/assets/images/home/acopon-featured.jpg');
-    background-size: 100%;
-    background-position: bottom center;
-    transition: .15s ease-out;
-} */
 
 #feature1:hover #project1 {
     background-size: 102%;
@@ -629,13 +595,32 @@ section[data-section-type="content"] {
     background: linear-gradient(151deg, rgba(185, 105, 7, 1) 0%, rgba(251, 232, 91, 1) 100%);
 }
 
-/* #featured #labels {
-    background: var(--rr-surface-color-offwhite);
-} */
-
 #featured .card:last-of-type {
     background: rgb(250, 170, 141);
     background: linear-gradient(133deg, rgba(250, 170, 141, 1) 0%, rgba(214, 65, 39, 1) 100%);
+}
+
+.card>#acopon.img-container {
+    background-image: url('/assets/images/2025/featured/acopon.jpg');
+    transition: .25s ease-in;
+}
+
+.card>#labels.img-container {
+    background-image: url('/assets/images/2025/featured/cans-labels.png');
+    transition: .25s ease-in;
+}
+
+.card>#logos.img-container {
+    background-image: url('/assets/images/2025/featured/logos.gif');
+    transition: .25s ease-in;
+}
+
+.card .img-container {
+    filter: grayscale(0);
+}
+
+.card:hover .img-container>.section-overlay {
+    filter: blur(1);
 }
 
 #featured ul,
@@ -671,8 +656,8 @@ section[data-section-type="content"] {
     opacity: .2;
 }
 
-.marquee-container {
-    z-index: 2;
+.section-header {
+    z-index: 3;
     border-top: 1px solid var(--rr-border-color-default);
     border-bottom: 1px solid var(--rr-border-color-default);
     width: 100%;
@@ -686,14 +671,7 @@ section[data-section-type="content"] {
     background: var(--rr-surface-color-primary);
 }
 
-.marquee {
-    position: sticky;
-    top: 0;
-    color: var(--rr-text-color-primary);
-    padding-left: var(--rr-size-md);
-}
-
-.marquee-container h2 {
+.section-header h2 {
     color: var(--rr-text-color-primary);
     padding-left: var(--rr-size-md);
 }
@@ -719,7 +697,7 @@ section[data-section-type="content"] {
     line-height: 2rem;
 }
 
-.marquee-container h2:before,
+.section-header h2:before,
 .shadow-container>span:before {
     position: absolute;
     left: 0;
