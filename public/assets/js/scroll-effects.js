@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let introSection = document.getElementById("welcome");
     let lightSwitches = document.querySelectorAll(".lightswitch");
-    let menuEl = document.getElementById("menu");
+    let menuEl = document.querySelector(".menu-pos");
+    let featuredHeader = document.querySelector('[data-feature-type=work]');
 
     window.addEventListener('scroll', function handleScroll(event) {
 
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             introSection.style.opacity = 0;
         }
         if (window.scrollY >= 800) {
-            menuEl.classList.add("move-down");
+            menuEl.style.top = "70px"
             lightSwitches.forEach((lightswitch) => {
                 lightswitch.style.top = "70px"
             });
@@ -24,22 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
         // If Scrolling Up
         if (window.scrollY < this.lastScrollTop) {
             console.log('scrolling up');
+            // Get First Section header y position
+            let headerScrollTrigger = featuredHeader.getBoundingClientRect().top;
+
             if (scrollY < 300) {
                 introSection.style.opacity = 1;
             }
-            // If scrolling up and scroll position is less than 200
             if (scrollY < 200) {
                 introSection.setAttribute("data-blur", "off")
             }
-
-            // if (window.scrollY >= 400) {
-            //     menuEl.classList.remove("move-down");
-            //     lightSwitches.forEach((lightswitch) => {
-            //         lightswitch.style.top = "0px"
-            //     });
-            // }
+            if (headerScrollTrigger > 10) {
+                menuEl.style.top = "0px"
+            }
             if (window.scrollY >= 800) {
-                menuEl.classList.remove("move-down");
                 lightSwitches.forEach((lightswitch) => {
                     lightswitch.style.top = "0px"
                 });

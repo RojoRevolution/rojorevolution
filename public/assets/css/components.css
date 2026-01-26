@@ -192,6 +192,8 @@
 
 #projects .card:hover .tag-container>.chip {
     /* box-shadow: 0 0 0 6px var(--alpha-red500-75); */
+    color: var(--rr-surface-color-brand);
+    border-color: var(--rr-surface-color-brand);
     transition: .25s ease-in;
 }
 
@@ -685,9 +687,16 @@
 
 /* =============== */
 /* Main Navigation */
+.menu-pos {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 24px;
+}
+
 #menu {
     z-index: 3;
-    position: fixed;
+    position: absolute;
     overflow: hidden;
     font-family: var(--rr-font-header);
     text-transform: uppercase;
@@ -764,7 +773,7 @@
     width: 70px;
     height: 48px;
     top: -6px;
-    right: 24px;
+    right: 0;
     transition: .25s ease-out;
     border-radius: 0 0 var(--rr-radius-lg) var(--rr-radius-lg);
 }
@@ -780,7 +789,7 @@
 #menu[data-menu-status="open"] {
     width: 160px;
     top: 20px;
-    right: 28px;
+    right: 0;
     transition: .25s ease-out;
     border-radius: var(--rr-radius-md);
     box-shadow: -20px 20px 0 0 var(--alpha-red500-75);
