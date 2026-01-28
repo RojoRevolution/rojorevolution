@@ -145,11 +145,15 @@
     justify-content: end;
     gap: var(--rr-size-md);
     transition: .25s ease-in;
-
 }
 
-#projects .card .tag-container>.chip {
-    background: var(--rr-surface-color-primary);
+#projects .card .tag-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+#projects .card .tag-container .chip {
     border: 1px solid var(--rr-border-color-default);
     color: var(--rr-text-color-primary);
     font-size: var(--rr-size-md);
@@ -186,15 +190,13 @@
 
 #projects .card:hover .tag-container {
     right: 60px;
-    /* transform: scale(1.05); */
+    transform: scale(1.05);
     transition: .25s ease-out;
 }
 
-#projects .card:hover .tag-container>.chip {
-    /* box-shadow: 0 0 0 6px var(--alpha-red500-75); */
-    color: var(--rr-surface-color-brand);
-    border-color: var(--rr-surface-color-brand);
-    transition: .25s ease-in;
+#projects .card:hover .tag-container .chip {
+    border-color: var(--rr-border-color-brand);
+    color: var(--rr-text-color-brand);
 }
 
 #projects .card:hover .img-container .learn {

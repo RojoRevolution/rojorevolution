@@ -201,6 +201,10 @@
     --rr-border-color-brand: var(--revolution-red-500);
     --rr-border-color-dark: var(--neutral-600);
     --rr-border-color-offwhite: var(--basic-off-white);
+
+    .grain:after {
+        opacity: .4;
+    }
 }
 
 [data-theme="dark"] {
@@ -253,6 +257,8 @@
     --rr-border-color-brand: var(--revolution-red-500);
     --rr-border-color-dark: var(--neutral-600);
     --rr-border-color-offwhite: var(--basic-off-white);
+
+
 }
 
 [data-film-effect="off"] {

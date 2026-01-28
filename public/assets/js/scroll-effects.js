@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // If Scrolling Up
         if (window.scrollY < this.lastScrollTop) {
-            console.log('scrolling up');
             // Get First Section header y position
             let headerScrollTrigger = featuredHeader.getBoundingClientRect().top;
 
@@ -36,12 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             if (headerScrollTrigger > 10) {
                 menuEl.style.top = "0px"
-            }
-            if (window.scrollY >= 800) {
                 lightSwitches.forEach((lightswitch) => {
                     lightswitch.style.top = "0px"
                 });
             }
+            // if (window.scrollY >= 800) {
+            //     lightSwitches.forEach((lightswitch) => {
+            //         lightswitch.style.top = "0px"
+            //     });
+            // }
 
         }
         this.lastScrollTop = window.scrollY;
