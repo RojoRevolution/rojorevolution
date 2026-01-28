@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Color Theme Elements
-    const bodyEl = document.body;
+    const htmlEl = document.querySelector('html');
     const lightSwitchBox = document.querySelector('.light-switch-box');
     const filmEffectBG = document.querySelector('.film-effect-bg');
     const clickEl = document.querySelector('.click-sound');
@@ -104,13 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event Listener for Light Switch Chains
     lightSwitches.forEach((lightSwitch) => {
         lightSwitch.addEventListener("click", (evt) => {
+            console.log("click")
             // Get current Target
             let lightSwitchContainter = evt.currentTarget;
             // Get targets attribute - dictactes which chain was pulled
             let activeSwitch = evt.currentTarget.getAttribute('data-switch-type')
 
             // Color theme
-            let themeStatus = bodyEl.getAttribute('data-theme');
+            let themeStatus = colorThemeControl.getAttribute('data-theme');
             // Selects relevant elements based on current target
             let currentLightSwitchBox = lightSwitchContainter.querySelector('.light-switch-box');
             let currentClickEl = lightSwitchContainter.querySelector('.click-sound')
@@ -118,13 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             switch (activeSwitch) {
-                // If first chain is pulled
+                // If first chain is pulled change the theme
                 case "theme":
                     switch (themeStatus) {
                         case 'light':
                             currentLightSwitchBox.classList.add("pull");
                             currentClickEl.classList.add("show-click");
-                            bodyEl.setAttribute('data-theme', 'dark');
+                            colorThemeControl.setAttribute('data-theme', 'dark');
+                            localStorage.setItem('theme', 'dark');
                             setTimeout(() => {
                                 currentLightSwitchBox.classList.remove("pull");
                                 currentClickEl.classList.remove("show-click");
@@ -134,8 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         case 'dark':
                             currentLightSwitchBox.classList.add("pull");
                             currentClickEl.classList.add("show-click");
-
-                            bodyEl.setAttribute('data-theme', 'light');
+                            colorThemeControl.setAttribute('data-theme', 'light');
+                            localStorage.setItem('theme', 'light');
                             setTimeout(() => {
                                 currentLightSwitchBox.classList.remove("pull");
                                 currentClickEl.classList.remove("show-click");
@@ -146,11 +148,28 @@ document.addEventListener("DOMContentLoaded", () => {
                             break
                     }
                     break;
-                // If second chain is pulled
+                // If second chain is pulled show/hide the film efect
                 case "film":
-                    filmEffectBG.classList.toggle("display-none");
+                    let filmStatus = htmlEl.getAttribute('data-film-effect');
+                    console.log(filmStatus)
                     currentLightSwitchBox.classList.add("pull");
                     currentClickEl.classList.add("show-click");
+
+                    switch (filmStatus) {
+                        case 'on':
+                            // filmEffectBG.classList.add("display-none");
+                            htmlEl.setAttribute('data-film-effect', 'off');
+                            localStorage.setItem('film', 'off');
+                            break;
+                        case 'off':
+                            // filmEffectBG.classList.remove("display-none");
+                            htmlEl.setAttribute('data-film-effect', 'on');
+                            localStorage.setItem('film', 'on');
+                            break;
+                        default:
+                            break;
+                    }
+
 
                     setTimeout(() => {
                         currentLightSwitchBox.classList.remove("pull");

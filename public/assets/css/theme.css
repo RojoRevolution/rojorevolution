@@ -172,8 +172,8 @@
     --rr-surface-color-overlay-primary: var(--alpha-white-50);
 
     /* Gradients */
-    --rr-surface-gradient-primary-linear-top-bottom: linear-gradient(0deg, var(--alpha-neutral-300-0) 0%, var(--rr-surface-color-primary) 100%);
-    --rr-surface-gradient-primary-linear-bottom-top: linear-gradient(180deg, var(--alpha-neutral-300-0) 0%, var(--rr-surface-color-primary) 90%, var(--rr-surface-color-primary) 100%);
+    --rr-surface-gradient-primary-linear-top-bottom: linear-gradient(0deg, var(--alpha-neutral-1100-0) 0%, var(--rr-surface-color-primary) 100%);
+    --rr-surface-gradient-primary-linear-bottom-top: linear-gradient(180deg, var(--alpha-neutral-1100-0) 0%, var(--rr-surface-color-primary) 90%, var(--rr-surface-color-primary) 100%);
 
     /* Buttons */
     --rr-surface-button-primary-default: var(--revolution-red-500);
@@ -220,12 +220,15 @@
     --rr-surface-color-success-heavy: var(--success-900);
     --rr-surface-color-warning-subtle: var(--warning-100);
     --rr-surface-color-warning-subtle: var(--warning-900);
-
     --rr-surface-color-overlay-primary: var(--alpha-black-50);
 
+    /* Gradients */
+    --rr-surface-gradient-primary-linear-top-bottom: linear-gradient(0deg, var(--alpha-neutral-300-0) 0%, var(--rr-surface-color-primary) 100%);
+    --rr-surface-gradient-primary-linear-bottom-top: linear-gradient(180deg, var(--alpha-neutral-300-0) 0%, var(--rr-surface-color-primary) 90%, var(--rr-surface-color-primary) 100%);
+
+    /* Buttons */
     --rr-surface-button-primary-default: var(--revolution-red-500);
     --rr-surface-button-primary-hover: var(--revolution-red-600);
-
     --rr-surface-button-inverse-default: var(--neutral-300);
     --rr-surface-button-inverse-hover: var(--neutral-400);
 
@@ -250,6 +253,12 @@
     --rr-border-color-brand: var(--revolution-red-500);
     --rr-border-color-dark: var(--neutral-600);
     --rr-border-color-offwhite: var(--basic-off-white);
+}
+
+[data-film-effect="off"] {
+    .film-effect-bg {
+        display: none;
+    }
 }
 
 *,
