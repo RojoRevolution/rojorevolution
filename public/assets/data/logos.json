@@ -1,0 +1,200 @@
+{
+    "azwbadge": {
+        "src": "/assets/images/2025/logos/rr-logo-1.svg",
+        "alt": "Badge depicting a hiker sitting on top of a ridge for Arizona Wilderness Brewing Co.",
+        "bg": "#1E4488",
+        "maxWidth": "350px"
+    },
+    "bwbw": {
+        "src": "/assets/images/2025/logos/rr-logo-2.gif",
+        "alt": "Icon depicting a glass of wine with barley leaves flickering around it and grapes near the bottom.",
+        "bg": "#F2E7E8",
+        "maxWidth": "350px"
+    },
+    "muirs": {
+        "src": "/assets/images/2025/logos/rr-logo-3.svg",
+        "alt": "Circular design that reads Muir's Mure plus a spindle holding a bunch of grapes",
+        "bg": "#471D32",
+        "maxWidth": "350px"
+    },
+    "oldgrowth": {
+        "src": "/assets/images/2025/logos/rr-logo-4.gif",
+        "alt": "Circular icon that reads Old Growth Forest. The icon spins occasionally, thowing leaves when it comes to a stop.",
+        "bg": "#F7F5F4",
+        "maxWidth": "350px"
+    },
+    "dfiu": {
+        "src": "/assets/images/2025/logos/rr-logo-5.svg",
+        "alt": "Logo that boldy reads Don't Fuck it Up",
+        "bg": "#EE3124",
+        "maxWidth": "280px"
+    },
+    "cbwn": {
+        "src": "/assets/images/2025/logos/rr-logo-6.gif",
+        "alt": "Logo with a coffee cup and a whiskey glass swirling into each other",
+        "bg": "#FFE9D8",
+        "maxWidth": "350px"
+    },
+    "trigo": {
+        "src": "/assets/images/2025/logos/rr-logo-7.svg",
+        "alt": "Logo with the word Trigo in the design of a cactus",
+        "bg": "#473E34",
+        "maxWidth": "350px"
+    },
+    "estrella": {
+        "src": "/assets/images/2025/logos/rr-logo-8.svg",
+        "alt": "Logo with a star with a cactus inside",
+        "bg": "#FBFAF2",
+        "maxWidth": "350px"
+    },
+    "sauvage": {
+        "src": "/assets/images/2025/logos/rr-logo-9.svg",
+        "alt": "Logo that reads Region Sauvage with two leafs on the sides",
+        "bg": "#8B261C",
+        "maxWidth": "350px"
+    },
+    "woolsey": {
+        "src": "/assets/images/2025/logos/rr-logo-10.svg",
+        "alt": "Logo that reads Woolsey the Wild, named after the Woolsey Wilderness.",
+        "bg": "#FBF1E5",
+        "maxWidth": "350px"
+    },
+    "hellsgate": {
+        "src": "/assets/images/2025/logos/rr-logo-11.svg",
+        "alt": "Simple Text logo that reads La Ciudad IPA",
+        "bg": "#1E0F0F",
+        "maxWidth": "350px"
+    },
+    "ciudad": {
+        "src": "/assets/images/2025/logos/rr-logo-12.svg",
+        "alt": "Logo with a coffee cup and a whiskey glass swirling into each other",
+        "bg": "#FEFEFE",
+        "maxWidth": "350px"
+    },
+    "brutalnature": {
+        "src": "/assets/images/2025/logos/rr-logo-13.svg",
+        "alt": "Logo with a human skull with horns looking up to a glass. The words Wilderness written behind.",
+        "bg": "#1A1A1A",
+        "maxWidth": "280px"
+    },
+    "cherrycreek": {
+        "src": "/assets/images/2025/logos/rr-logo-14.svg",
+        "alt": "Logo that reads Cherry Creek with cherries hanging off of it",
+        "bg": "#FCE1E0",
+        "maxWidth": "350px"
+    },
+    "skullvalley": {
+        "src": "/assets/images/2025/logos/rr-logo-15.svg",
+        "alt": "Logo thay reads Skull Valley with a border around it",
+        "bg": "#2D2A27",
+        "maxWidth": "350px"
+    },
+    "shadesofcitrus": {
+        "src": "/assets/images/2025/logos/rr-logo-16.svg",
+        "alt": "Multi colors logo that reads Shades of Citrus",
+        "bg": "#F4B61A",
+        "maxWidth": "350px"
+    },
+    "desertdweller": {
+        "src": "/assets/images/2025/logos/rr-logo-17.svg",
+        "alt": "Logo that reads Desert Dweller which appears to be disentigrating",
+        "bg": "#593614",
+        "maxWidth": "350px"
+    },
+    "leadjam": {
+        "src": "/assets/images/2025/logos/rr-logo-18.svg",
+        "alt": "Logo with a roller blade wheel on fire that reads Lead Jam",
+        "bg": "#FEFEFE",
+        "maxWidth": "350px"
+    },
+    "nocturnal": {
+        "src": "/assets/images/2025/logos/rr-logo-19.svg",
+        "alt": "Upscale, script style logo that reads Nocturnal Opulence",
+        "bg": "#41043F",
+        "maxWidth": "350px"
+    },
+    "refuge": {
+        "src": "/assets/images/2025/logos/rr-logo-20.svg",
+        "alt": "An icon depicting a tent with a bonfire underneath the mountains",
+        "bg": "#E1E5EA",
+        "maxWidth": "350px"
+    },
+    "picacho": {
+        "src": "/assets/images/2025/logos/rr-logo-21.svg",
+        "alt": "An icon with a pecan in a glass surroumded by pecan trees.",
+        "bg": "#3F2723",
+        "maxWidth": "350px"
+    },
+    "nobadday": {
+        "src": "/assets/images/2025/logos/rr-logo-22.svg",
+        "alt": "Logo in the style of a comic book that reads No Bad Days Man",
+        "bg": "#ffffff",
+        "maxWidth": "280px"
+    },
+    "pricklypear": {
+        "src": "/assets/images/2025/logos/rr-logo-23.svg",
+        "alt": "Logo with spikes shooting out that reads Prickly Pear Saison",
+        "bg": "#DC2859",
+        "maxWidth": "350px"
+    },
+    "peoplepower": {
+        "src": "/assets/images/2025/logos/rr-logo-24.svg",
+        "alt": "Logo with a mouth yelling People Power",
+        "bg": "#F6CC43",
+        "maxWidth": "350px"
+    },
+    "wildernessact": {
+        "src": "/assets/images/2025/logos/rr-logo-25.svg",
+        "alt": "Logo that reads The Wilderness Act Est 1964. It includes mountains, trees, and a piece of parchment",
+        "bg": "#16271E",
+        "maxWidth": "350px"
+    },
+    "superstition": {
+        "src": "/assets/images/2025/logos/rr-logo-26.svg",
+        "alt": "Logo with a coffee cup and a whiskey glass swirling into each other",
+        "bg": "#FFF2D5",
+        "maxWidth": "350px"
+    },
+    "watermelon": {
+        "src": "/assets/images/2025/logos/rr-logo-27.svg",
+        "alt": "Icon of a dripping watermelon with a scorching desert on top",
+        "bg": "#FF383C",
+        "maxWidth": "300px"
+    },
+    "whitecanyon": {
+        "src": "/assets/images/2025/logos/rr-logo-28.svg",
+        "alt": "Logo depicting the white canyon mountain range with sunrays coming up behind it",
+        "bg": "#FBF5EB",
+        "maxWidth": "350px"
+    },
+    "wilderblack": {
+        "src": "/assets/images/2025/logos/rr-logo-29.svg",
+        "alt": "Dark heavy metal style logo that reads WilderBlack",
+        "bg": "#333333",
+        "maxWidth": "350px"
+    },
+    "coolship": {
+        "src": "/assets/images/2025/logos/rr-logo-30.svg",
+        "alt": "Logo depicting a truck and a tent in the forest that reads Camp Coolship",
+        "bg": "#E8E5DE",
+        "maxWidth": "350px"
+    },
+    "pride": {
+        "src": "/assets/images/2025/logos/rr-logo-31.svg",
+        "alt": "Logo that reads Arizona Pride IPA with a rainbow flag.",
+        "bg": "#5B4A9E",
+        "maxWidth": "350px"
+    },
+    "dhw": {
+        "src": "/assets/images/2025/logos/rr-logo-32.svg",
+        "alt": "Circular icon depicting a hop cubmerged in dark liquid with the words Dirty Hop Water around it.",
+        "bg": "#FFFFFF",
+        "maxWidth": "350px"
+    },
+    "gilberttower": {
+        "src": "/assets/images/2025/logos/rr-logo-33.svg",
+        "alt": "Clean wordmark that reads Gilber Tower Lager",
+        "bg": "#18214C",
+        "maxWidth": "350px"
+    }
+}

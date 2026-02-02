@@ -7,7 +7,11 @@ module.exports = (app) => {
     });
 
     app.get('/index', (req, res) => {
-        res.render('index', { title: 'Human Centered Design and Differentiationt | RojoRevolution' });
+        res.render('index', { title: 'Human Centered Design and Differentiation | RojoRevolution' });
+    });
+
+    app.get('/logos', (req, res) => {
+        res.render('logos', { title: 'Logo Collection | RojoRevolution' });
     });
 
 }

@@ -203,16 +203,15 @@
     --rr-border-color-offwhite: var(--basic-off-white);
 
     .grain:after {
-        opacity: .4;
+        opacity: .35;
     }
 }
 
 [data-theme="dark"] {
     /* Surface: General Background */
     --rr-surface-color-primary: var(--neutral-1100);
-    --rr-surface-color-primary-dark: var(--neutral-300);
-    --rr-surface-color-primary-inverse: var(--neutral-100);
-    --rr-surface-color-secondary: var(--neutral-700);
+    --rr-surface-color-primary-inverse: var(--neutral-300);
+    --rr-surface-color-secondary: var(--neutral-1000);
     --rr-surface-color-accent: var(--neutral-900);
     --rr-surface-color-white: var(--basic-black);
     --rr-surface-color-black: var(--basic-white);

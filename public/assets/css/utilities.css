@@ -9,6 +9,10 @@
     flex-direction: column;
 }
 
+.width-100 {
+    width: 100%;
+}
+
 
 /* Display */
 .display-none {
@@ -220,6 +224,10 @@
     width: 75%;
 }
 
+.img-multiply {
+    mix-blend-mode: multiply;
+}
+
 
 /* Sizing and spacing */
 .height-100vh {
@@ -427,11 +435,11 @@
 }
 
 .padd-y-12 {
-    padding: 0 var(--rr-size-xl-6x);
+    padding: var(--rr-size-xl-6x) 0;
 }
 
 .padd-y-13 {
-    padding: 0 var(--rr-size-xl-7x);
+    padding: var(--rr-size-xl-7x) 0;
 }
 
 
