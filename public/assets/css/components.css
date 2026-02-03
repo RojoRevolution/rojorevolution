@@ -246,12 +246,18 @@
     border-radius: var(--rr-radius-lg);
     padding: var(--rr-size-md);
     width: 100%;
-    transition: .5s ease-in;
+    transform: scale(1);
+    transition: .25s ease-in;
 }
 
 .panel.logo {
     height: 500px;
 }
+
+/* .panel.logo:hover {
+    cursor: pointer;
+    transform: scaleY(1.05);
+} */
 
 
 

@@ -711,6 +711,20 @@
     max-width: 400px;
 }
 
+/* Scale */
+
+.scale-minus-1 {
+    transform: scale(.9);
+}
+
+.scale-normal {
+    transform: scale(1);
+}
+
+.scale-add-1 {
+    transform: scale(1.1);
+}
+
 /* Shadows */
 .shadow-1 {
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);

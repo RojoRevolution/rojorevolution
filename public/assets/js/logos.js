@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const logoPanels = document.querySelectorAll("[data-logo]");
+    let logoPanels;
     const logoImages = document.querySelectorAll("[data-img-type]");
     const showcaseDiv = document.querySelector('[data-target="showcase"]');
     let topPos = 70;
+    let panelPositions = [];
+    let windowScrollPos;
 
     let totalImageElements;
     let imgData;
@@ -16,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
             // console.log(jsonResponse)
             imgData = jsonResponse;
             totalImageElements = Object.keys(imgData).length;
-            console.log(imgData);
             generateHTML(totalImageElements);
+
         });
     }).catch((err) => {
         console.log(`Error: ${err}`)
@@ -25,14 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function creates divs and images and inserts them
     const createPanel = (imgName, imgSrc, imgAlt, topPos, maxWidth) => {
+        // Create a Tag
+        const newATag = document.createElement("a");
+        newATag.setAttribute('href', "#" + imgName)
+
         // Create Div
         const newDiv = document.createElement("div");
         newDiv.classList.add("panel");
         newDiv.classList.add("logo");
+        // newDiv.classList.add("scale-add-1");
         newDiv.setAttribute("data-logo", imgName);
         newDiv.setAttribute("id", imgName);
+        // newDiv.setAttribute("data-top-pos", topPos);
         newDiv.style.background = imgData[imgName]["bg"];
         newDiv.style.top = topPos + "px";
+        logoPanels = document.querySelectorAll('[data-logo]')
+
         // Create Image
         const newImg = document.createElement("img");
         newImg.classList.add("width-100");
@@ -57,6 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // Append HTML
         showcaseDiv.appendChild(newDiv);
         newDiv.appendChild(newImg);
+
+        // Get element position
+        let elemPositions = newDiv.getBoundingClientRect();
+        let elemTop = elemPositions.top;
+        // console.log("Elem Top: ", elemTop)
+
+        // newDiv.setAttribute('data-pos', elemTop)
     }
 
     // Function runs loop based on JSON object length
@@ -65,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
             let objKeys = Object.keys(imgData);
             // Add 8 to each panels top position
             topPos = topPos + 8;
-
             let currentImg = objKeys[i];
             let currentSrc = imgData[currentImg]["src"];
             let currentAlt = imgData[currentImg]["alt"];
@@ -74,16 +90,5 @@ document.addEventListener("DOMContentLoaded", () => {
             createPanel(currentImg, currentSrc, currentAlt, topPos, maxWidth);
         }
     }
-
-    console.log(logoPanels)
-
-    logoPanels.forEach((panel) => {
-        panel.addEventListener('click', (evt) => {
-            console.log(evt.target)
-            console.log("CLICK")
-        })
-    })
-
-
 
 });
