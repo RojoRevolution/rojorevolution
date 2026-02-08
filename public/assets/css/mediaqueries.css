@@ -14,3 +14,30 @@
         max-width: 100%;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: var(--rr-size-xl-5x);
+    }
+
+    h2 {
+        font-size: var(--rr-size-xl);
+    }
+
+    h3 {
+        font-size: var(--rr-size-lg);
+    }
+
+    h4,
+    h5 {
+        font-size: var(--rr-size-lg);
+    }
+
+    p {
+        font-size: var(--rr-size-md);
+    }
+
+
+}
