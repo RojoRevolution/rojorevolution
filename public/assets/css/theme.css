@@ -176,10 +176,10 @@
     --rr-surface-gradient-primary-linear-bottom-top: linear-gradient(180deg, var(--alpha-neutral-1100-0) 0%, var(--rr-surface-color-primary) 90%, var(--rr-surface-color-primary) 100%);
 
     /* Buttons */
-    --rr-surface-button-primary-default: var(--revolution-red-500);
-    --rr-surface-button-primary-hover: var(--revolution-red-600);
-    --rr-surface-button-inverse-default: var(--neutral-300);
-    --rr-surface-button-inverse-hover: var(--neutral-400);
+    --rr-button-primary-surface-default: var(--neutral-300);
+    --rr-button-primary-surface-hover: var(--neutral-200);
+    --rr-button-inverse-surface-default: var(--neutral-300);
+    --rr-button-inverse-surface-hover: var(--neutral-400);
 
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-1100);
@@ -193,11 +193,8 @@
     --rr-text-color-white: var(--basic-white);
     --rr-text-color-offwhite: var(--basic-off-white);
 
-    /* Shadow Colors */
-    --rr-shadow-color-brand-25: var(--alpha-red500-5);
-
     /* Border Colors */
-    --rr-border-color-default: var(--neutral-400);
+    --rr-border-color-default: var(--neutral-500);
     --rr-border-color-brand: var(--revolution-red-500);
     --rr-border-color-dark: var(--neutral-600);
     --rr-border-color-offwhite: var(--basic-off-white);
@@ -230,8 +227,8 @@
     --rr-surface-gradient-primary-linear-bottom-top: linear-gradient(180deg, var(--alpha-neutral-300-0) 0%, var(--rr-surface-color-primary) 90%, var(--rr-surface-color-primary) 100%);
 
     /* Buttons */
-    --rr-surface-button-primary-default: var(--revolution-red-500);
-    --rr-surface-button-primary-hover: var(--revolution-red-600);
+    --rr-button-primary-surface-default: var(--neutral-1100);
+    --rr-button-primary-surface-hover: var(--neutral-1000);
     --rr-surface-button-inverse-default: var(--neutral-300);
     --rr-surface-button-inverse-hover: var(--neutral-400);
 
@@ -327,7 +324,7 @@ h5 {
 h1 {
     font-size: var(--rr-size-xl-7x);
     font-weight: var(--weight-900);
-    line-height: var(--rr-size-xl-7x);
+    line-height: 84px;
 }
 
 h2 {
@@ -366,6 +363,16 @@ p {
     color: var(--rr-text-color-secondary);
     margin-block-start: .5em;
     margin-block-end: .5em;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
 }
 
 .display-font {

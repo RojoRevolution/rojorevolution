@@ -4,7 +4,7 @@
 section[data-section-type="intro"] {
     position: sticky;
     top: 0;
-    z-index: -1;
+    /* z-index: -1; */
     padding-bottom: var(--rr-size-xl-4x);
 }
 
@@ -620,7 +620,8 @@ section[data-section-type="intro"] {
 }
 
 .card:hover .img-container>.section-overlay {
-    filter: blur(1);
+    /* filter: blur(1); */
+    background-color: var(--rr-surface-color-overlay-primary);
 }
 
 #featured ul,

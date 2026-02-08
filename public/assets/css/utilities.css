@@ -191,6 +191,10 @@
     color: var(--rr-text-color-);
 }
 
+.text-theme-brand {
+    color: var(--rr-text-color-brand);
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -709,6 +713,13 @@
 
 .max-400 {
     max-width: 400px;
+}
+
+
+/* Borders */
+
+.border-default {
+    border: 1px solid var(--rr-border-color-default);
 }
 
 /* Scale */
