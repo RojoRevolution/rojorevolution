@@ -312,13 +312,10 @@ section[data-section-type="intro"] {
     gap: 0 6px
 }
 
-#welcome .intro-header h1[data-intro-text] {
-    overflow: hidden;
-}
 
 #welcome .intro-header h1[data-intro-text="human"] {
     animation-name: intro-text-human;
-    animation-duration: 20s;
+    animation-duration: 16s;
     animation-iteration-count: infinite;
     animation-timing-function: bounce-in;
 }
@@ -360,10 +357,10 @@ section[data-section-type="intro"] {
 
 #welcome .intro-header h1[data-intro-text="off"] {
     width: 0;
-    color: var(--rr-text-color-brand);
+    /* color: var(--rr-text-color-brand); */
     /* font-family: var(--font-display); */
     animation-name: intro-text-off;
-    animation-duration: 20s;
+    animation-duration: 16s;
     /* animation-delay: 1s; */
     animation-iteration-count: infinite;
     animation-timing-function: bounce-out;
@@ -378,48 +375,45 @@ section[data-section-type="intro"] {
     31% {
         width: 0;
         opacity: 0;
-        color: var(--rr-text-color-default);
     }
 
     35% {
-        width: 140px;
+        width: 148px;
         opacity: 1;
-        color: var(--rr-text-color-brand);
     }
 
     88% {
-        width: 140px;
+        width: 148px;
         opacity: 1;
     }
 
     91% {
         width: 0px;
         opacity: 0;
-        color: var(--rr-text-color-brand);
     }
 
     100% {
         width: 0px;
         opacity: 0;
-        color: var(--rr-text-color-default);
     }
 
 }
 
 #welcome .intro-header h1[data-intro-text="centered"] {
+    line-height: 84px;
     animation-name: intro-text-centered;
-    animation-duration: 20s;
+    animation-duration: 16s;
     animation-iteration-count: infinite;
     animation-timing-function: bounce-in;
 }
 
 @keyframes intro-text-centered {
     0% {
-        width: 377px;
+        width: 384px;
     }
 
     30% {
-        width: 377px;
+        width: 384px;
 
     }
 
@@ -433,17 +427,17 @@ section[data-section-type="intro"] {
     }
 
     93% {
-        width: 377px;
+        width: 384px;
     }
 
     100% {
-        width: 377px;
+        width: 384px;
     }
 }
 
 #welcome .intro-header h1[data-intro-text="design"] {
     animation-name: intro-text-design;
-    animation-duration: 20s;
+    animation-duration: 16s;
     animation-iteration-count: infinite;
     animation-timing-function: bounce-in;
     /* animation-delay: 2s; */
@@ -492,7 +486,7 @@ section[data-section-type="intro"] {
     /* color: var(--alpha-red500-0); */
     opacity: 0;
     animation-name: intro-text-differ;
-    animation-duration: 20s;
+    animation-duration: 16s;
     animation-iteration-count: infinite;
     animation-timing-function: bounce-in;
 }
@@ -511,11 +505,11 @@ section[data-section-type="intro"] {
     }
 
 
-    88% {
+    90% {
         opacity: 1;
     }
 
-    90% {
+    92% {
         opacity: 0;
     }
 
@@ -540,7 +534,7 @@ section[data-section-type="intro"] {
     right: -12px;
     animation-name: blink-cursor;
     animation-iteration-count: infinite;
-    animation-duration: 10s;
+    animation-duration: 12s;
     transition: none;
 }
 

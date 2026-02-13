@@ -3,11 +3,11 @@ const path = require('path');
 module.exports = (app) => {
 
     app.get('/', (req, res) => {
-        res.render('index', { title: 'Human Centered Design and Differentiation | RojoRevolution' });
+        res.render('index', { title: 'Human Centered Design. Off Center Differentiation.' });
     });
 
     app.get('/index', (req, res) => {
-        res.render('index', { title: 'Human Centered Design and Differentiation | RojoRevolution' });
+        res.render('index', { title: 'Human Centered Design. Off Center Differentiation.' });
     });
 
     app.get('/logos', (req, res) => {

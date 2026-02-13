@@ -175,6 +175,18 @@
 
 
 /* Text */
+
+.text-no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
 .text-left {
     text-align: left;
 }

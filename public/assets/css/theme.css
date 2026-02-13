@@ -118,7 +118,6 @@
     --weight-900: 900;
 
     /* Font */
-    --font-console: 'Inconsolata', serif;
     --font-header: 'Poppins', Helvetica, Arial, sans-serif;
     /* --font-content: "Karla", sans-serif; */
     --font-content: 'Inconsolata', serif;
@@ -278,9 +277,11 @@ html {
 
 body {
     background-color: var(--rr-surface-color-primary);
+    color: var(--rr-text-color-primary);
     margin: 0px;
     padding: 0px;
     font-family: var(--font-content);
+    cursor: url('../images/2025/misc/hand-default.svg')1 0, auto;
 }
 
 a {
@@ -295,6 +296,7 @@ a:visited {
 a:hover {
     color: var(--rojo-secondary);
     text-decoration: none;
+    cursor: url('../images/2025/misc/hand-click.svg')1 0, auto;
 }
 
 h1,

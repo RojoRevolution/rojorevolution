@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    let logoPanels;
-    const logoImages = document.querySelectorAll("[data-img-type]");
+
     const showcaseDiv = document.querySelector('[data-target="showcase"]');
     let topPos = 70;
-    let panelPositions = [];
-    let windowScrollPos;
 
     let totalImageElements;
     let imgData;
