@@ -787,8 +787,6 @@ section[data-section-type="intro"] {
 ;
 
 /* Featured Projects */
-
-
 .feature-card {
     transition: .25s ease-out
 }
@@ -1037,6 +1035,15 @@ section[data-section-type="intro"] {
 
 #webdev p {
     margin: 0;
+}
+
+
+#logos [data-logo] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 500px;
+    padding: var(--rr-size-xl-3x);
 }
 
 

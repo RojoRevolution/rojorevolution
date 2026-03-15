@@ -128,15 +128,14 @@
     /* ================================== */
 
     /* Border Radius */
-    --rr-radius-sm-3x: var(--size-2px);
-    --rr-radius-sm-2x: var(--size-4px);
-    --rr-radius-sm: var(--size-8px);
-    --rr-radius-md: var(--size-12px);
+    --rr-radius-subtle: var(--size-4px);
+    --rr-radius-normal: var(--size-8px);
+    --rr-radius-pronounced: var(--size-12px);
     --rr-radius-lg: var(--size-16px);
     --rr-radius-lg-2x: var(--size-28px);
     --rr-radius-lg-3x: var(--size-32px);
     --rr-radius-lg-4x: var(--size-40px);
-
+    --rr-radius-full: 999px;
     /* Padding and Margins */
     --rr-size-sm-4x: var(--size-2px);
     --rr-size-sm-3x: var(--size-4px);
@@ -176,10 +175,12 @@
     --rr-surface-gradient-primary-linear-bottom-top: linear-gradient(180deg, var(--alpha-neutral-1100-0) 0%, var(--rr-surface-color-primary) 90%, var(--rr-surface-color-primary) 100%);
 
     /* Buttons */
-    --rr-button-primary-surface-default: var(--neutral-300);
+    --rr-button-primary-surface-default: var(--neutral-100);
     --rr-button-primary-surface-hover: var(--neutral-200);
+    --rr-button-primary-surface-active: var(--neutral-300);
     --rr-button-inverse-surface-default: var(--neutral-300);
     --rr-button-inverse-surface-hover: var(--neutral-400);
+    --rr-button-inverse-surface-hover: var(--neutral-500);
 
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-1100);
@@ -383,4 +384,15 @@ li {
     font-weight: 400;
     font-style: normal;
     font-size: 3rem;
+}
+
+/* ===== Content Color Theme Specifics =====*/
+
+/* Logos Page */
+[data-theme="dark"] [data-img-theme="default"] {
+    display: none;
+}
+
+[data-theme="light"] [data-img-theme="inverse"] {
+    display: none;
 }

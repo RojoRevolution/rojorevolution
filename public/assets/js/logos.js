@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
+    const getThemeFromElement = document.querySelector('[data-theme]');
     const showcaseDiv = document.querySelector('[data-target="showcase"]');
     let topPos = 70;
 
@@ -23,47 +23,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Function creates divs and images and inserts them
-    const createPanel = (imgName, imgSrc, imgAlt, topPos, maxWidth) => {
+    const createPanel = (imgName, imgSrcDefault, imgSrcInverse, imgAlt, topPos, maxWidth) => {
         // Create a Tag
         const newATag = document.createElement("a");
         newATag.setAttribute('href', "#" + imgName)
 
         // Create Div
         const newDiv = document.createElement("div");
-        newDiv.classList.add("panel");
-        newDiv.classList.add("logo");
+        // newDiv.classList.add("panel");
+        // newDiv.classList.add("logo");
         // newDiv.classList.add("scale-add-1");
         newDiv.setAttribute("data-logo", imgName);
         newDiv.setAttribute("id", imgName);
         // newDiv.setAttribute("data-top-pos", topPos);
-        newDiv.style.background = imgData[imgName]["bg"];
+        // newDiv.style.background = imgData[imgName]["bg"];
         newDiv.style.top = topPos + "px";
         logoPanels = document.querySelectorAll('[data-logo]')
 
-        // Create Image
-        const newImg = document.createElement("img");
-        newImg.classList.add("width-100");
-        newImg.setAttribute("src", imgSrc);
-        newImg.setAttribute("alt", imgAlt);
-        newImg.style.maxWidth = maxWidth;
+        // Create Image Default Logo
+        const newImgDefault = document.createElement("img");
+        newImgDefault.classList.add("width-100");
+        newImgDefault.setAttribute("src", imgSrcDefault);
+        newImgDefault.setAttribute("alt", imgAlt);
+        newImgDefault.setAttribute("data-img-theme", "default");
+        newImgDefault.style.maxWidth = maxWidth;
+        // Create Image Inverse Logo
+        const newImgInverse = document.createElement("img");
+        newImgInverse.classList.add("width-100");
+        newImgInverse.setAttribute("src", imgSrcInverse);
+        newImgInverse.setAttribute("alt", imgAlt);
+        newImgInverse.setAttribute("data-img-theme", "inverse");
+        newImgInverse.style.maxWidth = maxWidth;
 
-        // Switch case for image that require opacity blend mode
-        switch (imgName) {
-            case "bwbw":
-                newImg.classList.add("img-multiply")
-                break;
-            case "oldgrowth":
-                newImg.classList.add("img-multiply")
-                break;
-            case "cbwn":
-                newImg.classList.add("img-multiply")
-                break;
-            default:
-                break;
-        }
         // Append HTML
         showcaseDiv.appendChild(newDiv);
-        newDiv.appendChild(newImg);
+        newDiv.appendChild(newImgDefault);
+        newDiv.appendChild(newImgInverse);
 
         // Get element position
         let elemPositions = newDiv.getBoundingClientRect();
@@ -80,11 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // Add 8 to each panels top position
             topPos = topPos + 8;
             let currentImg = objKeys[i];
-            let currentSrc = imgData[currentImg]["src"];
+            let defaultImg = imgData[currentImg]["default"];
+            let InverseImg = imgData[currentImg]["inverse"];
             let currentAlt = imgData[currentImg]["alt"];
             let maxWidth = imgData[currentImg]["maxWidth"];
+            // let maxWidth = "300px";
 
-            createPanel(currentImg, currentSrc, currentAlt, topPos, maxWidth);
+            createPanel(currentImg, defaultImg, InverseImg, currentAlt, topPos, maxWidth);
         }
     }
 
