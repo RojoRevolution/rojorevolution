@@ -15,6 +15,11 @@
 
 
 /* Display */
+
+.flex {
+    display: flex;
+}
+
 .display-none {
     display: none;
 }
@@ -54,9 +59,6 @@
 }
 
 /* FLEX */
-.flex {
-    display: flex;
-}
 
 .flex-full {
     flex: 0 0 100%;
@@ -171,6 +173,10 @@
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
 }
 
 
@@ -736,12 +742,18 @@
 
 /* Scale */
 
+.scale-0 {
+    transform: scale(0);
+    transition: .25s ease-out;
+}
+
 .scale-minus-1 {
     transform: scale(.9);
 }
 
 .scale-normal {
     transform: scale(1);
+    transition: .25s ease-in;
 }
 
 .scale-add-1 {

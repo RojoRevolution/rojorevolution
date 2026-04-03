@@ -387,25 +387,30 @@
     transition: .25s ease-in;
     font-size: var(--rr-size-md);
     font-weight: var(--weight-600);
+    font-size: var(--rr-size-md);
+    border-radius: var(--rr-radius-normal);
+    transition: .25s ease-in;
+}
+
+.btn:hover {
+    transition: .25s ease-out;
+    box-shadow: 0 0 0 6px var(--alpha-red500-75);
+    cursor: url('../images/2025/misc/hand-click.svg'), auto;
 }
 
 
 .btn.primary {
     background-color: var(--rr-button-primary-surface-default);
-    border-radius: var(--rr-radius-normal);
     border: 1px solid var(--rr-border-color-default);
-    font-size: var(--rr-size-md);
     color: var(--rr-text-color-primary);
-    transition: .25s ease-in;
 }
 
 .btn.primary:hover {
     background-color: var(--rr-button-primary-surface-hover);
     border-color: var(--rr-border-color-brand);
+    color: var(--rr-text-color-brand);
     /* cursor: pointer; */
-    transition: .25s ease-out;
-    box-shadow: 0 0 0 6px var(--alpha-red500-75);
-    cursor: url('../images/2025/misc/hand-click.svg'), auto;
+
 }
 
 .btn.primary:active {
@@ -419,6 +424,16 @@
 .btn[disabled].primary:hover {
     background-color: var(--rr-surface-button-primary-default);
     cursor: not-allowed;
+}
+
+.btn.brand {
+    background-color: var(--rr-surface-color-brand);
+    color: var(--rr-text-color-primary);
+    border: 1px solid var(--rr-border-color-default);
+}
+
+.btn.brand:hover {
+    background-color: var(--rr-surface-color-brand-accent);
 }
 
 

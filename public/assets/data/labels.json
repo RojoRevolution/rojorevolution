@@ -1,0 +1,101 @@
+{
+    "powerFades": {
+        "canImage": "/assets/images/2025/labels/cans/powerfades-can.png"
+    },
+    "amPrez": {
+        "canImage": "/assets/images/2025/labels/cans/amprez-can.png"
+    },
+    "hansTrapp": {
+        "canImage": "/assets/images/2025/labels/cans/hanstrapp-can.png"
+    },
+    "cactucPalace": {
+        "canImage": "/assets/images/2025/labels/cans/cactus-palace-can.png"
+    },
+    "pariaPils": {
+        "canImage": "/assets/images/2025/labels/cans/paria-can.png"
+    },
+    "brutalNature": {
+        "canImage": "/assets/images/2025/labels/cans/brutal-nature-can.png"
+    },
+    "empressRising": {
+        "canImage": "/assets/images/2025/labels/cans/empress-rising-can.png"
+    },
+    "elJefe": {
+        "canImage": "/assets/images/2025/labels/cans/el-jefe-can.png"
+    },
+    "elBonito": {
+        "canImage": "/assets/images/2025/labels/cans/el-bonito-can.png"
+    },
+    "skullValey": {
+        "canImage": "/assets/images/2025/labels/cans/skull-valley-can.png"
+    },
+    "intergalactic": {
+        "canImage": "/assets/images/2025/labels/cans/intergalacic-can.png"
+    },
+    "papaDontPreach": {
+        "canImage": "/assets/images/2025/labels/cans/papa-dont-preach-can.png"
+    },
+    "humanKindness": {
+        "canImage": "/assets/images/2025/labels/cans/human-kindness-can.png"
+    },
+    "mother": {
+        "canImage": "/assets/images/2025/labels/cans/mother-can.png"
+    },
+    "hellsgateHelles": {
+        "canImage": "/assets/images/2025/labels/cans/hellsgate-can.png"
+    },
+    "sunshineOfLove": {
+        "canImage": "/assets/images/2025/labels/cans/sunshine-love-can.png"
+    },
+    "cobraBlood": {
+        "canImage": "/assets/images/2025/labels/cans/cobra-blood-can.png"
+    },
+    "laCiudad": {
+        "canImage": "/assets/images/2025/labels/cans/la-ciudad-can.png"
+    },
+    "leggoMyEgo": {
+        "canImage": "/assets/images/2025/labels/cans/leggo-ego-can.png"
+    },
+    "bigHorn": {
+        "canImage": "/assets/images/2025/labels/cans/big-horn-can.png"
+    },
+    "wilderBlack": {
+        "canImage": "/assets/images/2025/labels/cans/wilderblack-can.png"
+    },
+    "watchYourSix": {
+        "canImage": "/assets/images/2025/labels/cans/watch-six-can.png"
+    },
+    "wildernessAct": {
+        "canImage": "/assets/images/2025/labels/cans/wilderness-act-can.png"
+    },
+    "nothingBecomesHer": {
+        "canImage": "/assets/images/2025/labels/cans/nothing-becomes-can.png"
+    },
+    "citrusValley": {
+        "canImage": "/assets/images/2025/labels/cans/citrus-valley-can.png"
+    },
+    "desertDweller": {
+        "canImage": "/assets/images/2025/labels/cans/desert-dweller-can.png"
+    },
+    "chocolateBunny": {
+        "canImage": "/assets/images/2025/labels/cans/chocolate-bunny-can.png"
+    },
+    "gilbertTower": {
+        "canImage": "/assets/images/2025/labels/cans/gilbert-tower-can.png"
+    },
+    "refuge": {
+        "canImage": "/assets/images/2025/labels/cans/refuge-can.png"
+    },
+    "shrimp": {
+        "canImage": "/assets/images/2025/labels/cans/shrimp-can.png"
+    },
+    "picketPost": {
+        "canImage": "/assets/images/2025/labels/cans/picket-post-can.png"
+    },
+    "noBadDays": {
+        "canImage": "/assets/images/2025/labels/cans/nobaddays-can.png"
+    },
+    "dontFuckItUp": {
+        "canImage": "/assets/images/2025/labels/cans/dfiu-can.png"
+    }
+}

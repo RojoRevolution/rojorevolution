@@ -11,7 +11,11 @@ module.exports = (app) => {
     });
 
     app.get('/logos', (req, res) => {
-        res.render('logos', { title: 'Logo Collection | RojoRevolution' });
+        res.render('logos', { title: 'Logo Collection | Identity Design' });
+    });
+
+    app.get('/labels', (req, res) => {
+        res.render('labels', { title: 'Craft Beer Labels | Illustration & Packaging' });
     });
 
 }

@@ -921,6 +921,10 @@ section[data-section-type="intro"] {
     left: -439px;
 }
 
+[data-section-type="labels"] .shadow-container {
+    left: -480px;
+}
+
 .shadow-container>span {
     position: relative;
     font-family: var(--font-header);
@@ -1057,4 +1061,66 @@ footer p {
     justify-content: end;
     min-height: 90px;
     font-size: var(--rr-size-sm);
+}
+
+/* ================ */
+/* Can Label Page */
+/* ================= */
+
+#label-showcase [data-target="showcase"] {
+    min-height: 900px;
+}
+
+.can-control-container {
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#label-showcase .scroll-container {
+    position: relative;
+    height: 250px;
+}
+
+#label-showcase [data-target="can-controls"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .25s ease-in;
+}
+
+#label-showcase [data-can] {
+    transform: scale(.9);
+    transition: .25s ease-in;
+}
+
+#label-showcase [data-can]:hover {
+    transform: scale(1);
+    transition: .25s ease-out;
+}
+
+#label-showcase .move-right-container,
+#label-showcase .move-left-container {
+    position: absolute;
+    bottom: 0;
+    height: 240px;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    padding: 20px;
+}
+
+#label-showcase .move-right-container {
+    right: 0;
+}
+
+#label-showcase .move-left-container {
+    left: 0;
+}
+
+#label-showcase .move-right-container>button,
+#label-showcase .move-left-container>button {
+    box-shadow: 0 0 32px rgba(0, 0, 0, .75);
 }
