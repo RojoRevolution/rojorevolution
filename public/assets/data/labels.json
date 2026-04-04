@@ -1,101 +1,134 @@
 {
     "powerFades": {
-        "canImage": "/assets/images/2025/labels/cans/powerfades-can.png"
+        "canImage": "/assets/images/2025/labels/cans/powerfades-can.png",
+        "labelImage": "/assets/images/2025/labels/label/powerfades.webp"
     },
     "amPrez": {
-        "canImage": "/assets/images/2025/labels/cans/amprez-can.png"
+        "canImage": "/assets/images/2025/labels/cans/amprez-can.png",
+        "labelImage": "/assets/images/2025/labels/label/amprez.webp"
     },
     "hansTrapp": {
-        "canImage": "/assets/images/2025/labels/cans/hanstrapp-can.png"
+        "canImage": "/assets/images/2025/labels/cans/hanstrapp-can.png",
+        "labelImage": "/assets/images/2025/labels/label/hanstrapp.webp"
     },
-    "cactucPalace": {
-        "canImage": "/assets/images/2025/labels/cans/cactus-palace-can.png"
+    "cactusPalace": {
+        "canImage": "/assets/images/2025/labels/cans/cactus-palace-can.png",
+        "labelImage": "/assets/images/2025/labels/label/cactuspalace.webp"
     },
     "pariaPils": {
-        "canImage": "/assets/images/2025/labels/cans/paria-can.png"
+        "canImage": "/assets/images/2025/labels/cans/paria-can.png",
+        "labelImage": "/assets/images/2025/labels/label/pariapils.webp"
     },
     "brutalNature": {
-        "canImage": "/assets/images/2025/labels/cans/brutal-nature-can.png"
+        "canImage": "/assets/images/2025/labels/cans/brutal-nature-can.png",
+        "labelImage": "/assets/images/2025/labels/label/brutalnature.webp"
     },
     "empressRising": {
-        "canImage": "/assets/images/2025/labels/cans/empress-rising-can.png"
+        "canImage": "/assets/images/2025/labels/cans/empress-rising-can.png",
+        "labelImage": "/assets/images/2025/labels/label/empressrising.webp"
     },
     "elJefe": {
-        "canImage": "/assets/images/2025/labels/cans/el-jefe-can.png"
+        "canImage": "/assets/images/2025/labels/cans/el-jefe-can.png",
+        "labelImage": "/assets/images/2025/labels/label/eljefe.webp"
     },
     "elBonito": {
-        "canImage": "/assets/images/2025/labels/cans/el-bonito-can.png"
+        "canImage": "/assets/images/2025/labels/cans/el-bonito-can.png",
+        "labelImage": "/assets/images/2025/labels/label/elbonito.webp"
     },
     "skullValey": {
-        "canImage": "/assets/images/2025/labels/cans/skull-valley-can.png"
+        "canImage": "/assets/images/2025/labels/cans/skull-valley-can.png",
+        "labelImage": "/assets/images/2025/labels/label/skullvalley.webp"
     },
     "intergalactic": {
-        "canImage": "/assets/images/2025/labels/cans/intergalacic-can.png"
+        "canImage": "/assets/images/2025/labels/cans/intergalacic-can.png",
+        "labelImage": "/assets/images/2025/labels/label/intergalactic.webp"
     },
     "papaDontPreach": {
-        "canImage": "/assets/images/2025/labels/cans/papa-dont-preach-can.png"
+        "canImage": "/assets/images/2025/labels/cans/papa-dont-preach-can.png",
+        "labelImage": "/assets/images/2025/labels/label/papadontpreach.webp"
     },
     "humanKindness": {
-        "canImage": "/assets/images/2025/labels/cans/human-kindness-can.png"
+        "canImage": "/assets/images/2025/labels/cans/human-kindness-can.png",
+        "labelImage": "/assets/images/2025/labels/label/humankindness.webp"
     },
     "mother": {
-        "canImage": "/assets/images/2025/labels/cans/mother-can.png"
+        "canImage": "/assets/images/2025/labels/cans/mother-can.png",
+        "labelImage": "/assets/images/2025/labels/label/mother.webp"
     },
     "hellsgateHelles": {
-        "canImage": "/assets/images/2025/labels/cans/hellsgate-can.png"
+        "canImage": "/assets/images/2025/labels/cans/hellsgate-can.png",
+        "labelImage": "/assets/images/2025/labels/label/hellsgate.webp"
     },
     "sunshineOfLove": {
-        "canImage": "/assets/images/2025/labels/cans/sunshine-love-can.png"
+        "canImage": "/assets/images/2025/labels/cans/sunshine-love-can.png",
+        "labelImage": "/assets/images/2025/labels/label/sunshineoflove.webp"
     },
     "cobraBlood": {
-        "canImage": "/assets/images/2025/labels/cans/cobra-blood-can.png"
+        "canImage": "/assets/images/2025/labels/cans/cobra-blood-can.png",
+        "labelImage": "/assets/images/2025/labels/label/cobrablood.webp"
     },
     "laCiudad": {
-        "canImage": "/assets/images/2025/labels/cans/la-ciudad-can.png"
+        "canImage": "/assets/images/2025/labels/cans/la-ciudad-can.png",
+        "labelImage": "/assets/images/2025/labels/label/laciudad.webp"
     },
     "leggoMyEgo": {
-        "canImage": "/assets/images/2025/labels/cans/leggo-ego-can.png"
+        "canImage": "/assets/images/2025/labels/cans/leggo-ego-can.png",
+        "labelImage": "/assets/images/2025/labels/label/leggomyego.webp"
     },
     "bigHorn": {
-        "canImage": "/assets/images/2025/labels/cans/big-horn-can.png"
+        "canImage": "/assets/images/2025/labels/cans/big-horn-can.png",
+        "labelImage": "/assets/images/2025/labels/label/bighorn.webp"
     },
     "wilderBlack": {
-        "canImage": "/assets/images/2025/labels/cans/wilderblack-can.png"
+        "canImage": "/assets/images/2025/labels/cans/wilderblack-can.png",
+        "labelImage": "/assets/images/2025/labels/label/wilderblack.webp"
     },
     "watchYourSix": {
-        "canImage": "/assets/images/2025/labels/cans/watch-six-can.png"
+        "canImage": "/assets/images/2025/labels/cans/watch-six-can.png",
+        "labelImage": "/assets/images/2025/labels/label/watchyoursix.webp"
     },
     "wildernessAct": {
-        "canImage": "/assets/images/2025/labels/cans/wilderness-act-can.png"
+        "canImage": "/assets/images/2025/labels/cans/wilderness-act-can.png",
+        "labelImage": "/assets/images/2025/labels/label/wildernessact.webp"
     },
     "nothingBecomesHer": {
-        "canImage": "/assets/images/2025/labels/cans/nothing-becomes-can.png"
+        "canImage": "/assets/images/2025/labels/cans/nothing-becomes-can.png",
+        "labelImage": "/assets/images/2025/labels/label/nothingbecomesher.webp"
     },
     "citrusValley": {
-        "canImage": "/assets/images/2025/labels/cans/citrus-valley-can.png"
+        "canImage": "/assets/images/2025/labels/cans/citrus-valley-can.png",
+        "labelImage": "/assets/images/2025/labels/label/citrusvalley.webp"
     },
     "desertDweller": {
-        "canImage": "/assets/images/2025/labels/cans/desert-dweller-can.png"
+        "canImage": "/assets/images/2025/labels/cans/desert-dweller-can.png",
+        "labelImage": "/assets/images/2025/labels/label/desertdweller.webp"
     },
     "chocolateBunny": {
-        "canImage": "/assets/images/2025/labels/cans/chocolate-bunny-can.png"
+        "canImage": "/assets/images/2025/labels/cans/chocolate-bunny-can.png",
+        "labelImage": "/assets/images/2025/labels/label/chocolatebunny.webp"
     },
     "gilbertTower": {
-        "canImage": "/assets/images/2025/labels/cans/gilbert-tower-can.png"
+        "canImage": "/assets/images/2025/labels/cans/gilbert-tower-can.png",
+        "labelImage": "/assets/images/2025/labels/label/gilbertower.webp"
     },
     "refuge": {
-        "canImage": "/assets/images/2025/labels/cans/refuge-can.png"
+        "canImage": "/assets/images/2025/labels/cans/refuge-can.png",
+        "labelImage": "/assets/images/2025/labels/label/refuge.webp"
     },
     "shrimp": {
-        "canImage": "/assets/images/2025/labels/cans/shrimp-can.png"
+        "canImage": "/assets/images/2025/labels/cans/shrimp-can.png",
+        "labelImage": "/assets/images/2025/labels/label/shrimp.webp"
     },
     "picketPost": {
-        "canImage": "/assets/images/2025/labels/cans/picket-post-can.png"
+        "canImage": "/assets/images/2025/labels/cans/picket-post-can.png",
+        "labelImage": "/assets/images/2025/labels/label/picketpost.webp"
     },
     "noBadDays": {
-        "canImage": "/assets/images/2025/labels/cans/nobaddays-can.png"
+        "canImage": "/assets/images/2025/labels/cans/nobaddays-can.png",
+        "labelImage": "/assets/images/2025/labels/label/nobaddays.webp"
     },
     "dontFuckItUp": {
-        "canImage": "/assets/images/2025/labels/cans/dfiu-can.png"
+        "canImage": "/assets/images/2025/labels/cans/dfiu-can.png",
+        "labelImage": "/assets/images/2025/labels/label/dfiu.webp"
     }
 }

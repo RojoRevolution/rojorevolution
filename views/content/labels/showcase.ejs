@@ -11,19 +11,24 @@
     </div>
 </div>
 <div id="label-showcase" class="width-100 relative">
-    <div class="col justify-center gap-12 padd-y-12" data-target="showcase">
+    <div class="row justify-center">
+        <div class="col justify-start" data-target="showcase">
 
+        </div>
     </div>
     <div class="can-control-container">
         <div class="relative scroll-container">
-            <div class="row gap-8 overflow-hidden padd-x-8" data-target="can-controls">
+            <!-- Artwork Div -->
+            <div class="row gap-8 overflow-hidden padd-x-8 z-index-4" data-target="can-controls">
 
             </div>
         </div>
-        <div class="flex move-left-container scale-0">
+        <!-- BG Gradient -->
+        <!-- Can Controls -->
+        <div class="flex move-left-container scale-0 z-index-4">
             <button class="btn primary" data-btn-action="move-left"><i class="bi bi-arrow-left"></i></button>
         </div>
-        <div class="flex move-right-container scale-0 scale-normal">
+        <div class="flex move-right-container scale-0 scale-normal z-index-4">
             <button class="btn primary" data-btn-action="move-right"><i class="bi bi-arrow-right"></i></>
         </div>
     </div>

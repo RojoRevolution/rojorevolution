@@ -1,31 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-
+    const artworkShowcaseDiv = document.querySelector('[data-target="showcase"]');
     const canImagesContainer = document.querySelector('[data-target="can-controls"]');
     const scrollCanButtons = document.querySelectorAll('[data-btn-action]');
     const scrollLeftButtonDiv = document.querySelector('.move-left-container');
     const scrollRightButtonDiv = document.querySelector('.move-right-container');
     let canContainerPosition = canImagesContainer.getBoundingClientRect();
 
-    console.log(canContainerPosition)
-
-
-    // console.log(firstCan)
     // Total count of data elements
     let totalCanImages;
     // Stores JSON Response
     let imgData;
 
-    // fetch JSON then run functions to add content
+    // Fetch JSON then run functions to add content
     fetch('/assets/data/labels.json', {
         method: 'GET'
     }).then((response) => {
         response.json().then((jsonResponse) => {
-            // console.log(jsonResponse)
             imgData = jsonResponse;
-            console.log(imgData)
+            // console.log(imgData)
             totalCanImages = Object.keys(imgData).length;
-            console.log(totalCanImages)
+            // console.log(totalCanImages)
             generateHTML(totalCanImages);
         });
     }).catch((err) => {
@@ -34,45 +28,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Function creates divs and images and inserts them
-    const createPanel = (imgName, imgSrcDefault, imgSrcInverse, imgAlt, topPos, maxWidth) => {
-        // Create a Tag
-        // const newATag = document.createElement("a");
-        // newATag.setAttribute('href', "#" + imgName)
-
-        // Create Div
+    const createPanel = (imgName, imgSrcDefault, artworkSrc, imgAlt, topPos, maxWidth) => {
+        // Create Div for Can Image
         const newDiv = document.createElement("div");
-        // newDiv.classList.add("panel");
-        // newDiv.classList.add("logo");
-        // newDiv.classList.add("scale-add-1");
         newDiv.setAttribute("data-can", imgName);
         newDiv.setAttribute("id", imgName);
         newDiv.classList.add("width-100");
-        // newDiv.classList.add("absolute");
-        // newDiv.classList.add("overflow-x-scroll");
+        if (imgName == "powerFades") {
+            newDiv.setAttribute("data-selected", "true");
+        } else {
+            newDiv.setAttribute("data-selected", "false");
+        }
 
-        // newDiv.setAttribute("data-top-pos", topPos);
-        // newDiv.style.background = imgData[imgName]["bg"];
-        // newDiv.style.top = topPos + "px";
-        // logoPanels = document.querySelectorAll('[data-logo]')
-
-        // Create Can Images
+        // Create Can Image
         const newImgDefault = document.createElement("img");
         newImgDefault.style.maxWidth = "100px";
         newImgDefault.setAttribute("src", imgSrcDefault);
-        // newImgDefault.setAttribute("alt", imgAlt);
-        // newImgDefault.setAttribute("data-img-theme", "default");
-        // newImgDefault.style.maxWidth = maxWidth;
-
-        // Append HTML
+        // Append HTML for Can Image
         canImagesContainer.appendChild(newDiv);
         newDiv.appendChild(newImgDefault);
 
-        // Get element position
-        // let elemPositions = newDiv.getBoundingClientRect();
-        // let elemTop = elemPositions.top;
-        // console.log("Elem Top: ", elemTop)
+        // Create Elements for Artwork Images
+        const newArtworkImg = document.createElement("img");
+        newArtworkImg.setAttribute("data-artwork", imgName);
+        newArtworkImg.setAttribute("id", imgName);
+        // Hide All Images
+        newArtworkImg.classList.add("display-none");
+        newArtworkImg.classList.add("hide-img");
+        // Show only the first image in the controls
+        if (imgName == "powerFades") {
+            newArtworkImg.classList.add("display-block");
+            newArtworkImg.classList.add("show-img");
+        }
 
-        // newDiv.setAttribute('data-pos', elemTop)
+        newArtworkImg.setAttribute("src", artworkSrc);
+        // Append HTML for Artwork Image
+        artworkShowcaseDiv.appendChild(newArtworkImg);
     }
 
 
@@ -80,28 +71,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const generateHTML = (totalImageElements) => {
         for (let i = 0; i < totalImageElements; i++) {
             let objKeys = Object.keys(imgData);
-            // Add 8 to each panels top position
-            // topPos = topPos + 8;
             let currentImg = objKeys[i];
-            let defaultImg = imgData[currentImg]["canImage"];
-            // console.log(defaultImg)
-            // let InverseImg = imgData[currentImg]["inverse"];
-            // let currentAlt = imgData[currentImg]["alt"];
-            // let maxWidth = imgData[currentImg]["maxWidth"];
-            // let maxWidth = "300px";
-            createPanel(currentImg, defaultImg);
+            let canImg = imgData[currentImg]["canImage"];
+            let labelImg = imgData[currentImg]["labelImage"];
+            createPanel(currentImg, canImg, labelImg);
         }
     }
 
 
     const hideScrollButtons = (buttonClicked) => {
-        // console.log("Container Position: ", containerPosition);
         console.log("Button Clicked: ", buttonClicked)
         let updatedContainerPosition = canImagesContainer.getBoundingClientRect();
         console.log("Updated Position: ", updatedContainerPosition);
 
         if (buttonClicked == "move-right" && updatedContainerPosition.left <= 0 && !scrollLeftButtonDiv.classList.contains('scale-normal')) {
-            // scrollLeftButtonDiv.classList.remove('display-none');
             scrollLeftButtonDiv.classList.add('scale-normal');
         } else if (buttonClicked == "move-right" && updatedContainerPosition.left <= -2101 && scrollRightButtonDiv.classList.contains('scale-normal')) {
             scrollRightButtonDiv.classList.remove('scale-normal');
@@ -115,44 +98,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // Event Listener for each scroll can button
+    // Event Listener for both buttons that scoll the can selection
     scrollCanButtons.forEach((btn) => {
         btn.addEventListener("click", (evt) => {
             let target = evt.currentTarget
             evt.preventDefault();
             evt.stopPropagation();
-            // console.log(target);
             let currentBtn = target.getAttribute('data-btn-action');
             let canContainerPosition = canImagesContainer.getBoundingClientRect();
-            let updatedContainerPosition
 
-                // console.log(currentBtn);
-                // console.log(canContainerPosition);
-                ;
             switch (currentBtn) {
                 case 'move-right':
                     canImagesContainer.style.left = canContainerPosition.left - 300 + "px";
-                    // updatedContainerPosition = canImagesContainer.getBoundingClientRect();
-                    // console.log("Move Right");
-                    // console.log("Updated Position: ", updatedContainerPosition);
-
-                    // if (updatedContainerPosition.left <= 0 && scrollLeftButtonDiv.classList.contains('display-none')) {
-                    //     scrollLeftButtonDiv.classList.remove('display-none');
-                    // }
                     hideScrollButtons(currentBtn);
                     break;
                 case 'move-left':
                     canImagesContainer.style.left = canContainerPosition.left + 300 + "px";
-                    // updatedContainerPosition = canImagesContainer.getBoundingClientRect();
-                    // console.log("Move Left");
-                    // console.log("Updated Position: ", updatedContainerPosition);
-
-                    // if (updatedContainerPosition.left >= -300 && !scrollLeftButtonDiv.classList.contains('display-none')) {
-                    //     scrollLeftButtonDiv.classList.add('display-none');
-                    // }
                     hideScrollButtons(currentBtn);
-
-
                     break;
                 default:
                     break;
@@ -162,5 +124,52 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 
+});
+// Wait for everything to load in order to grab the dynamic image selectors
+window.addEventListener("load", () => {
+    console.log("Window Loaded");
+    const canElements = document.querySelectorAll('[data-can]');
+    const allArtworkImages = document.querySelectorAll('[data-artwork]');
+
+
+    // Function hides and display the appropriate images
+    const displayArtworkImage = (activeArtwork) => {
+        // Remove classes that show the artwork from all images
+        let currentArtworkEl = document.querySelector(`[data-artwork="${activeArtwork}"]`);
+
+        // console.log("Variable Passed: ", activeArtwork);
+        allArtworkImages.forEach((img) => {
+            // img.classList.remove('show-img');
+            img.style.opacity = 0;
+
+            img.classList.remove('display-block');
+        });
+        currentArtworkEl.classList.add('display-block');
+        setTimeout(() => {
+            // currentArtworkEl.classList.add('show-img');
+            currentArtworkEl.style.opacity = 1;
+        }, 100);
+    }
+
+    // Event listener for the can selection buttons
+    canElements.forEach((can) => {
+        can.addEventListener("click", (evt) => {
+            console.log("CAN CLICKED")
+            let target = evt.currentTarget
+            evt.preventDefault();
+            evt.stopPropagation();
+            let currentCan = target.getAttribute('data-can');
+            console.log("Clan Clicked: ", currentCan);
+
+            canElements.forEach((img) => {
+                img.setAttribute('data-selected', 'false');
+            });
+
+            target.setAttribute('data-selected', 'true');
+
+
+            displayArtworkImage(currentCan);
+        })
+    })
 
 });
