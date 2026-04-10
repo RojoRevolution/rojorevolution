@@ -87,6 +87,15 @@
     --warning-800: #7F5F01;
     --warning-900: #533F04;
 
+    /* Non Theme Colors */
+    --acopon-blue: #3E3F55;
+    --acopon-gold: #A19254;
+    --acopon-green: #6AA284;
+    --acopon-sand: #E8D9B4;
+    --acopon-beige: #F5EBE3;
+    --acopon-grey: #999A9B;
+
+
     /* Size */
     --size-2px: 0.125rem;
     --size-4px: 0.25rem;
@@ -122,16 +131,15 @@
     /* --font-content: "Karla", sans-serif; */
     --font-content: 'Inconsolata', serif;
     --font-display: "Monoton", sans-serif;
-    ;
 
     /* ======= Root Semantic Variables ======= */
     /* ================================== */
 
     /* Border Radius */
-    --rr-radius-subtle: var(--size-4px);
-    --rr-radius-normal: var(--size-8px);
-    --rr-radius-pronounced: var(--size-12px);
-    --rr-radius-lg: var(--size-16px);
+    --rr-radius-sm-3x: var(--size-4px);
+    --rr-radius-sm-2x: var(--size-8px);
+    --rr-radius-sm: var(--size-12px);
+    --rr-radius-md: var(--size-16px);
     --rr-radius-lg-2x: var(--size-28px);
     --rr-radius-lg-3x: var(--size-32px);
     --rr-radius-lg-4x: var(--size-40px);

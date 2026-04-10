@@ -18,4 +18,8 @@ module.exports = (app) => {
         res.render('labels', { title: 'Craft Beer Labels | Illustration & Packaging' });
     });
 
+    app.get('/acoponbrewing', (req, res) => {
+        res.render('acopon', { title: 'Acopon Brewing Co. | Differentiation, Illustration, Packaging, Print' });
+    });
+
 }

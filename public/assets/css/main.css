@@ -914,8 +914,9 @@ section[data-section-type="intro"] {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    left: -450px;
+    /* left: -450px; */
 }
+
 
 [data-section-type="services"] .shadow-container {
     left: -439px;
@@ -924,6 +925,27 @@ section[data-section-type="intro"] {
 [data-section-type="labels"] .shadow-container {
     left: -480px;
 }
+
+[data-section-type="acopon-primary-logo"] .shadow-container {
+    left: -410px;
+}
+
+[data-section-type="acopon-secondary-logo"] .shadow-container {
+    left: -412px;
+}
+
+[data-section-type="acopon-colors"] .shadow-container {
+    left: -344px;
+}
+
+[data-section-type="acopon-colors"] .shadow-container {
+    left: -344px;
+}
+
+[data-section-type="acopon-patterns"] .shadow-container {
+    left: -470px;
+}
+
 
 .shadow-container>span {
     position: relative;
@@ -1133,11 +1155,6 @@ footer p {
     transition: .25s ease-out;
 }
 
-/* 
-#label-showcase [data-selected="true"]>img {
-    box-shadow: 0 0 32px rgba(255, 255, 255, .75);
-} */
-
 #label-showcase .move-right-container,
 #label-showcase .move-left-container {
     position: absolute;
@@ -1160,4 +1177,97 @@ footer p {
 #label-showcase .move-right-container>button,
 #label-showcase .move-left-container>button {
     box-shadow: 0 0 32px rgba(0, 0, 0, .75);
+}
+
+/* ================ */
+/* Acopon Project */
+
+#acopon .corner-cask {
+    position: absolute;
+    max-width: 394px;
+    width: 100%;
+}
+
+#acopon .corner-cask:first-of-type {
+    left: 0;
+    bottom: 0;
+}
+
+#acopon .corner-cask:last-of-type {
+    transform: scaleX(-1);
+    right: 0;
+    bottom: 0;
+}
+
+#acopon .corner-cask>img {
+    width: 100%;
+}
+
+#acopon .img-panel {
+    width: 100%;
+    border: 1px solid var(--rr-border-color-default);
+    border-radius: var(--rr-radius-md);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+#acopon .pattern {
+    background-repeat: repeat-x;
+    background-size: 25%;
+    height: 430px;
+}
+
+#acopon .pattern.dark {
+    background-image: url('/assets/images/2025/acopon/acopon-pattern-dark.webp');
+}
+
+#acopon .pattern.light {
+    background-image: url('/assets/images/2025/acopon/acopon-pattern-light.webp');
+}
+
+#acopon .cask-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('/assets/images/2025/acopon/cask-pattern.svg');
+    height: 290px
+}
+
+.acopon-bg-blue {
+    background: var(--acopon-blue);
+}
+
+.acopon-bg-gold {
+    background: var(--acopon-gold);
+}
+
+.acopon-bg-green {
+    background: var(--acopon-green);
+}
+
+.acopon-bg-sand {
+    background: var(--acopon-sand);
+}
+
+.acopon-bg-beige {
+    background: var(--acopon-beige);
+}
+
+.acopon-bg-grey {
+    background: var(--acopon-grey);
+}
+
+.acopon-bg-blue>p,
+.acopon-bg-gold>p {
+    color: var(--neutral-100);
+}
+
+.acopon-bg-green>p,
+.acopon-bg-sand>p,
+.acopon-bg-beige>p,
+.acopon-bg-grey>p {
+    color: var(--neutral-1000);
 }

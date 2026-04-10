@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Stores JSON Response
     let imgData;
 
-    // Fetch JSON then run functions to add content
+    // Fetch and store JSON data then run functions to add content
     fetch('/assets/data/labels.json', {
         method: 'GET'
     }).then((response) => {
