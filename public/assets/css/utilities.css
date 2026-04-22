@@ -48,9 +48,22 @@
     flex-basis: 33%;
 }
 
+.flex-basis-40 {
+    flex-basis: 40%;
+}
+
+.flex-basis-50 {
+    flex-basis: 50%;
+}
+
+.flex-basis-60 {
+    flex-basis: 60%;
+}
+
 .flex-basis-80 {
     flex-basis: 80%;
 }
+
 
 .display-none {
     display: none;
