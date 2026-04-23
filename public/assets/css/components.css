@@ -69,7 +69,6 @@
     max-width: 48%;
     width: 100%;
     min-height: 300px;
-    border-radius: var(--rr-radius-pronounced);
     transition: .5s;
 }
 
@@ -86,7 +85,7 @@
     width: 100%;
     min-height: 300px;
     border: 1px solid var(--rr-border-color-default);
-    border-radius: var(--rr-radius-pronounced);
+    border-radius: var(--rr-radius-md);
     overflow: hidden;
 }
 
@@ -96,7 +95,7 @@
     background-size: 100%;
     background-position: bottom center;
     transition: .25s ease-out;
-    border-radius: var(--rr-radius-pronounced);
+    border-radius: var(--rr-radius-md);
 }
 
 .card.featured>.img-container>.vid-bg {
@@ -402,13 +401,16 @@
 .btn.primary {
     background-color: var(--rr-button-primary-surface-default);
     border: 1px solid var(--rr-border-color-default);
+    border-radius: var(--rr-radius-sm);
     color: var(--rr-text-color-primary);
+    /* box-shadow: 4px 8px 0 0 var(--rr-button-primary-surface-default); */
 }
 
 .btn.primary:hover {
     background-color: var(--rr-button-primary-surface-hover);
     border-color: var(--rr-border-color-brand);
     color: var(--rr-text-color-brand);
+    margin-bottom: 4px;
     /* cursor: pointer; */
 
 }

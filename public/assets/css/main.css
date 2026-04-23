@@ -918,8 +918,16 @@ section[data-section-type="intro"] {
 }
 
 
+[data-section-type="featured"] .shadow-container {
+    left: -449px;
+}
+
 [data-section-type="services"] .shadow-container {
     left: -439px;
+}
+
+[data-section-type="logos"] .shadow-container {
+    left: -811px;
 }
 
 [data-section-type="labels"] .shadow-container {
