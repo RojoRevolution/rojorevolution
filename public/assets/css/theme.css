@@ -190,7 +190,7 @@
     --rr-button-primary-surface-active: var(--neutral-300);
     --rr-button-inverse-surface-default: var(--neutral-300);
     --rr-button-inverse-surface-hover: var(--neutral-400);
-    --rr-button-inverse-surface-hover: var(--neutral-500);
+    --rr-button-inverse-surface-active: var(--neutral-500);
 
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-1100);

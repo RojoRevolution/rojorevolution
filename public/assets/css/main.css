@@ -807,13 +807,13 @@ section[data-section-type="intro"] {
     background: #fff;
     min-height: 500px;
     transition: .25s ease-out;
-    filter: sepia(0%);
+    /* filter: sepia(0%); */
 }
 
 .feature-card:hover .card-img {
     transition: .25s ease-out;
     /* cursor: pointer; */
-    filter: sepia(90%);
+    /* filter: sepia(90%); */
 }
 
 #feature1:hover #project1 {
@@ -847,7 +847,7 @@ section[data-section-type="intro"] {
 }
 
 .card .img-container {
-    filter: grayscale(0);
+    /* filter: grayscale(0); */
 }
 
 .card:hover .img-container>.section-overlay {
