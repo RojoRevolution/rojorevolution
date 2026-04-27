@@ -191,6 +191,8 @@
     --rr-button-inverse-surface-default: var(--neutral-300);
     --rr-button-inverse-surface-hover: var(--neutral-400);
     --rr-button-inverse-surface-active: var(--neutral-500);
+    --rr-button-shadow-default: var(--alpha-neutral-300-25);
+    --rr-button-shadow-inverse: var(--alpha-neutral-1100-25);
 
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-1100);
@@ -241,8 +243,8 @@
     --rr-surface-gradient-primary-radial-in-out: radial-gradient(circle, var(--alpha-neutral-1100-0) 0%, var(--rr-surface-color-primary) 50%, var(--alpha-neutral-1100-0) 100%);
 
     /* Buttons */
-    --rr-button-primary-surface-default: var(--neutral-1100);
-    --rr-button-primary-surface-hover: var(--neutral-1000);
+    --rr-button-primary-surface-default: var(--neutral-1000);
+    --rr-button-primary-surface-hover: var(--neutral-900);
     --rr-surface-button-inverse-default: var(--neutral-300);
     --rr-surface-button-inverse-hover: var(--neutral-400);
 
