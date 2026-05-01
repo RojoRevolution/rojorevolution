@@ -1,7 +1,7 @@
 /* Sections */
 
 
-section[data-section-type="intro"] {
+section[data-header-type="intro"] {
     position: sticky;
     top: 0;
     /* z-index: -1; */
@@ -832,17 +832,17 @@ section[data-section-type="intro"] {
 }
 
 .card>#acopon.img-container {
-    background-image: url('/assets/images/2025/featured/acopon.jpg');
+    background-image: url('/assets/images/projects/featured/acopon.jpg');
     transition: .25s ease-in;
 }
 
 .card>#labels.img-container {
-    background-image: url('/assets/images/2025/featured/cans-labels.png');
+    background-image: url('/assets/images/projects/featured/cans-labels.png');
     transition: .25s ease-in;
 }
 
 .card>#logos.img-container {
-    background-image: url('/assets/images/2025/featured/logos.gif');
+    background-image: url('/assets/images/projects/featured/logos.gif');
     transition: .25s ease-in;
 }
 
@@ -918,44 +918,48 @@ section[data-section-type="intro"] {
 }
 
 
-[data-section-type="featured"] .shadow-container {
+[data-header-type="featured"] .shadow-container {
     left: -449px;
 }
 
-[data-section-type="services"] .shadow-container {
+[data-header-type="services"] .shadow-container {
     left: -439px;
 }
 
-[data-section-type="logos"] .shadow-container {
+[data-header-type="logos"] .shadow-container {
     left: -811px;
 }
 
-[data-section-type="labels"] .shadow-container {
+[data-header-type="labels"] .shadow-container {
     left: -480px;
 }
 
-[data-section-type="acopon-primary-logo"] .shadow-container {
+[data-header-type="acopon-primary-logo"] .shadow-container {
     left: -410px;
 }
 
-[data-section-type="acopon-secondary-logo"] .shadow-container {
+[data-header-type="acopon-secondary-logo"] .shadow-container {
     left: -412px;
 }
 
-[data-section-type="acopon-colors"] .shadow-container {
+[data-header-type="acopon-colors"] .shadow-container {
     left: -344px;
 }
 
-[data-section-type="acopon-colors"] .shadow-container {
+[data-header-type="acopon-colors"] .shadow-container {
     left: -344px;
 }
 
-[data-section-type="acopon-patterns"] .shadow-container {
+[data-header-type="acopon-patterns"] .shadow-container {
     left: -470px;
 }
 
-[data-section-type="acopon-cask"] .shadow-container {
+[data-header-type="acopon-cask"] .shadow-container {
     left: -590px;
+}
+
+[data-header-type="acopon-merch"] .shadow-container {
+    left: -760px;
 }
 
 
@@ -1158,7 +1162,7 @@ footer p {
 #label-showcase [data-can]:hover {
     transform: scale(.9);
     transition: .25s ease-out;
-    cursor: url('../images/2025/misc/hand-click.svg')1 0, auto;
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
 }
 
 #label-showcase [data-selected="true"],
@@ -1256,11 +1260,11 @@ footer p {
 }
 
 #acopon .pattern.dark {
-    background-image: url('/assets/images/2025/acopon/acopon-pattern-dark.webp');
+    background-image: url('/assets/images/projects/acopon/acopon-pattern-dark.webp');
 }
 
 #acopon .pattern.light {
-    background-image: url('/assets/images/2025/acopon/acopon-pattern-light.webp');
+    background-image: url('/assets/images/projects/acopon/acopon-pattern-light.webp');
 }
 
 #acopon .cask-pattern {
@@ -1268,8 +1272,16 @@ footer p {
     bottom: 60px;
     left: 0;
     width: 100%;
-    background-image: url('/assets/images/2025/acopon/cask-pattern.svg');
+    background-image: url('/assets/images/projects/acopon/cask-pattern.svg');
     height: 290px
+}
+
+#acopon .merch-img {
+    max-width: 500px;
+}
+
+#acopon .merch-img.featured {
+    max-width: 1124px;
 }
 
 .acopon-bg-blue {
@@ -1311,7 +1323,7 @@ footer p {
 #acopon .cask-photos {
     width: 100%;
     height: 400px;
-    background-image: url('/assets/images/2025/acopon/cask-badges/cask-photos.webp');
+    background-image: url('/assets/images/projects/acopon/cask-badges/cask-photos.webp');
     background-size: contain;
     background-position: center;
     background-repeat: repeat-x;

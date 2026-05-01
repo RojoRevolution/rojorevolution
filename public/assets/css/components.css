@@ -398,7 +398,7 @@
 .btn:hover {
     transition: .25s ease-out;
     box-shadow: 0 0 0 6px var(--alpha-red500-75);
-    cursor: url('../images/2025/misc/hand-click.svg'), auto;
+    cursor: url('../images/projects/misc/hand-click.svg'), auto;
 }
 
 
@@ -545,7 +545,7 @@
 }
 
 .lightswitch:hover {
-    cursor: url('../images/2025/misc/hand-grab.svg')0 0, auto;
+    cursor: url('../images/projects/misc/hand-grab.svg')0 0, auto;
 }
 
 .lightswitch[data-switch-type="film"] {
@@ -1001,7 +1001,7 @@
 }
 
 #menu[data-menu-status="open"] nav ul a li:hover {
-    cursor: url('../images/2025/misc/hand-click.svg')1 0, auto;
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
 
 }
 

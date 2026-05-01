@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // let introSection = document.getElementById("welcome");
-    let introSection = document.querySelector('[data-section-type="intro"]');
+    let introSection = document.querySelector('[data-header-type="intro"]');
     let lightSwitches = document.querySelectorAll(".lightswitch");
     let menuEl = document.querySelector(".menu-pos");
     let featuredHeader = document.querySelector('[data-feature-type=work]');
