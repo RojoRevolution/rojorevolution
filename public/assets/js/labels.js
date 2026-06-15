@@ -125,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
 // Wait for everything to load in order to grab the dynamic image selectors
 window.addEventListener("load", () => {
     console.log("Window Loaded");
@@ -139,14 +140,12 @@ window.addEventListener("load", () => {
 
         // console.log("Variable Passed: ", activeArtwork);
         allArtworkImages.forEach((img) => {
-            // img.classList.remove('show-img');
             img.style.opacity = 0;
 
             img.classList.remove('display-block');
         });
         currentArtworkEl.classList.add('display-block');
         setTimeout(() => {
-            // currentArtworkEl.classList.add('show-img');
             currentArtworkEl.style.opacity = 1;
         }, 100);
     }

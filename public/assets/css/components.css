@@ -130,6 +130,10 @@
     margin-block-end: 0;
 }
 
+#projects h2 {
+    text-transform: capitalize !important;
+}
+
 #projects .card .img-container .section-overlay {
     opacity: 0;
     transition: .25s ease-out;
@@ -398,7 +402,7 @@
 .btn:hover {
     transition: .25s ease-out;
     box-shadow: 0 0 0 6px var(--alpha-red500-75);
-    cursor: url('../images/projects/misc/hand-click.svg'), auto;
+    cursor: url('../images/projects/misc/hand-grab.svg'), auto;
 }
 
 
@@ -446,7 +450,8 @@
     margin-bottom: 0px;
     box-shadow: 0 0 0 0 var(--rr-button-inverse-surface-hover);
     transition: .25s ease-out;
-    /* cursor: pointer; */
+    cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto;
+
 }
 
 .btn.primary:hover:after {
@@ -795,7 +800,7 @@
     background-color: var(--rr-text-color-primary);
     width: 6px;
     height: 9px;
-    border-radius: var(--rr-radius-subtle);
+    border-radius: var(--rr-radius-sm);
 }
 
 .bead-0 {
@@ -891,6 +896,12 @@
     height: 30px;
 }
 
+#menu>.col .menu-btn:hover {
+    height: 30px;
+    cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto;
+
+}
+
 
 #menu nav ul {
     display: flex;
@@ -976,6 +987,8 @@
 
 #menu[data-menu-status="open"]:hover {
     top: 24px;
+    /* cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto; */
+
 }
 
 #menu[data-menu-status="open"]>.col>.col>.row {
@@ -993,6 +1006,8 @@
     transform: scale(1.1);
     border-right: 4px solid var(--rr-border-color-brand);
     transition: .1s ease-out;
+    cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto;
+
 }
 
 #menu[data-menu-status="open"] nav ul a li {
@@ -1001,7 +1016,7 @@
 }
 
 #menu[data-menu-status="open"] nav ul a li:hover {
-    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
+    cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto;
 
 }
 
