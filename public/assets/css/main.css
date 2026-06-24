@@ -440,15 +440,28 @@ section[data-header-type="intro"] {
     gap: 0 6px
 }
 
+#welcome .intro-logo {
+    max-width: 40px;
+    width: 100%;
+}
+
 #welcome .titles {
-    height: 50px;
+    height: 1.3rem;
     overflow: hidden;
     min-width: 400px;
+    margin-bottom: 1rem;
+    border-left: 1px solid var(--rr-border-color-default);
+}
+
+#welcome p {
+    font-size: var(--rr-size-xl-2x);
+    line-height: 1.25;
 }
 
 #welcome ul {
     position: absolute;
-    top: 6px;
+    padding-top: 2px;
+    top: -14px;
     left: var(--rr-size-md);
     min-width: 400px;
     font-size: var(--rr-size-lg);
@@ -460,96 +473,208 @@ section[data-header-type="intro"] {
 
 @keyframes title-scroll {
     0% {
-        top: 6px;
+        top: -14px;
+        filter: blur(0px);
+    }
+
+    5% {
+        top: -14px;
+        filter: blur(0px);
+    }
+
+    6% {
+        top: -14px;
+        filter: blur(4px);
     }
 
     7% {
-        top: 6px;
+        top: -60px;
+        filter: blur(0px);
     }
 
-    8% {
-        top: -32px;
+    12% {
+        top: -60px;
+        filter: blur(0px);
     }
 
-    15% {
-        top: -32px;
+    13% {
+        top: -60px;
+        filter: blur(4px);
     }
 
-    16% {
-        top: -66px;
-    }
-
-    23% {
-        top: -66px;
-    }
-
-    24% {
+    14% {
         top: -104px;
+        filter: blur(0px);
     }
 
-    31% {
+    19% {
         top: -104px;
+        filter: blur(0px);
     }
 
-    32% {
-        top: -142px;
+    20% {
+        top: -104px;
+        filter: blur(4px);
     }
 
-    39% {
-        top: -142px;
+    21% {
+        top: -150px;
+        filter: blur(0px);
+    }
+
+    26% {
+        top: -150px;
+        filter: blur(0px);
+    }
+
+    27% {
+        top: -150px;
+        filter: blur(4px);
+    }
+
+    28% {
+        top: -196px;
+        filter: blur(0px);
+    }
+
+    33% {
+        top: -196px;
+        filter: blur(0px);
+    }
+
+    34% {
+        top: -196px;
+        filter: blur(4px);
+    }
+
+    35% {
+        top: -242px;
+        filter: blur(0px);
     }
 
     40% {
-        top: -180px;
+        top: -242px;
+        filter: blur(0px);
     }
 
-    55% {
-        top: -180px;
+    41% {
+        top: -242px;
+        filter: blur(4px);
     }
 
-    56% {
-        top: -142px;
+    42% {
+        top: -286px;
+        filter: blur(0px);
     }
 
-    63% {
-        top: -142px;
+    /* 48% {
+        top: -286px;
+    } */
+
+    /* 49% {
+        top: -242px;
+    } */
+
+    58% {
+        top: -286px;
+        filter: blur(0px);
     }
 
-    64% {
-        top: -104px;
+    59% {
+        top: -286px;
+        filter: blur(4px);
     }
 
-    71% {
-        top: -104px;
+    60% {
+        top: -242px;
+        filter: blur(0px);
+    }
+
+    65% {
+        top: -242px;
+        filter: blur(0px);
+    }
+
+    66% {
+        top: -242px;
+        filter: blur(4px);
+    }
+
+    67% {
+        top: -196px;
+        filter: blur(0px);
     }
 
     72% {
-        top: -66px;
+        top: -196px;
+        filter: blur(0px);
+    }
+
+    73% {
+        top: -196px;
+        filter: blur(4px);
+    }
+
+    74% {
+        top: -150px;
+        filter: blur(0px);
     }
 
     79% {
-        top: -66px;
+        top: -150px;
+        filter: blur(0px);
     }
 
     80% {
-        top: -32px;
+        top: -150px;
+        filter: blur(4px);
+    }
+
+    81% {
+        top: -104px;
+        filter: blur(0px);
+    }
+
+    86% {
+        top: -104px;
+        filter: blur(0px);
     }
 
     87% {
-        top: -32px;
+        top: -104px;
+        filter: blur(4px);
     }
 
     88% {
-        top: 6px;
+        top: -60px;
+        filter: blur(0px);
+    }
+
+    93% {
+        top: -60px;
+        filter: blur(0px);
+    }
+
+    94% {
+        top: -60px;
+        filter: blur(4px);
+    }
+
+    95% {
+        top: -14px;
+        filter: blur(0px);
     }
 
     100% {
-        top: 6px;
+        top: -14px;
+        filter: blur(0px);
     }
 }
 
 #welcome ul li {
     padding: var(--rr-size-sm-2x) 0;
+    font-size: var(--rr-size-xl-2x);
+    text-transform: uppercase;
 }
 
 
@@ -1010,7 +1135,7 @@ section[data-header-type="intro"] {
     position: relative;
     color: var(--rr-text-color-brand);
     transition: .25s ease-in;
-    text-decoration: wavy var(--rr-text-color-brand) underline;
+    /* text-decoration: wavy var(--rr-text-color-brand) underline; */
 }
 
 .pronunciation:hover {
