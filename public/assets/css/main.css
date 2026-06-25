@@ -280,6 +280,7 @@ section[data-header-type="intro"] {
 #welcome {
     height: 70vh;
     padding: var(--rr-size-xl-3x) var(--rr-size-md);
+    justify-content: flex-end;
 }
 
 #welcome h1 {
@@ -287,151 +288,46 @@ section[data-header-type="intro"] {
     position: relative;
 }
 
-#welcome h1>span.cursor {
-    position: relative;
-}
-
-/* #welcome h1>span.intro-hover {
-    transition: .25s ease-out;
-}
-
-#welcome h1>span.intro-hover:hover {
-    transition: .25s ease-in;
+.hover-grow:hover {
     transform: scale(1.1);
-} */
-#welcome h1>span.human,
-#welcome h1>span.centered,
-#welcome h1>span.design,
-#welcome h1>span.off,
-#welcome h1>span.center,
-#welcome h1>span.diff {
+}
+
+#welcome span.off,
+#welcome span.center {
     position: relative;
-    padding-left: 0;
-    color: var(--rr-background-color-primary);
     color: rgba(0, 0, 0, 0)
 }
 
-#welcome h1>span.human:before,
-#welcome h1>span.centered:before,
-#welcome h1>span.design:before,
-#welcome h1>span.off:before,
-#welcome h1>span.center:before,
-#welcome h1>span.diff:before {
+#welcome span.off:before,
+#welcome span.center:before {
     position: absolute;
-    top: 8px;
-    left: 0;
-    font-family: var(--font-header);
-    font-weight: var(--weight-900);
-    color: var(--rr-text-color-primary);
+    color: var(--rr-text-color-secondary);
 }
 
-
-
-#welcome h1>span.off:before,
-#welcome h1>span.center:before {
-    animation-duration: 25s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-delay: 8s;
-    animation-fill-mode: forwards
+#welcome span.off:before {
+    content: 'off';
+    top: -8px;
+    transition: .25s ease-out;
 }
 
-#welcome h1>span.human:before {
-    content: 'HUMAN';
+#welcome span.off:hover:before {
+    top: -4px;
+    transition: .25s ease-in;
 }
 
-#welcome h1>span.centered:before {
-    content: 'CENTERED';
-}
-
-#welcome h1>span.design:before {
-    content: 'DESIGN';
-}
-
-#welcome h1>span.diff:before {
-    content: 'DIFFERENTIATION';
-}
-
-#welcome h1>span.off:before {
-    content: 'OFF';
-    animation-name: off-text;
-}
-
-#welcome h1>span.center:before {
-    content: 'CENTER';
-    animation-name: center-text;
-}
-
-@keyframes off-text {
-    0% {
-        top: 8px;
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    100% {
-        top: -223px;
-        left: 95px;
-        transform: rotate(-118deg);
-    }
-}
-
-@keyframes center-text {
-    0% {
-        top: 8px;
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    100% {
-        top: -300px;
-        left: 200px;
-        transform: rotate(75deg);
-    }
+#welcome span.center:before {
+    content: 'center';
+    bottom: -8px;
+    transition: .25s ease-out;
 
 }
 
-#welcome h1>span:hover.human:before,
-#welcome h1>span:hover.centered:before,
-#welcome h1>span:hover.design:before,
-#welcome h1>span:hover.off:before,
-#welcome h1>span:hover.center:before,
-#welcome h1>span:hover.diff:before {
-    color: var(--rr-text-color-brand);
-    transform: scale(1.1);
+#welcome span.center:hover:before {
+    bottom: -4px;
+    transition: .25s ease-in;
 }
 
-#welcome h1>span:hover.center:before,
-#welcome h1>span:hover.off:before {
-    animation-play-state: paused;
-    color: var(--rr-text-color-brand);
-    transform: scale(1.1);
-    cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto;
-}
 
-#welcome h1>span.off.reset,
-#welcome h1>span.center.reset {
-    top: 8px;
-    left: 0;
-    transform: rotate(0deg);
-    animation-name: reset-text;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-delay: 5s;
-    animation-fill-mode: forwards
-}
-
-@keyframes reset-text {
-    0% {}
-
-    100% {
-        top: 8px;
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-
-}
 
 #welcome .intro-header {
     display: flex;
@@ -454,7 +350,7 @@ section[data-header-type="intro"] {
 }
 
 #welcome p {
-    font-size: var(--rr-size-xl-2x);
+    font-size: var(--rr-size-xl-4x);
     line-height: 1.25;
 }
 
@@ -1058,7 +954,7 @@ section[data-header-type="intro"] {
     position: absolute;
     top: -6px;
     animation-name: scroll-titles;
-    animation-duration: 12s;
+    animation-duration: 16s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
 }
@@ -1131,11 +1027,48 @@ section[data-header-type="intro"] {
 
 }
 
-.pronunciation {
+.kern-av {
+    letter-spacing: -.5rem;
+    margin-right: .5rem;
+    margin-left: -.25rem;
+}
+
+#welcome .pronunciation {
     position: relative;
-    color: var(--rr-text-color-brand);
+    color: rgba(0, 0, 0, 0);
     transition: .25s ease-in;
     /* text-decoration: wavy var(--rr-text-color-brand) underline; */
+}
+
+#welcome .pronunciation:before {
+    position: absolute;
+    content: 'Rojo';
+    color: var(--rr-text-color-brand);
+    transition: .25s ease-in;
+}
+
+#welcome .pronunciation:hover:before {
+    transform: scale(1.1);
+    transition: .25s ease-out;
+}
+
+#welcome .pronunciation .bubble {
+    position: absolute;
+    top: -18px;
+    right: -20px;
+    opacity: 0;
+    transform: scale(.5);
+    background-color: var(--rr-surface-color-overlay-primary);
+    padding: 4px 8px;
+    min-width: 60px;
+    font-size: var(--rr-size-md);
+    line-height: 1.5;
+    color: var(--rr-text-color-secondary);
+    font-family: var(--font-content);
+    text-transform: lowercase;
+    text-align: center;
+    border-radius: var(--rr-radius-sm);
+    transition: .25s ease;
 }
 
 .pronunciation:hover {
@@ -1144,7 +1077,13 @@ section[data-header-type="intro"] {
     transition: .25s ease-out;
 }
 
-;
+#welcome .pronunciation:hover .bubble {
+    opacity: 1;
+    top: -32px;
+    right: -28px;
+    transform: scale(1.5);
+    transition: .25s ease;
+}
 
 /* Featured Projects */
 .feature-card {
@@ -1153,7 +1092,7 @@ section[data-header-type="intro"] {
 
 
 .feature-card:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     color: var(--rr-text-color-brand);
 }
 
@@ -1471,7 +1410,7 @@ footer p {
 #label-showcase [data-can]:hover {
     transform: scale(.9);
     transition: .25s ease-out;
-    cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto;
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
 }
 
 #label-showcase [data-selected="true"],

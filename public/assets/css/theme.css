@@ -312,7 +312,7 @@ a:visited {
 a:hover {
     color: var(--rojo-secondary);
     text-decoration: none;
-    cursor: url('../images/projects/misc/hand-grab.svg')1 0, auto;
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
 }
 
 h1,
