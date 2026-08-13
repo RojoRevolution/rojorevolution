@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollLeftButtonDiv = document.querySelector('.move-left-container');
     const scrollRightButtonDiv = document.querySelector('.move-right-container');
     let canContainerPosition = canImagesContainer.getBoundingClientRect();
+    // Below this width, the artwork showcase is hidden (see mediaqueries.css)
+    // and cans are just a scrollable gallery, so clicking a can shouldn't select it.
+    const mobileLayout = window.matchMedia('(max-width: 990px)');
 
     // Total count of data elements
     let totalCanImages;
@@ -157,6 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // individual can images (added later, asynchronously, once labels.json
     // resolves) so clicks work regardless of when the cans finish rendering.
     canImagesContainer.addEventListener("click", (evt) => {
+        if (mobileLayout.matches) return;
+
         const target = evt.target.closest('[data-can]');
         if (!target) return;
 

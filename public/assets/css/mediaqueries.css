@@ -19,6 +19,53 @@
     .card {
         max-width: 100%;
     }
+
+    /* Craft beer label showcase: hide the artwork, show only a scrollable can gallery */
+    #label-showcase {
+        min-height: 700px;
+    }
+
+    #label-showcase [data-target="showcase"] {
+        display: none;
+    }
+
+    #label-showcase [data-can] img {
+        max-width: 250px !important;
+    }
+
+    #label-showcase [data-can] {
+        transform: scale(.8);
+    }
+
+    #label-showcase [data-selected="true"],
+    #label-showcase [data-can]:hover[data-selected="true"] {
+        transform: scale(.8);
+    }
+
+
+    #label-showcase [data-target="can-controls"] {
+        position: relative;
+        /* Restore the shrink-to-fit sizing position:absolute used to provide,
+           so the strip still grows to fit every can instead of clipping
+           itself at the viewport width. */
+        width: max-content;
+    }
+
+    #label-showcase .move-right-container,
+    #label-showcase .move-left-container {
+        justify-content: end;
+        width: auto;
+    }
+
+    #label-showcase .move-right-container>button,
+    #label-showcase .move-left-container>button {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #label-showcase .scroll-container {
+        height: 650px;
+    }
 }
 
 
