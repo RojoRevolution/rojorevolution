@@ -79,20 +79,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // Max empty space (px) allowed between the last can and the edge of the viewport
+    const EDGE_GAP = 28;
+    // Fixed distance (px) each arrow click moves the can strip
+    const SCROLL_STEP = 300;
+
+    // The furthest left the strip is allowed to travel (a large negative number)
+    // and the furthest right (always 0, its starting position).
+    const getScrollBounds = () => {
+        const trackWidth = canImagesContainer.scrollWidth;
+        const viewportWidth = canImagesContainer.parentElement.clientWidth;
+        const minLeft = Math.min(0, viewportWidth - trackWidth - EDGE_GAP);
+        return { minLeft, maxLeft: 0 };
+    };
+
     const hideScrollButtons = (buttonClicked) => {
-        console.log("Button Clicked: ", buttonClicked)
         let updatedContainerPosition = canImagesContainer.getBoundingClientRect();
-        console.log("Updated Position: ", updatedContainerPosition);
+        const { minLeft } = getScrollBounds();
 
         if (buttonClicked == "move-right" && updatedContainerPosition.left <= 0 && !scrollLeftButtonDiv.classList.contains('scale-normal')) {
             scrollLeftButtonDiv.classList.add('scale-normal');
-        } else if (buttonClicked == "move-right" && updatedContainerPosition.left <= -2101 && scrollRightButtonDiv.classList.contains('scale-normal')) {
+        } else if (buttonClicked == "move-right" && updatedContainerPosition.left <= minLeft && scrollRightButtonDiv.classList.contains('scale-normal')) {
             scrollRightButtonDiv.classList.remove('scale-normal');
         }
 
-        if (buttonClicked == "move-left" && updatedContainerPosition.left >= -300 && scrollLeftButtonDiv.classList.contains('scale-normal')) {
+        if (buttonClicked == "move-left" && updatedContainerPosition.left >= -SCROLL_STEP && scrollLeftButtonDiv.classList.contains('scale-normal')) {
             scrollLeftButtonDiv.classList.remove('scale-normal');
-        } else if (buttonClicked == "move-left" && updatedContainerPosition.left >= -2700 && !scrollRightButtonDiv.classList.contains('scale-normal')) {
+        } else if (buttonClicked == "move-left" && updatedContainerPosition.left >= minLeft + SCROLL_STEP && !scrollRightButtonDiv.classList.contains('scale-normal')) {
             scrollRightButtonDiv.classList.add('scale-normal');
         }
 
@@ -106,14 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
             evt.stopPropagation();
             let currentBtn = target.getAttribute('data-btn-action');
             let canContainerPosition = canImagesContainer.getBoundingClientRect();
+            const { minLeft, maxLeft } = getScrollBounds();
 
             switch (currentBtn) {
                 case 'move-right':
-                    canImagesContainer.style.left = canContainerPosition.left - 300 + "px";
+                    canImagesContainer.style.left = Math.max(canContainerPosition.left - SCROLL_STEP, minLeft) + "px";
                     hideScrollButtons(currentBtn);
                     break;
                 case 'move-left':
-                    canImagesContainer.style.left = canContainerPosition.left + 300 + "px";
+                    canImagesContainer.style.left = Math.min(canContainerPosition.left + SCROLL_STEP, maxLeft) + "px";
                     hideScrollButtons(currentBtn);
                     break;
                 default:
@@ -124,24 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 
-});
-
-// Wait for everything to load in order to grab the dynamic image selectors
-window.addEventListener("load", () => {
-    console.log("Window Loaded");
-    const canElements = document.querySelectorAll('[data-can]');
-    const allArtworkImages = document.querySelectorAll('[data-artwork]');
-
-
-    // Function hides and display the appropriate images
+    // Function hides and displays the appropriate artwork image
     const displayArtworkImage = (activeArtwork) => {
-        // Remove classes that show the artwork from all images
-        let currentArtworkEl = document.querySelector(`[data-artwork="${activeArtwork}"]`);
+        let currentArtworkEl = artworkShowcaseDiv.querySelector(`[data-artwork="${activeArtwork}"]`);
 
-        // console.log("Variable Passed: ", activeArtwork);
-        allArtworkImages.forEach((img) => {
+        artworkShowcaseDiv.querySelectorAll('[data-artwork]').forEach((img) => {
             img.style.opacity = 0;
-
             img.classList.remove('display-block');
         });
         currentArtworkEl.classList.add('display-block');
@@ -150,25 +152,24 @@ window.addEventListener("load", () => {
         }, 100);
     }
 
-    // Event listener for the can selection buttons
-    canElements.forEach((can) => {
-        can.addEventListener("click", (evt) => {
-            console.log("CAN CLICKED")
-            let target = evt.currentTarget
-            evt.preventDefault();
-            evt.stopPropagation();
-            let currentCan = target.getAttribute('data-can');
-            console.log("Clan Clicked: ", currentCan);
+    // Delegated event listener for the can selection buttons.
+    // Bound to the container (present at DOMContentLoaded) instead of the
+    // individual can images (added later, asynchronously, once labels.json
+    // resolves) so clicks work regardless of when the cans finish rendering.
+    canImagesContainer.addEventListener("click", (evt) => {
+        const target = evt.target.closest('[data-can]');
+        if (!target) return;
 
-            canElements.forEach((img) => {
-                img.setAttribute('data-selected', 'false');
-            });
+        evt.preventDefault();
+        evt.stopPropagation();
+        let currentCan = target.getAttribute('data-can');
 
-            target.setAttribute('data-selected', 'true');
+        canImagesContainer.querySelectorAll('[data-can]').forEach((img) => {
+            img.setAttribute('data-selected', 'false');
+        });
+        target.setAttribute('data-selected', 'true');
 
-
-            displayArtworkImage(currentCan);
-        })
-    })
+        displayArtworkImage(currentCan);
+    });
 
 });

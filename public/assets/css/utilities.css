@@ -559,11 +559,11 @@
 }
 
 .padd-y-b-12 {
-    padding: 0 var(--rr-size-xl-6x);
+    padding: 0 0 var(--rr-size-xl-6x) 0;
 }
 
 .padd-y-b-13 {
-    padding: 0 var(--rr-size-xl-7x);
+    padding: 0 0 var(--rr-size-xl-7x) 0;
 }
 
 .padd-x-1 {
