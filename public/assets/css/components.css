@@ -211,7 +211,6 @@
 #projects .card .tag-container .chip {
     border: 1px solid var(--rr-border-color-default);
     color: var(--rr-text-color-primary);
-    font-size: var(--rr-size-md);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -334,7 +333,7 @@
     padding-bottom: var(--rr-size-sm-2x);
     padding-left: var(--rr-size-md);
     padding-right: var(--rr-size-md);
-    /* font-size: var(--rr-size-sm); */
+    font-size: var(--rr-size-md);
     border-radius: var(--rr-radius-full);
     transition: .25s ease-out;
 }
