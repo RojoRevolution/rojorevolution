@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const letsTalkShopContainer = document.querySelector(".bubble-flip");
+    const genreText = document.getElementById("genre");
+    const bandText = document.getElementById("band");
+
+    const genres = ["heavy metal", "death metal", "black metal", "sludge metal"]
+    const bands = ["Judas Priest", "Bolt Thrower", "Dark Throne", "Neurosis"]
+
+    const insertFooterText = () => {
+        let randomNumber = Math.floor(Math.random() * 3) + 1;
+        genreText.innerHTML = genres[randomNumber];
+        bandText.innerHTML = bands[randomNumber];
+    }
+
+    insertFooterText();
 
     // Bail out on the pages that don't include the footer contact markup
     // (see views/content/footer/contact.ejs — only 4 of 13 pages include it).
