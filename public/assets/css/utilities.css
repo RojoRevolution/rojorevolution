@@ -41,6 +41,10 @@
     display: flex;
 }
 
+.flex-basis-10 {
+    flex-basis: 10%;
+}
+
 .flex-basis-20 {
     flex-basis: 20%;
 }
@@ -63,6 +67,10 @@
 
 .flex-basis-80 {
     flex-basis: 80%;
+}
+
+.flex-basis-90 {
+    flex-basis: 90%;
 }
 
 

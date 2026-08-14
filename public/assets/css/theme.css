@@ -114,6 +114,7 @@
     --size-48px: 3rem;
     --size-60px: 3.75rem;
     --size-72px: 4.5rem;
+    --size-96px: 6rem;
 
     /* Weight */
     --weight-100: 100;
@@ -157,7 +158,8 @@
     --rr-size-xl-4x: var(--size-40px);
     --rr-size-xl-5x: var(--size-48px);
     --rr-size-xl-6x: var(--size-60px);
-    --rr-size-xl-7x: var(--size-72px)
+    --rr-size-xl-7x: var(--size-72px);
+    --rr-size-xl-8x: var(--size-96px)
 }
 
 [data-theme="light"] {
@@ -185,9 +187,9 @@
     --rr-surface-gradient-primary-linear-right-left: linear-gradient(270deg, var(--alpha-neutral-300-0) 0%, var(--rr-surface-color-primary) 99%, var(--rr-surface-color-primary) 100%);
     --rr-surface-gradient-primary-radial-in-out: radial-gradient(circle, var(--alpha-neutral-300-0) 0%, var(--rr-surface-color-primary) 50%, var(--alpha-neutral-300-0) 100%);
     /* Buttons */
-    --rr-button-primary-surface-default: var(--neutral-100);
-    --rr-button-primary-surface-hover: var(--neutral-200);
-    --rr-button-primary-surface-active: var(--neutral-300);
+    --rr-button-primary-surface-default: var(--neutral-1000);
+    --rr-button-primary-surface-hover: var(--neutral-800);
+    --rr-button-primary-surface-active: var(--neutral-1100);
     --rr-button-inverse-surface-default: var(--neutral-300);
     --rr-button-inverse-surface-hover: var(--neutral-400);
     --rr-button-inverse-surface-active: var(--neutral-500);
@@ -243,10 +245,14 @@
     --rr-surface-gradient-primary-radial-in-out: radial-gradient(circle, var(--alpha-neutral-1100-0) 0%, var(--rr-surface-color-primary) 50%, var(--alpha-neutral-1100-0) 100%);
 
     /* Buttons */
-    --rr-button-primary-surface-default: var(--neutral-1000);
-    --rr-button-primary-surface-hover: var(--neutral-900);
-    --rr-surface-button-inverse-default: var(--neutral-300);
-    --rr-surface-button-inverse-hover: var(--neutral-400);
+    --rr-button-primary-surface-default: var(--neutral-100);
+    --rr-button-primary-surface-hover: var(--neutral-200);
+    --rr-button-primary-surface-active: var(--neutral-300);
+    --rr-button-inverse-surface-default: var(--neutral-1000);
+    --rr-button-inverse-surface-hover: var(--neutral-600);
+    --rr-button-inverse-surface-active: var(--neutral-1200);
+    --rr-button-shadow-default: var(--alpha-white-50);
+    --rr-button-shadow-inverse: var(--alpha-black-50);
 
     /* Text Colors */
     --rr-text-color-primary: var(--neutral-200);
@@ -320,7 +326,7 @@ h2,
 h3 {
     font-family: var(--font-header);
     font-weight: var(--weight-900);
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
 }
 
 h4,
@@ -338,18 +344,20 @@ h5 {
     color: var(--rr-text-color-primary);
     text-decoration: none;
     margin: 0;
-    line-height: 1.15;
+    line-height: 1;
 }
 
 h1 {
-    font-size: var(--rr-size-xl-7x);
+    font-size: var(--rr-size-xl-8x);
+    word-spacing: 1rem;
     font-weight: var(--weight-900);
 }
 
 h2 {
-    font-size: var(--rr-size-xl-6x);
-    line-height: 1.5;
+    font-size: var(--rr-size-xl-7x);
+    line-height: 1.15;
     text-transform: uppercase;
+    word-spacing: .5rem;
 }
 
 h3 {
