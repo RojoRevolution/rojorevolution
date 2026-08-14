@@ -1253,8 +1253,7 @@ footer .btn.primary {
 }
 
 .bubble-flip {
-    transform: rotateY(0deg);
-    transition: .25s ease-out;
+    transform: perspective(1000px) rotateY(0deg);
 }
 
 footer .bubble-rotate {
