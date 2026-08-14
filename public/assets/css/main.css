@@ -306,12 +306,12 @@ section[data-header-type="intro"] {
 
 #welcome span.off:before {
     content: 'off';
-    top: -4px;
+    top: -8px;
     transition: .25s ease-out;
 }
 
 #welcome span.off:hover:before {
-    top: -2px;
+    top: -4px;
     transition: .25s ease-in;
 }
 
@@ -326,8 +326,6 @@ section[data-header-type="intro"] {
     bottom: -2px;
     transition: .25s ease-in;
 }
-
-
 
 #welcome .intro-header {
     display: flex;
@@ -351,7 +349,8 @@ section[data-header-type="intro"] {
 
 #welcome p {
     font-size: var(--rr-size-lg);
-    line-height: 1.25;
+    line-height: 1.5;
+    max-width: 580px;
 }
 
 #welcome ul {
@@ -1269,6 +1268,7 @@ footer .bubble-skew:hover {
 }
 
 footer .bubble-body {
+    z-index: 1;
     background: var(--rr-surface-color-primary-inverse);
     padding: var(--rr-size-xl-2x);
     border-radius: var(--rr-radius-lg-2x);
@@ -1276,19 +1276,33 @@ footer .bubble-body {
 
 footer .bubble-body::after {
     position: absolute;
+    z-index: 0;
     content: '';
     background-image: url('/assets/images/projects/misc/bubble-pointer.svg');
     width: 218px;
     height: 95px;
+    bottom: -70px;
     left: 80px;
 }
 
 
 footer .bubble-body h1 {
-    /* position: relative; */
     color: var(--rr-text-color-primary-inverse);
     font-size: var(--rr-size-xl-7x);
     text-align: center;
+}
+
+footer [data-element="contact-btn"] {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    height: 50px;
+}
+
+footer p {
+    font-size: var(--rr-size-lg);
+    line-height: 1.5;
+    max-width: 580px;
 }
 
 

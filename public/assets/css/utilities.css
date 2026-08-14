@@ -26,6 +26,10 @@
     width: 134%;
 }
 
+.width-max-content {
+    width: max-content;
+}
+
 .height-0 {
     height: 0%;
 }

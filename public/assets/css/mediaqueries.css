@@ -8,6 +8,11 @@
     .card {
         max-width: 100%;
     }
+
+    [data-stack="1040"] {
+        flex-direction: column;
+        align-items: start;
+    }
 }
 
 @media screen and (max-width: 990px) {
@@ -79,31 +84,33 @@
 
 @media screen and (max-width: 768px) {
 
-    h1 {
-        font-size: var(--rr-size-xl-5x);
+    [data-stack="768"] {
+        flex-direction: column;
+        align-items: start;
     }
-
-    h2 {
-        font-size: var(--rr-size-xl);
-    }
-
-    h3 {
-        font-size: var(--rr-size-lg);
-    }
-
-    h4,
-    h5 {
-        font-size: var(--rr-size-lg);
-    }
-
-    p {
-        font-size: var(--rr-size-md);
-    }
-
 
 }
 
 @media screen and (max-width: 600px) {
+
+    [data-stack="600"] {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    footer .bubble-body h1 {
+        font-size: var(--rr-size-xl-6x);
+    }
+
+    footer .bubble-body::after {
+        bottom: -60px;
+        left: 20px;
+    }
+
+    #legal [data-stack="600"] {
+        align-items: center;
+        gap: var(--rr-size-sm);
+    }
 
     .chip,
     .chip-outline {
