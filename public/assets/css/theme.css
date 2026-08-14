@@ -141,6 +141,7 @@
     --rr-radius-sm-2x: var(--size-8px);
     --rr-radius-sm: var(--size-12px);
     --rr-radius-md: var(--size-16px);
+    --rr-radius-lg: var(--size-20px);
     --rr-radius-lg-2x: var(--size-28px);
     --rr-radius-lg-3x: var(--size-32px);
     --rr-radius-lg-4x: var(--size-40px);

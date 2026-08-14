@@ -1252,6 +1252,46 @@ footer .btn.primary {
     /* transform: scale(1.25); */
 }
 
+.bubble-flip {
+    transform: rotateY(0deg);
+    transition: .25s ease-out;
+}
+
+footer .bubble-rotate {
+    transform: rotate(352deg);
+}
+
+footer .bubble-skew {
+    transform: skew(-10deg, 2deg);
+}
+
+footer .bubble-skew:hover {
+    transform: skew(-10deg, 2deg);
+}
+
+footer .bubble-body {
+    background: var(--rr-surface-color-primary-inverse);
+    padding: var(--rr-size-xl-2x);
+    border-radius: var(--rr-radius-lg-2x);
+}
+
+footer .bubble-body::after {
+    position: absolute;
+    content: '';
+    background-image: url('/assets/images/projects/misc/bubble-pointer.svg');
+    width: 218px;
+    height: 95px;
+    left: 80px;
+}
+
+
+footer .bubble-body h1 {
+    /* position: relative; */
+    color: var(--rr-text-color-primary-inverse);
+    font-size: var(--rr-size-xl-7x);
+    text-align: center;
+}
+
 
 #legal {
     background: var(--rr-surface-color-primary);
