@@ -4,9 +4,9 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1040px) {
     .card {
-        max-width: 48%;
+        max-width: 100%;
     }
 }
 
@@ -66,6 +66,14 @@
     #label-showcase .scroll-container {
         height: 650px;
     }
+
+    #footerContact>.row.gap-13 {
+        flex-direction: column;
+        align-items: start;
+        gap: var(--rr-size-md);
+        padding-bottom: var(--rr-size-lg);
+    }
+
 }
 
 
@@ -100,5 +108,9 @@
     .chip,
     .chip-outline {
         font-size: var(--rr-size-sm);
+    }
+
+    .btn.primary.cta {
+        font-size: var(--rr-size-lg);
     }
 }

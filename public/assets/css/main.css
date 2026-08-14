@@ -1,13 +1,14 @@
 /* Sections */
 
-/* section {
-    background: var(--rr-surface-color-primary);
-} */
+section {
+    padding: var(--rr-size-xl-4x) 0;
+
+}
 
 section[data-header-type="intro"] {
     position: sticky;
     top: 0;
-    padding-bottom: var(--rr-size-xl-4x);
+    /* border-bottom: 1px solid var(--rr-border-color-default); */
 }
 
 .spacing-a-t {
@@ -1240,6 +1241,7 @@ footer {
     z-index: 1;
     padding-bottom: var(--rr-size-xl-4x);
     min-height: 20vh;
+    border-top: 1px solid var(--rr-border-color-default);
 }
 
 footer #footerContact {
@@ -1247,12 +1249,9 @@ footer #footerContact {
 }
 
 footer .btn.primary {
-    transform: scale(1.5);
+    /* transform: scale(1.25); */
 }
 
-#contactBtn {
-    transform: scale(1.5);
-}
 
 #legal {
     background: var(--rr-surface-color-primary);

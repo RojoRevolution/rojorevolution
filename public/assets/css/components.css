@@ -443,7 +443,6 @@
     box-shadow: 0 0 0 0 var(--rr-button-inverse-surface-hover);
     transition: .25s ease-out;
     cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
-
 }
 
 .btn.primary:hover:after {
@@ -453,6 +452,17 @@
     height: 100%;
     transition: .25s ease-out;
 }
+
+.btn.primary.cta {
+    background-color: var(--rr-button-cta-surface-default);
+    color: var(--rr-text-color-primary-inverse);
+    font-size: var(--rr-size-xl-2x);
+}
+
+.btn.primary.cta:hover {
+    background-color: var(--rr-button-cta-surface-hover);
+}
+
 
 @keyframes btn-border-dance-1 {
     0% {
