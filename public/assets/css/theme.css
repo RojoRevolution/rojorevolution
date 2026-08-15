@@ -128,7 +128,7 @@
     --weight-900: 900;
 
     /* Font */
-    --font-header: 'Poppins', Helvetica, Arial, sans-serif;
+    --font-header: 'Passion One', Helvetica, Arial, sans-serif;
     /* --font-content: "Karla", sans-serif; */
     --font-content: 'Inconsolata', serif;
     --font-display: "Monoton", sans-serif;
@@ -338,7 +338,8 @@ h1,
 h2,
 h3 {
     font-family: var(--font-header);
-    font-weight: var(--weight-900);
+    font-weight: var(--weight-700);
+    letter-spacing: .1rem;
     text-transform: uppercase;
 }
 
@@ -363,7 +364,6 @@ h5 {
 h1 {
     font-size: var(--rr-size-xl-8x);
     word-spacing: 1rem;
-    font-weight: var(--weight-900);
 }
 
 h2 {

@@ -350,7 +350,7 @@ section[data-header-type="intro"] {
 #welcome p {
     font-size: var(--rr-size-lg);
     line-height: 1.5;
-    max-width: 580px;
+    max-width: 590px;
 }
 
 #welcome ul {
