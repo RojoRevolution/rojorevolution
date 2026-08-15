@@ -7,39 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightRays = document.querySelectorAll('.rays');
     const lightSwitches = document.querySelectorAll('.lightswitch');
 
-    // Navigation Menu Elements
+    // Theme Toggle Elements
     const topMenus = document.querySelectorAll('[data-menu-type]');
-    const menuEl = document.getElementById('menu');
     const lightSwitchEl = document.getElementById('light-switch');
-    const menuText = document.querySelector('.menu-btn');
-    const navItems = document.getElementById("nav-items");
 
     const colorThemeControl = document.querySelector("[data-theme]");
 
-
-
-    let currentMenuStatus
-    currentMenuStatus = menuEl.getAttribute("data-menu-status");
-
-
-    // Show hide main nav menu
+    // Toggle light/dark theme
     let changeMenuStatus = (targetEl, status) => {
         switch (status) {
-            case 'nav-closed':
-                console.log("Case Nav Closed")
-                menuEl.setAttribute('data-menu-status', 'open');
-                targetEl.setAttribute('data-status', 'nav-open');
-                navItems.classList.toggle('show');
-                targetEl.innerHTML = "Close"
-                break;
-
-            case 'nav-open':
-                console.log("Case Nav Open")
-                menuEl.setAttribute('data-menu-status', 'closed');
-                targetEl.setAttribute('data-status', 'nav-closed');
-                navItems.classList.toggle('show');
-                targetEl.innerHTML = "Menu"
-                break;
             case 'light':
                 colorThemeControl.setAttribute('data-theme', 'dark');
                 targetEl.setAttribute('data-status', 'dark');

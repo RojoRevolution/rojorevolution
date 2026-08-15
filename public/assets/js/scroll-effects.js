@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // let introSection = document.getElementById("welcome");
     let introSection = document.querySelector('[data-header-type="intro"]');
     let lightSwitches = document.querySelectorAll(".lightswitch");
-    // let menuEl = document.querySelector(".menu-pos");
     let featuredHeader = document.querySelector('[data-feature-type=work]');
 
     window.addEventListener('scroll', function handleScroll(event) {
@@ -15,14 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.scrollY >= 200) {
             introSection.style.opacity = 0;
         }
-        // if (window.scrollY >= 800) {
-        //     menuEl.style.top = "70px"
-        //     lightSwitches.forEach((lightswitch) => {
-        //         lightswitch.style.top = "70px"
-        //     });
-        // }
-
-
         // If Scrolling Up
         if (window.scrollY < this.lastScrollTop) {
             // Get First Section header y position
