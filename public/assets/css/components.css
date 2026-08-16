@@ -402,13 +402,24 @@
 }
 
 
-.btn.primary {
+.btn.primary,
+.btn.secondary {
     position: relative;
-    background-color: var(--rr-button-primary-surface-default);
     border-radius: var(--rr-radius-sm);
-    color: var(--rr-text-color-primary-inverse);
     box-shadow: 4px 4px 0 2px var(--rr-button-inverse-surface-hover);
     margin-bottom: 4px;
+}
+
+.btn.primary {
+    background-color: var(--rr-button-primary-surface-default);
+    border: 2px solid var(--rr-button-border);
+    color: var(--rr-text-color-primary-inverse);
+}
+
+.btn.secondary {
+    background-color: var(--rr-button-secondary-surface-default);
+    border: 2px solid var(--rr-button-border-inverse);
+    color: var(--rr-text-color-primary);
 }
 
 .btn.primary:before {
@@ -435,15 +446,31 @@
     transition: .25s ease-in;
 }
 
-.btn.primary:hover {
+.btn.primary:hover,
+.btn.secondary:hover {
     background-color: var(--rr-button-primary-surface-hover);
     border-color: var(--rr-border-color-brand);
     color: var(--rr-text-color-brand);
     margin-bottom: 0px;
     box-shadow: 0 0 0 0 var(--rr-button-inverse-surface-hover);
     transition: .25s ease-out;
-    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
 }
+
+.btn.primary:hover {
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
+    background-color: var(--rr-button-primary-surface-hover);
+}
+
+.btn.secondary:hover {
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
+    background-color: var(--rr-button-secondary-surface-hover);
+}
+
+
+.btn.primary:focus {
+    border-color: var(--rr-border-color-brand);
+}
+
 
 .btn.primary:hover:after {
     width: calc(100% + 0px);

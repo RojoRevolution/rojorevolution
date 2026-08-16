@@ -14,6 +14,10 @@
     width: 0%;
 }
 
+.width-50 {
+    width: 100%;
+}
+
 .width-100 {
     width: 100%;
 }
@@ -217,6 +221,10 @@
     position: absolute;
 }
 
+.fixed {
+    position: fixed;
+}
+
 .z-index-1 {
     z-index: 1;
 }
@@ -231,6 +239,10 @@
 
 .z-index-4 {
     z-index: 4;
+}
+
+.z-index-20 {
+    z-index: 20;
 }
 
 .overflow-hidden {
@@ -904,4 +916,8 @@
 
 .bg-neutral-300 {
     background: var(--neutral-300);
+}
+
+.bg-blur {
+    backdrop-filter: blur(10px);
 }
