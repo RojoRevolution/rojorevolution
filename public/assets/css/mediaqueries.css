@@ -25,6 +25,12 @@
         max-width: 100%;
     }
 
+    /* Acopon */
+    #acopon .corner-cask {
+        max-width: 334px;
+    }
+
+
     /* Craft beer label showcase: hide the artwork, show only a scrollable can gallery */
     #label-showcase {
         min-height: 700px;
@@ -89,6 +95,33 @@
         align-items: start;
     }
 
+    [data-reverse="768"] {
+        flex-direction: column-reverse;
+    }
+
+    #acopon [data-stack="768"] {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #acopon [data-reverse="768"] {
+        flex-direction: column-reverse;
+    }
+
+    /* Acopon */
+    #acopon .corner-cask {
+        max-width: 284px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    /* Acopon */
+    #acopon .corner-cask {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -96,6 +129,10 @@
     [data-stack="600"] {
         flex-direction: column;
         align-items: start;
+    }
+
+    #acopon .intro-img-container>img {
+        width: 150%;
     }
 
     footer .bubble-body h1 {

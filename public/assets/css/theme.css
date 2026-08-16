@@ -451,7 +451,7 @@ li {
     }
 
     h2 {
-        font-size: var(--rr-size-xl);
+        font-size: var(--rr-size-xl-5x);
     }
 
     h3 {

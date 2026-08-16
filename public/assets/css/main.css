@@ -923,7 +923,7 @@ header[data-menu-status="open"] #mainNav ul li {
 .feature-card:hover h3,
 .feature-card:hover .chip-outline {
     color: var(--rr-text-color-brand);
-    border-color: var(--rr-text-color-brand);
+    border-color: var(--rr-border-color-dark);
 }
 
 .feature-card .card-img {
@@ -1104,7 +1104,7 @@ header[data-menu-status="open"] #mainNav ul li {
 .feature-card:hover h3,
 .feature-card:hover .chip-outline {
     color: var(--rr-text-color-primary);
-    border-color: var(--rr-text-color-primary);
+    border-color: var(--rr-border-color-dark);
 }
 
 
@@ -1219,6 +1219,16 @@ header[data-menu-status="open"] #mainNav ul li {
 /* ================ */
 /* Acopon Project */
 
+#acopon .intro-img-container {
+    justify-content: end;
+    align-items: center;
+    max-height: 575px;
+}
+
+#acopon .intro-img-container>img {
+    width: 100%;
+}
+
 #acopon .corner-cask {
     position: absolute;
     max-width: 394px;
@@ -1308,6 +1318,7 @@ header[data-menu-status="open"] #mainNav ul li {
 
 #acopon .merch-img {
     max-width: 500px;
+    width: 100%;
 }
 
 #acopon .merch-img.featured {
