@@ -326,7 +326,7 @@
     padding-left: var(--rr-size-md);
     padding-right: var(--rr-size-md);
     font-size: var(--rr-size-md);
-    border-radius: var(--rr-radius-full);
+    border-radius: var(--rr-radius-sm);
     transition: .25s ease-out;
     box-shadow: 0 0 12px 4px rgb(0, 0, 0, .1);
 }
