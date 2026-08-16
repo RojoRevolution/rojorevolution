@@ -1457,3 +1457,27 @@ footer p {
     font-family: var(--font-header);
     text-transform: uppercase;
 }
+
+/* ==================== */
+/* Page Transitions     */
+/* ==================== */
+
+/* Hidden is the default state so the page starts blurred/invisible on load
+   with no flash of unstyled content; page-transitions.js reveals it once the
+   DOM is ready, and hides it again right before navigating to a new page.
+   steps() (instead of ease/linear) gives the "deteriorating", not-smooth look. */
+body {
+    opacity: 0;
+    filter: blur(24px);
+    transition: opacity .6s steps(6, end), filter .6s steps(6, end);
+}
+
+body[data-page-transition="visible"] {
+    opacity: 1;
+    /* Must be the literal `none` keyword, not `blur(0)` - any non-`none`
+       filter value (even a zero-strength one) creates a new containing
+       block for position:fixed descendants (#navHeader, .lightswitch),
+       which detaches them from the viewport and breaks their fixed
+       positioning once the page has revealed. */
+    filter: none;
+}
