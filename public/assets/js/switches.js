@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Color Theme Elements
-    const htmlEl = document.querySelector('html');
     const lightSwitchBox = document.querySelector('.light-switch-box');
-    const filmEffectBG = document.querySelector('.film-effect-bg');
     const clickEl = document.querySelector('.click-sound');
     const lightRays = document.querySelectorAll('.rays');
     const lightSwitches = document.querySelectorAll('.lightswitch');
@@ -123,35 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         default:
                             break
                     }
-                    break;
-                // If second chain is pulled show/hide the film efect
-                case "film":
-                    let filmStatus = htmlEl.getAttribute('data-film-effect');
-                    console.log(filmStatus)
-                    currentLightSwitchBox.classList.add("pull");
-                    currentClickEl.classList.add("show-click");
-
-                    switch (filmStatus) {
-                        case 'on':
-                            // filmEffectBG.classList.add("display-none");
-                            htmlEl.setAttribute('data-film-effect', 'off');
-                            localStorage.setItem('film', 'off');
-                            break;
-                        case 'off':
-                            // filmEffectBG.classList.remove("display-none");
-                            htmlEl.setAttribute('data-film-effect', 'on');
-                            localStorage.setItem('film', 'on');
-                            break;
-                        default:
-                            break;
-                    }
-
-
-                    setTimeout(() => {
-                        currentLightSwitchBox.classList.remove("pull");
-                        currentClickEl.classList.remove("show-click");
-                    }, 500);
-                    animateLightRays(currentTargetRays);
                     break;
                 default:
                     break;

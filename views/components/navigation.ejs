@@ -2,16 +2,33 @@
     <div id="menuContainer" class="relative">
         <div class="row justify-center">
             <button id="menuBtn" class="btn secondary" data-menu-status="closed">
-                Main Menu
+                Menu
             </button>
         </div>
-        <nav id="mainNav" class="col">
-            <ul>
-                <li class="col justify-end"><a href="/">Home</a></li>
-                <li class="col justify-end"><a href="#">Portfolio</a></li>
-                <li class="col justify-end"><a href="#">About</a></li>
-                <li class="col justify-end"><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="menuEl" class="row justify-center" data-stack="600">
+            <nav id="mainNav" class="col">
+                <ul>
+                    <h3>Navigation</h3>
+                    <li class="col"><a href="/">Home</a></li>
+                    <li class="col"><a href="#">Portfolio</a></li>
+                    <li class="col"><a href="#">About</a></li>
+                    <li class="col"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="divider">
+
+            </div>
+            <div id="options" class="col">
+                <h3>Options</h3>
+                <div class="col gap-4">
+                    <label for="filmGrain">Film Grain</label>
+                    <input type="range" id="filmGrain" name="cowbell" min="0" max="100" value="100" step="10" />
+                </div>
+                <div class="col gap-4">
+                    <label for="colorRange">Image Color</label>
+                    <input type="range" id="colorRange" name="cowbell" min="0" max="100" value="0" step="10" />
+                </div>
+            </div>
+        </div>
     </div>
 </header>
