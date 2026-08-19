@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //
     //   - the PUPIL moves TOWARD the cursor, travelling the whole eye white
     //     (the skull's pupil moved away, using the exposed crescent as the cue);
-    //   - the white triangular glint (.reflection) moves AWAY from the cursor
-    //     AND rotates so its point aims away.
+    //   - the white triangular glint (.reflection) is stretched into a long
+    //     wedge whose THICK end points AWAY from the cursor. Its own
+    //     pupil-shaped clip trims it to a pie-slice that reaches the pupil rim,
+    //     so the white glint always joins up with the white of the eye.
     //
     // Both eyes live in one SVG (#bottle-eyes), unlike the skull's two.
     //
@@ -25,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!eyeNodes.length) return;
 
     // Decorative motion only, so honour a reduced-motion preference and bail.
+    // (Bailing here also leaves the artist's original small glint untouched,
+    // since the wedge is only stretched further down in the active path.)
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     // --- Tunables ---------------------------------------------------------
@@ -32,9 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // white always shows at full deflection instead of the pupil kissing the
     // (stroked) eye outline.
     const SAFE = 0.88;
-    // Share of the pupil's own radius the glint slides. Kept well under 1: too
-    // much travel pushes the wedge out of the pupil clip and it disappears.
-    const GLINT = 0.45;
+    // How far past the pupil radius the wedge's base is pushed, as a multiple of
+    // the pupil's larger radius. Well over 1 so the base always sits outside the
+    // pupil clip (even along the long axis) and the slice reaches the rim.
+    const REACH = 2.4;
+    // Share of the pupil's radius the whole wedge slides away from the cursor.
+    // Small: the aim comes from rotation now, this is just a nudge of the point.
+    const GLINT = 0.30;
     // Distance (px) over which the gaze eases in; past it, full deflection.
     // Also stops the eyes twitching when the cursor is right on the artwork.
     const FALLOFF = 260;
@@ -64,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // The glint is a wedge: two vertices close together form the base, the third
     // is the point. So the apex is the vertex opposite the SHORTEST side, and the
-    // direction base-midpoint -> apex is where the wedge currently points (the
-    // art has both eyes pointing left, ~175.7deg).
+    // two base vertices are the rest. `openAxis` is the way the wedge widens
+    // (apex -> base midpoint); the art has both eyes opening to the right.
     const describeWedge = (pts) => {
         if (pts.length !== 3) return null;
         const span = (p, q) => Math.hypot(p[0] - q[0], p[1] - q[1]);
@@ -77,7 +85,21 @@ document.addEventListener("DOMContentLoaded", () => {
         ].sort((m, n) => m.opposite - n.opposite);
         const { apex, base } = ranked[0];
         const mid = [(base[0][0] + base[1][0]) / 2, (base[0][1] + base[1][1]) / 2];
-        return { apex, angle: Math.atan2(apex[1] - mid[1], apex[0] - mid[0]) };
+        return { apex, base, openAxis: Math.atan2(mid[1] - apex[1], mid[0] - apex[0]) };
+    };
+
+    // Stretch the wedge along its own two edges so the base lands `reach` units
+    // from the apex, keeping the apex and the wedge's half-angle exactly as the
+    // artist drew them. The far base then always pokes outside the pupil clip,
+    // which trims the wedge to a slice that meets the eye white at the rim.
+    const stretchWedge = (wedge, reach) => {
+        const extend = (p) => {
+            const dx = p[0] - wedge.apex[0];
+            const dy = p[1] - wedge.apex[1];
+            const len = Math.hypot(dx, dy) || 1;
+            return [wedge.apex[0] + (dx / len) * reach, wedge.apex[1] + (dy / len) * reach];
+        };
+        return [wedge.apex, extend(wedge.base[0]), extend(wedge.base[1])];
     };
 
     const eyes = [];
@@ -93,7 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // survives the SVG being re-exported with nudged shapes.
         const ballGeo = { cx: num(ball, "cx"), cy: num(ball, "cy"), rx: num(ball, "rx"), ry: num(ball, "ry") };
         const pupGeo = { cx: num(pupilEllipse, "cx"), cy: num(pupilEllipse, "cy"), rx: num(pupilEllipse, "rx"), ry: num(pupilEllipse, "ry") };
-        const wedge = reflection ? describeWedge(readPoints(reflection)) : null;
+
+        let wedge = reflection ? describeWedge(readPoints(reflection)) : null;
+        if (wedge) {
+            // Lengthen the wedge once, up front, and write the longer triangle
+            // back to the DOM. Per frame we then only rotate + nudge it.
+            const stretched = stretchWedge(wedge, Math.max(pupGeo.rx, pupGeo.ry) * REACH);
+            reflection.setAttribute("points", stretched.map((p) => p.join(" ")).join(" "));
+        }
 
         eyes.push({
             ball,
@@ -141,13 +170,14 @@ document.addEventListener("DOMContentLoaded", () => {
             eye.pupilWant.y = uy * eye.travel.y * mag;
 
             if (!eye.wedge) return;
-            // Glint: slides to the far side of the pupil...
+            // Glint: nudge the whole wedge to the far side of the pupil...
             eye.glintWant.x = -ux * eye.glintTravel.x * mag;
             eye.glintWant.y = -uy * eye.glintTravel.y * mag;
-            // ...and swings so its point aims away from the cursor. Net effect
-            // with the cursor above: wedge low, point at the bottom aiming down.
+            // ...and swing it so it WIDENS away from the cursor (thick base on
+            // the far side, point toward the cursor). Cursor above -> wedge
+            // opens downward, so the white slice sits along the bottom rim.
             const away = Math.atan2(-uy, -ux);
-            eye.spinWant = ((away - eye.wedge.angle) * 180) / Math.PI;
+            eye.spinWant = ((away - eye.wedge.openAxis) * 180) / Math.PI;
         });
     };
 
@@ -195,9 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 residual = Math.max(residual, glintResidual);
 
-                // Rotate about the apex first, then translate: the point stays
-                // pinned while the body swings, and the translate then carries
-                // the whole wedge out to the far side of the pupil.
+                // Rotate the stretched wedge about its apex to aim it, then nudge
+                // the whole thing. The apex stays near the pupil centre, the far
+                // base stays outside the clip, so the slice always touches the
+                // rim -> the glint stays joined to the white of the eye.
                 eye.reflection.setAttribute(
                     "transform",
                     `translate(${eye.glint.x.toFixed(3)} ${eye.glint.y.toFixed(3)}) ` +
