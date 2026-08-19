@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const bands = ["Judas Priest", "Bolt Thrower", "Dark Throne", "Neurosis"]
 
     const insertFooterText = () => {
+        // The #genre / #band spans live in the footer's text block, which
+        // isn't present on every layout - bail out if they're absent.
+        if (!genreText || !bandText) return;
         let randomNumber = Math.floor(Math.random() * 3) + 1;
         genreText.innerHTML = genres[randomNumber];
         bandText.innerHTML = bands[randomNumber];

@@ -1499,6 +1499,32 @@ footer p {
     max-width: 580px;
 }
 
+.molotov-body {
+    max-width: 438px;
+    min-height: 768px;
+}
+
+.molotov-legs {
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 226px);
+    transform: scale(.4);
+}
+
+.eyes-container {
+    position: absolute;
+    top: 283px;
+    width: 160px;
+    left: calc(50% - 72px);
+}
+
+.mouth-container {
+    position: absolute;
+    top: 440px;
+    width: 90px;
+    left: calc(50% - 45px);
+}
+
 
 #legal {
     background: var(--rr-surface-color-primary);
