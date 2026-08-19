@@ -1528,9 +1528,10 @@ footer p {
 
 .mrboneshadow {
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     transform: scaleX(.65) scaleY(0.75);
-    left: calc(50% - 212px);
+    left: calc(50% - 125px);
+    max-width: 250px;
 }
 
 .mrbones-eye:first-of-type {
