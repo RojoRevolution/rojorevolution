@@ -1516,6 +1516,35 @@ footer p {
     text-transform: uppercase;
 }
 
+.mrbones {
+    max-width: 322px;
+    width: 100%;
+}
+
+.mrbones-eye:first-of-type {
+    position: absolute;
+    top: 89px;
+    left: 72px;
+}
+
+.mrbones-eye .eye:first-of-type {
+    position: relative;
+    width: 62px;
+}
+
+.mrbones-eye:last-of-type {
+    position: absolute;
+    top: 83px;
+    left: 149px;
+    transform: scale(1.07);
+}
+
+.mrbones-eye .eye:last-of-type {
+    position: relative;
+    width: 62px;
+}
+
+
 /* ==================== */
 /* Page Transitions     */
 /* ==================== */
