@@ -381,14 +381,13 @@ h5 {
 
 h1 {
     font-size: var(--rr-size-xl-8x);
-    word-spacing: 1rem;
+    line-height: .9;
 }
 
 h2 {
     font-size: var(--rr-size-xl-7x);
-    line-height: 1.15;
+    line-height: 1;
     text-transform: uppercase;
-    word-spacing: .5rem;
 }
 
 h3 {

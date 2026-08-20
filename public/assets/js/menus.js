@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filmGrainSlider = document.querySelector("#filmGrain")
     const colorRangeSlider = document.querySelector("#colorRange")
     const filmEffectBg = document.querySelector(".film-effect-bg")
-    const GRAYSCALE_SELECTOR = "img, .card>.img-container, #acopon .img-panel, #acopon #acoponColors, #acopon .row.pattern.dark, #acopon .row.pattern.pattern.light, #acopon .cask-pattern, .cask-photos"
+    const GRAYSCALE_SELECTOR = "img, .card>.img-container, #acopon .img-panel, #acopon #acoponColors, #acopon .row.pattern.dark, #acopon .row.pattern.pattern.light, #acopon .cask-pattern, .cask-photos, .molotov-container"
 
     // Restore slider values from a previous visit, if any, so settings
     // carry over between pages.
