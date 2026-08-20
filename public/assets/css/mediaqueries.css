@@ -17,6 +17,14 @@
 
 @media screen and (max-width: 990px) {
 
+    [data-stack="990"] {
+        flex-direction: column;
+    }
+
+    [data-reverse="990"] {
+        flex-direction: column-reverse;
+    }
+
     .card.featured>.img-container {
         min-height: 300px;
     }
@@ -85,6 +93,11 @@
         padding-bottom: var(--rr-size-lg);
     }
 
+    .molotov-container {
+        transform: scale(.8);
+        margin: 32px 0px 100px 0;
+    }
+
 }
 
 
@@ -145,6 +158,11 @@
 
     #acopon .merch-img {
         width: 80%;
+    }
+
+    footer .contact-text p {
+        font-size: var(--rr-size-xl);
+        line-height: 1;
     }
 
 }
@@ -208,5 +226,9 @@
 
     .btn.primary.cta {
         font-size: var(--rr-size-lg);
+    }
+
+    .vibe-pattern-container {
+        display: none;
     }
 }

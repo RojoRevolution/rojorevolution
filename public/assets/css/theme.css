@@ -1,5 +1,11 @@
 /* Universal Elements */
 :root {
+    /* Non Design System Variables */
+    --fire-orange: rgb(255, 106, 0);
+    --fire-red: rgb(255, 34, 0);
+    --fire-yellow: rgb(255, 200, 0);
+
+
     /* ================================== */
     /* ======= Design System 2.0 ======== */
     /* ================================== */
