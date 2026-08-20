@@ -332,7 +332,8 @@
 }
 
 .chip {
-    background-color: var(--rr-surface-color-white);
+    background-color: var(--rr-surface-color-primary);
+    border: 1px solid var(--rr-border-color-dark);
 }
 
 .chip-outline {
@@ -384,7 +385,8 @@
     border: none;
     padding: var(--rr-size-sm) var(--rr-size-md);
     transition: .25s ease-in;
-    font-weight: var(--weight-600);
+    font-family: var(--font-content);
+    font-weight: var(--weight-500);
     font-size: var(--rr-size-lg);
     border-radius: var(--rr-radius-md);
     transition: .25s ease-in;
