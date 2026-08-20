@@ -1499,16 +1499,27 @@ footer p {
     max-width: 580px;
 }
 
+.bounce-my-boy {
+    animation-name: character-bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
 .molotov-body {
     max-width: 438px;
     min-height: 768px;
+    animation-name: character-bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 .molotov-legs {
     position: absolute;
-    bottom: -40px;
-    left: calc(50% - 226px);
-    transform: scale(.4);
+    bottom: 20px;
+    left: calc(50% - 108px);
+    max-width: 230px;
 }
 
 .eyes-container {
@@ -1523,6 +1534,14 @@ footer p {
     top: 440px;
     width: 90px;
     left: calc(50% - 45px);
+}
+
+.bottle-shadow {
+    position: absolute;
+    max-width: 300px;
+    width: 100%;
+    bottom: 26px;
+    left: calc(50% - 150px);
 }
 
 
@@ -1542,6 +1561,7 @@ footer p {
     text-transform: uppercase;
 }
 
+/* 
 .mrbones {
     max-width: 125px;
     width: 100%;
@@ -1583,13 +1603,13 @@ footer p {
 }
 
 .mrbones-eye .eye {
-    animation-name: skull-bounce;
+    animation-name: character-bounce;
     animation-iteration-count: infinite;
     animation-duration: 1s;
     animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-}
+} */
 
-@keyframes skull-bounce {
+@keyframes character-bounce {
     0% {
         transform: scaleX(1) translateY(0);
     }
