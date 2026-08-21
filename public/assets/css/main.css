@@ -1592,6 +1592,38 @@ footer .contact-text p {
 
 }
 
+.boots-container {
+    position: absolute;
+    max-width: 234px;
+    bottom: -131px;
+    left: 108px;
+}
+
+.legs-container {
+    position: absolute;
+    width: 112px;
+    bottom: 25px;
+    left: 169px;
+    animation-name: character-bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.legs-container .left {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 100px;
+}
+
+.legs-container .right {
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 100px;
+}
+
 .bottle-shadow {
     position: absolute;
     max-width: 300px;
@@ -1768,7 +1800,6 @@ footer .contact-text p {
     background-color: var(--fire-red);
     background-image: linear-gradient(to bottom left, color-mix(in srgb, var(--fire-red) 90%, transparent), color-mix(in srgb, var(--fire-orange) 70%, transparent));
     z-index: 1;
-
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-name: burn-left;
@@ -1992,6 +2023,29 @@ footer .contact-text p {
 
     100% {
         transform: scaleX(1) translateY(0);
+
+    }
+}
+
+@keyframes legs-bounce {
+    0% {
+        transform: scaleX(1) translateY(-2px);
+    }
+
+    25% {
+        transform: scaleX(1.05) translateY(0px);
+    }
+
+    50% {
+        transform: scaleX(.98) translateY(-4px);
+    }
+
+    75% {
+        transform: scaleX(1.05) translateY(0px);
+    }
+
+    100% {
+        transform: scaleX(1) translateY(-2px);
 
     }
 }
