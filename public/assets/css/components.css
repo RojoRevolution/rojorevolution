@@ -690,15 +690,24 @@
     border-top: 1px solid var(--rr-border-color-default);
 }
 
+#projectStory {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 /* Project Info CSS */
 #projectStory[data-status="hide"] {
     height: 0;
-    opacity: 0;
+    display: none;
 }
 
 #projectStory[data-status="open"] {
     height: auto;
-    opacity: 1;
+    display: block;
+}
+
+#work[data-status="hide"] {
+    display: none;
 }
 
 .story-container {

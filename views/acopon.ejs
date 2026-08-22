@@ -1,14 +1,14 @@
 <%- include('partials/html-start-doc'); %>
     <!-- Start Body -->
-    <main id="acopon" class="padd-y-5">
-        <section class="relative col padd-y-12 gap-12" data-header-type="intro">
+    <main id="acopon" class="padd-t-5">
+        <section class="relative col padd-y-t-12 gap-13" data-header-type="intro">
             <%- include('content/acopon/intro'); %>
         </section>
-        <section>
+        <section id="projectStory" data-status="hide">
             <%- include('components/project-story'); %>
         </section>
-        <div id="work">
-            <section class="relative col padd-y-12 gap-12" data-header-type="content">
+        <div id="work" data-status="show">
+            <section class="relative col padd-y-t-12 gap-12" data-header-type="content">
                 <%- include('content/acopon/intro-img'); %>
             </section>
             <section class="relative col padd-y-12 gap-12" data-header-type="content">
