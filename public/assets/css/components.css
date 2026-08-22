@@ -328,7 +328,7 @@
     font-size: var(--rr-size-md);
     border-radius: var(--rr-radius-sm);
     transition: .25s ease-out;
-    box-shadow: 0 0 12px 4px rgb(0, 0, 0, .1);
+    /* box-shadow: 0 0 12px 4px rgb(0, 0, 0, .1); */
 }
 
 .chip {
@@ -388,7 +388,6 @@
     font-family: var(--font-content);
     font-weight: var(--weight-500);
     font-size: var(--rr-size-lg);
-    border-radius: var(--rr-radius-md);
     transition: .25s ease-in;
     /* transform: scale(1.15); */
 }
@@ -492,6 +491,83 @@
     background-color: var(--rr-button-cta-surface-hover);
 }
 
+/* Button Group */
+.btn-group {
+    position: relative;
+    border-radius: var(--rr-radius-md);
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
+
+.btn-group .btn {
+    outline: none;
+    border: none;
+    padding: var(--rr-size-sm) var(--rr-size-md);
+    transition: .25s ease-in;
+    font-family: var(--font-content);
+    font-weight: var(--weight-500);
+    font-size: var(--rr-size-lg);
+    border-radius: 0;
+    transition: .25s ease-in;
+}
+
+.btn-group .btn.primary {
+    position: relative;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 2px var(--rr-button-inverse-surface-hover);
+    margin-bottom: 4px;
+    background-color: var(--rr-button-primary-surface-default);
+    border: 2px solid var(--rr-button-border);
+    border-right: none;
+    color: var(--rr-text-color-primary-inverse);
+}
+
+.btn-group .btn.primary:first-of-type {
+    border-radius: var(--rr-radius-sm) 0 0 var(--rr-radius-sm);
+}
+
+.btn-group .btn.primary:last-of-type {
+    border-radius: 0 var(--rr-radius-sm) var(--rr-radius-sm) 0;
+    border-right: 2px solid var(--rr-button-border);
+}
+
+.btn-group .btn.primary:hover,
+.btn-group .btn.primary:active {
+    transform: translateY(2px);
+    /* margin-bottom: 2px; */
+    box-shadow: 2px 2px 0 2px var(--rr-button-inverse-surface-hover);
+    transition: .25s ease-out;
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
+}
+
+.btn-group .btn.primary:hover {
+    background-color: var(--rr-button-primary-surface-hover);
+    color: var(--rr-text-color-secondary-inverse);
+}
+
+.btn-group .btn.primary:disabled,
+.btn-group .btn.primary:disabled:hover,
+.btn-group .btn.primary:disabled:active {
+    opacity: .75;
+    background-color: var(--rr-button-group-surface-active);
+    color: var(--rr-text-color-primary-inverse);
+    transform: translateY(4px);
+    margin-bottom: 2px;
+    box-shadow: 0 0 0 0 var(--rr-button-inverse-surface-hover);
+    transition: .25s ease-out;
+    cursor: url('../images/projects/misc/hand-not-allowed.svg')1 0, auto;
+    /* border: 2px solid var(--rr-button-border-inverse); */
+    border-right: none;
+}
+
+.btn-group .btn.primary:active {
+    background-color: var(--rr-button-primary-surface-active);
+    color: var(--rr-text-color-secondary-inverse);
+}
+
+
 
 @keyframes btn-border-dance-1 {
     0% {
@@ -545,6 +621,48 @@
     background-color: var(--rr-surface-color-brand-accent);
 }
 
+.scroll-controls {
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+}
+
+.point-up {
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 20px);
+    max-width: 40px;
+    /* transform: rotate(180deg); */
+    /* animation-name: hand-point-down;
+    animation-iteration-count: infinite;
+    animation-duration: 1s; */
+}
+
+.point-down {
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 20px);
+    max-width: 40px;
+    transform: rotate(180deg);
+    animation-name: hand-point-down;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes hand-point-down {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 30px;
+    }
+
+}
+
 
 /* Images */
 .img-placeholder {
@@ -565,6 +683,32 @@
     /* max-width: 250px; */
     width: 100%;
     padding: var(--rr-size-sm);
+}
+
+.divider {
+    margin: 2rem 0;
+    border-top: 1px solid var(--rr-border-color-default);
+}
+
+/* Project Info CSS */
+#projectStory[data-status="hide"] {
+    height: 0;
+    opacity: 0;
+}
+
+#projectStory[data-status="open"] {
+    height: auto;
+    opacity: 1;
+}
+
+.story-container {
+    padding: var(--rr-size-xl);
+    overflow-y: scroll;
+}
+
+.story {
+    /* height: 50vh; */
+    max-width: 700px;
 }
 
 

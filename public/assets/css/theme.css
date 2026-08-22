@@ -206,6 +206,9 @@
     --rr-button-shadow-default: var(--alpha-neutral-300-25);
     --rr-button-shadow-inverse: var(--alpha-neutral-1100-25);
 
+    --rr-button-group-surface-active: var(--neutral-600);
+
+
     --rr-button-cta-surface-default: var(--revolution-red-500);
     --rr-button-cta-surface-hover: var(--revolution-red-600);
     --rr-button-cta-surface-active: var(--revolution-red-700);
@@ -220,6 +223,7 @@
     --rr-text-color-primary: var(--neutral-1100);
     --rr-text-color-primary-inverse: var(--neutral-200);
     --rr-text-color-secondary: var(--neutral-800);
+    --rr-text-color-secondary-inverse: var(--neutral-400);
     --rr-text-color-subtle: var(--neutral-400);
     --rr-text-color-brand: var(--revolution-red-500);
     --rr-text-color-danger: var(--revolution-red-600);
@@ -289,6 +293,7 @@
     --rr-text-color-primary: var(--neutral-200);
     --rr-text-color-primary-inverse: var(--neutral-1100);
     --rr-text-color-secondary: var(--neutral-300);
+    --rr-text-color-secondary-inverse: var(--neutral-800);
     --rr-text-color-subtle: var(--neutral-600);
     --rr-text-color-brand: var(--revolution-red-500);
     --rr-text-color-danger: var(--revolution-red-600);
@@ -389,6 +394,7 @@ h2 {
     line-height: 1;
     text-transform: uppercase;
 }
+
 
 h3 {
     font-size: var(--rr-size-xl-4x);
