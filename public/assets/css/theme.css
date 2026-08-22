@@ -207,6 +207,7 @@
     --rr-button-shadow-inverse: var(--alpha-neutral-1100-25);
 
     --rr-button-group-surface-active: var(--neutral-600);
+    --rr-button-group-surface-disabled: var(--neutral-600);
 
 
     --rr-button-cta-surface-default: var(--revolution-red-500);
@@ -285,6 +286,9 @@
     --rr-button-cta-surface-hover: var(--revolution-red-400);
     --rr-button-cta-surface-active: var(--revolution-red-600);
     --rr-button-shadow-cta: var(---revolution-red-300);
+
+    --rr-button-group-surface-active: var(--neutral-300);
+    --rr-button-group-surface-disabled: var(--neutral-300);
 
     --rr-button-border: var(--neutral-1100);
     --rr-button-border-inverse: var(--neutral-300);

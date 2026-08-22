@@ -551,7 +551,7 @@
 .btn-group .btn.primary:disabled:hover,
 .btn-group .btn.primary:disabled:active {
     opacity: .75;
-    background-color: var(--rr-button-group-surface-active);
+    background-color: var(--rr-button-group-surface-disabled);
     color: var(--rr-text-color-primary-inverse);
     transform: translateY(4px);
     margin-bottom: 2px;
