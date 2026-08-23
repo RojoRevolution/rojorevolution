@@ -1,14 +1,22 @@
 <%- include('partials/html-start-doc'); %>
     <!-- Start Body -->
     <main id="acopon" class="padd-t-5">
-        <section class="relative col padd-y-t-12 gap-13" data-header-type="intro">
+        <section class="col padd-y-t-12 gap-13" data-header-type="intro">
             <%- include('content/acopon/intro'); %>
         </section>
+        <div class="container controls-container">
+            <div class="project-view">
+                <div class="row justify-between align-item-center">
+                    <p>Acopon Brewing Co. | Dripping Springs, Tx</p>
+                    <%- include('components/project-view-switch'); %>
+                </div>
+            </div>
+        </div>
         <section id="projectStory" data-status="hide">
             <%- include('components/project-story'); %>
         </section>
         <div id="work" data-status="show">
-            <section class="relative col padd-y-t-12 gap-12" data-header-type="content">
+            <section class="relative col gap-12" data-header-type="content">
                 <%- include('content/acopon/intro-img'); %>
             </section>
             <section class="relative col padd-y-12 gap-12" data-header-type="content">

@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectStorySection = document.getElementById("projectStory");
     const storyButtonEl = document.querySelectorAll("#storyBtn button");
     const scrollSection = document.querySelector(".scroll-section ")
-    const bodyEl = document.querySelector("body");
-
-    console.log(scrollSection);
+    const storySectionTop = document.getElementById("storyTop");
+    const projectControlsContainer = document.querySelector(".controls-container")
+    const projectViewControls = document.querySelector(".project-view")
+    const projectViewControlsParagraph = document.querySelector(".project-view p")
 
     const removeDisabledFromAllBtns = () => {
         storyButtonEl.forEach((button) => {
@@ -18,25 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
             let clickedButton = event.currentTarget;
-            console.log(clickedButton)
             let content = clickedButton.getAttribute("data-content");
-            console.log(content)
-            // Set Data Attributes
+            let distanceFromTop = window.scrollY;
+
+            // Remove all Data Attributes
             removeDisabledFromAllBtns();
             clickedButton.setAttribute("data-active", "true");
-            // Show Content
+            // Set Attributes ad Show Content
             switch (content) {
                 case "work":
                     projectWorkSection.setAttribute("data-status", "show");
                     projectStorySection.setAttribute("data-status", "hide");
-                    scrollSection.classList.remove("overflow-auto");
+                    // scrollSection.classList.remove("overflow-auto");
                     // bodyEl.classList.remove("lock-scroll");
                     break;
                 case "story":
                     projectWorkSection.setAttribute("data-status", "hide");
                     projectStorySection.setAttribute("data-status", "show");
-                    scrollSection.classList.add("overflow-auto");
-                    // bodyEl.classList.add("lock-scroll");
+                    if (distanceFromTop > 300) {
+                        storySectionTop.scrollIntoView('{behavior: "smooth}')
+                    }
                     break;
                 default:
                     break;
@@ -45,6 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
             clickedButton.disabled = true;
         });
     });
+
+    window.addEventListener("scroll", (e) => {
+        e.preventDefault;
+        if (window.scrollY > 400) {
+            projectControlsContainer.classList.add("move-controls");
+            projectViewControlsParagraph.classList.add("display-none");
+        }
+        if (window.scrollY < 400) {
+            projectControlsContainer.classList.remove("move-controls");
+            projectViewControlsParagraph.classList.remove("display-none");
+
+        }
+    })
 
     // window.addEventListener('wheel', (e) => {
     //     const atBottom = scrollSection.scrollTop + scrollSection.clientHeight >= scrollSection.scrollHeight;

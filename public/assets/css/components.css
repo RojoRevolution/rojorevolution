@@ -518,7 +518,7 @@
     transition: .25s ease-in;
     font-family: var(--font-content);
     font-weight: var(--weight-500);
-    font-size: var(--rr-size-lg);
+    font-size: var(--rr-size-md);
     border-radius: 0;
     transition: .25s ease-in;
 }
@@ -721,13 +721,47 @@
 }
 
 .divider {
-    margin: 2rem 0;
-    border-top: 1px solid var(--rr-border-color-default);
+    padding-top: 2rem;
+    border-bottom: 1px solid var(--rr-border-color-default);
 }
 
 #projectStory {
     margin-top: 0;
     padding-top: 0;
+}
+
+/* Project View Controls */
+.container.controls-container {
+    /* position: sticky; */
+    /* top: 0; */
+    z-index: 4;
+    padding: 0 var(--rr-size-md);
+    transition: .5s;
+}
+
+.container.controls-container.move-controls {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0;
+}
+
+.project-view {
+    font-size: var(--size-28px);
+}
+
+.project-view.move-adjust {
+    /* width: 100%;
+    bottom: .5rem; */
+    /* background: var(--rr-surface-color-primary); */
+    transition: .5s;
+    /* border-radius: var(--rr-radius-md) var(--rr-radius-md); */
+    /* border: 2px solid var(--rr-border-color-dark); */
+    font-size: var(--size-18px);
+}
+
+.project-view p {
+    font-size: inherit;
 }
 
 /* Project Info CSS */
@@ -745,24 +779,26 @@
     display: none;
 }
 
-.story-container {
-    padding: var(--rr-size-xl);
-    /* height: 200vh; */
-    /* position: sticky; */
-    /* top: 20px; */
-    /* max-height: calc(100vh - 40px); */
-    /* overflow-y: auto; */
-}
-
-.story-container .scroll-section {
-    height: 50vh;
-    overflow-y: visible;
-    /* border: 1px solid #ccc; */
+.story-container .callout {
+    font-size: var(--size-24px);
+    padding: 0 var(--rr-size-xl-6x);
+    font-style: italic;
+    text-align: center;
 }
 
 .story {
     height: 50vh;
     max-width: 700px;
+}
+
+#acopon .story-container img.credit-due {
+    max-width: 320px;
+    width: 100%;
+    border: 2px solid var(--rr-border-color-dark);
+}
+
+#acopon .story-container img.credit-due::before {
+    content: "Photo by JoMando Cruz";
 }
 
 

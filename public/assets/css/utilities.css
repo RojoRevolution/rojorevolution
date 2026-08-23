@@ -887,6 +887,22 @@
     max-width: 400px;
 }
 
+.max-500 {
+    max-width: 500px;
+}
+
+.max-600 {
+    max-width: 600px;
+}
+
+.max-700 {
+    max-width: 768px;
+}
+
+.max-768 {
+    max-width: 768px;
+}
+
 
 /* Borders */
 

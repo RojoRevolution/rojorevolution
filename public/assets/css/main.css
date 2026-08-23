@@ -222,8 +222,9 @@ header#navHeader {
     justify-content: center;
     max-width: 90px;
     width: 100%;
-    left: calc(50% - 45px);
+    /* left: calc(50% - 45px); */
     top: 0;
+    right: 1rem;
     z-index: 20;
 }
 
@@ -449,10 +450,16 @@ header[data-menu-status="open"] #menuEl #options {
 
 /* ============= */
 /* Intro Section */
-#welcome {
+#welcome,
+#projectIntro {
     height: 50vh;
     padding: var(--rr-size-xl-3x) var(--rr-size-md);
     justify-content: flex-end;
+}
+
+#projectIntro {
+    height: 40vh;
+    padding: var(--rr-size-xl-3x) var(--rr-size-md);
 }
 
 #welcome h1 {
