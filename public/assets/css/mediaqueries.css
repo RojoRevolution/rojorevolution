@@ -131,7 +131,7 @@
     }
 
     #projectIntro {
-        height: 40vh;
+        height: 50vh;
     }
 
     #projectIntro span {
@@ -233,7 +233,7 @@
 
     .chip,
     .chip-outline {
-        font-size: var(--rr-size-sm);
+        font-size: var(md);
     }
 
     .btn.primary.cta {

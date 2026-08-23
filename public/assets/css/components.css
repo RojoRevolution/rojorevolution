@@ -80,6 +80,8 @@
     width: 100%;
     min-height: 300px;
     transition: .5s;
+    background: none;
+    border: none;
 }
 
 #projects .card.featured {
@@ -220,13 +222,6 @@
 }
 
 
-/* #projects .card .tag-container .chip {
-    border: 1px solid var(--rr-border-color-default);
-    color: var(--rr-text-color-primary);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-} */
-
 #projects .card .project-context h3 {
     font-size: var(--rr-size-xl-7x);
     text-transform: uppercase;
@@ -263,8 +258,7 @@
 
 #projects .card:hover .tag-container .chip {
     background-color: var(--rr-surface-color-secondary);
-    border-color: var(--rr-border-color-brand);
-    /* color: var(--rr-text-color-brand); */
+    /* border-color: var(--rr-border-color-brand); */
 }
 
 #projects .card:hover .img-container .learn {
@@ -274,7 +268,7 @@
 }
 
 #projects .card:hover .img-container {
-    background-size: 105%;
+    background-size: 110%;
     /* filter: grayscale(100%); */
     transition: .25s ease-out;
 }
@@ -299,7 +293,7 @@
 
 .card:hover>.img-container {
     border-color: var(--rr-border-color-brand);
-    box-shadow: 0 0 0 6px var(--alpha-red500-75);
+    /* box-shadow: 0 0 0 6px var(--alpha-red500-75); */
     transition: .25s ease-in;
 }
 

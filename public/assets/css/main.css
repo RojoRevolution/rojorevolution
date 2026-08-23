@@ -1318,7 +1318,7 @@ header[data-menu-status="open"] #menuEl #options {
 
 #acopon .img-panel {
     width: 100%;
-    border: 1px solid var(--rr-border-color-default);
+    border: 2px solid var(--rr-border-color-dark);
     border-radius: var(--rr-radius-md);
     display: flex;
     justify-content: center;
@@ -1326,7 +1326,7 @@ header[data-menu-status="open"] #menuEl #options {
 
 #acopon .swatches {
     width: 100%;
-    border: 1px solid var(--rr-border-color-default);
+    border: 2px solid var(--rr-border-color-dark);
     border-radius: var(--rr-radius-md);
     display: flex;
     justify-content: start;

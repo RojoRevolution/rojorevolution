@@ -914,6 +914,10 @@
     border: 1px solid var(--rr-border-color-default);
 }
 
+.border-toon {
+    border: 2px solid var(--rr-border-color-dark);
+}
+
 /* Radius */
 .radius-sm-3x {
     border-radius: var(--rr-radius-sm-3x);
