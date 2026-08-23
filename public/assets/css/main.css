@@ -9,7 +9,6 @@ section {
 section[data-header-type="intro"] {
     position: sticky;
     top: 0;
-    /* border-bottom: 1px solid var(--rr-border-color-default); */
 }
 
 .spacing-a-t {
@@ -22,7 +21,7 @@ section[data-header-type="intro"] {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 0;
+    z-index: -1;
 }
 
 .film-card-clip {

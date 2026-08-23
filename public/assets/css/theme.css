@@ -227,6 +227,7 @@
     --rr-text-color-secondary-inverse: var(--neutral-400);
     --rr-text-color-subtle: var(--neutral-400);
     --rr-text-color-brand: var(--revolution-red-500);
+    --rr-text-color-brand-accent: var(--revolution-red-600);
     --rr-text-color-danger: var(--revolution-red-600);
     --rr-text-color-success: var(--success-500);
     --rr-text-color-warning: var(--warning-500);
@@ -300,6 +301,7 @@
     --rr-text-color-secondary-inverse: var(--neutral-800);
     --rr-text-color-subtle: var(--neutral-600);
     --rr-text-color-brand: var(--revolution-red-500);
+    --rr-text-color-brand-accent: var(--revolution-red-400);
     --rr-text-color-danger: var(--revolution-red-600);
     --rr-text-color-success: var(--success-500);
     --rr-text-color-warning: var(--warning-500);
@@ -347,16 +349,17 @@ body {
 }
 
 a {
-    color: var(--rojo-primary);
+    color: var(--rr-text-color-brand);
     text-decoration: none;
+    transition: .5s;
 }
 
 a:visited {
-    color: none;
+    color: var(--rr-text-color-brand);
 }
 
 a:hover {
-    color: var(--rojo-secondary);
+    color: var(--rr-text-color-brand-accent);
     text-decoration: none;
     cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
 }

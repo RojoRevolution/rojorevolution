@@ -81,6 +81,10 @@
     flex-basis: 90%;
 }
 
+.flex-basis-100 {
+    flex-basis: 100%;
+}
+
 
 .display-none {
     display: none;
@@ -174,6 +178,18 @@
     align-items: end;
 }
 
+.align-self-start {
+    align-self: start;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-end {
+    align-self: end;
+}
+
 .align-content-start {
     align-content: start;
 }
@@ -247,6 +263,14 @@
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-auto {
+    overflow: auto;
 }
 
 .overflow-x-scroll {
@@ -925,4 +949,8 @@
 
 .bg-blur {
     backdrop-filter: blur(10px);
+}
+
+body.lock-scroll {
+    overflow: hidden;
 }
