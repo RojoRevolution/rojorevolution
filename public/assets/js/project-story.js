@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const storyButtonEl = document.querySelectorAll("#storyBtn button");
     const scrollSection = document.querySelector(".scroll-section ")
     const storySectionTop = document.getElementById("storyTop");
-    const projectControlsContainer = document.querySelector(".controls-container")
-    const projectViewControls = document.querySelector(".project-view")
-    const projectViewControlsParagraph = document.querySelector(".project-view p")
+    // const projectControlsContainer = document.querySelector(".controls-container")
+    // const projectViewControls = document.querySelector(".project-view")
+    // const projectViewControlsParagraph = document.querySelector(".project-view p")
+    const switchTooltipEl = document.querySelector(".point-container");
 
     const removeDisabledFromAllBtns = () => {
         storyButtonEl.forEach((button) => {
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    // Button Group controls changes content
     storyButtonEl.forEach((button) => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
@@ -30,46 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "work":
                     projectWorkSection.setAttribute("data-status", "show");
                     projectStorySection.setAttribute("data-status", "hide");
-                    // scrollSection.classList.remove("overflow-auto");
-                    // bodyEl.classList.remove("lock-scroll");
                     break;
                 case "story":
                     projectWorkSection.setAttribute("data-status", "hide");
                     projectStorySection.setAttribute("data-status", "show");
-                    if (distanceFromTop > 300) {
-                        storySectionTop.scrollIntoView('{behavior: "smooth}')
-                    }
+                    switchTooltipEl.classList.add("display-none");
+                    storySectionTop.scrollIntoView({ behavior: "smooth", block: "start" });
                     break;
                 default:
                     break;
             }
-
             clickedButton.disabled = true;
         });
     });
-
-    window.addEventListener("scroll", (e) => {
-        e.preventDefault;
-        if (window.scrollY > 400) {
-            projectControlsContainer.classList.add("move-controls");
-            projectViewControlsParagraph.classList.add("display-none");
-        }
-        if (window.scrollY < 400) {
-            projectControlsContainer.classList.remove("move-controls");
-            projectViewControlsParagraph.classList.remove("display-none");
-
-        }
-    })
-
-    // window.addEventListener('wheel', (e) => {
-    //     const atBottom = scrollSection.scrollTop + scrollSection.clientHeight >= scrollSection.scrollHeight;
-    //     const atTop = scrollSection.scrollTop === 0;
-
-    //     if ((!atBottom && e.deltaY > 0) || (!atTop && e.deltaY < 0)) {
-    //         scrollSection.scrollTop += e.deltaY;
-    //         e.preventDefault();
-    //     }
-    // }, { passive: false });
 
 
 });

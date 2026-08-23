@@ -883,6 +883,10 @@
     margin: 0 var(--rr-size-xl-7x);
 }
 
+.max-200 {
+    max-width: 200px;
+}
+
 .max-400 {
     max-width: 400px;
 }

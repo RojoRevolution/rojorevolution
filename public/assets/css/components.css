@@ -653,6 +653,15 @@
     text-transform: uppercase;
 }
 
+.point-container {
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    text-align: center;
+    width: 120px;
+    z-index: 1;
+}
+
 .point-up {
     position: absolute;
     bottom: 40px;
@@ -666,7 +675,7 @@
 
 .point-down {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: calc(50% - 20px);
     max-width: 40px;
     transform: rotate(180deg);
@@ -678,11 +687,11 @@
 
 @keyframes hand-point-down {
     0% {
-        top: 50px;
+        top: 20px;
     }
 
     100% {
-        top: 80px;
+        top: 50px;
     }
 
 }
@@ -732,19 +741,21 @@
 
 /* Project View Controls */
 .container.controls-container {
-    /* position: sticky; */
-    /* top: 0; */
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    padding: 0;
     z-index: 4;
     padding: 0 var(--rr-size-md);
     transition: .5s;
 }
 
-.container.controls-container.move-controls {
+/* .container.controls-container.move-controls {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
     padding: 0;
-}
+} */
 
 .project-view {
     font-size: var(--size-28px);
