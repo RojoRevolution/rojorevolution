@@ -739,7 +739,7 @@
     bottom: 2rem;
     right: 1.25rem;
     padding: 0;
-    z-index: 4;
+    z-index: 20;
     padding: 0 var(--rr-size-md);
     transition: .5s;
 }
