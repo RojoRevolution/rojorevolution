@@ -649,11 +649,25 @@
 
 .point-container {
     position: absolute;
-    top: -130px;
-    left: 50%;
     text-align: center;
     width: 120px;
-    z-index: 1;
+    z-index: 999;
+}
+
+.point-container[data-type="viewSwitch"] {
+    top: -130px;
+    left: 50%;
+}
+
+.point-container[data-type="selectCan"] {
+    left: 147px;
+    top: -360px;
+}
+
+.point-container[data-type="moveRight"] {
+    right: 20px;
+    bottom: -2.5rem;
+    width: 75px;
 }
 
 .point-up {

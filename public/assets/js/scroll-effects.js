@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // visible (default opacity 1, no blur). Apply the same hidden state the
     // scroll handler would, when we load already scrolled past it.
     const hideIntroIfScrolledPast = () => {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 100) {
             introSection.setAttribute("data-blur", "on");
             introSection.style.opacity = 0;
         }

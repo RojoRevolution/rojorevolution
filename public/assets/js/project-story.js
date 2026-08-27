@@ -4,10 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const storyButtonEl = document.querySelectorAll("#storyBtn button");
     const scrollSection = document.querySelector(".scroll-section ")
     const storySectionTop = document.getElementById("storyTop");
-    // const projectControlsContainer = document.querySelector(".controls-container")
-    // const projectViewControls = document.querySelector(".project-view")
-    // const projectViewControlsParagraph = document.querySelector(".project-view p")
-    const switchTooltipEl = document.querySelector(".point-container");
+    const switchTooltipEl = document.querySelector('.point-container[data-type="viewSwitch"]');
+
+    let projectContentTooltip;
+
+    projectContentTooltip = localStorage.getItem('projectStoryTooltip');
+
+    if (projectContentTooltip === "true") {
+        switchTooltipEl.classList.add("display-none");
+        console.log("In If Loop")
+    }
 
     const removeDisabledFromAllBtns = () => {
         storyButtonEl.forEach((button) => {
@@ -36,7 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "story":
                     projectWorkSection.setAttribute("data-status", "hide");
                     projectStorySection.setAttribute("data-status", "show");
-                    switchTooltipEl.classList.add("display-none");
+                    if (!projectContentTooltip || projectContentTooltip === "false") {
+                        localStorage.setItem('projectStoryTooltip', 'true')
+                        switchTooltipEl.classList.add("display-none");
+                    }
                     storySectionTop.scrollIntoView({ behavior: "smooth", block: "start" });
                     break;
                 default:
@@ -46,6 +55,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const hideSwitchContentOnLoad = () => {
+        if (window.scrollY > 100) {
+            switchTooltipEl.classList.add("display-none");
+        }
+    };
 
+    // Run now for the common case, and again on load: the browser can restore
+    // the scroll position after DOMContentLoaded, so the load pass is the
+    // reliable one.
+    hideSwitchContentOnLoad();
+    window.addEventListener("load", hideSwitchContentOnLoad);
+
+    window.addEventListener('scroll', function handleScroll(event) {
+
+        if (window.scrollY >= 200) {
+            switchTooltipEl.classList.add("display-none");
+        }
+
+        if (window.scrollY <= 200 && !projectContentTooltip || projectContentTooltip === "false") {
+            switchTooltipEl.classList.remove("display-none");
+        }
+
+    });
 
 });

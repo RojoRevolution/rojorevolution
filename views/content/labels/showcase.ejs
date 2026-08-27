@@ -1,23 +1,39 @@
+<!-- Mobile Note -->
+<div class="visit-desktop">
+    <div class="note">
+        <p>Visit on a dekstop if you'd like to see the full label artwork.</p>
+    </div>
+</div>
 <div id="label-showcase" class="width-100 relative">
     <div class="row justify-center">
         <div class="col justify-end" data-target="showcase" style="padding-bottom:160px">
 
         </div>
     </div>
-    <div class="can-control-container">
-        <div class="relative scroll-container">
-            <!-- Artwork Div -->
-            <div class="row gap-8 overflow-hidden padd-x-8 z-index-4" data-target="can-controls">
+    <div class="relative width-100">
+        <div class="point-container" data-type="selectCan">
+            <span>Pick a different can</span>
+            <img class="point-down" src="/assets/images/projects/misc/hand-pointing-no-arm.svg" />
+        </div>
+        <div class="point-container" data-type="moveRight">
+            <span>View more cans</span>
+            <img class="point-up" src="/assets/images/projects/misc/hand-pointing-no-arm.svg" />
+        </div>
+        <div class="can-control-container">
+            <div class="relative scroll-container">
+                <!-- Artwork Div -->
+                <div class="row overflow-hidden padd-x-8 z-index-4" data-target="can-controls">
 
+                </div>
             </div>
-        </div>
-        <!-- BG Gradient -->
-        <!-- Can Controls -->
-        <div class="flex move-left-container scale-0 z-index-4">
-            <button class="btn primary" data-btn-action="move-left"><i class="bi bi-arrow-left"></i></button>
-        </div>
-        <div class="flex move-right-container scale-0 scale-normal z-index-4">
-            <button class="btn primary" data-btn-action="move-right"><i class="bi bi-arrow-right"></i></>
+            <!-- BG Gradient -->
+            <!-- Can Controls -->
+            <div class="flex move-left-container scale-0 z-index-4">
+                <button class="btn primary" data-btn-action="move-left"><i class="bi bi-arrow-left"></i></button>
+            </div>
+            <div class="flex move-right-container scale-0 scale-normal z-index-4">
+                <button class="btn primary" data-btn-action="move-right"><i class="bi bi-arrow-right"></i></>
+            </div>
         </div>
     </div>
 </div>

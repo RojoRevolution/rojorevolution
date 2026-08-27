@@ -4,10 +4,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollCanButtons = document.querySelectorAll('[data-btn-action]');
     const scrollLeftButtonDiv = document.querySelector('.move-left-container');
     const scrollRightButtonDiv = document.querySelector('.move-right-container');
+    const pickCanTooltipEl = document.querySelector('.point-container[data-type="selectCan"]');
+    const viewMoreTooltipEl = document.querySelector('.point-container[data-type="moveRight"]');
+    const activelySelectedCanEl = document.querySelector('[data-selected="true"]');
+
     let canContainerPosition = canImagesContainer.getBoundingClientRect();
     // Below this width, the artwork showcase is hidden (see mediaqueries.css)
     // and cans are just a scrollable gallery, so clicking a can shouldn't select it.
-    const mobileLayout = window.matchMedia('(max-width: 990px)');
+    const mobileLayout = window.matchMedia('(max-width: 768px)');
+
+    // if (mobileLayout) {
+    //     activelySelectedCanEl.setAttribute("data-selected", "false")
+    // }
+
+    let pickCanTooltip;
+    let moveRightToolTip;
+
+    const hideTooltips = () => {
+        pickCanTooltip = localStorage.getItem('hideCanTooltip');
+        moveRightToolTip = localStorage.getItem('hideMoveRightTooltip');
+
+        if (pickCanTooltip === "true") {
+            pickCanTooltipEl.classList.add('display-none');
+        }
+        if (moveRightToolTip === "true") {
+            viewMoreTooltipEl.classList.add('display-none');
+        }
+    }
+    hideTooltips();
+
+
+
 
     // Total count of data elements
     let totalCanImages;
@@ -124,6 +151,9 @@ document.addEventListener("DOMContentLoaded", () => {
             let canContainerPosition = canImagesContainer.getBoundingClientRect();
             const { minLeft, maxLeft } = getScrollBounds();
 
+            moveRightToolTip = localStorage.setItem('hideMoveRightTooltip', "true");
+            hideTooltips();
+
             switch (currentBtn) {
                 case 'move-right':
                     canImagesContainer.style.left = Math.max(canContainerPosition.left - SCROLL_STEP, minLeft) + "px";
@@ -175,6 +205,8 @@ document.addEventListener("DOMContentLoaded", () => {
         target.setAttribute('data-selected', 'true');
 
         displayArtworkImage(currentCan);
+        pickCanTooltip = localStorage.setItem('hideCanTooltip', "true");
+        hideTooltips();
     });
 
 });

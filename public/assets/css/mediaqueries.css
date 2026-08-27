@@ -33,9 +33,18 @@
         max-width: 100%;
     }
 
+    .point-container {
+        display: none;
+    }
+
     /* Acopon */
     #acopon .corner-cask {
         max-width: 334px;
+    }
+
+    .can-control-container {
+        height: 320px;
+        bottom: -70px;
     }
 
 
@@ -44,21 +53,23 @@
         min-height: 700px;
     }
 
-    #label-showcase [data-target="showcase"] {
+    /* #label-showcase [data-target="showcase"] {
         display: none;
-    }
+    } */
 
     #label-showcase [data-can] img {
-        max-width: 250px !important;
+        max-width: 180px !important;
     }
 
     #label-showcase [data-can] {
-        transform: scale(.8);
+        transform: scale(.5);
+        max-width: 150px !important;
     }
 
     #label-showcase [data-selected="true"],
+    #label-showcase [data-can]:hover,
     #label-showcase [data-can]:hover[data-selected="true"] {
-        transform: scale(.8);
+        transform: scale(.6);
     }
 
 
@@ -68,18 +79,21 @@
            so the strip still grows to fit every can instead of clipping
            itself at the viewport width. */
         width: max-content;
+        gap: var(--rr-size-sm);
+        height: 300px;
+        align-items: center;
     }
 
     #label-showcase .move-right-container,
     #label-showcase .move-left-container {
-        justify-content: end;
+        justify-content: center;
         width: auto;
     }
 
     #label-showcase .move-right-container>button,
     #label-showcase .move-left-container>button {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 3.5rem;
     }
 
     #label-showcase .scroll-container {
@@ -100,6 +114,12 @@
 
 }
 
+
+@media screen and (min-width: 768px) {
+    .visit-desktop {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -172,6 +192,65 @@
         width: 80%;
     }
 
+    /* Labels */
+    #label-showcase [data-target="showcase"] {
+        display: none;
+    }
+
+
+    .can-control-container {
+        position: relative;
+        /* Grow with the wrapped cans; drop the desktop scroller's fixed height
+           and the -70px offset it leaks in from the 990px block. */
+        height: auto;
+        bottom: auto;
+        overflow: visible;
+    }
+
+    #label-showcase [data-target="can-controls"] {
+        width: 100%;
+        flex-wrap: wrap;
+        /* Static wrapped gallery: height follows the rows instead of the
+           300px single-row height inherited from the 990px scroller. */
+        height: auto;
+        overflow: visible;
+        gap: var(--rr-size-lg);
+        justify-content: center;
+    }
+
+    #label-showcase .scroll-container {
+        /* Was locked to 650px at 990px, which the wrapped rows overflowed. */
+        height: auto;
+    }
+
+    #label-showcase [data-can] {
+        width: 100%;
+        transform: none;
+    }
+
+    #label-showcase [data-selected="true"] {
+        /* transform: none;
+        width: auto; */
+    }
+
+    #label-showcase [data-can] img {
+        width: 100%;
+    }
+
+    #label-showcase [data-can]:hover,
+    #label-showcase [data-selected="true"],
+    #label-showcase [data-can]:hover[data-selected="true"] {
+        transform: none;
+    }
+
+
+
+
+    #label-showcase .move-right-container,
+    #label-showcase .move-left-container {
+        display: none;
+    }
+
     footer .contact-text p {
         font-size: var(--rr-size-xl);
         line-height: 1;
@@ -212,6 +291,13 @@
         width: 100%;
         height: 2px;
     } */
+
+    #projectIntro {
+        height: 31vh;
+        justify-content: end;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
     #acopon .intro-img-container>img {
         width: 150%;

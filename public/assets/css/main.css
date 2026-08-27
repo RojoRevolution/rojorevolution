@@ -1195,6 +1195,21 @@ header[data-menu-status="open"] #menuEl #options {
 /* Can Label Page */
 /* ================= */
 
+
+.visit-desktop {
+    padding: 0 var(--rr-size-lg);
+}
+
+.visit-desktop .note {
+    background: var(--rr-surface-color-accent);
+    border: 2px solid var(--rr-border-color-dark);
+    padding: var(--rr-size-lg);
+}
+
+.visit-desktop .note p {
+    text-align: center;
+}
+
 #label-showcase [data-target="showcase"] {
     min-height: 900px;
 }
@@ -1242,6 +1257,7 @@ header[data-menu-status="open"] #menuEl #options {
     left: 0;
     top: 0;
     transition: .25s ease-out;
+    gap: var(--rr-size-xl-2x);
 }
 
 #label-showcase [data-can] {
