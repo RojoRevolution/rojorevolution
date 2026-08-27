@@ -22,7 +22,7 @@ section[data-header-type="intro"] {
 
 [data-header-type="project"] h2 {
     color: var(--rr-text-color-primary);
-    font-size: var(--size-28px);
+    font-size: var(--rr-size-xl-4x);
 }
 
 .spacing-a-t {
@@ -1376,6 +1376,13 @@ header[data-menu-status="open"] #menuEl #options {
     width: 100%;
 }
 
+.pattern-container {
+    border: 2px solid var(--rr-border-color-dark);
+    border-radius: var(--rr-radius-lg-2x);
+    overflow: hidden;
+    position: relative;
+}
+
 #acopon .pattern {
     background-repeat: repeat-x;
     background-size: 25%;
@@ -1393,7 +1400,7 @@ header[data-menu-status="open"] #menuEl #options {
 
 #acopon .cask-pattern {
     position: absolute;
-    bottom: 0;
+    bottom: -14px;
     left: 0;
     width: 100%;
     background-image: url('/assets/images/projects/acopon/cask-pattern.svg');
