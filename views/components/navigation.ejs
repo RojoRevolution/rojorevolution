@@ -5,7 +5,7 @@
                 Menu
             </button>
         </div>
-        <div id="menuEl" class="row justify-center" data-stack="600">
+        <div id="menuEl" class="row justify-center" data-stack="768">
             <nav id="mainNav" class="col">
                 <ul>
                     <h3>Navigation</h3>
@@ -19,14 +19,17 @@
             </div>
             <div id="options" class="col">
                 <h3>Options</h3>
-                <div class="col gap-4">
-                    <label for="filmGrain">Film Grain</label>
-                    <input type="range" id="filmGrain" name="cowbell" min="0" max="100" value="100" step="10" />
+                <div class="col gap-6">
+                    <div class="col gap-4">
+                        <label for="filmGrain">Film Grain</label>
+                        <input type="range" id="filmGrain" name="cowbell" min="0" max="100" value="100" step="10" />
+                    </div>
+                    <div class="col gap-4">
+                        <label for="colorRange">Color</label>
+                        <input type="range" id="colorRange" name="cowbell" min="0" max="100" value="0" step="10" />
+                    </div>
                 </div>
-                <div class="col gap-4">
-                    <label for="colorRange">Color</label>
-                    <input type="range" id="colorRange" name="cowbell" min="0" max="100" value="0" step="10" />
-                </div>
+                <%- include('./mode-switch'); %>
             </div>
         </div>
     </div>

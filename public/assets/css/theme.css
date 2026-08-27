@@ -394,6 +394,7 @@ h5 {
 h1 {
     font-size: var(--rr-size-xl-8x);
     line-height: .9;
+    word-break: bre;
 }
 
 h2 {
@@ -465,7 +466,7 @@ li {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: var(--rr-size-xl-6x);
+        font-size: var(--rr-size-xl-7x);
         line-height: .9;
     }
 
@@ -475,7 +476,7 @@ li {
     }
 
     h3 {
-        font-size: var(--rr-size-xl);
+        font-size: var(--rr-size-xl-3x);
     }
 
     h4,
