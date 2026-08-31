@@ -2029,9 +2029,6 @@ footer .contact-text p {
     }
 }
 
-
-
-
 /* Legal Section */
 #legal {
     background: var(--rr-surface-color-primary);
@@ -2045,8 +2042,9 @@ footer .contact-text p {
 #legal ul li {
     color: var(--rr-text-color-primary);
     font-size: var(--rr-size-md);
-    font-family: var(--font-header);
+    font-family: var(--font-content);
     text-transform: uppercase;
+    margin: 0;
 }
 
 @keyframes character-bounce {
@@ -2115,7 +2113,6 @@ footer .contact-text p {
     width: .5rem;
     height: .5rem;
 }
-
 
 /* ==================== */
 /* Page Transitions     */

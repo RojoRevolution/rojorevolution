@@ -11,7 +11,6 @@
 
     [data-stack="1040"] {
         flex-direction: column;
-        align-items: start;
     }
 }
 
@@ -148,6 +147,10 @@
 
     [data-basis-100="768"] {
         flex-basis: 100%;
+    }
+
+    [data-item-center="768px"] {
+        align-items: center;
     }
 
     header#navHeader[data-menu-status="open"] #menuContainer {
@@ -334,10 +337,10 @@
         left: 20px;
     }
 
-    #legal [data-stack="600"] {
+    /* #legal [data-stack="600"] {
         align-items: center;
         gap: var(--rr-size-sm);
-    }
+    } */
 
     .chip,
     .chip-outline {
