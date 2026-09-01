@@ -396,17 +396,6 @@
     /* transform: scale(1.15); */
 }
 
-.btn[disabled] {
-    opacity: .5;
-}
-
-.btn:hover {
-    transition: .25s ease-out;
-    box-shadow: 0 0 0 6px var(--alpha-red500-75);
-    cursor: url('../images/projects/misc/hand-click.svg'), auto;
-}
-
-
 .btn.primary,
 .btn.secondary {
     position: relative;
@@ -471,7 +460,6 @@
     background-color: var(--rr-button-secondary-surface-hover);
 }
 
-
 .btn.primary:focus {
     border-color: var(--rr-border-color-brand);
 }
@@ -493,6 +481,12 @@
 
 .btn.primary.cta:hover {
     background-color: var(--rr-button-cta-surface-hover);
+}
+
+.btn[disabled],
+.btn[disabled]:hover {
+    opacity: .5;
+    pointer-events: none;
 }
 
 /* Button Group */

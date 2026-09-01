@@ -1024,6 +1024,20 @@ header[data-menu-status="open"] #menuEl #options {
     background: linear-gradient(133deg, rgba(250, 170, 141, 1) 0%, rgba(214, 65, 39, 1) 100%);
 }
 
+.card .img-container .banner-soon {
+    position: absolute;
+    left: -80px;
+    top: 10px;
+    transform: rotate(-25deg);
+    width: 300px;
+    text-align: center;
+    padding: var(--rr-size-md);
+    background: var(--rr-surface-color-warning);
+    color: var(--rr-text-color-primary-inverse);
+    font-size: var(--rr-size-lg);
+    font-weight: 700;
+}
+
 .card>#acopon.img-container {
     background-image: url('/assets/images/projects/featured/acopon.jpg');
     transition: .25s ease-in;

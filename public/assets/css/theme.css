@@ -183,6 +183,7 @@
     --rr-surface-color-danger-heavy: var(--revolution-red-900);
     --rr-surface-color-success-subtle: var(--success-100);
     --rr-surface-color-success-heavy: var(--success-900);
+    --rr-surface-color-warning: var(--warning-500);
     --rr-surface-color-warning-subtle: var(--warning-100);
     --rr-surface-color-warning-heavy: var(--warning-900);
     --rr-surface-color-overlay-primary: var(--alpha-white-50);
@@ -259,6 +260,7 @@
     --rr-surface-color-danger-heavy: var(--revolution-red-900);
     --rr-surface-color-success-subtle: var(--success-100);
     --rr-surface-color-success-heavy: var(--success-900);
+    --rr-surface-color-warning: var(--warning-400);
     --rr-surface-color-warning-subtle: var(--warning-100);
     --rr-surface-color-warning-subtle: var(--warning-900);
     --rr-surface-color-overlay-primary: var(--alpha-black-50);
