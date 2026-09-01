@@ -7,6 +7,20 @@
     height: 100%;
 }
 
+.rr-icon {
+    position: relative;
+    /* top: 1rem;
+    left: calc(50% - 75px); */
+    width: 50px;
+}
+
+.rr-icon .icon-eye {
+    position: absolute;
+    width: 25px;
+    bottom: 10px;
+    left: 12px;
+}
+
 /* Tooltips */
 .tooltip {
     position: relative;
@@ -96,7 +110,7 @@
     background-position: center center;
     width: 100%;
     min-height: 300px;
-    border: 1px solid var(--rr-border-color-default);
+    border: 2px solid var(--rr-border-color-dark);
     border-radius: var(--rr-radius-md);
     overflow: hidden;
 }
@@ -107,6 +121,7 @@
     background-size: 100%;
     background-position: bottom center;
     transition: .25s ease-out;
+    border: 2px solid var(--rr-border-color-dark);
     border-radius: var(--rr-radius-md);
 }
 
@@ -641,6 +656,10 @@
     text-transform: uppercase;
 }
 
+.featured-point-container {
+    position: relative;
+}
+
 .point-container {
     position: absolute;
     text-align: center;
@@ -708,6 +727,7 @@
     }
 
 }
+
 
 
 /* Images */

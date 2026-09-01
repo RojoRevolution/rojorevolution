@@ -288,6 +288,7 @@ header#navHeader #menuContainer {
 
 #mainNav ul li a {
     /* text-shadow: 4px 4px 2px var(--rr-button-inverse-surface-hover); */
+    color: var(--rr-text-color-primary);
     transition: .25s ease-out;
 }
 
@@ -466,7 +467,7 @@ header[data-menu-status="open"] #menuEl #options {
 /* Intro Section */
 #welcome,
 #projectIntro {
-    height: 50vh;
+    height: 66vh;
     padding: var(--rr-size-xl-3x) var(--rr-size-md);
     justify-content: flex-end;
 }
@@ -1559,7 +1560,8 @@ footer p {
     max-width: 580px;
 }
 
-footer .contact-text p {
+footer .contact-text p,
+#featured p {
     font-size: var(--rr-size-xl);
     line-height: 1.5;
 }
@@ -2055,7 +2057,7 @@ footer .contact-text p {
 #legal p,
 #legal ul li {
     color: var(--rr-text-color-primary);
-    font-size: var(--rr-size-md);
+    font-size: var(--rr-size-sm);
     font-family: var(--font-content);
     text-transform: uppercase;
     margin: 0;
