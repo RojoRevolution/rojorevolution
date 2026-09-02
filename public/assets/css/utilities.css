@@ -332,6 +332,21 @@
     color: var(--rr-text-color-secondary);
 }
 
+.word-break-all {
+    word-break: break-all;
+
+}
+
+.word-wrap {
+    word-wrap: break-word;
+}
+
+.text-medium {
+    font-weight: 600;
+}
+
+
+
 /* Images */
 .img-container {
     width: 100%;

@@ -407,7 +407,7 @@
         height: auto;
     }
 
-    h1 span.h-adjust {
+    /* h1 span.h-adjust {
         font-size: var(--rr-size-xl-5x);
-    }
+    } */
 }
