@@ -20,6 +20,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+    #projects .card.featured>.img-container {
+        min-height: 300px;
+    }
+
     #projects .card {
         max-width: 100%;
     }
@@ -319,6 +323,11 @@
         font-size: var(--rr-size-lg);
     }
 
+    .can-block {
+        transform: scale(.94);
+        top: -10px;
+    }
+
     #projectIntro {
         height: 31vh;
         justify-content: end;
@@ -405,6 +414,11 @@
 
     #projectIntro {
         height: auto;
+    }
+
+    .can-block {
+        transform: scale(.8);
+        top: 14px;
     }
 
     /* h1 span.h-adjust {

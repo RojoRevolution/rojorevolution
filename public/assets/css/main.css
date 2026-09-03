@@ -22,7 +22,7 @@ section[data-header-type="intro"] {
 
 [data-header-type="project"] h2 {
     color: var(--rr-text-color-primary);
-    font-size: var(--rr-size-xl-4x);
+    font-size: var(--rr-size-xl-6x);
 }
 
 .spacing-a-t {
@@ -1045,12 +1045,213 @@ header[data-menu-status="open"] #menuEl #options {
 }
 
 .card>#labels.img-container {
-    background-image: url('/assets/images/projects/featured/cans-labels.png');
+    position: relative;
+    /* background-image: url('/assets/images/projects/featured/cans-labels.png'); */
+    background-color: #4cc2ce;
     transition: .25s ease-in;
 }
 
+.can-block {
+    position: absolute;
+    top: -20px;
+    width: 620px;
+    height: 334px;
+    left: calc(50% - 326px);
+    overflow: hidden;
+}
+
+.can-block>.relative {
+    width: 620px;
+    height: 334px;
+}
+
+.craft-can {
+    position: absolute;
+    top: 80px;
+    width: 126px;
+}
+
+.craft-can:nth-of-type(1) {
+    left: 90px;
+    transform: rotate(-27deg);
+    top: 110px;
+    width: 120px;
+    animation-name: can-pop-1;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* .craft-can:nth-of-type(1):hover {
+    transform: rotate(-27deg) scale(1.1);
+} */
+
+@keyframes can-pop-1 {
+    0% {
+        transform: rotate(-27deg) scale(1);
+    }
+
+    90% {
+        transform: rotate(-27deg) scale(1);
+    }
+
+    95% {
+        transform: rotate(-27deg) scale(1.1);
+
+    }
+
+    100% {
+        transform: rotate(-27deg) scale(1);
+    }
+}
+
+.craft-can:nth-of-type(2) {
+    left: 175px;
+    transform: rotate(-18deg);
+    animation-name: can-pop-2;
+    animation-duration: 3s;
+    animation-delay: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+/* .craft-can:nth-of-type(2):hover {
+    transform: rotate(-18deg) scale(1.1);
+} */
+
+@keyframes can-pop-2 {
+    0% {
+        transform: rotate(-18deg) scale(1);
+    }
+
+    90% {
+        transform: rotate(-18deg) scale(1);
+    }
+
+    95% {
+        transform: rotate(-18deg) scale(1.1);
+
+    }
+
+    100% {
+        transform: rotate(-18deg) scale(1);
+    }
+}
+
+.craft-can:nth-of-type(3) {
+    left: 260px;
+    top: 70px;
+    transform: rotate(0deg);
+    z-index: 3;
+    width: 136px;
+    animation-name: can-pop-3;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+/* .craft-can:nth-of-type(3):hover {
+    transform: rotate(-0deg) scale(1.1);
+} */
+
+@keyframes can-pop-3 {
+    0% {
+        transform: rotate(-0deg) scale(1);
+    }
+
+    90% {
+        transform: rotate(-0deg) scale(1);
+    }
+
+    95% {
+        transform: rotate(-0deg) scale(1.1);
+
+    }
+
+    100% {
+        transform: rotate(-0deg) scale(1);
+    }
+}
+
+.craft-can:nth-of-type(4) {
+    left: 350px;
+    transform: rotate(18deg);
+    z-index: 2;
+    animation-name: can-pop-4;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+/* .craft-can:nth-of-type(4):hover {
+    transform: rotate(18deg) scale(1.1);
+} */
+
+@keyframes can-pop-4 {
+    0% {
+        transform: rotate(18deg) scale(1);
+    }
+
+    90% {
+        transform: rotate(18deg) scale(1);
+    }
+
+    95% {
+        transform: rotate(18deg) scale(1.1);
+
+    }
+
+    100% {
+        transform: rotate(18deg) scale(1);
+    }
+}
+
+.craft-can:nth-of-type(5) {
+    left: 440px;
+    top: 110px;
+    transform: rotate(27deg);
+    width: 120px;
+    animation-name: can-pop-5;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+/* .craft-can:nth-of-type(5):hover {
+    transform: rotate(27deg) scale(1.1);
+} */
+
+@keyframes can-pop-5 {
+    0% {
+        transform: rotate(27deg) scale(1);
+    }
+
+    90% {
+        transform: rotate(27deg) scale(1);
+    }
+
+    95% {
+        transform: rotate(27deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(27deg) scale(1);
+    }
+}
+
+
+
 .card>#logos.img-container {
-    background-image: url('/assets/images/projects/featured/logos.gif');
+    /* background-image: url('/assets/images/projects/featured/logos.gif'); */
+    background-color: #FFBD2F;
     transition: .25s ease-in;
 }
 
@@ -1061,6 +1262,89 @@ header[data-menu-status="open"] #menuEl #options {
 .card:hover .img-container>.section-overlay {
     /* filter: blur(1); */
     background-color: var(--rr-surface-color-overlay-primary);
+}
+
+.logos-home-card {
+    position: absolute;
+    top: 30px;
+    max-width: 300px;
+    left: calc(50% - 150px);
+    opacity: 0
+}
+
+.logos-home-card:nth-of-type(1),
+.logos-home-card:nth-of-type(2),
+.logos-home-card:nth-of-type(3),
+.logos-home-card:nth-of-type(4) {
+    animation-name: logos-pop;
+    animation-duration: 4s;
+    /* animation-delay: 0s; */
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-iteration-count: infinite;
+}
+
+.logos-home-card:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.logos-home-card:nth-of-type(2) {
+    top: 20px;
+    max-width: 250px;
+    left: calc(50% - 125px);
+    animation-delay: 1s;
+}
+
+.logos-home-card:nth-of-type(3) {
+    width: 225px;
+    left: calc(50% - 112.5px);
+    animation-delay: 2s;
+}
+
+.logos-home-card:nth-of-type(4) {
+    max-width: 350px;
+    left: calc(50% - 175px);
+    top: 70px;
+    animation-delay: 3s;
+}
+
+@keyframes logos-pop {
+
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    1% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    4% {
+        transform: scale(.9);
+    }
+
+    6% {
+        transform: scale(1);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    25% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    95% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
 }
 
 #featured ul,

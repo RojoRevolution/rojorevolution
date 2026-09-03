@@ -123,7 +123,7 @@
 
 
 #projects .card.featured>.img-container {
-    min-height: 420px;
+    min-height: 468px;
     background-size: 100%;
     background-position: bottom center;
     transition: .25s ease-out;
@@ -198,10 +198,10 @@
 #projects .card .tag-container ul li {
     position: relative;
     width: attr(data-width);
-    animation-name: chip-expand;
+    /* animation-name: chip-expand;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 #projects .card .tag-container ul li:nth-of-type(1) {
@@ -464,8 +464,8 @@
 .btn.primary:hover,
 .btn.secondary:hover {
     background-color: var(--rr-button-primary-surface-hover);
-    border-color: var(--rr-border-color-brand);
-    color: var(--rr-text-color-brand);
+    border-color: var(--rr-border-color-dark);
+    color: var(--rr-text-color-secondary-inverse);
     margin-bottom: 0px;
     box-shadow: 0 0 0 0 var(--rr-button-inverse-surface-hover);
     transition: .25s ease-out;
