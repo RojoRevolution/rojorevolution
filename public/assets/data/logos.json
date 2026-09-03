@@ -180,5 +180,33 @@
         "alt": "Text logo that reads Gilbert Tower Lager with the L looping though the O ",
         "bg": "#333",
         "maxWidth": "350px"
+    },
+    "powerfades": {
+        "default": "/assets/images/projects/logos/rr-logo-27-default.svg",
+        "inverse": "/assets/images/projects/logos/rr-logo-27-inverse.svg",
+        "alt": "Wordmark that reads Power Fades stylized like a death metal band logo",
+        "bg": "#333",
+        "maxWidth": "550px"
+    },
+    "stoiccider": {
+        "default": "/assets/images/projects/logos/rr-logo-28-default.svg",
+        "inverse": "/assets/images/projects/logos/rr-logo-28-inverse.svg",
+        "alt": "Triangular icon with 3 seeds inside for Stoic Cider Co.",
+        "bg": "#333",
+        "maxWidth": "350px"
+    },
+    "coldfashioned": {
+        "default": "/assets/images/projects/logos/rr-logo-29-default.svg",
+        "inverse": "/assets/images/projects/logos/rr-logo-29-inverse.svg",
+        "alt": "Classical serif wordmark that reads Cold Fashioned, with sparks and snowflakes coming off the top",
+        "bg": "#333",
+        "maxWidth": "650px"
+    },
+    "xolo": {
+        "default": "/assets/images/projects/logos/rr-logo-30-default.svg",
+        "inverse": "/assets/images/projects/logos/rr-logo-30-inverse.svg",
+        "alt": "Outline of a dog that appears to be painted as a skeleton",
+        "bg": "#333",
+        "maxWidth": "250px"
     }
 }

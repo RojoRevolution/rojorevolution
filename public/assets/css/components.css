@@ -12,6 +12,12 @@
     /* top: 1rem;
     left: calc(50% - 75px); */
     width: 50px;
+    transition: .25s;
+}
+
+.rr-icon:hover {
+    transform: scale(1.1) rotate(-30deg);
+    transition: .25s;
 }
 
 .rr-icon .icon-eye {
@@ -683,7 +689,8 @@
     width: 105px;
 }
 
-.point-container>span {
+.point-container>span,
+.featured-point-container>span {
     background: var(--rr-surface-color-primary);
     padding: var(--rr-size-sm-3x) var(--rr-size-sm-2x);
     border: 1px solid var(--rr-border-color-default);
