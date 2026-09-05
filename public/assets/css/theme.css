@@ -396,7 +396,7 @@ h5 {
 h1 {
     font-size: var(--rr-size-xl-8x);
     line-height: .9;
-    word-break: bre;
+    word-break: break-word;
 }
 
 h2 {

@@ -467,7 +467,7 @@ header[data-menu-status="open"] #menuEl #options {
 /* Intro Section */
 #welcome,
 #projectIntro {
-    height: 66vh;
+    height: 80vh;
     padding: var(--rr-size-xl-3x) var(--rr-size-md);
     justify-content: flex-end;
 }
@@ -539,24 +539,25 @@ header[data-menu-status="open"] #menuEl #options {
 }
 
 #welcome .titles {
-    height: 1.4rem;
+    /* height: 10rem; */
     overflow: hidden;
     min-width: 400px;
-    margin-bottom: 1rem;
-    border-left: 1px solid var(--rr-border-color-default);
+    /* margin-bottom: 1rem; */
+    /* border-left: 1px solid var(--rr-border-color-default); */
 }
 
 #welcome p {
-    font-size: var(--rr-size-xl);
+    margin: 0;
+    /* font-size: var(--rr-size-xl); */
     line-height: 1.5;
     max-width: 810px;
 }
 
 #welcome ul {
     position: absolute;
-    padding-top: 2px;
+    padding-top: 8px;
     top: -14px;
-    left: var(--rr-size-md);
+    left: var(--rr-size-sm);
     min-width: 400px;
     font-size: var(--rr-size-lg);
     animation-name: title-scroll;
@@ -768,7 +769,8 @@ header[data-menu-status="open"] #menuEl #options {
 #welcome ul li {
     padding: var(--rr-size-sm-2x) 0;
     font-size: var(--rr-size-xl-2x);
-    text-transform: uppercase;
+    /* font-weight: 500; */
+    /* text-transform: uppercase; */
 }
 
 .blur {
@@ -942,6 +944,15 @@ header[data-menu-status="open"] #menuEl #options {
     transition: .25s ease-in;
 }
 
+#welcome .pronunciation:after {
+    position: absolute;
+    content: '.';
+    color: var(--rr-text-color-primary);
+    transition: .25s ease-in;
+    right: 0px;
+    bottom: 8px;
+}
+
 #welcome .pronunciation:hover:before {
     transform: scale(1.1);
     transition: .25s ease-out;
@@ -978,6 +989,21 @@ header[data-menu-status="open"] #menuEl #options {
     right: -28px;
     transform: scale(1.5);
     transition: .25s ease;
+}
+
+#welcome h2 {
+    font-size: var(--rr-size-xl-8x);
+    color: var(--rr-text-color-primary-inverse);
+    line-height: .9;
+    word-break: break-word;
+    text-shadow: 0 0 2px var(--rr-text-color-brand);
+}
+
+@keyframes show-header {
+    0% {
+        display: none;
+        opacity: 0;
+    }
 }
 
 /* Featured Projects */
@@ -1093,11 +1119,11 @@ header[data-menu-status="open"] #menuEl #options {
     }
 
     90% {
-        transform: rotate(-27deg) scale(1);
+        transform: rotate(-27deg) scale(1) translateY(0px);
     }
 
     95% {
-        transform: rotate(-27deg) scale(1.1);
+        transform: rotate(-27deg) scale(1.05) translateY(20px);
 
     }
 
@@ -1127,11 +1153,11 @@ header[data-menu-status="open"] #menuEl #options {
     }
 
     90% {
-        transform: rotate(-18deg) scale(1);
+        transform: rotate(-18deg) scale(1) translateY(0px);
     }
 
     95% {
-        transform: rotate(-18deg) scale(1.1);
+        transform: rotate(-18deg) scale(1.05) translateY(20px);
 
     }
 
@@ -1164,11 +1190,11 @@ header[data-menu-status="open"] #menuEl #options {
     }
 
     90% {
-        transform: rotate(-0deg) scale(1);
+        transform: rotate(-0deg) scale(1) translateY(0px);
     }
 
     95% {
-        transform: rotate(-0deg) scale(1.1);
+        transform: rotate(-0deg) scale(1.05) translateY(20px);
 
     }
 
@@ -1199,11 +1225,11 @@ header[data-menu-status="open"] #menuEl #options {
     }
 
     90% {
-        transform: rotate(18deg) scale(1);
+        transform: rotate(18deg) scale(1) translateY(0px);
     }
 
     95% {
-        transform: rotate(18deg) scale(1.1);
+        transform: rotate(18deg) scale(1.05) translateY(20px);
 
     }
 
@@ -1235,11 +1261,11 @@ header[data-menu-status="open"] #menuEl #options {
     }
 
     90% {
-        transform: rotate(27deg) scale(1);
+        transform: rotate(27deg) scale(1) translateY(0px);
     }
 
     95% {
-        transform: rotate(27deg) scale(1.1);
+        transform: rotate(27deg) scale(1.05) translateY(20px);
     }
 
     100% {
@@ -1310,12 +1336,12 @@ header[data-menu-status="open"] #menuEl #options {
 @keyframes logos-pop {
 
     0% {
-        transform: scale(1.1);
+        transform: scale(1.05);
         opacity: 0;
     }
 
     1% {
-        transform: scale(1.1);
+        transform: scale(1.05);
         opacity: 1;
     }
 
