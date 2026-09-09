@@ -86,6 +86,10 @@
         transform: scale(.6);
     }
 
+    #footerContact #btn-container {
+        padding: var(--rr-size-sm) 0 var(--rr-size-xl-8x) 0;
+    }
+
 
     #label-showcase [data-target="can-controls"] {
         position: relative;
@@ -268,11 +272,14 @@
     }
 
 
-
-
     #label-showcase .move-right-container,
     #label-showcase .move-left-container {
         display: none;
+    }
+
+    .contact-bubble {
+        opacity: 1;
+        transform: scale(1);
     }
 
     footer .contact-text p {

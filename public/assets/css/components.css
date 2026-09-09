@@ -482,6 +482,7 @@
 }
 
 .btn.primary:focus {
+    background-color: var(--rr-button-primary-surface-hover);
     border-color: var(--rr-border-color-brand);
 }
 

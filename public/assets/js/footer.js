@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         contactBtnEl.addEventListener("mouseleave", () => {
-            contactBtnEl.innerHTML = "Let's Chat";
+            contactBtnEl.innerHTML = "Let's Collaborate";
             if (contactBubbleEl) contactBubbleEl.innerHTML = "Click to copy email";
         });
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // and shows the confirmation, and listeners don't stack on each hover.
         contactBtnEl.addEventListener("click", () => {
             navigator.clipboard.writeText(EMAIL);
-            if (contactBubbleEl) contactBubbleEl.innerHTML = "Email copied to clipboard";
+            if (contactBubbleEl) contactBubbleEl.innerHTML = "copied, copy?";
         });
     }
 

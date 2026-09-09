@@ -2039,7 +2039,7 @@ footer [data-element="contact-btn"] {
 
 .contact-bubble {
     position: absolute;
-    bottom: -50px;
+    top: 100px;
     opacity: 0;
     transform: scale(.5);
     background-color: var(--rr-surface-color-overlay-primary);
