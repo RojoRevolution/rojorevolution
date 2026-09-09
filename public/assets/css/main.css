@@ -2037,6 +2037,29 @@ footer [data-element="contact-btn"] {
     height: 50px;
 }
 
+.contact-bubble {
+    position: absolute;
+    bottom: -50px;
+    opacity: 0;
+    transform: scale(.5);
+    background-color: var(--rr-surface-color-overlay-primary);
+    padding: 4px 12px;
+    min-width: 60px;
+    font-size: var(--rr-size-md);
+    line-height: 1.5;
+    color: var(--rr-text-color-secondary);
+    font-family: var(--font-content);
+    text-transform: lowercase;
+    text-align: center;
+    border-radius: var(--rr-radius-sm);
+    transition: .25s ease;
+}
+
+#contact-btn:hover+.contact-bubble {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
 footer p {
     font-size: var(--rr-size-lg);
     line-height: 1.5;

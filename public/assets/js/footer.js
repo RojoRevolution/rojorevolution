@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const contactBtnEl = document.getElementById("contact-btn");
+    const contactBubbleEl = document.querySelector(".contact-bubble");
     const letsTalkShopContainer = document.querySelector(".bubble-flip");
     const genreText = document.getElementById("genre");
     const bandText = document.getElementById("band");
@@ -16,6 +18,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     insertFooterText();
+
+    // Contact button hover swap. Registered up here, before the early returns
+    // below, so it works regardless of whether the (now-removed) .bubble-flip
+    // exists or the viewport is mobile. Guarded because the footer contact
+    // markup isn't present on every page.
+    if (contactBtnEl) {
+        const EMAIL = "rojo@rojorevolution.com";
+
+        // Use mouseenter/mouseleave, NOT mouseover/mouseout: the hover state
+        // injects an <i> icon into the button, and mouseover/mouseout also fire
+        // when the pointer crosses between the button and that child element -
+        // which fired a stray "out" right around the click and reset the
+        // "Email copied to clipboard" text before it could be seen.
+        // enter/leave only fire at the button's outer boundary.
+        contactBtnEl.addEventListener("mouseenter", () => {
+            contactBtnEl.innerHTML = `${EMAIL} <i class="bi bi-copy"></i>`;
+        });
+
+        contactBtnEl.addEventListener("mouseleave", () => {
+            contactBtnEl.innerHTML = "Let's Chat";
+            if (contactBubbleEl) contactBubbleEl.innerHTML = "Click to copy email";
+        });
+
+        // Registered once (not inside the hover handler) so every click copies
+        // and shows the confirmation, and listeners don't stack on each hover.
+        contactBtnEl.addEventListener("click", () => {
+            navigator.clipboard.writeText(EMAIL);
+            if (contactBubbleEl) contactBubbleEl.innerHTML = "Email copied to clipboard";
+        });
+    }
 
     // Bail out on the pages that don't include the footer contact markup
     // (see views/content/footer/contact.ejs — only 4 of 13 pages include it).
@@ -96,4 +128,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
         startLoop();
     });
+
 });
