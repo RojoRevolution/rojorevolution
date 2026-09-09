@@ -505,7 +505,7 @@ header[data-menu-status="open"] #menuEl #options {
 
 #welcome span.off:before {
     content: 'off';
-    top: -8px;
+    top: -12px;
     transition: .25s ease-out;
 }
 
@@ -516,9 +516,8 @@ header[data-menu-status="open"] #menuEl #options {
 
 #welcome span.center:before {
     content: 'center';
-    bottom: -4px;
+    bottom: -8px;
     transition: .25s ease-out;
-
 }
 
 #welcome span.center:hover:before {
@@ -958,14 +957,15 @@ header[data-menu-status="open"] #menuEl #options {
     transition: .25s ease-out;
 }
 
-#welcome .pronunciation .bubble {
+#welcome .pronunciation .product-bubble,
+#welcome .pronunciation .designer-bubble,
+#welcome .pronunciation .frontend-bubble,
+#welcome .pronunciation .illustrator-bubble {
     position: absolute;
-    top: -18px;
-    right: -20px;
     opacity: 0;
     transform: scale(.5);
     background-color: var(--rr-surface-color-overlay-primary);
-    padding: 4px 8px;
+    padding: 4px 12px;
     min-width: 60px;
     font-size: var(--rr-size-md);
     line-height: 1.5;
@@ -975,6 +975,50 @@ header[data-menu-status="open"] #menuEl #options {
     text-align: center;
     border-radius: var(--rr-radius-sm);
     transition: .25s ease;
+    animation-name: bubble-show;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#welcome .pronunciation .bubble {
+    top: -18px;
+    right: -20px;
+}
+
+#welcome .pronunciation .product-bubble {
+    /* opacity: 1; */
+    top: -42px;
+    left: -30px;
+    transform: scale(1.5);
+    transition: .25s ease;
+    animation-delay: 0s;
+}
+
+#welcome .pronunciation .designer-bubble {
+    /* opacity: 1; */
+    top: -102px;
+    right: -118px;
+    transform: scale(1.5);
+    transition: .25s ease;
+    animation-delay: .5s;
+}
+
+#welcome .pronunciation .frontend-bubble {
+    /* opacity: 0; */
+    top: -42px;
+    right: -208px;
+    transform: scale(1.5);
+    transition: .25s ease;
+    animation-delay: 1s;
+}
+
+#welcome .pronunciation .illustrator-bubble {
+    /* opacity: 1; */
+    top: 18px;
+    right: -258px;
+    transform: scale(1.5);
+    transition: .25s ease;
+    animation-delay: 1.5s;
 }
 
 .pronunciation:hover {
@@ -983,28 +1027,157 @@ header[data-menu-status="open"] #menuEl #options {
     transition: .25s ease-out;
 }
 
-#welcome .pronunciation:hover .bubble {
+/* #welcome .pronunciation:hover .bubble {
     opacity: 1;
-    top: -32px;
+    top: -162px;
     right: -28px;
     transform: scale(1.5);
     transition: .25s ease;
+} */
+
+@keyframes bubble-show {
+
+    0%,
+    24% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    25%,
+    74% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+    75%,
+    100% {
+        opacity: 0;
+        transform: scale(.5);
+    }
 }
 
+
+
 #welcome h2 {
+    position: relative;
     font-size: var(--rr-size-xl-8x);
-    color: var(--rr-text-color-primary-inverse);
+    /* color: var(--rr-text-color-primary-inverse); */
     line-height: .9;
     word-break: break-word;
+    /* text-shadow: 0 0 2px var(--rr-text-color-brand); */
+}
+
+#welcome h2>span {
+    /* display: none; */
+    color: var(--rr-text-color-primary-inverse);
     text-shadow: 0 0 2px var(--rr-text-color-brand);
 }
 
-@keyframes show-header {
+#welcome h2>span:nth-of-type(1),
+#welcome h2>span:nth-of-type(2),
+#welcome h2>span:nth-of-type(3),
+#welcome h2>span:nth-of-type(4),
+#welcome h2>span:nth-of-type(5) {
+    /* display: none; */
+    /* animation-name: display-title; */
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#welcome h2>span:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+#welcome h2>span:nth-of-type(2) {
+    animation-delay: 2s;
+}
+
+#welcome h2>span:nth-of-type(3) {
+    animation-delay: 4s;
+}
+
+#welcome h2>span:nth-of-type(4) {
+    animation-delay: 6s;
+}
+
+#welcome h2>span:nth-of-type(5) {
+    animation-delay: 8s;
+}
+
+@keyframes display-title {
     0% {
         display: none;
         opacity: 0;
+        transform: scale(1);
+    }
+
+    9% {
+        display: block;
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(.95);
+    }
+
+    11% {
+        transform: scale(1.05);
+    }
+
+    12% {
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    29% {
+        opacity: 0
+    }
+
+    30%,
+    100% {
+        display: none;
+        opacity: 0;
+        transform: scale(1);
     }
 }
+
+@keyframes highlight-title {
+    0% {
+        display: none;
+        color: var(--rr-text-color-primary-inverse);
+        text-shadow: 0 0 2px var(--rr-text-color-brand);
+    }
+
+    9% {
+        display: block;
+    }
+
+    10%,
+    20% {
+        color: var(--rr-text-color-primary);
+        text-shadow: 0 0 0 var(--rr-text-color-brand);
+    }
+
+    30%,
+    100% {
+        color: var(--rr-text-color-primary-inverse);
+        text-shadow: 0 0 2px var(--rr-text-color-brand);
+    }
+
+    31% {
+        display: none;
+    }
+
+}
+
+
+
 
 /* Featured Projects */
 .feature-card {
