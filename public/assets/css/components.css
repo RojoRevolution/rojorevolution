@@ -1298,3 +1298,11 @@ input[type="range"]:active::-moz-range-thumb {
 input[type="range"]:focus::-moz-range-thumb {
     box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
 }
+
+/* Accordion */
+
+.accordion-content {
+    display: none;
+    opacity: 0;
+    transition: .25s;
+}

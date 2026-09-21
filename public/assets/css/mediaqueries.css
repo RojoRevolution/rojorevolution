@@ -439,6 +439,10 @@
         padding-bottom: 0;
     }
 
+    .foto {
+        max-width: 125px;
+    }
+
     #acopon .intro-img-container>img {
         width: 150%;
     }

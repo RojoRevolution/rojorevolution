@@ -6,7 +6,11 @@
 <script src="/assets/js/footer.js"></script>
 <script src="/assets/js/eye-follow.js"></script>
 <script src="/assets/js/bottle-eye-follow.js"></script>
+<% if (locals.projectStory) { %>
+<!-- Only the interior project pages (labels, acopon, logos) contain the
+     #projectStory / #work markup this script drives. -->
 <script src="/assets/js/project-story.js"></script>
+<% } %>
 </body>
 
 </html>
