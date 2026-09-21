@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // and shows the confirmation, and listeners don't stack on each hover.
         contactBtnEl.addEventListener("click", () => {
             navigator.clipboard.writeText(EMAIL);
-            if (contactBubbleEl) contactBubbleEl.innerHTML = "copied, copy?";
+            if (contactBubbleEl) contactBubbleEl.innerHTML = "Email copied to clipboard";
         });
     }
 

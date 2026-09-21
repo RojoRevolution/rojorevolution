@@ -39,6 +39,42 @@
         flex-direction: column-reverse;
     }
 
+    /* Intro Animation */
+    #welcome .pronunciation .product-bubble,
+    #welcome .pronunciation .designer-bubble,
+    #welcome .pronunciation .frontend-bubble,
+    #welcome .pronunciation .illustrator-bubble {
+        font-size: var(--rr-size-sm);
+    }
+
+    #welcome .pronunciation .product-bubble {
+        /* opacity: 1; */
+        top: -42px;
+        left: -60px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .designer-bubble {
+        /* opacity: 1; */
+        top: -92px;
+        left: -40px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .frontend-bubble {
+        top: -142px;
+        left: -50px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .illustrator-bubble {
+        top: -192px;
+        left: -50px;
+        right: auto;
+    }
+
+    /* End Intro Animation */
+
     .card.featured>.img-container {
         min-height: 300px;
     }
@@ -132,6 +168,12 @@
 
 }
 
+@media screen and (max-width:900px) {
+    [data-stack="900"] {
+        flex-direction: column;
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     .visit-desktop {
@@ -187,6 +229,42 @@
     #menuEl #options label {
         font-size: var(--rr-size-xl-4x);
     }
+
+    /* Intro Animation */
+    #welcome .pronunciation .product-bubble,
+    #welcome .pronunciation .designer-bubble,
+    #welcome .pronunciation .frontend-bubble,
+    #welcome .pronunciation .illustrator-bubble {
+        font-size: var(--rr-size-sm);
+    }
+
+    #welcome .pronunciation .product-bubble {
+        /* opacity: 1; */
+        top: -42px;
+        left: -120px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .designer-bubble {
+        /* opacity: 1; */
+        top: -92px;
+        left: -100px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .frontend-bubble {
+        top: -142px;
+        left: -120px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .illustrator-bubble {
+        top: -192px;
+        left: -120px;
+        right: auto;
+    }
+
+    /* End Intro Animation */
 
     #projectIntro {
         height: 50vh;
@@ -277,10 +355,10 @@
         display: none;
     }
 
-    .contact-bubble {
+    /* .contact-bubble {
         opacity: 1;
         transform: scale(1);
-    }
+    } */
 
     footer .contact-text p {
         font-size: var(--rr-size-xl);
@@ -318,6 +396,24 @@
         gap: var(--rr-size-md);
     }
 
+    #welcome {
+        height: 70vh;
+    }
+
+    /* Intro Animation */
+    #welcome .pronunciation .product-bubble,
+    #welcome .pronunciation .designer-bubble,
+    #welcome .pronunciation .frontend-bubble,
+    #welcome .pronunciation .illustrator-bubble {
+        display: none;
+        animation: none;
+    }
+
+    /* .tagline,
+    .featured-point-container>span {
+        display: none;
+    } */
+
     #welcome .titles {
         border-left: none;
     }
@@ -328,6 +424,7 @@
 
     #welcome p {
         font-size: var(--rr-size-lg);
+        padding-bottom: var(--rr-size-xl);
     }
 
     .can-block {
@@ -355,15 +452,6 @@
         left: 20px;
     }
 
-    /* #legal [data-stack="600"] {
-        align-items: center;
-        gap: var(--rr-size-sm);
-    } */
-
-    .chip,
-    .chip-outline {
-        font-size: var(md);
-    }
 
     .btn.primary.cta {
         font-size: var(--rr-size-lg);
@@ -375,6 +463,8 @@
 }
 
 @media screen and (max-width:500px) {
+
+
     [data-stack="500"] {
         flex-direction: column;
     }

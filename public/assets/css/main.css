@@ -468,7 +468,7 @@ header[data-menu-status="open"] #menuEl #options {
 #welcome,
 #projectIntro {
     height: 80vh;
-    padding: var(--rr-size-xl-3x) var(--rr-size-md);
+    padding: var(--rr-size-xl-3x) var(--rr-size-md) var(--rr-size-xl-4x) var(--rr-size-md);
     justify-content: flex-end;
 }
 
@@ -491,7 +491,7 @@ header[data-menu-status="open"] #menuEl #options {
     transform: scale(1.1);
 }
 
-#welcome span.off,
+/* #welcome span.off,
 #welcome span.center {
     position: relative;
     color: rgba(0, 0, 0, 0)
@@ -505,12 +505,12 @@ header[data-menu-status="open"] #menuEl #options {
 
 #welcome span.off:before {
     content: 'Off';
-    top: -12px;
+    bottom: -20px;
     transition: .25s ease-out;
-}
+} */
 
-#welcome span.off:hover:before {
-    top: -4px;
+/* #welcome span.off:hover:before {
+    bottom: 0;
     transition: .25s ease-in;
 }
 
@@ -523,7 +523,7 @@ header[data-menu-status="open"] #menuEl #options {
 #welcome span.center:hover:before {
     bottom: -2px;
     transition: .25s ease-in;
-}
+} */
 
 #welcome .intro-header {
     display: flex;
@@ -963,6 +963,7 @@ header[data-menu-status="open"] #menuEl #options {
 #welcome .pronunciation .illustrator-bubble {
     position: absolute;
     opacity: 0;
+    /* opacity: 1; */
     transform: scale(.5);
     background-color: var(--rr-surface-color-overlay-primary);
     padding: 4px 12px;
@@ -982,6 +983,7 @@ header[data-menu-status="open"] #menuEl #options {
 
 #welcome .pronunciation .bubble {
     top: -18px;
+    left: auto;
     right: -20px;
 }
 
@@ -997,6 +999,7 @@ header[data-menu-status="open"] #menuEl #options {
 #welcome .pronunciation .designer-bubble {
     /* opacity: 1; */
     top: -102px;
+    left: auto;
     right: -118px;
     transform: scale(1.5);
     transition: .25s ease;
@@ -1006,6 +1009,7 @@ header[data-menu-status="open"] #menuEl #options {
 #welcome .pronunciation .frontend-bubble {
     /* opacity: 0; */
     top: -42px;
+    left: auto;
     right: -208px;
     transform: scale(1.5);
     transition: .25s ease;
@@ -1015,6 +1019,7 @@ header[data-menu-status="open"] #menuEl #options {
 #welcome .pronunciation .illustrator-bubble {
     /* opacity: 1; */
     top: 18px;
+    left: auto;
     right: -258px;
     transform: scale(1.5);
     transition: .25s ease;
@@ -2558,16 +2563,17 @@ footer .contact-text p,
 }
 
 /* Legal Section */
-#legal {
+
+#legal>span {
     background: var(--rr-surface-color-primary);
     padding: var(--rr-size-sm) var(--rr-size-xl-2x);
     border: 1px solid var(--rr-border-color-dark);
     border-radius: var(--rr-radius-sm);
-    box-shadow: 8px 8px rgba(0, 0, 0, .25);
 }
 
 #legal p,
-#legal ul li {
+#legal ul li,
+#legal span {
     color: var(--rr-text-color-primary);
     font-size: var(--rr-size-sm);
     font-family: var(--font-content);
