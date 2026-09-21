@@ -1301,6 +1301,16 @@ input[type="range"]:focus::-moz-range-thumb {
 
 /* Accordion */
 
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rr-size-sm);
+}
+
+.accordion:hover {
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
+}
+
 .accordion-content {
     display: none;
     opacity: 0;
