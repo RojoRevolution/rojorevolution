@@ -504,7 +504,7 @@ header[data-menu-status="open"] #menuEl #options {
 }
 
 #welcome span.off:before {
-    content: 'off';
+    content: 'Off';
     top: -12px;
     transition: .25s ease-out;
 }
@@ -1201,6 +1201,12 @@ header[data-menu-status="open"] #menuEl #options {
     min-height: 500px;
     transition: .25s ease-out;
     /* filter: sepia(0%); */
+}
+
+.foto {
+    max-width: 200px;
+    border-radius: 9999999px;
+    border: 2px solid var(--rr-border-color-dark);
 }
 
 .feature-card:hover .card-img {
@@ -1968,7 +1974,7 @@ footer {
     z-index: 1;
     padding-bottom: var(--rr-size-xl-4x);
     min-height: 20vh;
-    border-top: 1px solid var(--rr-border-color-dark);
+    border-top: 2px solid var(--rr-border-color-dark);
 }
 
 footer #footerContact {

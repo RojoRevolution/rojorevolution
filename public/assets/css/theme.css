@@ -444,6 +444,7 @@ ul {
 
 li {
     list-style-type: none;
+    font-size: var(--rr-size-lg);
 }
 
 .display-font {
