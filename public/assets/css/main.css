@@ -1032,14 +1032,6 @@ header[data-menu-status="open"] #menuEl #options {
     transition: .25s ease-out;
 }
 
-/* #welcome .pronunciation:hover .bubble {
-    opacity: 1;
-    top: -162px;
-    right: -28px;
-    transform: scale(1.5);
-    transition: .25s ease;
-} */
-
 @keyframes bubble-show {
 
     0%,
@@ -1060,8 +1052,6 @@ header[data-menu-status="open"] #menuEl #options {
         transform: scale(.5);
     }
 }
-
-
 
 #welcome h2 {
     position: relative;
@@ -1180,9 +1170,6 @@ header[data-menu-status="open"] #menuEl #options {
     }
 
 }
-
-
-
 
 /* Featured Projects */
 .feature-card {
