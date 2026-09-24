@@ -1210,7 +1210,7 @@ header[data-menu-status="open"] #menuEl #options {
 
 .foto {
     position: relative;
-    max-width: 85px;
+    max-width: 150px;
     border-radius: 9999999px;
     border: 2px solid var(--rr-border-color-dark);
 }
