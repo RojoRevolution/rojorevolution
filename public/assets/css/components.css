@@ -1337,6 +1337,7 @@ input[type="range"]:focus::-moz-range-thumb {
 
 /* The slider */
 .slider {
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -1359,6 +1360,10 @@ input[type="range"]:focus::-moz-range-thumb {
     background-color: var(--rr-surface-color-primary-inverse);
     -webkit-transition: .4s;
     transition: .4s;
+}
+
+.slider:hover {
+    cursor: url('../images/projects/misc/hand-click.svg')1 0, auto;
 }
 
 input:checked+.slider {

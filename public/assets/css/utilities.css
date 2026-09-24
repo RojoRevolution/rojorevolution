@@ -86,14 +86,6 @@
 }
 
 
-.display-none {
-    display: none;
-}
-
-.display-block {
-    display: block;
-}
-
 /* Opacity */
 .opacity-0 {
     opacity: 0;
@@ -1004,4 +996,13 @@
 
 body.lock-scroll {
     overflow: hidden;
+}
+
+/* Display */
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
 }
