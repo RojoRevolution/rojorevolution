@@ -431,6 +431,10 @@
         padding-bottom: var(--rr-size-xl);
     }
 
+    .molotov-container {
+        transform: scale(.7);
+    }
+
     .can-block {
         transform: scale(.94);
         top: -10px;
@@ -522,8 +526,8 @@
     }
 
     .can-block {
-        transform: scale(.8);
-        top: 14px;
+        transform: scale(.7);
+        top: 30px;
     }
 
     /* h1 span.h-adjust {
