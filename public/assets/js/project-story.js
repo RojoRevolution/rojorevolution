@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (projectContentTooltip === "true") {
         switchTooltipEl.classList.add("display-none");
-        console.log("In If Loop")
     }
 
     const removeDisabledFromAllBtns = () => {

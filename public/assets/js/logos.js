@@ -30,13 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Create Div
         const newDiv = document.createElement("div");
-        // newDiv.classList.add("panel");
-        // newDiv.classList.add("logo");
-        // newDiv.classList.add("scale-add-1");
         newDiv.setAttribute("data-logo", imgName);
         newDiv.setAttribute("id", imgName);
-        // newDiv.setAttribute("data-top-pos", topPos);
-        // newDiv.style.background = imgData[imgName]["bg"];
         newDiv.style.top = topPos + "px";
         logoPanels = document.querySelectorAll('[data-logo]')
 
@@ -79,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
             let InverseImg = imgData[currentImg]["inverse"];
             let currentAlt = imgData[currentImg]["alt"];
             let maxWidth = imgData[currentImg]["maxWidth"];
-            // let maxWidth = "300px";
 
             createPanel(currentImg, defaultImg, InverseImg, currentAlt, topPos, maxWidth);
         }

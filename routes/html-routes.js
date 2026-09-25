@@ -22,8 +22,5 @@ module.exports = (app) => {
         res.render('acopon', { title: 'Acopon Brewing Co. | RojoRevolution' });
     });
 
-    app.get('/about', (req, res) => {
-        res.render('about', { title: 'About David Rojo | RojoRevolution' });
-    });
 
 }
