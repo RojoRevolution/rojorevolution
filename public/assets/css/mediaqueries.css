@@ -603,4 +603,9 @@
     #acopon .cask-pattern {
         height: 158px;
     }
+
+    .container.controls-container {
+        right: calc(50% - 111px);
+        padding: 0;
+    }
 }
