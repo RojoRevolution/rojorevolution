@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme data-film-effect>
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43105127-2"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43105127-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-43105127-2');
-    </script>
+    </script> -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,19 +19,30 @@
     <title>
         <%= title %>
     </title>
-    <!-- Bootstrap CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,700;0,800;0,900&display=swap"
+        rel="stylesheet"> -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Passion+One:wght@400;700;900&display=swap"
         rel="stylesheet">
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="/assets/css/universal.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- StyleSheets -->
+    <link href="/assets/css/theme.css" rel="stylesheet" />
+    <link href="/assets/css/components.css" rel="stylesheet" />
     <link href="/assets/css/main.css" rel="stylesheet" />
+    <link href="/assets/css/utilities.css" rel="stylesheet" />
     <link href="/assets/css/mediaqueries.css" rel="stylesheet" />
+    <!-- Theme Script -->
+    <script src="/assets/js/theme-preference.js"></script>
+
 </head>
 
 <body>
+    <!-- <div class="bg-effect"></div> -->
+
+    <%- include('film-effect'); %>
+        <%- include('light-switch'); %>
+            <%- include('../components/navigation'); %>

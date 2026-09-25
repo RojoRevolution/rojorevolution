@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "type": "visual",
+            "image": "/assets/images/projects/featured/acopon.jpg",
+            "name": "Acopon Brewing Co.",
+            "description": "Differentiating a small brewpub in the Texas Hill Country.",
+            "details": [
+                "Differentiation",
+                "Illustration",
+                "Identity",
+                "Packaging",
+                "Print"
+            ],
+            "link": "/work/acopon-brewing"
+        },
+        {
+            "type": "visual",
+            "image": "/assets/images/projects/featured/can-labels.jpg",
+            "name": "Craft Beer Labels",
+            "description": "A collection of craft beer labels over the years.",
+            "details": [
+                "Differentiation",
+                "Illustration",
+                "Packaging",
+                "Print"
+            ],
+            "link": "/work/craft-beer-labels"
+        },
+        {
+            "type": "visual",
+            "image": "/assets/images/projects/featured/logos.jpg",
+            "name": "Logos / Identity",
+            "description": "A collection of logo designs over the years.",
+            "details": [
+                "Differentiation",
+                "Illustration",
+                "Packaging",
+                "Print"
+            ],
+            "link": "/work/logofolio"
+        }
+    ]
+}

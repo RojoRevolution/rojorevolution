@@ -1,0 +1,134 @@
+{
+    "powerFades": {
+        "canImage": "/assets/images/projects/labels/cans/powerfades-can.png",
+        "labelImage": "/assets/images/projects/labels/label/powerfades.webp"
+    },
+    "amPrez": {
+        "canImage": "/assets/images/projects/labels/cans/amprez-can.png",
+        "labelImage": "/assets/images/projects/labels/label/amprez.webp"
+    },
+    "hansTrapp": {
+        "canImage": "/assets/images/projects/labels/cans/hanstrapp-can.png",
+        "labelImage": "/assets/images/projects/labels/label/hanstrapp.webp"
+    },
+    "cactusPalace": {
+        "canImage": "/assets/images/projects/labels/cans/cactus-palace-can.png",
+        "labelImage": "/assets/images/projects/labels/label/cactuspalace.webp"
+    },
+    "pariaPils": {
+        "canImage": "/assets/images/projects/labels/cans/paria-can.png",
+        "labelImage": "/assets/images/projects/labels/label/pariapils.webp"
+    },
+    "brutalNature": {
+        "canImage": "/assets/images/projects/labels/cans/brutal-nature-can.png",
+        "labelImage": "/assets/images/projects/labels/label/brutalnature.webp"
+    },
+    "empressRising": {
+        "canImage": "/assets/images/projects/labels/cans/empress-rising-can.png",
+        "labelImage": "/assets/images/projects/labels/label/empressrising.webp"
+    },
+    "elJefe": {
+        "canImage": "/assets/images/projects/labels/cans/el-jefe-can.png",
+        "labelImage": "/assets/images/projects/labels/label/eljefe.webp"
+    },
+    "elBonito": {
+        "canImage": "/assets/images/projects/labels/cans/el-bonito-can.png",
+        "labelImage": "/assets/images/projects/labels/label/elbonito.webp"
+    },
+    "skullValey": {
+        "canImage": "/assets/images/projects/labels/cans/skull-valley-can.png",
+        "labelImage": "/assets/images/projects/labels/label/skullvalley.webp"
+    },
+    "intergalactic": {
+        "canImage": "/assets/images/projects/labels/cans/intergalacic-can.png",
+        "labelImage": "/assets/images/projects/labels/label/intergalactic.webp"
+    },
+    "papaDontPreach": {
+        "canImage": "/assets/images/projects/labels/cans/papa-dont-preach-can.png",
+        "labelImage": "/assets/images/projects/labels/label/papadontpreach.webp"
+    },
+    "humanKindness": {
+        "canImage": "/assets/images/projects/labels/cans/human-kindness-can.png",
+        "labelImage": "/assets/images/projects/labels/label/humankindness.webp"
+    },
+    "mother": {
+        "canImage": "/assets/images/projects/labels/cans/mother-can.png",
+        "labelImage": "/assets/images/projects/labels/label/mother.webp"
+    },
+    "hellsgateHelles": {
+        "canImage": "/assets/images/projects/labels/cans/hellsgate-can.png",
+        "labelImage": "/assets/images/projects/labels/label/hellsgate.webp"
+    },
+    "sunshineOfLove": {
+        "canImage": "/assets/images/projects/labels/cans/sunshine-love-can.png",
+        "labelImage": "/assets/images/projects/labels/label/sunshineoflove.webp"
+    },
+    "cobraBlood": {
+        "canImage": "/assets/images/projects/labels/cans/cobra-blood-can.png",
+        "labelImage": "/assets/images/projects/labels/label/cobrablood.webp"
+    },
+    "laCiudad": {
+        "canImage": "/assets/images/projects/labels/cans/la-ciudad-can.png",
+        "labelImage": "/assets/images/projects/labels/label/laciudad.webp"
+    },
+    "leggoMyEgo": {
+        "canImage": "/assets/images/projects/labels/cans/leggo-ego-can.png",
+        "labelImage": "/assets/images/projects/labels/label/leggomyego.webp"
+    },
+    "bigHorn": {
+        "canImage": "/assets/images/projects/labels/cans/big-horn-can.png",
+        "labelImage": "/assets/images/projects/labels/label/bighorn.webp"
+    },
+    "wilderBlack": {
+        "canImage": "/assets/images/projects/labels/cans/wilderblack-can.png",
+        "labelImage": "/assets/images/projects/labels/label/wilderblack.webp"
+    },
+    "watchYourSix": {
+        "canImage": "/assets/images/projects/labels/cans/watch-six-can.png",
+        "labelImage": "/assets/images/projects/labels/label/watchyoursix.webp"
+    },
+    "wildernessAct": {
+        "canImage": "/assets/images/projects/labels/cans/wilderness-act-can.png",
+        "labelImage": "/assets/images/projects/labels/label/wildernessact.webp"
+    },
+    "nothingBecomesHer": {
+        "canImage": "/assets/images/projects/labels/cans/nothing-becomes-can.png",
+        "labelImage": "/assets/images/projects/labels/label/nothingbecomesher.webp"
+    },
+    "citrusValley": {
+        "canImage": "/assets/images/projects/labels/cans/citrus-valley-can.png",
+        "labelImage": "/assets/images/projects/labels/label/citrusvalley.webp"
+    },
+    "desertDweller": {
+        "canImage": "/assets/images/projects/labels/cans/desert-dweller-can.png",
+        "labelImage": "/assets/images/projects/labels/label/desertdweller.webp"
+    },
+    "chocolateBunny": {
+        "canImage": "/assets/images/projects/labels/cans/chocolate-bunny-can.png",
+        "labelImage": "/assets/images/projects/labels/label/chocolatebunny.webp"
+    },
+    "gilbertTower": {
+        "canImage": "/assets/images/projects/labels/cans/gilbert-tower-can.png",
+        "labelImage": "/assets/images/projects/labels/label/gilbertower.webp"
+    },
+    "refuge": {
+        "canImage": "/assets/images/projects/labels/cans/refuge-can.png",
+        "labelImage": "/assets/images/projects/labels/label/refuge.webp"
+    },
+    "shrimp": {
+        "canImage": "/assets/images/projects/labels/cans/shrimp-can.png",
+        "labelImage": "/assets/images/projects/labels/label/shrimp.webp"
+    },
+    "picketPost": {
+        "canImage": "/assets/images/projects/labels/cans/picket-post-can.png",
+        "labelImage": "/assets/images/projects/labels/label/picketpost.webp"
+    },
+    "noBadDays": {
+        "canImage": "/assets/images/projects/labels/cans/nobaddays-can.png",
+        "labelImage": "/assets/images/projects/labels/label/nobaddays.webp"
+    },
+    "dontFuckItUp": {
+        "canImage": "/assets/images/projects/labels/cans/dfiu-can.png",
+        "labelImage": "/assets/images/projects/labels/label/dfiu.webp"
+    }
+}

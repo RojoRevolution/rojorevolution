@@ -1,0 +1,28 @@
+<%- include('partials/html-start-doc'); %>
+    <!-- Start Body -->
+    <main id="labels" class="padd-y-5">
+        <!-- Main Content -->
+        <section class="relative col padd-y-12 gap-12" data-header-type="intro">
+            <%- include('content/labels/intro'); %>
+        </section>
+        <div class="container controls-container">
+            <%- include('components/project-view-switch'); %>
+        </div>
+        <section id="projectStory" data-status="hide">
+            <%- include('content/labels/project-story'); %>
+        </section>
+        <section id="work" class="relative col gap-12 padd-y-12" data-status="show">
+            <%- include('content/labels/showcase'); %>
+        </section>
+        <section class="border-t-bold">
+            <%- include('components/related-projects-labels'); %>
+        </section>
+    </main>
+    <footer>
+        <%- include('content/footer/contact'); %>
+            <%- include('content/footer/legal'); %>
+    </footer>
+    <div class="section-gradient-top bottom-of-page"></div>
+    <script src="/assets/js/labels.js"></script>
+    <!-- End Body -->
+    <%- include('partials/html-end-doc', { projectStory: true }); %>

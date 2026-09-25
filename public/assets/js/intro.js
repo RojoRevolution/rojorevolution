@@ -1,53 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    let textEl = document.getElementById('intro-text')
+    const offTextEl = document.getElementById("offText");
+    const centerTextEl = document.getElementById("centerText");
 
-    let services = ['designs memorable brands', 'designs user-centric products', 'builds full-stack websites']
-    let currentService = '';
-    let speed = 50;
-    let num = 0;
-    // console.log('Array: ', services[1][1])
-
-
-
-
-    const renderText = () => {
-        console.log('Function Running');
-        // console.log('Current Service: ', currentService);
-        for (let i = 0; i < services.length; i++) {
-
-            for (let o = 0; o < services[i].length; o++) {
-                // console.log(services[i][o])
-                console.log(`${i} || ${o}`)
-                currentService += services[i][o];
-                // console.log('In the loop: ', currentService)
-                setHTML(o)
-            }
-            console.log('Out of loop: ', currentService)
-            clearText(i);
-
-        }
-    }
-
-    const setHTML = (o) => {
-        setTimeout(function () {
-            // console.log(`in Timeout: ${o} `, currentService[o])
-            // console.log(currentService)
-            // textEl.innerHTML += currentService[o];
-            textEl.insertAdjacentHTML('beforeend', currentService[o])
-        }, 200 * o)
-    }
-
-    const clearText = (i) => {
-        // console.log('Clear Text Function')
-        setTimeout(() => {
-            textEl.innerHTML = '';
-        }, 200)
+    let removeAnimation = () => {
 
     }
 
 
-    renderText();
-})
+    offTextEl.addEventListener("click", () => {
+        console.log("OFF Clicked");
+        offTextEl.classList.remove("off");
+        void offTextEl.offsetWidth;
+        offTextEl.classList.add("off");
 
+    });
+    centerTextEl.addEventListener("click", () => {
+        console.log("CENTER Clicked");
+        centerTextEl.classList.remove("center");
+        void centerTextEl.offsetWidth;
+        centerTextEl.classList.add("center");
+    });
 
+});

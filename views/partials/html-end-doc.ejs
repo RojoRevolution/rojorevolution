@@ -1,10 +1,18 @@
-<!-- Universal script can be added here -->
-<script src="/assets/js/lazysizes.min.js" async=""></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<script src="/assets/js/getInTouch.js" type="text/javascript"></script>
+<!-- Scripts -->
+<script src="/assets/js/page-transitions.js"></script>
+<script src="/assets/js/menus.js"></script>
+<script src="/assets/js/switches.js"></script>
+<script src="/assets/js/scroll-effects.js"></script>
+<script src="/assets/js/footer.js"></script>
+<script src="/assets/js/accordion.js"></script>
+<script src="/assets/js/toggle-switch.js"></script>
+<script src="/assets/js/eye-follow.js"></script>
+<script src="/assets/js/bottle-eye-follow.js"></script>
+<% if (locals.projectStory) { %>
+<!-- Only the interior project pages (labels, acopon, logos) contain the
+     #projectStory / #work markup this script drives. -->
+<script src="/assets/js/project-story.js"></script>
+<% } %>
 </body>
 
 </html>

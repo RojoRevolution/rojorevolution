@@ -1,0 +1,28 @@
+<%- include('partials/html-start-doc'); %>
+    <!-- Start Body -->
+    <main id="logos" class="padd-y-5">
+        <!-- Main Content -->
+        <section class="relative col padd-y-12 gap-12" data-header-type="intro">
+            <%- include('content/logos/intro'); %>
+        </section>
+        <div class="container controls-container">
+            <%- include('components/project-view-switch'); %>
+        </div>
+        <section id="projectStory" data-status="hide">
+            <%- include('content/logos/project-story'); %>
+        </section>
+        <section id="work" class="relative col gap-12">
+            <%- include('content/logos/showcase'); %>
+        </section>
+        <section class="border-t-bold">
+            <%- include('components/related-projects-logos'); %>
+        </section>
+    </main>
+    <footer>
+        <%- include('content/footer/contact'); %>
+            <%- include('content/footer/legal'); %>
+    </footer>
+    <div class="section-gradient-top bottom-of-page"></div>
+    <script src="/assets/js/logos.js"></script>
+    <!-- End Body -->
+    <%- include('partials/html-end-doc', { projectStory: true }); %>

@@ -1,113 +1,528 @@
-@media only screen and (max-width: 991px) {
-    .card-overwrite { 
-        width:20rem;
+@media screen and (min-width: 1920px) {
+    #label-showcase [data-target="showcase"] {
+        max-width: 1440px
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .card {
+        max-width: 100%;
     }
 
-    .prj-placeholder {
-        padding-left:0px;
+    [data-stack="1040"] {
+        flex-direction: column;
+    }
+
+    #welcome>.col>.row.gap-5.align-item-end.width-max-content {
+        align-items: start;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    #projects .card.featured>.img-container {
+        min-height: 300px;
+    }
+
+    #projects .card {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    [data-stack="990"] {
+        flex-direction: column;
+    }
+
+    [data-reverse="990"] {
+        flex-direction: column-reverse;
+    }
+
+    /* Intro Animation */
+    #welcome .pronunciation .product-bubble,
+    #welcome .pronunciation .designer-bubble,
+    #welcome .pronunciation .frontend-bubble,
+    #welcome .pronunciation .illustrator-bubble {
+        font-size: var(--rr-size-sm);
+    }
+
+    #welcome .pronunciation .product-bubble {
+        /* opacity: 1; */
+        top: -42px;
+        left: -60px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .designer-bubble {
+        /* opacity: 1; */
+        top: -92px;
+        left: -40px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .frontend-bubble {
+        top: -142px;
+        left: -50px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .illustrator-bubble {
+        top: -192px;
+        left: -50px;
+        right: auto;
+    }
+
+    /* End Intro Animation */
+
+    .card.featured>.img-container {
+        min-height: 300px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .point-container {
+        display: none;
+    }
+
+    /* Acopon */
+    #acopon .corner-cask {
+        max-width: 334px;
+    }
+
+    .can-control-container {
+        height: 320px;
+        bottom: -70px;
+    }
+
+
+    /* Craft beer label showcase: hide the artwork, show only a scrollable can gallery */
+    #label-showcase {
+        min-height: 700px;
+    }
+
+    /* #label-showcase [data-target="showcase"] {
+        display: none;
+    } */
+
+    #label-showcase [data-can] img {
+        max-width: 180px !important;
+    }
+
+    #label-showcase [data-can] {
+        transform: scale(.5);
+        max-width: 150px !important;
+    }
+
+    #label-showcase [data-selected="true"],
+    #label-showcase [data-can]:hover,
+    #label-showcase [data-can]:hover[data-selected="true"] {
+        transform: scale(.6);
+    }
+
+    #footerContact #btn-container {
+        padding: var(--rr-size-sm) 0 var(--rr-size-xl-8x) 0;
+    }
+
+
+    #label-showcase [data-target="can-controls"] {
+        position: relative;
+        /* Restore the shrink-to-fit sizing position:absolute used to provide,
+           so the strip still grows to fit every can instead of clipping
+           itself at the viewport width. */
+        width: max-content;
+        gap: var(--rr-size-sm);
+        height: 300px;
+        align-items: center;
+    }
+
+    #label-showcase .move-right-container,
+    #label-showcase .move-left-container {
+        justify-content: center;
+        width: auto;
+    }
+
+    #label-showcase .move-right-container>button,
+    #label-showcase .move-left-container>button {
+        width: 4rem;
+        height: 3.5rem;
+    }
+
+    #label-showcase .scroll-container {
+        height: 650px;
+    }
+
+    #footerContact>.row.gap-13 {
+        flex-direction: column;
+        align-items: start;
+        gap: var(--rr-size-md);
+        padding-bottom: var(--rr-size-lg);
+    }
+
+    .molotov-container {
+        transform: scale(.8);
+        margin: 32px 0px 100px 0;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    [data-stack="900"] {
+        flex-direction: column;
     }
 }
 
 
-@media only screen and (max-width: 767px) {
-    .toggleWork {
-        width: 75%;
+@media screen and (min-width: 768px) {
+    .visit-desktop {
+        display: none;
     }
-    
-    .card-overwrite { 
-        width:25rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    [data-stack="768"] {
+        flex-direction: column;
+        /* align-items: start; */
     }
-    #mainHeader {
-        height: 100px;
+
+    [data-reverse="768"] {
+        flex-direction: column-reverse;
     }
-    #menu {
+
+    [data-full-width="768"] {
+        width: 100%;
+    }
+
+    [data-hide="768"] {
+        display: none;
+    }
+
+    [data-basis-100="768"] {
+        flex-basis: 100%;
+    }
+
+    [data-item-center="768px"] {
+        align-items: center;
+    }
+
+    header#navHeader[data-menu-status="open"] #menuContainer {
+        width: 70%;
+    }
+
+    #nav-mode-switch {
         display: block;
     }
 
-    #navIntro {
-        display: none;
-    }
-    #navContent {
-        display: none;
-    }
-    .img-badge{
-        max-width: 250px;
-    }
-
-    .can-image {
-        width: 200px;
-    }
-
-    #videoDiv {
+    .lightswitch {
         display: none;
     }
 
-    #videoReplace {
-        display: block;
+    header[data-menu-status="open"] #menuEl {
+        gap: var(--rr-size-lg);
     }
 
-    #acopon #posthero .col {
-        flex-basis: auto;
-        padding:0 200px;
+    #mainNav ul li,
+    #menuEl #options label,
+    #menuEl #options label {
+        font-size: var(--rr-size-xl-4x);
     }
 
-    #acopon .col {
-        flex-basis: auto;
+    /* Intro Animation */
+    #welcome .pronunciation .product-bubble,
+    #welcome .pronunciation .designer-bubble,
+    #welcome .pronunciation .frontend-bubble,
+    #welcome .pronunciation .illustrator-bubble {
+        font-size: var(--rr-size-sm);
     }
 
-    #acopon .col-6 {
-        flex-basis: content;
+    #welcome .pronunciation .product-bubble {
+        /* opacity: 1; */
+        top: -42px;
+        left: -120px;
+        right: auto;
     }
 
-    .color-scheme.acopon1 {
-        color: var(--acopon-light);
-        padding: 40px 0;
+    #welcome .pronunciation .designer-bubble {
+        /* opacity: 1; */
+        top: -92px;
+        left: -100px;
+        right: auto;
     }
 
-    .color-scheme.acopon2, .color-scheme.acopon3, .color-scheme.acopon4, .color-scheme.acopon5 {
-        color: var(--text-primary);
-        padding: 40px 0;
+    #welcome .pronunciation .frontend-bubble {
+        top: -142px;
+        left: -120px;
+        right: auto;
+    }
+
+    #welcome .pronunciation .illustrator-bubble {
+        top: -192px;
+        left: -120px;
+        right: auto;
+    }
+
+    /* End Intro Animation */
+
+    #projectIntro {
+        height: 50vh;
+    }
+
+    #acopon [data-reverse="768"] {
+        flex-direction: column-reverse;
+    }
+
+    /* Acopon */
+    #acopon .corner-cask {
+        max-width: 284px;
+    }
+
+    #acopon .pattern {
+        background-size: 100%;
+        height: 412px;
+    }
+
+    #acopon .cask-pattern {
+        bottom: -2px;
+        background-size: 190%;
+        height: 200px;
+    }
+
+    #acopon .cask-photos {
+        display: none;
+    }
+
+    #acopon .merch-img {
+        width: 80%;
+    }
+
+    /* Labels */
+    #label-showcase [data-target="showcase"] {
+        display: none;
+    }
+
+
+    .can-control-container {
+        position: relative;
+        /* Grow with the wrapped cans; drop the desktop scroller's fixed height
+           and the -70px offset it leaks in from the 990px block. */
+        height: auto;
+        bottom: auto;
+        overflow: visible;
+    }
+
+    #label-showcase [data-target="can-controls"] {
+        width: 100%;
+        flex-wrap: wrap;
+        /* Static wrapped gallery: height follows the rows instead of the
+           300px single-row height inherited from the 990px scroller. */
+        height: auto;
+        overflow: visible;
+        gap: var(--rr-size-lg);
+        justify-content: center;
+    }
+
+    #label-showcase .scroll-container {
+        /* Was locked to 650px at 990px, which the wrapped rows overflowed. */
+        height: auto;
+    }
+
+    #label-showcase [data-can] {
+        width: 100%;
+        transform: none;
+    }
+
+    #label-showcase [data-selected="true"] {
+        /* transform: none;
+        width: auto; */
+    }
+
+    #label-showcase [data-can] img {
+        width: 100%;
+    }
+
+    #label-showcase [data-can]:hover,
+    #label-showcase [data-selected="true"],
+    #label-showcase [data-can]:hover[data-selected="true"] {
+        transform: none;
+    }
+
+
+    #label-showcase .move-right-container,
+    #label-showcase .move-left-container {
+        display: none;
+    }
+
+    /* .contact-bubble {
+        opacity: 1;
+        transform: scale(1);
+    } */
+
+    footer .contact-text p {
+        font-size: var(--rr-size-xl);
+        line-height: 1;
     }
 
 }
 
+@media screen and (max-width: 700px) {
 
-@media only screen and (max-width: 600px) {
-    #intro-content {
-        padding-top: 18vh;  
-    }
-
-    h1 {
-        font-size: 1.75rem;
-        line-height:2.5rem;
-    }
-
-    p {
-        font-size:1rem;
-    }
-
-    .toggleWork {
-        width: 95%;
-    }
-
-    #web {
+    /* Acopon */
+    #acopon .corner-cask {
         display: none;
-    }
-
-    .card-overwrite {
-        width: 90%;
-    }
-
-    #acopon #posthero .col {
-        padding: 0 50px;
     }
 
 }
 
+@media screen and (max-width: 600px) {
 
-@media only screen and (max-width: 600px) {
-    #acopon #posthero .col {
-        padding: 0;
+    [data-stack="600"] {
+        flex-direction: column;
+        align-items: start;
     }
 
+    header#navHeader[data-menu-status="open"] #menuContainer {
+        width: 80%;
+    }
+
+    header[data-menu-status="open"] #menuEl {
+        gap: 0;
+    }
+
+    #menuEl ul,
+    #menuEl #options {
+        gap: var(--rr-size-md);
+    }
+
+    #welcome {
+        height: 70vh;
+    }
+
+    /* Intro Animation */
+    #welcome .pronunciation .product-bubble,
+    #welcome .pronunciation .designer-bubble,
+    #welcome .pronunciation .frontend-bubble,
+    #welcome .pronunciation .illustrator-bubble {
+        display: none;
+        animation: none;
+    }
+
+    /* .tagline,
+    .featured-point-container>span {
+        display: none;
+    } */
+
+    #welcome .titles {
+        border-left: none;
+    }
+
+    #welcome ul {
+        left: 0;
+    }
+
+    #welcome p {
+        font-size: var(--rr-size-lg);
+        padding-bottom: var(--rr-size-xl);
+    }
+
+    .can-block {
+        transform: scale(.94);
+        top: -10px;
+    }
+
+    #projectIntro {
+        height: 31vh;
+        justify-content: end;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .foto {
+        max-width: 125px;
+    }
+
+    #acopon .intro-img-container>img {
+        width: 150%;
+    }
+
+    footer .bubble-body h1 {
+        font-size: var(--rr-size-xl-6x);
+    }
+
+    footer .bubble-body::after {
+        bottom: -60px;
+        left: 20px;
+    }
+
+
+    .btn.primary.cta {
+        font-size: var(--rr-size-lg);
+    }
+
+    .vibe-pattern-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+
+    [data-stack="500"] {
+        flex-direction: column;
+    }
+
+    [data-start="500"] {
+        justify-content: start;
+    }
+
+    [data-hide="500"] {
+        display: none;
+    }
+
+    h3 {
+        font-size: var(--rr-size-xl-3x);
+    }
+
+    header[data-menu-status="open"] #menuEl {
+        gap: var(--rr-size--md);
+    }
+
+    #mainNav ul li,
+    #menuEl #options label {
+        font-size: var(--rr-size-xl-3x);
+    }
+
+    /* HOMEPAGE */
+
+
+    #projects .card {
+        max-width: 768px;
+    }
+
+    #projects .card.featured>.img-container {
+        min-height: 280px;
+        background-size: 180%;
+    }
+
+    #projects .card .content {
+        flex-direction: column;
+        justify-content: start;
+        gap: var(--rr-size-xl);
+    }
+
+
+    #projectIntro {
+        height: auto;
+    }
+
+    .can-block {
+        transform: scale(.8);
+        top: 14px;
+    }
+
+    /* h1 span.h-adjust {
+        font-size: var(--rr-size-xl-5x);
+    } */
 }

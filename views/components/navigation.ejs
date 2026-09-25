@@ -1,0 +1,36 @@
+<header id="navHeader" class="relative width-100" data-menu-status="closed">
+    <div id="menuContainer" class="relative">
+        <div class="row justify-center">
+            <button id="menuBtn" class="btn secondary" data-menu-status="closed">
+                Menu
+            </button>
+        </div>
+        <div id="menuEl" class="row justify-center" data-stack="768">
+            <nav id="mainNav" class="col">
+                <ul>
+                    <h3>Navigation</h3>
+                    <li class="col"><a href="/">Home</a></li>
+                    <li class="col"><a href="/#portfolio">Portfolio</a></li>
+                    <li class="col"><a href="/#about">About</a></li>
+                    <li class="col"><a href="/#footerContact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="divider" data-hide="768">
+            </div>
+            <div id="options" class="col">
+                <h3>Options</h3>
+                <div class="col gap-6">
+                    <div class="col gap-4">
+                        <label for="filmGrain">Film Grain</label>
+                        <input type="range" id="filmGrain" name="cowbell" min="0" max="100" value="100" step="10" />
+                    </div>
+                    <div class="col gap-4">
+                        <label for="colorRange">Color</label>
+                        <input type="range" id="colorRange" name="cowbell" min="0" max="100" value="0" step="10" />
+                    </div>
+                </div>
+                <%- include('./mode-switch'); %>
+            </div>
+        </div>
+    </div>
+</header>
