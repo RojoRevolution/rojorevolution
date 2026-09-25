@@ -50,6 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
         reveal();
     }
 
+    // When the page is restored from the browser's back/forward cache (bfcache),
+    // DOMContentLoaded does NOT fire again - the page comes back exactly as it
+    // was left when we navigated away: blurred out (data-page-transition removed)
+    // and with navigation locked (isNavigating still true from the click that
+    // took us away). Undo both so the restored page is visible and clickable.
+    window.addEventListener('pageshow', (evt) => {
+        if (!evt.persisted) return;
+        isNavigating = false;
+        document.body.setAttribute('data-page-transition', 'visible');
+    });
+
     // Only same-origin links that actually go somewhere - skips "#"
     // placeholders, external links, new-tab links, and downloads.
     const isNavigableLink = (link) => {
