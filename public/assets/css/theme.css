@@ -488,7 +488,8 @@ li {
         font-size: var(--rr-size-lg);
     }
 
-    p {
+    p,
+    li {
         font-size: var(--rr-size-md);
     }
 }

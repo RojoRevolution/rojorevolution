@@ -188,6 +188,10 @@
         /* align-items: start; */
     }
 
+    [data-row="768"] {
+        flex-direction: row;
+    }
+
     [data-reverse="768"] {
         flex-direction: column-reverse;
     }
@@ -265,6 +269,11 @@
     }
 
     /* End Intro Animation */
+
+    #switch-container {
+        justify-content: start;
+        padding-left: var(--rr-size-md);
+    }
 
     #projectIntro {
         height: 50vh;
@@ -365,6 +374,20 @@
         line-height: 1;
     }
 
+    .chip {
+        font-size: var(--rr-size-sm);
+    }
+
+    #menuBtn {
+        top: 16px;
+        border-radius: var(--rr-radius-md);
+        border: 2px solid var(--rr-button-border-inverse);
+    }
+
+    #menuBtn:hover {
+        padding-top: var(--rr-size-sm)
+    }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -393,7 +416,7 @@
 
     #menuEl ul,
     #menuEl #options {
-        gap: var(--rr-size-md);
+        gap: var(--rr-size-sm-2x);
     }
 
     #welcome {
@@ -427,6 +450,10 @@
         padding-bottom: var(--rr-size-xl);
     }
 
+    .molotov-container {
+        transform: scale(.7);
+    }
+
     .can-block {
         transform: scale(.94);
         top: -10px;
@@ -447,6 +474,31 @@
         width: 150%;
     }
 
+    #acopon .logo-primary,
+    #acopon .secondary-mark {
+        max-width: 250px;
+    }
+
+    #acopon .icon-primary-default:first-of-type {
+        max-width: 250px;
+    }
+
+    #acopon .icon-primary-default:nth-of-type(2) {
+        max-width: 150px;
+    }
+
+    #acopon .icon-primary-default:nth-of-type(3) {
+        max-width: 50px;
+    }
+
+    .width-134 {
+        width: 100%;
+    }
+
+    .card>#acopon.img-container {
+        background-size: cover;
+    }
+
     footer .bubble-body h1 {
         font-size: var(--rr-size-xl-6x);
     }
@@ -463,6 +515,10 @@
 
     .vibe-pattern-container {
         display: none;
+    }
+
+    #acopon .cask-badge {
+        max-width: 225px;
     }
 }
 
@@ -489,9 +545,23 @@
         gap: var(--rr-size--md);
     }
 
+    #menuEL {
+        gap: var()
+    }
+
+    #menuEl ul {
+        gap: 8px;
+        padding: 16px 0;
+    }
+
+
+    #menuEl #options {
+        padding: 0;
+    }
+
     #mainNav ul li,
     #menuEl #options label {
-        font-size: var(--rr-size-xl-3x);
+        font-size: var(--rr-size-xl);
     }
 
     /* HOMEPAGE */
@@ -518,11 +588,19 @@
     }
 
     .can-block {
-        transform: scale(.8);
-        top: 14px;
+        transform: scale(.7);
+        top: 30px;
     }
 
-    /* h1 span.h-adjust {
-        font-size: var(--rr-size-xl-5x);
-    } */
+    #coming-soon {
+        justify-content: start;
+    }
+
+    #acopon .pattern {
+        height: 396px;
+    }
+
+    #acopon .cask-pattern {
+        height: 158px;
+    }
 }

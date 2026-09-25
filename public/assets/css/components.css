@@ -781,9 +781,13 @@
     bottom: 2rem;
     right: .75rem;
     padding: 0;
-    z-index: 20;
+    z-index: 10;
     transition: .5s;
     padding: 0 var(--rr-size-md);
+}
+
+header[data-menu-status="open"]~.container.controls-container {
+    display: none;
 }
 
 .project-view {
