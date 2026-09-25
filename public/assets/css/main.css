@@ -1596,6 +1596,13 @@ header[data-menu-status="open"] #menuEl #options {
     padding-left: var(--rr-size-md);
 }
 
+/* About */
+#switch-container {
+    align-items: center;
+    justify-content: center;
+}
+
+
 /* Services */
 #services .tab {
     border-radius: var(--rr-radius-lg) var(--rr-radius-lg) 0 0;
