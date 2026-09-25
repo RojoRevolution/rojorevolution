@@ -569,6 +569,7 @@
 
     #projects .card {
         max-width: 768px;
+        padding: var(--rr-size-md) 0;
     }
 
     #projects .card.featured>.img-container {
@@ -588,8 +589,8 @@
     }
 
     .can-block {
-        transform: scale(.7);
-        top: 30px;
+        transform: scale(.6);
+        top: 47px;
     }
 
     #coming-soon {
@@ -607,5 +608,15 @@
     .container.controls-container {
         right: calc(50% - 111px);
         padding: 0;
+    }
+
+    footer #footerContact {
+        overflow: hidden;
+    }
+
+    footer p.text-center {
+        max-width: 320px;
+        padding: var(--rr-size-sm) var(--rr-size-xl-4x);
+        line-height: 1.5;
     }
 }
