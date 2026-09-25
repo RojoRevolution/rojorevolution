@@ -188,6 +188,10 @@
         /* align-items: start; */
     }
 
+    [data-row="768"] {
+        flex-direction: row;
+    }
+
     [data-reverse="768"] {
         flex-direction: column-reverse;
     }
