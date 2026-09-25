@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event Listener for Light Switch Chains
     lightSwitches.forEach((lightSwitch) => {
         lightSwitch.addEventListener("click", (evt) => {
-            console.log("click")
             // Get current Target
             let lightSwitchContainter = evt.currentTarget;
             // Get targets attribute - dictactes which chain was pulled

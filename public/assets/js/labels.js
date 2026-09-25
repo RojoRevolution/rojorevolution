@@ -13,10 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // and cans are just a scrollable gallery, so clicking a can shouldn't select it.
     const mobileLayout = window.matchMedia('(max-width: 768px)');
 
-    // if (mobileLayout) {
-    //     activelySelectedCanEl.setAttribute("data-selected", "false")
-    // }
-
     let pickCanTooltip;
     let moveRightToolTip;
 

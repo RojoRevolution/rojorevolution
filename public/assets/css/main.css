@@ -1244,7 +1244,6 @@ header[data-menu-status="open"] #menuEl #options {
 
 .card>#labels.img-container {
     position: relative;
-    /* background-image: url('/assets/images/projects/featured/cans-labels.png'); */
     background-color: #4cc2ce;
     transition: .25s ease-in;
 }
@@ -1448,7 +1447,6 @@ header[data-menu-status="open"] #menuEl #options {
 
 
 .card>#logos.img-container {
-    /* background-image: url('/assets/images/projects/featured/logos.gif'); */
     background-color: #FFBD2F;
     transition: .25s ease-in;
 }
@@ -1648,11 +1646,6 @@ header[data-menu-status="open"] #menuEl #options {
     margin: 0;
 } */
 
-
-/* Case Studies */
-#case-studies .card {
-    max-width: 768px;
-}
 
 #webdev .feature-card {
     width: 680px;

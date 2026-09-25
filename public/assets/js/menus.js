@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (savedColorRange !== null) colorRangeSlider.value = savedColorRange;
 
     const toggleMenu = (status) => {
-        console.log(status);
-
         if (status === "open") {
             headerEl.setAttribute("data-menu-status", "closed");
             menuBtn.setAttribute("data-menu-status", "closed");
