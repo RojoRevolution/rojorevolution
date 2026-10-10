@@ -1,138 +1,109 @@
 # Deploying RojoRevolution
 
-The site is an Express + EJS app served on cPanel via LiteSpeed/Passenger. There
-is a lightweight asset build (minified CSS/JS + responsive image variants). The
-build output is **not committed** (`public/assets/dist/` and
-`public/assets/manifest.json` are gitignored), so **it must be generated as part
-of every deploy**.
+The site is an Express + EJS app on cPanel (LiteSpeed/Passenger), deployed via
+**cPanel Git Version Control** (the server pulls from GitHub).
 
-> ⚠️ **The one thing that must not be skipped: run the build.**
-> If you deploy without building, the site still works but serves raw,
-> unminified CSS/JS and **full-size original images**. Because the lazy /
-> on-demand image loading is always active, skipping the build makes images feel
-> *slower*, not faster — each image loads on demand at full size instead of
-> pulling a small variant. Always build (or upload the build output) on deploy.
+There is a lightweight asset build (minified CSS/JS + responsive image variants).
+Because the build can't run on the cPanel host (`sharp` is a native module that
+isn't available there), **the build output is committed to the repo** so it ships
+with a normal git pull. `npm run deploy` rebuilds and commits it for you.
 
 ---
 
-## What the build produces
+## Everyday workflow
+
+1. Make your changes and commit them as usual (your own commit messages):
+   ```bash
+   git add -p        # or however you normally stage
+   git commit -m "Describe your change"
+   ```
+2. Build + commit the assets + push your branch, in one step:
+   ```bash
+   npm run deploy
+   ```
+   This runs `build:all` (esbuild for CSS/JS, sharp for image variants), stages
+   everything, adds a `Build assets for deploy` commit **only if the build output
+   changed**, and pushes the current branch to GitHub.
+3. Open a PR and merge it into `main` on GitHub. The committed `dist/` +
+   `manifest.json` travel through the merge, so `main` now has the built assets.
+4. In **cPanel → Git Version Control → (repo) → Pull or Deploy**, click **Update
+   from Remote** then **Deploy HEAD Commit**. The pull updates the files and
+   `.cpanel.yml` restarts the app automatically.
+
+That's the whole loop: `npm run deploy` → merge PR → cPanel deploy.
+
+> **Build before the merge.** The only rule that matters: the branch that gets
+> merged into `main` must contain a fresh build. `npm run deploy` guarantees that
+> for the current branch, so run it as the last step before opening/updating the
+> PR.
+
+---
+
+## What gets built
 
 - `npm run build` → combines + minifies the 5 CSS files into one hashed bundle
-  and minifies each JS file into `public/assets/dist/`. Fast (~1s).
-- `npm run build:images` → generates 480/800/1200/1600w WEBP variants for raster
-  images into `public/assets/dist/img/`. Slow (~20s); images change rarely.
-- `npm run build:all` → both of the above.
+  and minifies each JS file into `public/assets/dist/`. ~1s.
+- `npm run build:images` → 480/800/1200/1600w WEBP variants for raster images
+  into `public/assets/dist/img/`, never upscaling. ~20s.
+- `npm run build:all` → both. Writes `public/assets/manifest.json`.
+- `npm run deploy` → `build:all` + git add + conditional commit + push.
 
-All three write `public/assets/manifest.json`, which the server reads to emit the
-hashed asset URLs and image `srcset`s. No manifest = automatic fallback to the
-raw source files (site works, just unoptimized).
-
----
-
-## Deploy options
-
-Pick **A** (build on the server) or **B** (build locally, upload output).
-
-### Option A — build on the server (recommended if `sharp` installs cleanly)
-
-1. Upload / `git pull` the latest code to the app root.
-2. In cPanel **Setup Node.js App**, run **"Run NPM Install"** — or over SSH,
-   inside the app's Node environment:
-   ```bash
-   npm install
-   ```
-   > `sharp` is a native module compiled per-platform. **Never upload your local
-   > `node_modules`** (macOS arm64 binaries won't run on the Linux host). Let the
-   > server install them.
-3. Run the build — in the cPanel Node app UI use the **"Run JS script"** dropdown
-   and select `build:all`, or over SSH:
-   ```bash
-   npm run build:all
-   ```
-4. **Restart the app** (cPanel "Restart" button, or `touch tmp/restart.txt`).
-
-### Option B — build locally, upload the output (avoids native `sharp` on the host)
-
-esbuild and sharp are **devDependencies used only at build time**; the running
-server needs only `express` + `ejs`.
-
-1. On your machine:
-   ```bash
-   npm run build:all
-   ```
-2. Upload these to the server (overwriting):
-   - `public/assets/dist/`
-   - `public/assets/manifest.json`
-   - any changed source (`server.js`, `views/`, `public/assets/{css,js,fonts}/`)
-3. On the server install runtime deps only:
-   ```bash
-   npm install --omit=dev
-   ```
-4. **Restart the app.**
+The server reads `manifest.json` to emit hashed asset URLs and image `srcset`s.
+If it's missing (e.g. a deploy without the build), the templates fall back to the
+raw source files — the site still works, just unoptimized.
 
 ---
 
 ## cPanel "Setup Node.js App" settings
 
-- **Node version:** 18+ (sharp 0.33 needs ≥18.17; match your local v22 if offered).
+- **Node version:** 18+ (match local if offered).
 - **Application startup file:** `server.js`.
-- **Environment variables:** set `NODE_ENV=production`.
-  - In production the manifest is read once at startup (faster). **After any
-    build, restart the app** so it re-reads the manifest.
-  - In dev (`NODE_ENV` unset) the manifest is re-read per request, so a rebuild
-    is picked up without restarting.
-- **Port:** nothing to configure — `server.js` uses `process.env.PORT`, which
-  Passenger injects. Do not hardcode a port on the host.
+- **Environment variable:** `NODE_ENV=production`.
+- **Port:** nothing to set — `server.js` uses `process.env.PORT`, which Passenger
+  injects.
+- **Dependencies:** run **"Run NPM Install"** once (installs express + ejs). You
+  do **not** need the build tools (esbuild/sharp) on the server — they're
+  devDependencies used only when you build locally. Re-run it only when
+  `package.json` runtime deps change.
 
 ---
 
-## Files that must reach the server
+## Why the build output is committed (and the trade-off)
 
-These are needed at runtime and some are newer additions — confirm they deploy
-(if deploying via git, make sure they're committed):
+`sharp` won't install/run reliably on shared cPanel, and cPanel's "Run NPM
+Install" skips `devDependencies` under `NODE_ENV=production` anyway — so building
+on the host fails with `Cannot find module 'sharp'`. Committing the prebuilt
+output sidesteps all of that and fits the git-pull deploy exactly.
 
-- `server.js`, `routes/`, `views/`
-- `public/assets/css/`, `public/assets/js/`
-- `public/assets/fonts/*.woff2` — the self-hosted web fonts
-- `build/` — only needed if building **on** the server (Option A)
-- `public/assets/dist/` + `public/assets/manifest.json` — only when uploading a
-  prebuilt output (Option B); generated by the build in Option A
+Trade-off: the generated image variants (~21MB) live in the repo. They only
+change when you change source images (sharp output is deterministic, so unchanged
+images produce no diff). The hashed CSS/JS bundle changes on CSS/JS edits.
 
-Gitignored (never upload): `node_modules/`, `public/assets/dist/`,
-`public/assets/manifest.json` (the last two are build output — generate them,
-don't commit them).
+If this artifact noise becomes annoying later, the clean alternative is a GitHub
+Actions workflow that builds in CI and deploys over SSH/FTP, keeping `main` free
+of build output. Not set up today.
 
 ---
 
-## Post-deploy sanity checks
+## Post-deploy sanity check
 
-After deploying, from the browser console on https://rojorevolution.com:
-
+From the browser console on https://rojorevolution.com:
 ```js
-// Should be 200 (not 404) once the build is deployed:
-await fetch('/assets/manifest.json').then(r => r.status);
-
-// The <head> should link ONE hashed bundle, not the 5 raw css files:
-[...document.querySelectorAll('link[rel=stylesheet]')].map(l => l.href);
-
-// A homepage logo should have a non-empty srcset pointing at /assets/dist/img/:
-document.querySelector('.logos-home-card')?.getAttribute('srcset');
+await fetch('/assets/manifest.json').then(r => r.status);            // 200
+[...document.querySelectorAll('link[rel=stylesheet]')].map(l => l.href); // one /assets/dist/app.<hash>.css
+document.querySelector('.logos-home-card')?.getAttribute('srcset');  // lists /assets/dist/img/... variants
 ```
-
-Also worth confirming once:
-- Responses include `content-encoding: br` or `gzip` (LiteSpeed compresses text
-  assets automatically — no action needed if present).
-- Static `/assets/*` files are served by LiteSpeed directly with a long
-  `cache-control` (that's expected; the hashed `/dist` filenames handle
-  cache-busting on updates).
+If the CSS is still the 5 raw files and `srcset` is empty, the build didn't make
+it into the deployed commit — rebuild (`npm run deploy`), re-merge, redeploy.
 
 ---
 
-## Notes / known follow-ups
+## Notes
 
+- Changing `server.js` requires an app restart — `.cpanel.yml` handles that on
+  every deploy.
 - The craft-can thumbnails (`public/assets/images/projects/labels/cans/*.webp`,
-  ~250KB each at 276px) are **below the pipeline's resize threshold**, so the
-  build does not shrink them. They stay full-size until manually recompressed.
-- Changing `server.js` always requires an app restart. Editing templates, CSS,
-  JS, or images does not (they're read per request / served statically), but in
-  production you must rebuild + restart to pick up new hashed assets.
+  ~250KB at 276px) are below the pipeline's resize threshold, so the build does
+  not shrink them; recompress manually if desired.
+- `.cpanel.yml` assumes the app root is `/home/adyixrwf/rojorevolution`. If that
+  changes, update the path there.

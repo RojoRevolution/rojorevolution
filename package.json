@@ -8,6 +8,7 @@
     "build": "node build/build-assets.js",
     "build:images": "node build/build-images.js",
     "build:all": "npm run build:images && npm run build",
+    "deploy": "npm run build:all && git add -A && (git diff --cached --quiet || git commit -m \"Build assets for deploy\") && git push",
     "start": "node server.js"
   },
   "repository": {

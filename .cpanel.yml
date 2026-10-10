@@ -1,0 +1,17 @@
+---
+# cPanel Git Version Control deployment tasks.
+# Runs on the server each time you "Deploy HEAD Commit" in cPanel.
+#
+# The repo is cloned into the Node app directory, so the pull already updates the
+# files in place - the only thing left to do is restart Passenger, which it does
+# by touching tmp/restart.txt (Passenger restarts the app on the next request).
+#
+# If your app root differs, change the path below. If your cPanel Git setup
+# copies files to a separate document root instead of deploying in place, add the
+# usual `/bin/cp -R ...` tasks above the touch. If a deploy ever errors on this
+# file, you can delete it and instead click "Restart" in Setup Node.js App.
+deployment:
+  tasks:
+    - export APPPATH=/home/adyixrwf/rojorevolution
+    - /bin/mkdir -p $APPPATH/tmp
+    - /bin/touch $APPPATH/tmp/restart.txt
