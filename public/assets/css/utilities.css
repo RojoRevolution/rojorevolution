@@ -22,6 +22,14 @@
     width: 100%;
 }
 
+/* Images that carry width/height attributes (added for CLS/aspect-ratio) must
+   keep their proportions: let height derive from the attribute aspect-ratio
+   instead of the literal height attribute, which would otherwise stretch an
+   image whose CSS only constrains width. */
+img[width][height] {
+    height: auto;
+}
+
 .width-120 {
     width: 120%;
 }
