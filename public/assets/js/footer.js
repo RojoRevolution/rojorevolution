@@ -32,8 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // which fired a stray "out" right around the click and reset the
         // "Email copied to clipboard" text before it could be seen.
         // enter/leave only fire at the button's outer boundary.
+        // Inline copy icon (was Bootstrap Icons bi-copy; the icon-font CDN was
+        // removed from the <head> for performance, so the glyph is inlined here).
+        const COPY_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style="vertical-align:-0.125em"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>`;
         contactBtnEl.addEventListener("mouseenter", () => {
-            contactBtnEl.innerHTML = `${EMAIL} <i class="bi bi-copy"></i>`;
+            contactBtnEl.innerHTML = `${EMAIL} ${COPY_ICON}`;
         });
 
         contactBtnEl.addEventListener("mouseleave", () => {

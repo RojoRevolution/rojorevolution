@@ -9,21 +9,79 @@
     <title>
         <%= title %>
     </title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Passion+One:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- StyleSheets -->
+    <!-- Preload the hero headline font (Passion One 700, used by the above-the-fold <h1>) -->
+    <link rel="preload" href="/assets/fonts/passion-one-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Self-hosted fonts are declared via @font-face in theme.css (no third-party origin on the critical path) -->
+    <!-- StyleSheets: one minified+hashed bundle when built (npm run build), else the raw sources -->
+    <% if (hasBuild) { %>
+    <link href="<%= asset('css') %>" rel="stylesheet" />
+    <% } else { %>
     <link href="/assets/css/theme.css" rel="stylesheet" />
     <link href="/assets/css/components.css" rel="stylesheet" />
     <link href="/assets/css/main.css" rel="stylesheet" />
     <link href="/assets/css/utilities.css" rel="stylesheet" />
     <link href="/assets/css/mediaqueries.css" rel="stylesheet" />
-    <!-- Theme Script -->
-    <script src="/assets/js/theme-preference.js"></script>
+    <% } %>
+    <!-- Theme Script (inlined to avoid a render-blocking request; must run before paint to prevent a theme flash) -->
+    <script>
+        // Set the color theme on <html> before first paint so a dark-theme
+        // preference doesn't flash light. (Inlined from theme-preference.js.)
+        let htmlEl = document.querySelector('html')
+
+        let storedTheme;
+        storedTheme = localStorage.getItem('theme');
+        storedFilmEffect = localStorage.getItem('film');
+
+        if (storedTheme) {
+            currentTheme = storedTheme
+            htmlEl.setAttribute('data-theme', storedTheme)
+        } else {
+            htmlEl.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+
+        if (storedFilmEffect == 'off') {
+            currentTheme = storedTheme
+            htmlEl.setAttribute('data-film-effect', storedFilmEffect)
+            htmlEl.setAttribute('data-film-effect', 'off');
+            localStorage.setItem('film', 'off');
+        } else {
+            htmlEl.setAttribute('data-film-effect', 'on');
+            localStorage.setItem('film', 'on');
+        }
+
+        // In-menu theme switch (#theme-switch), shown at <=768px where the pull-chain
+        // is hidden. This runs in <head>, so defer wiring until the DOM exists.
+        // It reads/writes the same data-theme attribute + localStorage('theme') the
+        // pull-chain uses, so both controls stay consistent.
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeSwitch = document.getElementById('theme-switch');
+            if (!themeSwitch) return;
+
+            const buttons = themeSwitch.querySelectorAll('button[data-theme-value]');
+
+            // Reflect the given theme on the buttons: active one is marked + disabled.
+            const syncButtons = (theme) => {
+                buttons.forEach((btn) => {
+                    const isActive = btn.getAttribute('data-theme-value') === theme;
+                    btn.setAttribute('data-active', isActive ? 'true' : 'false');
+                    btn.disabled = isActive;
+                });
+            };
+
+            // Match the theme the head script already applied on load.
+            syncButtons(htmlEl.getAttribute('data-theme'));
+
+            buttons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const theme = btn.getAttribute('data-theme-value');
+                    htmlEl.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                    syncButtons(theme);
+                });
+            });
+        });
+    </script>
 
 </head>
 

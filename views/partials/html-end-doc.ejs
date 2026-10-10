@@ -1,17 +1,18 @@
-<!-- Scripts -->
-<script src="/assets/js/page-transitions.js"></script>
-<script src="/assets/js/menus.js"></script>
-<script src="/assets/js/switches.js"></script>
-<script src="/assets/js/scroll-effects.js"></script>
-<script src="/assets/js/footer.js"></script>
-<script src="/assets/js/accordion.js"></script>
-<script src="/assets/js/toggle-switch.js"></script>
-<script src="/assets/js/eye-follow.js"></script>
-<script src="/assets/js/bottle-eye-follow.js"></script>
+<!-- Scripts (deferred: all are DOMContentLoaded-gated, so parsing is never blocked).
+     asset() returns the hashed minified file when built, else the raw source. -->
+<script defer src="<%= asset('js/page-transitions.js') %>"></script>
+<script defer src="<%= asset('js/menus.js') %>"></script>
+<script defer src="<%= asset('js/switches.js') %>"></script>
+<script defer src="<%= asset('js/scroll-effects.js') %>"></script>
+<script defer src="<%= asset('js/footer.js') %>"></script>
+<script defer src="<%= asset('js/accordion.js') %>"></script>
+<script defer src="<%= asset('js/toggle-switch.js') %>"></script>
+<script defer src="<%= asset('js/eye-follow.js') %>"></script>
+<script defer src="<%= asset('js/bottle-eye-follow.js') %>"></script>
 <% if (locals.projectStory) { %>
 <!-- Only the interior project pages (labels, acopon, logos) contain the
      #projectStory / #work markup this script drives. -->
-<script src="/assets/js/project-story.js"></script>
+<script defer src="<%= asset('js/project-story.js') %>"></script>
 <% } %>
 </body>
 

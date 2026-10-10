@@ -37,20 +37,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Stores JSON Response
     let imgData;
 
-    // Fetch and store JSON data then run functions to add content
-    fetch('/assets/data/labels.json', {
-        method: 'GET'
-    }).then((response) => {
-        response.json().then((jsonResponse) => {
+    // Responsive-image manifest (written by `npm run build:images`). Loaded
+    // best-effort: when it's absent (no build) artworks just use their full-size
+    // src, so the gallery always works. Maps an original image URL to its
+    // generated webp variants, used to build a srcset for the big artwork.
+    let imagesManifest = {};
+    const srcsetFor = (src) => {
+        const entry = imagesManifest[src];
+        if (!entry || !entry.variants) return '';
+        return entry.variants.map((v) => `${v.url} ${v.w}w`).join(', ');
+    };
+
+    // Fetch and store JSON data then run functions to add content. The manifest
+    // is fetched first (and swallowed on failure) so variants are available
+    // when the panels are built.
+    fetch('/assets/manifest.json')
+        .then((r) => (r.ok ? r.json() : {}))
+        .catch(() => ({}))
+        .then((manifest) => {
+            imagesManifest = (manifest && manifest.images) || {};
+            return fetch('/assets/data/labels.json', { method: 'GET' });
+        })
+        .then((response) => response.json())
+        .then((jsonResponse) => {
             imgData = jsonResponse;
-            // console.log(imgData)
             totalCanImages = Object.keys(imgData).length;
-            // console.log(totalCanImages)
             generateHTML(totalCanImages);
+        })
+        .catch((err) => {
+            console.log(`Error: ${err}`)
         });
-    }).catch((err) => {
-        console.log(`Error: ${err}`)
-    });
 
 
     // Function creates divs and images and inserts them
@@ -66,10 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
             newDiv.setAttribute("data-selected", "false");
         }
 
-        // Create Can Image
+        // Create Can Image (the small thumbnail in the scrollable strip)
         const newImgDefault = document.createElement("img");
         newImgDefault.style.maxWidth = "100px";
         newImgDefault.setAttribute("src", imgSrcDefault);
+        newImgDefault.setAttribute("alt", "Beer can with an illustrative label");
+        newImgDefault.setAttribute("loading", "lazy");
+        newImgDefault.setAttribute("decoding", "async");
         // Append HTML for Can Image
         canImagesContainer.appendChild(newDiv);
         newDiv.appendChild(newImgDefault);
@@ -78,16 +97,31 @@ document.addEventListener("DOMContentLoaded", () => {
         const newArtworkImg = document.createElement("img");
         newArtworkImg.setAttribute("data-artwork", imgName);
         newArtworkImg.setAttribute("id", imgName);
+        newArtworkImg.setAttribute("alt", "Full label artwork");
+        newArtworkImg.setAttribute("decoding", "async");
         // Hide All Images
         newArtworkImg.classList.add("display-none");
         newArtworkImg.classList.add("hide-img");
-        // Show only the first image in the controls
+        // Only the first artwork (powerFades) is visible on load, so it's the
+        // only one that gets a real src up front. Every other full-res artwork
+        // keeps its URL in data-src and is fetched on demand the first time its
+        // can is selected (see displayArtworkImage) - this keeps ~30 large
+        // images off the initial page load.
+        // Responsive srcset for the large artwork (falls back to the full-size
+        // src when no variants exist). Sized for the showcase: near-full width
+        // on small screens, roughly two-thirds on desktop.
+        const artworkSrcset = srcsetFor(artworkSrc);
+        newArtworkImg.setAttribute("sizes", "(max-width: 768px) 90vw, 66vw");
         if (imgName == "powerFades") {
             newArtworkImg.classList.add("display-block");
             newArtworkImg.classList.add("show-img");
+            newArtworkImg.setAttribute("src", artworkSrc);
+            if (artworkSrcset) newArtworkImg.setAttribute("srcset", artworkSrcset);
+        } else {
+            newArtworkImg.setAttribute("data-src", artworkSrc);
+            if (artworkSrcset) newArtworkImg.setAttribute("data-srcset", artworkSrcset);
         }
 
-        newArtworkImg.setAttribute("src", artworkSrc);
         // Append HTML for Artwork Image
         artworkShowcaseDiv.appendChild(newArtworkImg);
     }
@@ -170,6 +204,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function hides and displays the appropriate artwork image
     const displayArtworkImage = (activeArtwork) => {
         let currentArtworkEl = artworkShowcaseDiv.querySelector(`[data-artwork="${activeArtwork}"]`);
+
+        // Lazy-load this artwork the first time it's shown: promote data-src ->
+        // src (and data-srcset -> srcset) so the image is only fetched when
+        // actually selected.
+        if (currentArtworkEl.dataset.srcset) {
+            currentArtworkEl.srcset = currentArtworkEl.dataset.srcset;
+            currentArtworkEl.removeAttribute('data-srcset');
+        }
+        if (currentArtworkEl.dataset.src) {
+            currentArtworkEl.src = currentArtworkEl.dataset.src;
+            currentArtworkEl.removeAttribute('data-src');
+        }
 
         artworkShowcaseDiv.querySelectorAll('[data-artwork]').forEach((img) => {
             img.style.opacity = 0;
