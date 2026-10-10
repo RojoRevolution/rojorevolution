@@ -5,6 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build/build-assets.js",
+    "build:images": "node build/build-images.js",
+    "build:all": "npm run build:images && npm run build",
     "start": "node server.js"
   },
   "repository": {
@@ -17,5 +20,9 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1",
+    "sharp": "^0.33.5"
   }
 }

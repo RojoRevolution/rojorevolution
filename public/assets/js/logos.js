@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         newImgDefault.setAttribute("src", imgSrcDefault);
         newImgDefault.setAttribute("alt", imgAlt);
         newImgDefault.setAttribute("data-img-theme", "default");
+        newImgDefault.setAttribute("loading", "lazy");
+        newImgDefault.setAttribute("decoding", "async");
         newImgDefault.style.maxWidth = maxWidth;
         // Create Image Inverse Logo
         const newImgInverse = document.createElement("img");
@@ -48,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         newImgInverse.setAttribute("src", imgSrcInverse);
         newImgInverse.setAttribute("alt", imgAlt);
         newImgInverse.setAttribute("data-img-theme", "inverse");
+        newImgInverse.setAttribute("loading", "lazy");
+        newImgInverse.setAttribute("decoding", "async");
         newImgInverse.style.maxWidth = maxWidth;
 
         // Append HTML

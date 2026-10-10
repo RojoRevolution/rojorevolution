@@ -1,5 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Lazy-load any video marked [data-lazy-video]: its <source> carries the
+    // URL in data-src (not src) so nothing downloads on initial paint. When the
+    // video scrolls near the viewport, promote data-src -> src, load, and play.
+    // This keeps the remote DentalRay clip off the FCP/LCP critical path.
+    const lazyVideos = document.querySelectorAll('video[data-lazy-video]');
+    if (lazyVideos.length && 'IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const video = entry.target;
+                video.querySelectorAll('source[data-src]').forEach((source) => {
+                    source.src = source.dataset.src;
+                    source.removeAttribute('data-src');
+                });
+                video.load();
+                const playback = video.play();
+                if (playback && typeof playback.catch === 'function') {
+                    playback.catch(() => { /* autoplay may be blocked; ignore */ });
+                }
+                obs.unobserve(video);
+            });
+        }, { rootMargin: '200px' });
+        lazyVideos.forEach((video) => videoObserver.observe(video));
+    }
+
     let introSection = document.querySelector('[data-header-type="intro"]');
 
     // The intro is home-page only, but this script loads on every page. Bail

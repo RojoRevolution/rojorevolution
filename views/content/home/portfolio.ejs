@@ -38,16 +38,21 @@
                 </div>
                 <div class="can-block">
                     <div class="relative">
-                        <img class="craft-can" src="/assets/images/projects/labels/cans/cactus-palace-can.png"
-                            alt="Beer can with an illustrative label" class="width-100">
-                        <img class="craft-can" src="/assets/images/projects/labels/cans/empress-rising-can.png"
-                            alt="Beer can with an illustrative label" class="width-100">
-                        <img class="craft-can" src="/assets/images/projects/labels/cans/powerfades-can.png"
-                            alt="Beer can with an illustrative label" class="width-100">
-                        <img class="craft-can" src="/assets/images/projects/labels/cans/hanstrapp-can.png"
-                            alt="Beer can with an illustrative label" class="width-100">
-                        <img class="craft-can" src="/assets/images/projects/labels/cans/paria-can.png"
-                            alt="Beer can with an illustrative label" class="width-100">
+                        <img class="craft-can" src="/assets/images/projects/labels/cans/cactus-palace-can.webp"
+                            alt="Beer can with an illustrative label" width="276" height="698" loading="lazy"
+                            decoding="async">
+                        <img class="craft-can" src="/assets/images/projects/labels/cans/empress-rising-can.webp"
+                            alt="Beer can with an illustrative label" width="276" height="698" loading="lazy"
+                            decoding="async">
+                        <img class="craft-can" src="/assets/images/projects/labels/cans/powerfades-can.webp"
+                            alt="Beer can with an illustrative label" width="276" height="696" loading="lazy"
+                            decoding="async">
+                        <img class="craft-can" src="/assets/images/projects/labels/cans/hanstrapp-can.webp"
+                            alt="Beer can with an illustrative label" width="276" height="698" loading="lazy"
+                            decoding="async">
+                        <img class="craft-can" src="/assets/images/projects/labels/cans/paria-can.webp"
+                            alt="Beer can with an illustrative label" width="276" height="698" loading="lazy"
+                            decoding="async">
                     </div>
                 </div>
                 <div class="content justify-between" data-stack="500">
@@ -64,10 +69,22 @@
             <!-- Logos -->
             <div class="card gap-4">
                 <div id="logos" class="img-container relative">
-                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-1.png" />
-                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-2.png" />
-                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-3.png" />
-                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-4.png" />
+                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-1.png"
+                        srcset="<%= imgSrcset('/assets/images/projects/featured/logo-card-img-1.png') %>"
+                        sizes="(max-width: 990px) 80vw, 420px"
+                        alt="Logo design sample" width="1240" height="972" loading="lazy" decoding="async" />
+                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-2.png"
+                        srcset="<%= imgSrcset('/assets/images/projects/featured/logo-card-img-2.png') %>"
+                        sizes="(max-width: 990px) 80vw, 420px"
+                        alt="Logo design sample" width="1240" height="1178" loading="lazy" decoding="async" />
+                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-3.png"
+                        srcset="<%= imgSrcset('/assets/images/projects/featured/logo-card-img-3.png') %>"
+                        sizes="(max-width: 990px) 80vw, 420px"
+                        alt="Logo design sample" width="953" height="1036" loading="lazy" decoding="async" />
+                    <img class="logos-home-card" src="/assets/images/projects/featured/logo-card-img-4.png"
+                        srcset="<%= imgSrcset('/assets/images/projects/featured/logo-card-img-4.png') %>"
+                        sizes="(max-width: 990px) 80vw, 420px"
+                        alt="Logo design sample" width="1478" height="646" loading="lazy" decoding="async" />
                 </div>
                 <div class="tag-container">
                     <ul class="row relative gap-4">
@@ -90,9 +107,10 @@
             <div class="card featured gap-4">
                 <div id="dentalray" class="img-container justify-end relative">
                     <div class="vid-bg">
-                        <video autoplay="" muted="" loop="" id="intro-vid" playsinline webkit-playsinline>
+                        <video muted="" loop="" id="intro-vid" playsinline webkit-playsinline preload="none"
+                            data-lazy-video>
                             <source
-                                src="https://embed-ssl.wistia.com/deliveries/ec2de1463e5ba017b15b7d71c70f2bd5b3930f64.bin?disposition=attachment&amp;filename=hero-bg.mp44"
+                                data-src="https://embed-ssl.wistia.com/deliveries/ec2de1463e5ba017b15b7d71c70f2bd5b3930f64.bin?disposition=attachment&amp;filename=hero-bg.mp4"
                                 type="video/mp4">
                         </video>
                     </div>
