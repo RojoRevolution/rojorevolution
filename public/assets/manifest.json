@@ -1,0 +1,1877 @@
+{
+  "css": "/assets/dist/app.86a24615.css",
+  "js/accordion.js": "/assets/dist/accordion.e799c46c.js",
+  "js/bottle-eye-follow.js": "/assets/dist/bottle-eye-follow.a54afce9.js",
+  "js/eye-follow.js": "/assets/dist/eye-follow.137dea5f.js",
+  "js/footer.js": "/assets/dist/footer.47055cd8.js",
+  "js/labels.js": "/assets/dist/labels.b2f357f9.js",
+  "js/logos.js": "/assets/dist/logos.45b1fe5f.js",
+  "js/menus.js": "/assets/dist/menus.41a221fe.js",
+  "js/page-transitions.js": "/assets/dist/page-transitions.8e5d9480.js",
+  "js/project-story.js": "/assets/dist/project-story.38f66bef.js",
+  "js/scroll-effects.js": "/assets/dist/scroll-effects.ccacf2f3.js",
+  "js/switches.js": "/assets/dist/switches.d547260d.js",
+  "js/toggle-switch.js": "/assets/dist/toggle-switch.b2d8ece5.js",
+  "images": {
+    "/assets/images/about/rojo@2x.png": {
+      "intrinsic": {
+        "width": 812,
+        "height": 812
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/about/rojo@2x-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/about/rojo@2x-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-building.webp": {
+      "intrinsic": {
+        "width": 1496,
+        "height": 998
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-building-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/acopon-building-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/acopon-building-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-logo-full-2color-inverse.webp": {
+      "intrinsic": {
+        "width": 1500,
+        "height": 1533
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-logo-full-2color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/acopon-logo-full-2color-inverse-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/acopon-logo-full-2color-inverse-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-logo-full-2color.webp": {
+      "intrinsic": {
+        "width": 1500,
+        "height": 1530
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-logo-full-2color-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/acopon-logo-full-2color-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/acopon-logo-full-2color-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-pattern-dark.webp": {
+      "intrinsic": {
+        "width": 1000,
+        "height": 1000
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-pattern-dark-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/acopon-pattern-dark-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-secondary-glass.webp": {
+      "intrinsic": {
+        "width": 1549,
+        "height": 1549
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-secondary-glass-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/acopon-secondary-glass-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/acopon-secondary-glass-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-story-1.png": {
+      "intrinsic": {
+        "width": 768,
+        "height": 960
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-story-1-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-story-2.png": {
+      "intrinsic": {
+        "width": 768,
+        "height": 960
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-story-2-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/acopon-story-3.png": {
+      "intrinsic": {
+        "width": 768,
+        "height": 960
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/acopon-story-3-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/cask-photos.webp": {
+      "intrinsic": {
+        "width": 2800,
+        "height": 652
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/cask-photos-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/cask-photos-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/cask-photos-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/cask-photos-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/gaspipes-1color.webp": {
+      "intrinsic": {
+        "width": 660,
+        "height": 1050
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/gaspipes-1color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/gaspipes-2color.webp": {
+      "intrinsic": {
+        "width": 660,
+        "height": 1050
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/gaspipes-2color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/homunculus-1color.webp": {
+      "intrinsic": {
+        "width": 693,
+        "height": 1050
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/homunculus-1color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/homunculus-2color.webp": {
+      "intrinsic": {
+        "width": 699,
+        "height": 1050
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/homunculus-2color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/knickers-1color.webp": {
+      "intrinsic": {
+        "width": 828,
+        "height": 966
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/knickers-1color-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/knickers-1color-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/knickers-2color.webp": {
+      "intrinsic": {
+        "width": 828,
+        "height": 963
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/knickers-2color-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/knickers-2color-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/oldpounder-1color.webp": {
+      "intrinsic": {
+        "width": 552,
+        "height": 700
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/oldpounder-1color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/oldpounder-2color.webp": {
+      "intrinsic": {
+        "width": 554,
+        "height": 700
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/oldpounder-2color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/specialbitter-1color.webp": {
+      "intrinsic": {
+        "width": 711,
+        "height": 1050
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/specialbitter-1color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/specialbitter-2color.webp": {
+      "intrinsic": {
+        "width": 717,
+        "height": 1050
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/specialbitter-2color-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/whitby-1color.webp": {
+      "intrinsic": {
+        "width": 828,
+        "height": 1053
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/whitby-1color-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/whitby-1color-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cask-badges/whitby-2color.webp": {
+      "intrinsic": {
+        "width": 828,
+        "height": 1050
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/whitby-2color-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/cask-badges/whitby-2color-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/cornercask-illustration.webp": {
+      "intrinsic": {
+        "width": 600,
+        "height": 379
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/cornercask-illustration-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/boyk-1color-default.webp": {
+      "intrinsic": {
+        "width": 856,
+        "height": 996
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/boyk-1color-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/boyk-1color-default-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/boyk-1color-inverse.webp": {
+      "intrinsic": {
+        "width": 856,
+        "height": 998
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/boyk-1color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/boyk-1color-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/hanstrapp-default.webp": {
+      "intrinsic": {
+        "width": 1002,
+        "height": 1318
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/hanstrapp-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/hanstrapp-default-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/hanstrapp-inverse.webp": {
+      "intrinsic": {
+        "width": 1002,
+        "height": 1322
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/hanstrapp-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/hanstrapp-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/hanstrapp-shirt.webp": {
+      "intrinsic": {
+        "width": 1200,
+        "height": 1320
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/hanstrapp-shirt-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/hanstrapp-shirt-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/lilith-7color-default.webp": {
+      "intrinsic": {
+        "width": 856,
+        "height": 1320
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/lilith-7color-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/lilith-7color-default-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/lilith-7color-inverse.webp": {
+      "intrinsic": {
+        "width": 856,
+        "height": 1320
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/lilith-7color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/lilith-7color-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/lilith-shirt.webp": {
+      "intrinsic": {
+        "width": 600,
+        "height": 660
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/lilith-shirt-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/marchmildness-1color-default.webp": {
+      "intrinsic": {
+        "width": 856,
+        "height": 1086
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/marchmildness-1color-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/marchmildness-1color-default-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/marchmildness-1color-inverse.webp": {
+      "intrinsic": {
+        "width": 852,
+        "height": 1092
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/marchmildness-1color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/marchmildness-1color-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/polednice-6color-default.webp": {
+      "intrinsic": {
+        "width": 2184,
+        "height": 1252
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-default-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-default-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-default-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/polednice-6color-inverse.webp": {
+      "intrinsic": {
+        "width": 2184,
+        "height": 1250
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-inverse-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-inverse-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-6color-inverse-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/polednice-feature-default.webp": {
+      "intrinsic": {
+        "width": 2261,
+        "height": 1355
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-default-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-default-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-default-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/polednice-feature-inverse.webp": {
+      "intrinsic": {
+        "width": 2260,
+        "height": 1355
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-inverse-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-inverse-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-feature-inverse-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/polednice-shirt.webp": {
+      "intrinsic": {
+        "width": 1200,
+        "height": 1320
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-shirt-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/polednice-shirt-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/ratking-6color-default.webp": {
+      "intrinsic": {
+        "width": 848,
+        "height": 1320
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/ratking-6color-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/ratking-6color-default-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/ratking-6color-inverse.webp": {
+      "intrinsic": {
+        "width": 842,
+        "height": 1320
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/ratking-6color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/ratking-6color-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/ratking-shirt.webp": {
+      "intrinsic": {
+        "width": 600,
+        "height": 660
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/ratking-shirt-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/year5-5color-default.webp": {
+      "intrinsic": {
+        "width": 856,
+        "height": 1208
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/year5-5color-default-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/year5-5color-default-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/year5-5color-inverse.webp": {
+      "intrinsic": {
+        "width": 856,
+        "height": 1208
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/year5-5color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/merch/year5-5color-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/merch/year5-shirt.webp": {
+      "intrinsic": {
+        "width": 600,
+        "height": 660
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/merch/year5-shirt-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/primary-mark/acopon-logo-full-2color-inverse.webp": {
+      "intrinsic": {
+        "width": 1500,
+        "height": 1533
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-logo-full-2color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-logo-full-2color-inverse-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-logo-full-2color-inverse-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/primary-mark/acopon-logo-full-2color.webp": {
+      "intrinsic": {
+        "width": 1500,
+        "height": 1530
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-logo-full-2color-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-logo-full-2color-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-logo-full-2color-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/primary-mark/acopon-primary-1color-detailed-inverse.webp": {
+      "intrinsic": {
+        "width": 1050,
+        "height": 858
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-primary-1color-detailed-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-primary-1color-detailed-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/primary-mark/acopon-primary-1color-detailed.webp": {
+      "intrinsic": {
+        "width": 1050,
+        "height": 858
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-primary-1color-detailed-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-primary-1color-detailed-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/primary-mark/acopon-primary-1color-simple-inverse.webp": {
+      "intrinsic": {
+        "width": 600,
+        "height": 492
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-primary-1color-simple-inverse-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/primary-mark/acopon-primary-1color-simple.webp": {
+      "intrinsic": {
+        "width": 600,
+        "height": 492
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/primary-mark/acopon-primary-1color-simple-480.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/secondary-mark/acopon-secondary-mark-1color-inverse.webp": {
+      "intrinsic": {
+        "width": 1074,
+        "height": 1080
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-1color-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-1color-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/secondary-mark/acopon-secondary-mark-1color.webp": {
+      "intrinsic": {
+        "width": 1074,
+        "height": 1080
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-1color-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-1color-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/secondary-mark/acopon-secondary-mark-full-inverse.webp": {
+      "intrinsic": {
+        "width": 1074,
+        "height": 1080
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-full-inverse-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-full-inverse-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/acopon/secondary-mark/acopon-secondary-mark-full.webp": {
+      "intrinsic": {
+        "width": 990,
+        "height": 995
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-full-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/acopon/secondary-mark/acopon-secondary-mark-full-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/featured/acopon.jpg": {
+      "intrinsic": {
+        "width": 1440,
+        "height": 960
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/featured/acopon-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/featured/acopon-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/featured/acopon-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/featured/cans-labels.png": {
+      "intrinsic": {
+        "width": 952,
+        "height": 600
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/featured/cans-labels-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/featured/cans-labels-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/featured/logo-card-img-1.png": {
+      "intrinsic": {
+        "width": 1240,
+        "height": 972
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-1-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-1-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-1-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/featured/logo-card-img-2.png": {
+      "intrinsic": {
+        "width": 1240,
+        "height": 1178
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-2-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-2-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-2-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/featured/logo-card-img-3.png": {
+      "intrinsic": {
+        "width": 953,
+        "height": 1036
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-3-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-3-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/featured/logo-card-img-4.png": {
+      "intrinsic": {
+        "width": 1478,
+        "height": 646
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-4-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-4-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-4-1200.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/featured/logo-card-img-5.png": {
+      "intrinsic": {
+        "width": 946,
+        "height": 769
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-5-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/featured/logo-card-img-5-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/azw-story1.webp": {
+      "intrinsic": {
+        "width": 1012,
+        "height": 1012
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/azw-story1-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/azw-story1-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/azw-story2.webp": {
+      "intrinsic": {
+        "width": 1012,
+        "height": 1012
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/azw-story2-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/azw-story2-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/azw-story3.webp": {
+      "intrinsic": {
+        "width": 1012,
+        "height": 1012
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/azw-story3-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/azw-story3-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/amprez.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1123
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/amprez-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/amprez-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/amprez-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/amprez-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/bighorn.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/bighorn-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/bighorn-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/bighorn-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/bighorn-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/brutalnature.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1123
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/brutalnature-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/brutalnature-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/brutalnature-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/brutalnature-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/cactuspalace.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/cactuspalace-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/cactuspalace-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/cactuspalace-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/cactuspalace-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/chocolatebunny.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/chocolatebunny-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/chocolatebunny-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/chocolatebunny-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/chocolatebunny-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/citrusvalley.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/citrusvalley-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/citrusvalley-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/citrusvalley-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/citrusvalley-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/cobrablood.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/cobrablood-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/cobrablood-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/cobrablood-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/cobrablood-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/desertdweller.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/desertdweller-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/desertdweller-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/desertdweller-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/desertdweller-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/dfiu.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/dfiu-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/dfiu-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/dfiu-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/dfiu-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/elbonito.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/elbonito-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/elbonito-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/elbonito-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/elbonito-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/eljefe.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/eljefe-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/eljefe-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/eljefe-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/eljefe-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/empressrising.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/empressrising-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/empressrising-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/empressrising-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/empressrising-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/gilbertower.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/gilbertower-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/gilbertower-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/gilbertower-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/gilbertower-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/hanstrapp.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1123
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/hanstrapp-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/hanstrapp-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/hanstrapp-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/hanstrapp-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/hellsgate.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/hellsgate-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/hellsgate-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/hellsgate-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/hellsgate-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/humankindness.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/humankindness-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/humankindness-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/humankindness-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/humankindness-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/intergalactic.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1123
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/intergalactic-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/intergalactic-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/intergalactic-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/intergalactic-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/laciudad.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/laciudad-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/laciudad-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/laciudad-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/laciudad-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/leggomyego.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/leggomyego-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/leggomyego-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/leggomyego-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/leggomyego-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/mother.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/mother-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/mother-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/mother-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/mother-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/nobaddays.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/nobaddays-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/nobaddays-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/nobaddays-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/nobaddays-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/nothingbecomesher.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/nothingbecomesher-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/nothingbecomesher-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/nothingbecomesher-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/nothingbecomesher-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/papadontpreach.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/papadontpreach-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/papadontpreach-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/papadontpreach-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/papadontpreach-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/pariapils.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/pariapils-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/pariapils-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/pariapils-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/pariapils-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/picketpost.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/picketpost-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/picketpost-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/picketpost-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/picketpost-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/powerfades.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1123
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/powerfades-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/powerfades-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/powerfades-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/powerfades-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/refuge.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/refuge-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/refuge-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/refuge-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/refuge-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/shrimp.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/shrimp-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/shrimp-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/shrimp-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/shrimp-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/skullvalley.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1123
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/skullvalley-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/skullvalley-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/skullvalley-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/skullvalley-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/sunshineoflove.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/sunshineoflove-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/sunshineoflove-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/sunshineoflove-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/sunshineoflove-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/watchyoursix.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/watchyoursix-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/watchyoursix-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/watchyoursix-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/watchyoursix-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/wilderblack.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/wilderblack-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/wilderblack-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/wilderblack-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/wilderblack-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/labels/label/wildernessact.webp": {
+      "intrinsic": {
+        "width": 1800,
+        "height": 1140
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/labels/label/wildernessact-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/labels/label/wildernessact-800.webp"
+        },
+        {
+          "w": 1200,
+          "url": "/assets/dist/img/projects/labels/label/wildernessact-1200.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/assets/dist/img/projects/labels/label/wildernessact-1600.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/logos/logo-story-1.webp": {
+      "intrinsic": {
+        "width": 1012,
+        "height": 1012
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/logos/logo-story-1-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/logos/logo-story-1-800.webp"
+        }
+      ]
+    },
+    "/assets/images/projects/logos/logo-story-2.webp": {
+      "intrinsic": {
+        "width": 1012,
+        "height": 1012
+      },
+      "variants": [
+        {
+          "w": 480,
+          "url": "/assets/dist/img/projects/logos/logo-story-2-480.webp"
+        },
+        {
+          "w": 800,
+          "url": "/assets/dist/img/projects/logos/logo-story-2-800.webp"
+        }
+      ]
+    }
+  }
+}
