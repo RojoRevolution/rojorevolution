@@ -1,5 +1,5 @@
 {
-  "css": "/assets/dist/app.86a24615.css",
+  "css": "/assets/dist/app.9724b439.css",
   "js/accordion.js": "/assets/dist/accordion.e799c46c.js",
   "js/bottle-eye-follow.js": "/assets/dist/bottle-eye-follow.a54afce9.js",
   "js/eye-follow.js": "/assets/dist/eye-follow.137dea5f.js",
@@ -11,7 +11,7 @@
   "js/project-story.js": "/assets/dist/project-story.38f66bef.js",
   "js/scroll-effects.js": "/assets/dist/scroll-effects.ccacf2f3.js",
   "js/switches.js": "/assets/dist/switches.d547260d.js",
-  "js/toggle-switch.js": "/assets/dist/toggle-switch.b2d8ece5.js",
+  "js/toggle-switch.js": "/assets/dist/toggle-switch.c0c6d77a.js",
   "images": {
     "/assets/images/about/rojo@2x.png": {
       "intrinsic": {

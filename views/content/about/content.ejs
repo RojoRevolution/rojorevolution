@@ -3,61 +3,61 @@
         <div class="col gap-4">
             <div class="col">
                 <h2>Let's get to the nitty gritty.</h2>
-                <div class="row justify-between align-item-center">
-                    <p>Who is this David Rojo?</p>
-                </div>
             </div>
         </div>
     </div>
     <div class="row gap-10" data-stack="768">
         <div class="col gap-4">
             <img class="img foto" src="/assets/images/about/rojo@2x.png"
-                srcset="<%= imgSrcset('/assets/images/about/rojo@2x.png') %>"
-                sizes="(max-width: 768px) 90vw, 400px" alt="Portrait of David Rojo" width="812" height="812"
-                loading="lazy" decoding="async">
-            <div id="switch-container" class="row gap-2">
-                <p>Roles: </p>
-                <label id="about-switch" class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+                srcset="<%= imgSrcset('/assets/images/about/rojo@2x.png') %>" sizes="(max-width: 768px) 90vw, 400px"
+                alt="Portrait of David Rojo" width="812" height="812" loading="lazy" decoding="async">
         </div>
         <div class="col gap-6">
-            <p class="about-content">
-                I'm a jack-of-all trades designer with the heart of an artist, brain of an engineer, and the speed of a
-                mongoose. I’m a sucker for good branding, micro
-                interactions, and learning how things work under the hood.
+            <div class="row">
+                <%- include('../../components/about-switch'); %>
+            </div>
+            <p class="about-content marg-0">
+                <strong>My name is David Rojo(rroh-hoh). I'm a multidisciplinary designer, illustrator, and
+                    developer</strong>
+                with the heart of an artist, the logic of an engineer, and the speed of a mongoose. I am a sucker
+                for good branding, micro-interactions, and understanding how everything works under the hood.
                 <br><br>
-                I have spent the majority of my career working with start-ups and independent companies, multiple times
-                as the founding designer. I excel at
-                building zero-to-one products by understanding business objectives and discovering user pain points. I
-                position companies for growth through differentiation and operation improvements, solving complex
-                problems through research and experimentation.
+                I have spent most of my career working with start-ups and small independent companies. I excel at
+                building zero-to-one products by understanding business objectives, operations, and discovering user
+                pain points. As
+                a founding designer, I get my hands dirty, doing whatever it takes to position products and companies
+                for growth through research, testing, experimentation, differentiation, and operational improvements.
                 <br><br>
-                Currently I lead all product and design initiatives at a med-tech startup that is changing the standard
+                Currently, I lead all product and design initiatives at a med-tech startup that is changing the standard
                 of care in dental radiology. I also moonlight in the adult beverage industry,
-                leveraging illustration to create distinctive brands, labels, and merchandise.
+                leveraging illustration to create distinctive brands, packaging, and merchandise.
             </p>
             <ul class="col gap-4 about-content display-none">
-                <li><b>Product Leadership:</b> I research, discover, and plan what's actually worth building, ensuring
-                    time isn't wasted on useless endeavors.</li>
-                <li><b>Design Systems:</b> A design system ensures
+                <li>From ideation to production, I own the whole road.</li>
+                <li><b>Product Leadership:</b> I research, discover, and plan what's actually worth building ensuring
+                    time isn't wasted on endeavors that don't improve the user experience or business outcomes.</li>
+                <li><b>Design Systems:</b> Establishing a system ensures
                     your
                     experience remains consistent and eliminates drift. I create rules and build libraries
-                    that can be synced and installed on any framework.
+                    that work on any framework.
                 </li>
-                <li><b>Product Design:</b> From wireframes to functional rapid prototypes. I design polished interfaces
-                    that remove user friction and feel great to use.
+                <li><b>Product Design:</b> From rapid functional prototypes to MVP. I design, test,
+                    and build
+                    polished interfaces that remove user friction, feel great to use, and positively impact revenue.
                 </li>
-                <li><b>Development:</b> I learned the full stack so I could contribute directly to production without
-                    engineers pulling their hair out. I focus primarily on the front-end, ensuring every minute detail
-                    is accounted for.
-                <li><b>Identity & Branding:</b> I establish consistent visual languages for all mediums including print,
-                    ensuring your business is recognizable and unique.
+                <li><b>Front-End Engineering:</b> I learned to code before AI became mainstream. While I learned the
+                    full stack, I specialize in front-end development, ensuring the minute details are not
+                    overlooked.
+                <li><b>Identity & Branding:</b> I love helping young companies grow! I create identities and
+                    consistent visual languages that help you carve out your reputation and space in the market.
                 </li>
-                <li><b>Vector Illustration:</b> From icons to t-shirts, design should be fun and I get it all done.</li>
+                <li><b>Vector Illustration: </b>Style agnostic and scalable. I bring ideas to life that translate
+                    perfectly for merchandising.</li>
             </ul>
+            <p class="about-content marg-0 display-none">
+                Sample Text
+
+            </p>
         </div>
     </div>
 </div>
